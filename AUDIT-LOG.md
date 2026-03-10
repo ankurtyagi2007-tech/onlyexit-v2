@@ -719,6 +719,26 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 
 ---
 
+#### C11 — Hero Badge Date Conflicts with Application Section
+
+**Issue:** Hero badge (line 72): "Apps Open April 2nd" — but the Application section (line 679) and FAQ say "Applications close May 15." There is no other mention of April 2nd. A visitor sees "Apps Open April 2nd" at the top and "Applications close May 15" further down. Are apps open or closed? When did they open? Is April 2nd past?
+
+**Files:** `index.html` line 72
+
+**Why it matters:** Date confusion erodes trust. If a visitor lands after April 2, they may think apps are already open and wonder why there's no form visible. If before April 2, the "Apply for Hacker House" CTA leads to the form but the badge says apps aren't open yet.
+
+**Proposed fix:** Make dates consistent. If apps open April 2 and close May 15, say "Apps Open April 2 · Close May 15" or just "Applications Open · Close May 15."
+
+**Effort:** Small
+**Audit checklist reference:** K9 (accuracy), Content & Copy #3
+**Status:** PENDING
+
+---
+
+**UPDATED NOTE:** Agent analysis confirmed "Hacker House" appears **25 times** (not 20 as originally counted). "Founder formation" and "founder transition engine" still appear **zero times**.
+
+---
+
 ## PHASE 4: DECISIONS
 
 *(Awaiting debate — each finding will be presented one at a time)*
