@@ -741,7 +741,17 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 
 ## PHASE 4: DECISIONS
 
-*(Awaiting debate — each finding will be presented one at a time)*
+### C1 — "Hacker House" Identity Crisis
+**Decision:** KEEP AS-IS. Founder wants "Hacker House" language preserved. The site's identity is intentional.
+**Action:** None.
+
+### C2 — "200+ Series A-E Founders in Network"
+**Decision:** SOFTEN QUALIFIER. Network is real but "Series A-E" is unverified precision. Change to "200+ Founders & Operators in Network" across all instances.
+**Action:** Update marquee (lines 102, 111) and What You Get section (line 298).
+
+### C3 — "3 Cities" Marquee Overstates Reality
+**Decision:** REMOVE "3 Cities" count tile from marquee. Keep "Seattle · SF · NYC" as a separate marquee item. City cards already show "Hacker House 2027" for SF/NYC — visitors connect the dots.
+**Action:** Remove the "3 Cities" marquee item (lines 98, 107). Keep "Seattle · SF · NYC" item.
 
 ---
 
