@@ -753,14 +753,28 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 **Decision:** REMOVE "3 Cities" count tile from marquee. Keep "Seattle · SF · NYC" as a separate marquee item. City cards already show "Hacker House 2027" for SF/NYC — visitors connect the dots.
 **Action:** Remove the "3 Cities" marquee item (lines 98, 107). Keep "Seattle · SF · NYC" item.
 
+### C4 — 45MB+ Image Payload
+**Decision:** CONVERT. Convert 7 large PNGs to WebP with resize (max 1920px wide, quality 80).
+**Action:** Convert hero.png, corvette-seattle.png, hackerhouse.png, nyc.png, seattle.png, event.png, sf.png → WebP. Update HTML references. Note: event.png and corvette-seattle.png are not referenced in HTML/CSS (potentially unused).
+
 ---
 
 ## PHASE 5: EXECUTION PLAN
 
-*(Will be compiled after Phase 4 debate)*
+*(Will be compiled after remaining Phase 4 decisions)*
 
 ---
 
 ## PHASE 6: EXECUTION LOG
 
-*(Will be logged during execution)*
+### C4 — Image Optimization (DONE)
+- Converted 7 PNGs to WebP: 44.6MB → 1.7MB (96% reduction)
+- hero.png: 6.8MB → 260KB
+- corvette-seattle.png: 5.8MB → 153KB
+- hackerhouse.png: 6.5MB → 219KB
+- nyc.png: 6.7MB → 318KB
+- seattle.png: 6.4MB → 300KB
+- event.png: 6.1MB → 148KB
+- sf.png: 6.3MB → 289KB
+- Updated 5 HTML references (hero, hackerhouse, seattle, sf, nyc)
+- Note: event.png and corvette-seattle.png not referenced in HTML — originals kept for now
