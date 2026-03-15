@@ -810,7 +810,7 @@ Use this to track what's been debated and decided vs. what's still pending.
 | H1 | Missing key memo phrases | DONE — no changes needed (founder decision) |
 | H3 | No team/founder section | DONE — keep clean for now, add when social proof exists (founder decision) |
 | H7 | Missing OG:image + Twitter cards | DONE — added og:image, og:url, twitter:card tags using hero.webp |
-| H14 | Dead privacy/terms links | PENDING |
+| H14 | Dead privacy/terms links | DONE — removed dead links, TODO added to SITE-QA.md |
 
 ### Larger Effort
 | # | Finding | Status |

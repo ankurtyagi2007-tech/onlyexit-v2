@@ -89,6 +89,7 @@ The Google Apps Script has hardcoded column mappings for each form type. If you 
 - [ ] All Luma event links point to valid events (not expired)
 - [ ] Social media links in footer resolve correctly
 - [ ] No broken anchor links (`href="#..."` should match an existing `id`)
+- [ ] **TODO:** Create Privacy Policy and Terms of Service pages and add links back to the footer
 
 ---
 
