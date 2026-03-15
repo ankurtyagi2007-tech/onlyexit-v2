@@ -196,63 +196,10 @@
   revealElements.forEach(function(el) {
     if (el.parentElement && el.parentElement.classList.contains('reveal-stagger')) {
       var childIndex = Array.from(el.parentElement.children).indexOf(el);
-      el.style.transitionDelay = childIndex * 120 + 'ms';
+      el.style.transitionDelay = childIndex * 100 + 'ms';
     }
     revealObserver.observe(el);
   });
-
-  // ===== HERO PARALLAX =====
-  var heroBgImg = document.querySelector('.hero__bg img');
-  if (heroBgImg) {
-    var ticking = false;
-    window.addEventListener('scroll', function() {
-      if (!ticking) {
-        requestAnimationFrame(function() {
-          var scrollY = window.scrollY;
-          if (scrollY < window.innerHeight) {
-            heroBgImg.style.transform = 'translateY(' + (scrollY * 0.35) + 'px) scale(1.05)';
-          }
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
-  }
-
-  // ===== THESIS CARDS — Mobile tap-to-toggle =====
-  var isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  var thesisCards = document.querySelectorAll('.thesis-card');
-
-  if (isTouchDevice && thesisCards.length > 0) {
-    thesisCards.forEach(function(card) {
-      card.addEventListener('click', function(e) {
-        var wasActive = card.classList.contains('thesis-card--active');
-        // Close all first
-        thesisCards.forEach(function(c) { c.classList.remove('thesis-card--active'); });
-        // Toggle the clicked one
-        if (!wasActive) {
-          card.classList.add('thesis-card--active');
-        }
-      });
-    });
-  }
-
-  // ===== FUNNEL STAGES — Mobile tap-to-toggle =====
-  var funnelStages = document.querySelectorAll('.funnel__stage');
-
-  if (isTouchDevice && funnelStages.length > 0) {
-    funnelStages.forEach(function(stage) {
-      stage.addEventListener('click', function(e) {
-        var wasActive = stage.classList.contains('funnel__stage--active');
-        // Close all first
-        funnelStages.forEach(function(s) { s.classList.remove('funnel__stage--active'); });
-        // Toggle the clicked one
-        if (!wasActive) {
-          stage.classList.add('funnel__stage--active');
-        }
-      });
-    });
-  }
 
   // ===== GENERIC MODAL HELPERS =====
   function openModal(modalId) {
