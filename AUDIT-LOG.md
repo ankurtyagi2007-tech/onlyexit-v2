@@ -773,6 +773,10 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 **Decision:** FIX. Wire up real Google Apps Script endpoint. Add error handling to all 4 forms.
 **Action:** Replace PLACEHOLDER_URL with live endpoint. Add loading state + error alerts to Hacker House, Co-Founder Match, Fly-In, and Merch Pre-Order forms. Use `no-cors` mode for Apps Script compatibility.
 
+### C9 — Hero Text Contrast Failure
+**Decision:** FIX. Darken hero overlay gradient and lighten subtitle color.
+**Action:** Change gradient from `0%→65%` to `40%→80%` opacity. Change subtitle from `--color-text-muted` (#999) to `#cccccc`.
+
 ---
 
 ## PHASE 5: EXECUTION PLAN
@@ -813,3 +817,8 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 - Added "Submitting..." loading state on submit buttons
 - Added error alert + button re-enable on failure
 - Used `no-cors` mode + `text/plain` content type for Apps Script CORS compatibility
+
+### C9 — Hero Text Contrast (DONE)
+- Darkened hero overlay gradient: `rgba(10,10,10,0.0)→0.65` changed to `0.4→0.8`
+- Lightened subtitle color from `--color-text-muted` (#999) to `#cccccc`
+- Hero headline + badge now readable regardless of background image brightness
