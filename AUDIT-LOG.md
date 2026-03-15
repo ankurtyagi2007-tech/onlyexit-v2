@@ -801,7 +801,7 @@ Use this to track what's been debated and decided vs. what's still pending.
 | H10 | Seattle thesis lacks data | DONE — added 4 data points + sources to Why Seattle section |
 | H11 | Frontier filter excludes consumer | DONE — added "consumer can be frontier" note under thesis |
 | H12 | Hero subtitle too long | DONE — no changes needed (founder decision) |
-| H13 | Profanity in title tag | PENDING |
+| H13 | Profanity in title tag | DONE — no changes needed (on-brand per memo) |
 | H15 | No social proof in first 2 scrolls | PENDING |
 
 ### Medium Effort
