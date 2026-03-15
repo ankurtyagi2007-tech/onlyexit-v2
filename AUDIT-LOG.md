@@ -798,7 +798,7 @@ Use this to track what's been debated and decided vs. what's still pending.
 | H5 | "Time Density" principle missing | DONE — added as subheader under Three Stages |
 | H8 | Generational Collisions absent | DONE — added to thesis cards |
 | H9 | Trust Filter funnel unclear | DONE — added FAQ for operators with families |
-| H10 | Seattle thesis lacks data | PENDING |
+| H10 | Seattle thesis lacks data | DONE — added 4 data points + sources to Why Seattle section |
 | H11 | Frontier filter excludes consumer | PENDING |
 | H12 | Hero subtitle too long | PENDING |
 | H13 | Profanity in title tag | PENDING |
