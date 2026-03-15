@@ -5,26 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="OnlyExit — Seattle's founder engine for frontier problems. We find builders and throw them into a hadron collider to ship or die.">
-  <meta property="og:title" content="OnlyExit — F**k Your 9-to-5. Come Build a Unicorn.">
+  <meta property="og:title" content="OnlyExit | Where Builders Become Founders">
   <meta property="og:description" content="Seattle's founder engine for frontier problems. We find builders and throw them into a hadron collider to ship or die.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://onlyexit.ai/assets/hero.webp">
   <meta property="og:url" content="https://onlyexit.ai">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="OnlyExit — F**k Your 9-to-5. Come Build a Unicorn.">
+  <meta name="twitter:title" content="OnlyExit | Where Builders Become Founders">
   <meta name="twitter:description" content="Seattle's founder engine for frontier problems. We find builders and throw them into a hadron collider to ship or die.">
   <meta name="twitter:image" content="https://onlyexit.ai/assets/hero.webp">
-  <title>OnlyExit — F**k Your 9-to-5. Come Build a Unicorn.</title>
+  <title>OnlyExit | Where Builders Become Founders</title>
   <link rel="icon" href="assets/favicon.jpg" type="image/jpeg">
+
+  <!-- Preload critical assets -->
+  <link rel="preload" as="image" href="./assets/hero.webp" type="image/webp">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="base.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="calc-modal.css">
+  <link rel="stylesheet" href="base.min.css">
+  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="calc-modal.min.css">
 </head>
 <body>
 
@@ -34,7 +37,7 @@
   <header class="header" id="header">
     <div class="header__inner">
       <a href="#" class="header__logo">
-        <img src="./assets/OnlyExit-Logo-White.png" alt="OnlyExit" loading="eager">
+        <img src="./assets/OnlyExit-Logo-White.webp" alt="OnlyExit" loading="eager">
       </a>
       <nav class="header__nav">
         <a href="#thesis">Thesis</a>
@@ -241,12 +244,11 @@
               <div class="funnel__deliverables">
                 <p class="funnel__deliverables-label">What you walk out with:</p>
                 <ul class="funnel__deliverables-list">
-                  <li>A problem thesis torn apart and rebuilt by exited founders and operators who've seen what works and what's a dead end</li>
-                  <li>A residency build plan. Not a vague pitch. A structured roadmap for 8 weeks.</li>
-                  <li>Co-founder compatibility proof. You'll know if this team works under pressure or falls apart in 6 hours.</li>
+                  <li>A problem thesis stress-tested by exited founders</li>
+                  <li>A structured 8-week residency build plan</li>
+                  <li>Co-founder compatibility proof under real pressure</li>
                 </ul>
               </div>
-              <p class="funnel__closer">This isn't a networking event. You're paying for access to people who've built, shipped, failed, and exited. That feedback loop in a single weekend is worth more than 6 months of brainstorming at Starbucks.</p>
             </div>
           </div>
 
@@ -1322,7 +1324,7 @@
           <div class="calc-modal__step-content">
             <div class="calc-modal__step-header">
               <span class="calc-modal__step-overline">Step 1</span>
-              <h2 class="calc-modal__step-title">Your Severance & Cash</h2>
+              <h3 class="calc-modal__step-title">Your Severance & Cash</h3>
               <p class="calc-modal__step-subtitle">Start with what you have. We'll figure out what you keep after taxes in the next step.</p>
             </div>
             <div class="calc-modal__form-grid">
@@ -1387,7 +1389,7 @@
           <div class="calc-modal__step-content">
             <div class="calc-modal__step-header">
               <span class="calc-modal__step-overline">Step 2</span>
-              <h2 class="calc-modal__step-title">Tax Reality</h2>
+              <h3 class="calc-modal__step-title">Tax Reality</h3>
               <p class="calc-modal__step-subtitle">Severance is taxed as ordinary income. Let's see what you actually keep.</p>
             </div>
             <div class="calc-modal__form-grid">
@@ -1480,7 +1482,7 @@
           <div class="calc-modal__step-content">
             <div class="calc-modal__step-header">
               <span class="calc-modal__step-overline">Step 3</span>
-              <h2 class="calc-modal__step-title">Monthly Burn</h2>
+              <h3 class="calc-modal__step-title">Monthly Burn</h3>
               <p class="calc-modal__step-subtitle">Be honest. The math only works if the inputs are real.</p>
             </div>
             <!-- Fixed Costs -->
@@ -1598,7 +1600,7 @@
           <div class="calc-modal__step-content">
             <div class="calc-modal__step-header">
               <span class="calc-modal__step-overline">Step 4</span>
-              <h2 class="calc-modal__step-title">Your Runway</h2>
+              <h3 class="calc-modal__step-title">Your Runway</h3>
             </div>
             <div class="calc-modal__runway-hero">
               <div class="calc-modal__runway-hero-number calc-modal__mono" id="cm-heroMonths">0</div>
@@ -1659,7 +1661,7 @@
     <div class="container">
       <div class="footer__grid">
         <div>
-          <img src="./assets/OnlyExit-Logo-White.png" alt="OnlyExit" class="footer__logo" style="height: 28px; width: auto; margin-bottom: var(--space-3);">
+          <img src="./assets/OnlyExit-Logo-White.webp" alt="OnlyExit" class="footer__logo" style="height: 28px; width: auto; margin-bottom: var(--space-3);">
           <p class="footer__tagline">We're going to incubate unicorns out of Seattle whether this city is ready or not.</p>
         </div>
         <div>
@@ -1689,7 +1691,7 @@
     </div>
   </footer>
 
-  <script src="calc-engine.js"></script>
-  <script src="app.js"></script>
+  <script src="calc-engine.min.js"></script>
+  <script src="app.min.js"></script>
 </body>
 </html>

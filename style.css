@@ -566,7 +566,7 @@
 }
 .facility-card__desc {
   font-size: var(--text-xs);
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.5;
 }
 .facility-card::after {
@@ -1083,7 +1083,7 @@
 }
 .city-card__desc {
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
+  color: #BBBBBB;
   margin-bottom: var(--space-4);
   line-height: 1.6;
 }

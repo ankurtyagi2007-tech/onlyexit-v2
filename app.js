@@ -405,8 +405,19 @@
   var calcCard = document.getElementById('calc-card');
   var calcModalClose = document.getElementById('calcModalClose');
 
+  var jetBrainsLoaded = false;
+  function loadJetBrainsMono() {
+    if (jetBrainsLoaded) return;
+    jetBrainsLoaded = true;
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap';
+    document.head.appendChild(link);
+  }
+
   function openCalcModal() {
     if (!calcModal) return;
+    loadJetBrainsMono();
     calcModal.classList.add('active');
     calcModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';

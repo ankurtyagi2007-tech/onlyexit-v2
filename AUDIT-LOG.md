@@ -512,7 +512,7 @@ Create a 1200x630 OG image.
 
 **Effort:** Small
 **Audit checklist reference:** E4, Performance #30-34 (fonts)
-**Status:** PENDING
+**Status:** DONE — JetBrains Mono removed from initial load, lazy-loaded on calculator open
 
 ---
 
@@ -532,7 +532,7 @@ Create a 1200x630 OG image.
 
 **Effort:** Small
 **Audit checklist reference:** E7, Performance #26-27
-**Status:** PENDING
+**Status:** DONE — Added preload for hero.webp
 
 ---
 
@@ -548,7 +548,7 @@ Create a 1200x630 OG image.
 
 **Effort:** Small
 **Audit checklist reference:** D3, Accessibility #6 (text over images)
-**Status:** PENDING
+**Status:** DONE — Increased opacity from 0.7 to 0.85
 
 ---
 
@@ -564,7 +564,7 @@ Create a 1200x630 OG image.
 
 **Effort:** Small
 **Audit checklist reference:** D4
-**Status:** PENDING — LOW PRIORITY
+**Status:** DONE — Brightened city card desc text to #BBBBBB
 
 ---
 
@@ -599,7 +599,7 @@ Create a 1200x630 OG image.
 
 **Effort:** Small
 **Audit checklist reference:** G1, Accessibility #13-14
-**Status:** PENDING
+**Status:** DONE — Calculator step titles changed from H2 to H3
 
 ---
 
@@ -615,7 +615,7 @@ Create a 1200x630 OG image.
 
 **Effort:** Small
 **Audit checklist reference:** C3, Content & Copy #2 (scannable body)
-**Status:** PENDING
+**Status:** DONE — Trimmed deliverables to short phrases, removed closing paragraph
 
 ---
 
@@ -631,7 +631,7 @@ Create a 1200x630 OG image.
 
 **Effort:** Small-Medium
 **Audit checklist reference:** E6, Performance #13-14
-**Status:** PENDING
+**Status:** DONE — Created .min.css and .min.js files, updated index.html references
 
 ---
 
@@ -647,7 +647,7 @@ Create a 1200x630 OG image.
 
 **Effort:** Small
 **Audit checklist reference:** E1, Performance #9
-**Status:** PENDING
+**Status:** DONE — Converted to WebP (434KB → 7KB), updated HTML references
 
 ---
 
@@ -663,7 +663,7 @@ Create a 1200x630 OG image.
 
 **Effort:** Small
 **Audit checklist reference:** E1
-**Status:** PENDING
+**Status:** DONE — Removed unused event.png (6.1MB)
 
 ---
 
