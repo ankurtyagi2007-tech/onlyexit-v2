@@ -808,15 +808,15 @@ Use this to track what's been debated and decided vs. what's still pending.
 | # | Finding | Status |
 |---|---------|--------|
 | H1 | Missing key memo phrases | DONE — no changes needed (founder decision) |
-| H3 | No team/founder section | PENDING |
-| H7 | Missing OG:image + Twitter cards | PENDING |
-| H14 | Dead privacy/terms links | PENDING |
+| H3 | No team/founder section | BLOCKED — needs founder bio, photo, LinkedIn from founder |
+| H7 | Missing OG:image + Twitter cards | DONE — added og:image, og:url, twitter:card tags using hero.webp |
+| H14 | Dead privacy/terms links | DONE — removed dead # links, re-add when real policies exist |
 
 ### Larger Effort
 | # | Finding | Status |
 |---|---------|--------|
-| H4 | Corvette = perk, not content engine | PENDING |
-| H6 | Page too long (18 sections) | PENDING |
+| H4 | Corvette = perk, not content engine | DONE — reframed as "Exit Vehicle" content platform per memo |
+| H6 | Page too long (18 sections) | BLOCKED — structural reorder needs founder decision on section priority |
 
 ---
 
