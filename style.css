@@ -1843,7 +1843,7 @@
 }
 .thesis-card {
   background: var(--color-bg);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(102, 255, 255, 0.25);
   border-radius: var(--radius-lg);
   padding: var(--space-8);
   min-height: 280px;
@@ -1896,17 +1896,23 @@
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--color-primary);
-  margin-bottom: var(--space-4);
+  margin-bottom: 0;
   font-weight: 500;
   opacity: 0;
+  height: 0;
+  overflow: hidden;
   transform: translateY(-8px);
   transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              margin-bottom 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   align-self: flex-start;
 }
 .thesis-card:hover .thesis-card__number,
 .thesis-card.thesis-card--active .thesis-card__number {
   opacity: 1;
+  height: auto;
+  margin-bottom: var(--space-4);
   transform: translateY(0);
 }
 .thesis-card__title {
