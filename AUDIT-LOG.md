@@ -781,6 +781,10 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 **Decision:** KEEP AS-IS. Founder considers "incubate" as a verb (action) not a noun (identity). Not a meaningful contradiction.
 **Action:** None.
 
+### C11 — Hero Badge Date Conflicts with Application Section
+**Decision:** FIX. Dates are accurate (Apps open April 2, close May 15, batch starts June 15) but badge only showed the open date, creating confusion. Show both open + close dates.
+**Action:** Changed hero badge from "Seattle House · Join Waitlist · Apps Open April 2nd" to "Seattle House · Apps Open April 2 · Close May 15".
+
 ---
 
 ## PHASE 5: EXECUTION PLAN
@@ -826,3 +830,7 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 - Darkened hero overlay gradient: `rgba(10,10,10,0.0)→0.65` changed to `0.4→0.8`
 - Lightened subtitle color from `--color-text-muted` (#999) to `#cccccc`
 - Hero headline + badge now readable regardless of background image brightness
+
+### C11 — Hero Badge Date Clarity (DONE)
+- Changed badge from "Seattle House · Join Waitlist · Apps Open April 2nd" to "Seattle House · Apps Open April 2 · Close May 15"
+- Timeline: Apps April 2 → Close May 15 → Interviews May 16-23 → Decisions May 25 → Move-in June 15
