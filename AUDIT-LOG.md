@@ -787,6 +787,39 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 
 ---
 
+## PHASE 4B: DEBATE STATUS (Quick Reference)
+
+Use this to track what's been debated and decided vs. what's still pending.
+
+### Quick Wins (Small effort, high value)
+| # | Finding | Status |
+|---|---------|--------|
+| H2 | Grants/No Equity buried | DONE — already in marquee ticker ("Zero Equity. Zero SAFEs. Zero Strings.") |
+| H5 | "Time Density" principle missing | PENDING |
+| H8 | Generational Collisions absent | PENDING |
+| H9 | Trust Filter funnel unclear | PENDING |
+| H10 | Seattle thesis lacks data | PENDING |
+| H11 | Frontier filter excludes consumer | PENDING |
+| H12 | Hero subtitle too long | PENDING |
+| H13 | Profanity in title tag | PENDING |
+| H15 | No social proof in first 2 scrolls | PENDING |
+
+### Medium Effort
+| # | Finding | Status |
+|---|---------|--------|
+| H1 | Missing key memo phrases | DONE — no changes needed (founder decision) |
+| H3 | No team/founder section | PENDING |
+| H7 | Missing OG:image + Twitter cards | PENDING |
+| H14 | Dead privacy/terms links | PENDING |
+
+### Larger Effort
+| # | Finding | Status |
+|---|---------|--------|
+| H4 | Corvette = perk, not content engine | PENDING |
+| H6 | Page too long (18 sections) | PENDING |
+
+---
+
 ## PHASE 5: EXECUTION PLAN
 
 *(Will be compiled after remaining Phase 4 decisions)*
