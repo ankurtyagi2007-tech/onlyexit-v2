@@ -815,8 +815,8 @@ Use this to track what's been debated and decided vs. what's still pending.
 ### Larger Effort
 | # | Finding | Status |
 |---|---------|--------|
-| H4 | Corvette = perk, not content engine | PENDING |
-| H6 | Page too long (18 sections) | PENDING |
+| H4 | Corvette = perk, not content engine | DONE — keep as-is for public site; content-engine framing for sponsor decks only (founder decision) |
+| H6 | Page too long (18 sections) | DONE — no changes needed (founder decision) |
 
 ---
 
