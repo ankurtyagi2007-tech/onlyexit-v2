@@ -244,14 +244,6 @@
   margin-bottom: var(--space-8);
   line-height: 1.7;
 }
-.hero__differentiator {
-  font-size: var(--text-sm);
-  color: var(--clr-accent, #66ffff);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: var(--space-4);
-}
 .hero__badge {
   display: inline-flex;
   align-items: center;
@@ -1963,39 +1955,6 @@
   font-style: italic;
   line-height: 1.7;
   max-width: 65ch;
-}
-
-/* Principle Callout */
-.principle-callout {
-  margin-top: var(--space-12, 3rem);
-  padding: var(--space-8) var(--space-6);
-  border-left: 3px solid var(--clr-accent, #66ffff);
-  background: rgba(102, 255, 255, 0.03);
-  max-width: 65ch;
-}
-.principle-callout__label {
-  font-size: var(--text-xs);
-  color: var(--clr-accent, #66ffff);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: var(--space-2);
-}
-.principle-callout__headline {
-  font-size: var(--text-xl);
-  color: var(--color-text);
-  margin-bottom: var(--space-4);
-}
-.principle-callout__text {
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary, #cccccc);
-  line-height: 1.7;
-  margin-bottom: var(--space-4);
-}
-.principle-callout__note {
-  font-size: var(--text-sm);
-  color: var(--color-text-muted, #999999);
-  font-style: italic;
-  line-height: 1.7;
 }
 
 @media (max-width: 640px) {
