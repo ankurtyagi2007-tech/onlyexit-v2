@@ -795,7 +795,7 @@ Use this to track what's been debated and decided vs. what's still pending.
 | # | Finding | Status |
 |---|---------|--------|
 | H2 | Grants/No Equity buried | DONE — already in marquee ticker ("Zero Equity. Zero SAFEs. Zero Strings.") |
-| H5 | "Time Density" principle missing | PENDING |
+| H5 | "Time Density" principle missing | DONE — added as subheader under Three Stages |
 | H8 | Generational Collisions absent | PENDING |
 | H9 | Trust Filter funnel unclear | PENDING |
 | H10 | Seattle thesis lacks data | PENDING |
