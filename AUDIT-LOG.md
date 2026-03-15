@@ -765,6 +765,10 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 **Decision:** FIX. Change corvette-seattle.jpg from `loading="eager"` to `loading="lazy"`.
 **Action:** Update line 419 in index.html.
 
+### C7 — No Skip-to-Content Link
+**Decision:** FIX. Add skip-to-content link for WCAG 2.2 Level A compliance.
+**Action:** Add `.skip-link` before header in index.html, add `id="main"` to `<main>`, add CSS in style.css.
+
 ---
 
 ## PHASE 5: EXECUTION PLAN
@@ -793,3 +797,8 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 
 ### C6 — Corvette Lazy Loading (DONE)
 - Changed corvette-seattle.jpg from `loading="eager"` to `loading="lazy"`
+
+### C7 — Skip-to-Content Link (DONE)
+- Added `.skip-link` element before header in index.html
+- Added `id="main"` to `<main>` element
+- Added skip-link CSS in style.css (hidden by default, visible on Tab focus)
