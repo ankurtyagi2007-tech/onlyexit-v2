@@ -757,6 +757,10 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 **Decision:** CONVERT. Convert 7 large PNGs to WebP with resize (max 1920px wide, quality 80).
 **Action:** Convert hero.png, corvette-seattle.png, hackerhouse.png, nyc.png, seattle.png, event.png, sf.png → WebP. Update HTML references. Note: event.png and corvette-seattle.png are not referenced in HTML/CSS (potentially unused).
 
+### C5 — City Images Loading Eagerly Below the Fold
+**Decision:** FIX. Change Seattle, SF, NYC city card images from `loading="eager"` to `loading="lazy"`.
+**Action:** Update lines 617, 629, 642 in index.html.
+
 ---
 
 ## PHASE 5: EXECUTION PLAN
@@ -778,3 +782,7 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 - sf.png: 6.3MB → 289KB
 - Updated 5 HTML references (hero, hackerhouse, seattle, sf, nyc)
 - Note: event.png and corvette-seattle.png not referenced in HTML — originals kept for now
+
+### C5 — Lazy Loading City Images (DONE)
+- Changed Seattle, SF, NYC city card images from `loading="eager"` to `loading="lazy"`
+- Only hero image and logo remain eager-loaded (correct behavior)
