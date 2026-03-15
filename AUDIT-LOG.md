@@ -802,7 +802,7 @@ Use this to track what's been debated and decided vs. what's still pending.
 | H11 | Frontier filter excludes consumer | DONE — added "consumer can be frontier" note under thesis |
 | H12 | Hero subtitle too long | DONE — no changes needed (founder decision) |
 | H13 | Profanity in title tag | DONE — no changes needed (on-brand per memo) |
-| H15 | No social proof in first 2 scrolls | PENDING |
+| H15 | No social proof in first 2 scrolls | DONE — nothing to add yet (founder decision) |
 
 ### Medium Effort
 | # | Finding | Status |
