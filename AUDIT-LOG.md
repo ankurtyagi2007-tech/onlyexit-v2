@@ -769,6 +769,10 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 **Decision:** FIX. Add skip-to-content link for WCAG 2.2 Level A compliance.
 **Action:** Add `.skip-link` before header in index.html, add `id="main"` to `<main>`, add CSS in style.css.
 
+### C8 — Form Submission Goes to PLACEHOLDER_URL
+**Decision:** FIX. Wire up real Google Apps Script endpoint. Add error handling to all 4 forms.
+**Action:** Replace PLACEHOLDER_URL with live endpoint. Add loading state + error alerts to Hacker House, Co-Founder Match, Fly-In, and Merch Pre-Order forms. Use `no-cors` mode for Apps Script compatibility.
+
 ---
 
 ## PHASE 5: EXECUTION PLAN
@@ -802,3 +806,10 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 - Added `.skip-link` element before header in index.html
 - Added `id="main"` to `<main>` element
 - Added skip-link CSS in style.css (hidden by default, visible on Tab focus)
+
+### C8 — Form Submission Wired Up (DONE)
+- Replaced PLACEHOLDER_URL with live Google Apps Script endpoint
+- All 4 forms now await response before showing success
+- Added "Submitting..." loading state on submit buttons
+- Added error alert + button re-enable on failure
+- Used `no-cors` mode + `text/plain` content type for Apps Script CORS compatibility

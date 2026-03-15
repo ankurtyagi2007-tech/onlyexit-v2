@@ -4,15 +4,14 @@
   'use strict';
 
   // ===== GOOGLE SHEETS FORM SUBMISSION =====
-  var GOOGLE_SHEETS_URL = 'PLACEHOLDER_URL'; // Replace with Google Apps Script URL
+  var GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxpCT61uRcvcvxUOC6rOzfdjMz9F4PUJyJKO0uSVPz4_RxSwi0lR0FU_zhQepyU6cEQ/exec';
 
   function submitToSheets(formData) {
     return fetch(GOOGLE_SHEETS_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
       body: JSON.stringify(formData)
-    }).catch(function() {
-      // Silently fail — form success is shown regardless
     });
   }
 
@@ -263,10 +262,19 @@
   if (hhForm) {
     hhForm.addEventListener('submit', function(e) {
       e.preventDefault();
+      var btn = hhForm.querySelector('button[type="submit"]');
+      var origText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
       var data = collectFormData(hhForm);
-      submitToSheets(data);
-      hhForm.style.display = 'none';
-      hhSuccess.classList.add('active');
+      submitToSheets(data).then(function() {
+        hhForm.style.display = 'none';
+        hhSuccess.classList.add('active');
+      }).catch(function() {
+        btn.disabled = false;
+        btn.textContent = origText;
+        alert('Submission failed — please try again.');
+      });
     });
   }
 
@@ -294,10 +302,19 @@
   if (cfForm) {
     cfForm.addEventListener('submit', function(e) {
       e.preventDefault();
+      var btn = cfForm.querySelector('button[type="submit"]');
+      var origText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
       var data = collectFormData(cfForm);
-      submitToSheets(data);
-      cfForm.style.display = 'none';
-      cfSuccess.classList.add('active');
+      submitToSheets(data).then(function() {
+        cfForm.style.display = 'none';
+        cfSuccess.classList.add('active');
+      }).catch(function() {
+        btn.disabled = false;
+        btn.textContent = origText;
+        alert('Submission failed — please try again.');
+      });
     });
   }
 
@@ -314,10 +331,19 @@
   if (flyinForm) {
     flyinForm.addEventListener('submit', function(e) {
       e.preventDefault();
+      var btn = flyinForm.querySelector('button[type="submit"]');
+      var origText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
       var data = collectFormData(flyinForm);
-      submitToSheets(data);
-      flyinForm.style.display = 'none';
-      flyinSuccess.classList.add('active');
+      submitToSheets(data).then(function() {
+        flyinForm.style.display = 'none';
+        flyinSuccess.classList.add('active');
+      }).catch(function() {
+        btn.disabled = false;
+        btn.textContent = origText;
+        alert('Submission failed — please try again.');
+      });
     });
   }
 
@@ -358,10 +384,19 @@
   if (preorderForm) {
     preorderForm.addEventListener('submit', function(e) {
       e.preventDefault();
+      var btn = preorderForm.querySelector('button[type="submit"]');
+      var origText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
       var data = collectFormData(preorderForm);
-      submitToSheets(data);
-      preorderForm.style.display = 'none';
-      poSuccess.classList.add('active');
+      submitToSheets(data).then(function() {
+        preorderForm.style.display = 'none';
+        poSuccess.classList.add('active');
+      }).catch(function() {
+        btn.disabled = false;
+        btn.textContent = origText;
+        alert('Submission failed — please try again.');
+      });
     });
   }
 
