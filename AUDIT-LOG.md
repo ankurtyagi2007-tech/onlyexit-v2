@@ -808,7 +808,7 @@ Use this to track what's been debated and decided vs. what's still pending.
 | # | Finding | Status |
 |---|---------|--------|
 | H1 | Missing key memo phrases | DONE — no changes needed (founder decision) |
-| H3 | No team/founder section | PENDING |
+| H3 | No team/founder section | DONE — keep clean for now, add when social proof exists (founder decision) |
 | H7 | Missing OG:image + Twitter cards | PENDING |
 | H14 | Dead privacy/terms links | PENDING |
 
