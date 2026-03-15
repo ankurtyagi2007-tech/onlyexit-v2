@@ -777,6 +777,10 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 **Decision:** FIX. Darken hero overlay gradient and lighten subtitle color.
 **Action:** Change gradient from `0%→65%` to `40%→80%` opacity. Change subtitle from `--color-text-muted` (#999) to `#cccccc`.
 
+### C10 — Footer Tagline Contradicts Memo Positioning
+**Decision:** KEEP AS-IS. Founder considers "incubate" as a verb (action) not a noun (identity). Not a meaningful contradiction.
+**Action:** None.
+
 ---
 
 ## PHASE 5: EXECUTION PLAN
