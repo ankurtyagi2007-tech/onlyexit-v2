@@ -800,23 +800,23 @@ Use this to track what's been debated and decided vs. what's still pending.
 | H9 | Trust Filter funnel unclear | DONE — added FAQ for operators with families |
 | H10 | Seattle thesis lacks data | DONE — added 4 data points + sources to Why Seattle section |
 | H11 | Frontier filter excludes consumer | DONE — added "consumer can be frontier" note under thesis |
-| H12 | Hero subtitle too long | DONE — no changes needed (founder decision) |
-| H13 | Profanity in title tag | DONE — no changes needed (on-brand per memo) |
-| H15 | No social proof in first 2 scrolls | DONE — nothing to add yet (founder decision) |
+| H12 | Hero subtitle too long | PENDING |
+| H13 | Profanity in title tag | PENDING |
+| H15 | No social proof in first 2 scrolls | PENDING |
 
 ### Medium Effort
 | # | Finding | Status |
 |---|---------|--------|
 | H1 | Missing key memo phrases | DONE — no changes needed (founder decision) |
-| H3 | No team/founder section | BLOCKED — needs founder bio, photo, LinkedIn from founder |
-| H7 | Missing OG:image + Twitter cards | DONE — added og:image, og:url, twitter:card tags using hero.webp |
-| H14 | Dead privacy/terms links | DONE — removed dead # links, re-add when real policies exist |
+| H3 | No team/founder section | PENDING |
+| H7 | Missing OG:image + Twitter cards | PENDING |
+| H14 | Dead privacy/terms links | PENDING |
 
 ### Larger Effort
 | # | Finding | Status |
 |---|---------|--------|
-| H4 | Corvette = perk, not content engine | DONE — reframed as "Exit Vehicle" content platform per memo |
-| H6 | Page too long (18 sections) | BLOCKED — structural reorder needs founder decision on section priority |
+| H4 | Corvette = perk, not content engine | PENDING |
+| H6 | Page too long (18 sections) | PENDING |
 
 ---
 
