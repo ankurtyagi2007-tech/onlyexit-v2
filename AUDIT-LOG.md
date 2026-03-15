@@ -834,3 +834,11 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 ### C11 — Hero Badge Date Clarity (DONE)
 - Changed badge from "Seattle House · Join Waitlist · Apps Open April 2nd" to "Seattle House · Apps Open April 2 · Close May 15"
 - Timeline: Apps April 2 → Close May 15 → Interviews May 16-23 → Decisions May 25 → Move-in June 15
+
+### C2 — "200+ Founders & Operators" (DONE)
+- Changed "200+ Series A-E Founders in Network" → "200+ Founders & Operators in Network" in both marquee strips
+- Updated What You Get section description to match
+
+### C3 — Remove "3 Cities" Marquee Tile (DONE)
+- Removed "3 Cities" tile from both marquee strips
+- "Seattle · SF · NYC" marquee item retained separately
