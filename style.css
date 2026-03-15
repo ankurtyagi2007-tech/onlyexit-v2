@@ -1843,7 +1843,7 @@
 }
 .thesis-card {
   background: var(--color-bg);
-  border: 1px solid rgba(102, 255, 255, 0.25);
+  border: 1px solid rgba(102, 255, 255, 0.5);
   border-radius: var(--radius-lg);
   padding: var(--space-8);
   min-height: 280px;
