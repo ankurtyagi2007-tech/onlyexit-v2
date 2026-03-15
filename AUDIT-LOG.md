@@ -761,6 +761,10 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 **Decision:** FIX. Change Seattle, SF, NYC city card images from `loading="eager"` to `loading="lazy"`.
 **Action:** Update lines 617, 629, 642 in index.html.
 
+### C6 — Corvette Image Loading Eagerly Below the Fold
+**Decision:** FIX. Change corvette-seattle.jpg from `loading="eager"` to `loading="lazy"`.
+**Action:** Update line 419 in index.html.
+
 ---
 
 ## PHASE 5: EXECUTION PLAN
@@ -786,3 +790,6 @@ Keyboard accessible (aria-hidden toggling, ESC to close), full-screen overlay on
 ### C5 — Lazy Loading City Images (DONE)
 - Changed Seattle, SF, NYC city card images from `loading="eager"` to `loading="lazy"`
 - Only hero image and logo remain eager-loaded (correct behavior)
+
+### C6 — Corvette Lazy Loading (DONE)
+- Changed corvette-seattle.jpg from `loading="eager"` to `loading="lazy"`
