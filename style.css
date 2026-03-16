@@ -443,8 +443,8 @@
   overflow: hidden;
   white-space: nowrap;
   border-top: none;
-  border-bottom: 1px solid var(--color-divider);
-  padding: var(--space-4) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding: var(--space-5) 0;
   padding-top: var(--space-6);
   background: var(--color-surface);
 }
@@ -1444,28 +1444,26 @@
 .resource-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-6);
-  margin-top: var(--space-8);
+  gap: var(--space-5);
+  margin-top: var(--space-10);
 }
 @media (min-width: 768px) {
   .resource-grid { grid-template-columns: 1fr 1fr; }
 }
 .resource-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-xl);
   padding: var(--space-8);
-  transition: border-color var(--transition-interactive);
-}
-.resource-card {
-  transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s var(--ease-golden);
 }
 .resource-card:hover {
-  border-color: rgba(102, 255, 255, 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3), 0 0 16px rgba(102, 255, 255, 0.06);
+  border-color: var(--glass-border-hover);
+  background: var(--glass-bg-hover);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), 0 0 24px rgba(102, 255, 255, 0.06);
 }
 .resource-card__icon {
   font-size: var(--text-xl);
@@ -1476,13 +1474,14 @@
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--color-text);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.01em;
 }
 .resource-card__desc {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
-  margin-bottom: var(--space-4);
-  line-height: 1.6;
+  margin-bottom: var(--space-5);
+  line-height: 1.7;
 }
 
 /* ===== QUIZ ===== */
@@ -1702,9 +1701,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(102, 255, 255, 0.06) 0%, transparent 70%);
+  width: 800px;
+  height: 800px;
+  background:
+    radial-gradient(circle, rgba(102, 255, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 40%, rgba(102, 255, 255, 0.04) 0%, transparent 40%);
   pointer-events: none;
 }
 .cta-banner__headline {
@@ -1712,31 +1713,42 @@
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--color-text);
-  margin-bottom: var(--space-4);
-  letter-spacing: -0.02em;
+  margin-bottom: var(--space-5);
+  letter-spacing: -0.03em;
   position: relative;
+  line-height: 1.05;
 }
 .cta-banner__subtitle {
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   color: var(--color-text-muted);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-10);
   max-width: 50ch;
   margin-inline: auto;
+  line-height: 1.7;
 }
 
 /* ===== FOOTER ===== */
 .footer {
   position: relative;
   z-index: 2;
-  border-top: 1px solid var(--color-divider);
-  padding: var(--space-12) 0 var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: var(--space-16) 0 var(--space-8);
   background: var(--color-bg);
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(102, 255, 255, 0.15), transparent);
 }
 .footer__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-8);
-  margin-bottom: var(--space-8);
+  gap: var(--space-10);
+  margin-bottom: var(--space-12);
 }
 @media (min-width: 768px) {
   .footer__grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
@@ -1745,38 +1757,39 @@
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   max-width: 40ch;
-  line-height: 1.6;
-  margin-top: var(--space-3);
+  line-height: 1.7;
+  margin-top: var(--space-4);
 }
 .footer__heading {
   font-size: var(--text-xs);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-text-faint);
-  margin-bottom: var(--space-4);
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-5);
   font-weight: 600;
+  font-family: var(--font-mono, var(--font-body));
 }
 .footer__links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-3);
 }
 .footer__links a {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   text-decoration: none;
-  transition: color var(--transition-interactive);
+  transition: all var(--transition-interactive);
 }
-.footer__links a:hover { color: var(--color-primary); }
+.footer__links a:hover { color: var(--color-primary); transform: translateX(2px); display: inline-block; }
 .footer__bottom {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: var(--space-4);
-  padding-top: var(--space-6);
-  border-top: 1px solid var(--color-divider);
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 .footer__copy {
   font-size: var(--text-xs);
@@ -2528,7 +2541,7 @@
 
 /* 7. Merch cards: styling now in main rule above */
 
-/* 8. CTA Banner: Reduce excessive whitespace, add subtle bg treatment */
+/* 8. CTA Banner: enhanced styling */
 .cta-banner {
   padding-top: var(--space-16) !important;
   padding-bottom: var(--space-16) !important;
@@ -2540,14 +2553,14 @@
   font-weight: 700;
   text-align: center;
   letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin-bottom: var(--space-4);
+  line-height: 1.05;
+  margin-bottom: var(--space-5);
 }
 .cta-banner__subtitle {
   text-align: center;
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   color: var(--color-text-muted);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-10);
 }
 .cta-banner .container {
   display: flex;
@@ -2555,10 +2568,10 @@
   align-items: center;
 }
 
-/* 9. Resource cards: Replace emoji icons with consistent styling */
+/* 9. Resource card icon styling */
 .resource-card__icon {
   font-size: 28px;
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
   line-height: 1;
 }
 
