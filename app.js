@@ -180,7 +180,10 @@
   // ===== SCROLL REVEALS =====
   document.body.classList.add('js-ready');
 
-  var revealElements = document.querySelectorAll('.reveal, .reveal-stagger > *');
+  // Check for reduced motion preference
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var revealElements = document.querySelectorAll('.reveal, .reveal--left, .reveal--right, .reveal--scale, .reveal-stagger > *');
   var revealObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
@@ -190,16 +193,69 @@
     });
   }, {
     threshold: 0.08,
-    rootMargin: '0px 0px -30px 0px'
+    rootMargin: '0px 0px -40px 0px'
   });
 
   revealElements.forEach(function(el) {
     if (el.parentElement && el.parentElement.classList.contains('reveal-stagger')) {
       var childIndex = Array.from(el.parentElement.children).indexOf(el);
-      el.style.transitionDelay = childIndex * 120 + 'ms';
+      el.style.transitionDelay = childIndex * 100 + 'ms';
     }
     revealObserver.observe(el);
   });
+
+  // ===== CARD SHINE EFFECT (auto-apply to interactive cards) =====
+  if (!prefersReducedMotion) {
+    var shineTargets = document.querySelectorAll(
+      '.benefit-card, .series-card, .thesis-card, .resource-card, .city-card'
+    );
+    shineTargets.forEach(function(card) {
+      card.classList.add('card-shine');
+    });
+  }
+
+  // ===== PARALLAX ON SCROLL (subtle) =====
+  if (!prefersReducedMotion) {
+    var parallaxElements = document.querySelectorAll('.stats-strip__item, .hero__stat');
+    var parallaxTicking = false;
+
+    window.addEventListener('scroll', function() {
+      if (!parallaxTicking) {
+        requestAnimationFrame(function() {
+          var scrollY = window.scrollY;
+          parallaxElements.forEach(function(el) {
+            var rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              var offset = (rect.top - window.innerHeight / 2) * 0.02;
+              el.style.transform = 'translateY(' + offset + 'px)';
+            }
+          });
+          parallaxTicking = false;
+        });
+        parallaxTicking = true;
+      }
+    }, { passive: true });
+  }
+
+  // ===== CURSOR GLOW FOLLOW ON CARDS =====
+  if (!prefersReducedMotion && window.innerWidth > 768) {
+    var glowCards = document.querySelectorAll(
+      '.benefit-card, .series-card, .thesis-frontier__item, .flyin__inner'
+    );
+    glowCards.forEach(function(card) {
+      card.addEventListener('mousemove', function(e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        card.style.setProperty('--glow-x', x + 'px');
+        card.style.setProperty('--glow-y', y + 'px');
+        card.style.background = 'radial-gradient(circle 200px at ' + x + 'px ' + y + 'px, rgba(102, 255, 255, 0.06), transparent 70%)';
+      });
+      card.addEventListener('mouseleave', function() {
+        card.style.background = '';
+      });
+    });
+  }
 
   // ===== HERO FADE-TO-BLUR ON SCROLL =====
   var heroBgImg = document.querySelector('.hero__bg img');
