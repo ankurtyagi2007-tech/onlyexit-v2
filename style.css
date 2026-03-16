@@ -242,8 +242,8 @@
   height: 100%;
   object-fit: cover;
   opacity: 0.9;
-  will-change: transform;
-  transition: transform 0.1s linear;
+  will-change: filter, opacity;
+  transition: filter 0.05s linear, opacity 0.05s linear;
 }
 .hero__bg::after {
   content: '';

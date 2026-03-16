@@ -201,20 +201,21 @@
     revealObserver.observe(el);
   });
 
-  // ===== HERO PARALLAX =====
+  // ===== HERO FADE-TO-BLUR ON SCROLL =====
   var heroBgImg = document.querySelector('.hero__bg img');
   if (heroBgImg) {
-    var ticking = false;
+    var heroTicking = false;
     window.addEventListener('scroll', function() {
-      if (!ticking) {
+      if (!heroTicking) {
         requestAnimationFrame(function() {
           var scrollY = window.scrollY;
-          if (scrollY < window.innerHeight) {
-            heroBgImg.style.transform = 'translateY(' + (scrollY * 0.35) + 'px) scale(1.05)';
-          }
-          ticking = false;
+          var vh = window.innerHeight;
+          var progress = Math.min(scrollY / (vh * 0.6), 1);
+          heroBgImg.style.filter = 'blur(' + (progress * 12) + 'px)';
+          heroBgImg.style.opacity = 0.9 - (progress * 0.5);
+          heroTicking = false;
         });
-        ticking = true;
+        heroTicking = true;
       }
     }, { passive: true });
   }
