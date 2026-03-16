@@ -180,6 +180,11 @@
   // ===== SCROLL REVEALS =====
   document.body.classList.add('js-ready');
 
+  // Immediately reveal hero content (position:fixed elements may not
+  // trigger IntersectionObserver reliably across all browsers)
+  var heroRevealEl = document.querySelector('.section--hero .hero__content');
+  if (heroRevealEl) heroRevealEl.classList.add('revealed');
+
   var revealElements = document.querySelectorAll(
     '.reveal, .reveal--left, .reveal--right, .reveal--scale, .reveal-stagger > *, .timeline, .funnel, .facility-grid'
   );
