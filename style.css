@@ -197,12 +197,20 @@
 
 .section__label {
   font-size: var(--text-xs);
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: var(--color-primary);
   margin-bottom: var(--space-4);
-  font-weight: 600;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+}
+.section__label::before {
+  content: '//';
+  color: var(--color-accent);
+  margin-right: 0.5em;
+  opacity: 0.6;
 }
 .section__headline {
   font-size: var(--text-2xl);
@@ -227,31 +235,40 @@
   margin-top: var(--space-2);
 }
 
-/* ===== HERO ===== */
+/* ===== HERO — REDESIGN ===== */
 .hero__content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 850px;
+  padding-bottom: var(--space-4);
 }
-.hero__bg {
+
+/* Floating particles */
+.hero__particles {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
 }
-.hero__bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.9;
-  will-change: filter, opacity;
-  transition: filter 0.05s linear, opacity 0.05s linear;
-}
-.hero__bg::after {
-  content: '';
+.particle {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(10,10,10,0.4) 0%, rgba(10,10,10,0.8) 80%);
+  left: var(--x);
+  top: var(--y);
+  width: var(--s);
+  height: var(--s);
+  background: var(--color-primary);
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: float var(--d) ease-in-out infinite;
+  box-shadow: 0 0 6px rgba(102, 255, 255, 0.4);
 }
+.particle:nth-child(even) {
+  background: var(--color-accent);
+  box-shadow: 0 0 6px rgba(139, 92, 246, 0.4);
+}
+
+/* Hero headline — glitch + gradient */
 .hero__headline {
   font-size: var(--text-2xl);
   font-family: var(--font-display);
@@ -264,50 +281,158 @@
 @media (min-width: 768px) {
   .hero__headline { font-size: var(--text-3xl); }
 }
-.hero__headline span { color: var(--color-primary); }
+
+/* Glitch text effect */
+.hero__glitch {
+  position: relative;
+  display: inline-block;
+}
+.hero__glitch::before,
+.hero__glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.hero__glitch::before {
+  color: var(--color-primary);
+  z-index: -1;
+  animation: glitch-1 4s infinite linear alternate-reverse;
+}
+.hero__glitch::after {
+  color: var(--color-accent);
+  z-index: -2;
+  animation: glitch-2 4s infinite linear alternate-reverse;
+}
+@keyframes glitch-1 {
+  0%, 85%, 100% { opacity: 0; transform: translate(0); }
+  86% { opacity: 0.8; transform: translate(-3px, -1px); }
+  87% { opacity: 0; }
+  94% { opacity: 0.6; transform: translate(2px, 1px); }
+  95% { opacity: 0; }
+}
+@keyframes glitch-2 {
+  0%, 88%, 100% { opacity: 0; transform: translate(0); }
+  89% { opacity: 0.6; transform: translate(3px, 1px); }
+  90% { opacity: 0; }
+  96% { opacity: 0.8; transform: translate(-2px, -1px); }
+  97% { opacity: 0; }
+}
+
+/* Typed text cursor */
+.hero__typed-wrap {
+  display: inline;
+}
+.hero__typed {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+.hero__cursor {
+  display: inline-block;
+  color: var(--color-primary);
+  font-weight: 300;
+  animation: cursor-blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
 .hero__subtitle {
   font-size: var(--text-base);
-  color: var(--color-text-secondary, #cccccc);
+  color: var(--color-text-secondary, #b0b0bc);
   max-width: 55ch;
   margin-bottom: var(--space-8);
   line-height: 1.7;
 }
+
+/* Badge — terminal-style */
 .hero__badge {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background: var(--color-primary-bg);
-  border: 1px solid rgba(102, 255, 255, 0.2);
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.25);
   border-radius: var(--radius-full);
   padding: var(--space-1) var(--space-4);
   font-size: var(--text-xs);
-  color: var(--color-primary);
+  color: var(--color-text-muted);
   font-weight: 500;
   margin-bottom: var(--space-8);
   letter-spacing: 0.02em;
 }
-.hero__badge .dot {
+.hero__badge .mono {
+  color: var(--color-primary);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.hero__badge-dot {
   width: 6px;
   height: 6px;
-  background: var(--color-primary);
+  background: var(--color-success);
   border-radius: 50%;
   animation: pulse-dot 2s ease-in-out infinite;
+  box-shadow: 0 0 8px rgba(77, 255, 145, 0.5);
 }
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
+
 .hero__ctas {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
 }
 
+/* Terminal line under CTAs */
+.hero__terminal {
+  margin-top: var(--space-8);
+  padding: var(--space-3) var(--space-4);
+  background: rgba(5, 5, 7, 0.6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  max-width: fit-content;
+}
+.hero__terminal-text {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* Glow button */
+.btn--glow {
+  animation: glow-pulse 3s ease-in-out infinite;
+  position: relative;
+}
+.btn--glow::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: var(--gradient-primary);
+  z-index: -1;
+  filter: blur(12px);
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+.btn--glow:hover::after {
+  opacity: 0.7;
+}
+
+/* Outline glow button */
+.btn--outline-glow {
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  color: var(--color-text);
+}
+.btn--outline-glow:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
+}
+
 /* Hero staggered entrance */
 .js-ready .hero__badge,
 .js-ready .hero__headline,
 .js-ready .hero__subtitle,
-.js-ready .hero__ctas {
+.js-ready .hero__ctas,
+.js-ready .hero__terminal {
   opacity: 0;
   transform: translateY(24px);
   animation: hero-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -316,18 +441,7 @@
 .js-ready .hero__headline { animation-delay: 0.25s; }
 .js-ready .hero__subtitle { animation-delay: 0.4s; }
 .js-ready .hero__ctas { animation-delay: 0.55s; }
-@keyframes hero-fade-up {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Scroll hint bounce */
-.hero__scroll-hint {
-  animation: scroll-hint-bounce 2s ease-in-out infinite;
-}
-@keyframes scroll-hint-bounce {
-  0%, 100% { transform: translateY(0); opacity: 0.6; }
-  50% { transform: translateY(8px); opacity: 1; }
-}
+.js-ready .hero__terminal { animation-delay: 0.7s; }
 
 /* ===== BUTTONS ===== */
 .btn {
@@ -2190,7 +2304,7 @@
   line-height: 1.7;
 }
 
-/* ===== VISUAL PRINCIPLES POLISH ===== */
+/* ===== VISUAL PRINCIPLES — REDESIGN ===== */
 
 /* 1. Hero: Fixed hero with content overlay scroll */
 .section--hero {
@@ -2205,6 +2319,8 @@
   align-items: center;
   padding-top: calc(var(--space-16) + var(--space-8));
   padding-bottom: var(--space-8);
+  background: var(--color-bg);
+  overflow: hidden;
 }
 
 /* Content wrapper that slides up over the fixed hero */
@@ -2215,10 +2331,8 @@
   background: var(--color-surface);
   border-radius: 24px 24px 0 0;
   overflow: hidden;
-  /* Soft shadow for depth as content slides over hero */
-  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 -8px 60px rgba(0, 0, 0, 0.6), 0 -2px 20px rgba(139, 92, 246, 0.05);
 }
-/* Solid backdrop behind rounded corners so hero never peeks through */
 .site-content::before {
   content: '';
   position: absolute;
@@ -2229,10 +2343,8 @@
   background: var(--color-surface);
   z-index: -1;
 }
-.hero__content {
-  padding-bottom: var(--space-4);
-}
-/* Subtle scroll indicator */
+
+/* Scroll indicator */
 .hero__scroll-hint {
   position: absolute;
   bottom: var(--space-6);
@@ -2251,13 +2363,10 @@
   color: var(--color-text-muted);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  font-family: var(--font-mono);
 }
 .hero__scroll-hint svg {
   color: var(--color-primary);
-}
-@keyframes hero-scroll-bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(6px); }
 }
 
 /* 2. Hacker House: bump bg image opacity */

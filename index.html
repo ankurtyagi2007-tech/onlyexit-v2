@@ -73,25 +73,42 @@
   <main id="main">
 
     <!-- ===== 1. HERO ===== -->
-    <section class="section section--hero section--dark" id="hero">
-      <div class="hero__bg">
-        <img src="./assets/hero.webp" alt="OnlyExit community" loading="eager">
+    <section class="section section--hero section--dark noise-overlay grid-bg" id="hero">
+      <!-- Gradient mesh blobs -->
+      <div class="mesh-blob mesh-blob--cyan" style="width:600px;height:600px;top:-10%;left:-5%;"></div>
+      <div class="mesh-blob mesh-blob--violet" style="width:500px;height:500px;bottom:10%;right:-10%;"></div>
+      <div class="mesh-blob mesh-blob--hot" style="width:300px;height:300px;top:40%;left:50%;"></div>
+
+      <!-- Floating particles -->
+      <div class="hero__particles" aria-hidden="true">
+        <span class="particle" style="--x:10%;--y:20%;--d:6s;--s:3px;"></span>
+        <span class="particle" style="--x:85%;--y:15%;--d:8s;--s:2px;"></span>
+        <span class="particle" style="--x:25%;--y:70%;--d:7s;--s:4px;"></span>
+        <span class="particle" style="--x:70%;--y:60%;--d:9s;--s:2px;"></span>
+        <span class="particle" style="--x:50%;--y:30%;--d:5s;--s:3px;"></span>
+        <span class="particle" style="--x:90%;--y:80%;--d:10s;--s:2px;"></span>
+        <span class="particle" style="--x:15%;--y:85%;--d:6s;--s:3px;"></span>
+        <span class="particle" style="--x:60%;--y:10%;--d:8s;--s:2px;"></span>
       </div>
+
       <div class="container hero__content reveal">
         <div class="hero__badge">
-          <span class="dot"></span>
-          Seattle House · Apps Open April 2 · Close May 15
+          <span class="hero__badge-dot"></span>
+          <span class="mono">SEATTLE HOUSE</span> &middot; Apps Open April 2 &middot; Close May 15
         </div>
         <h1 class="hero__headline">
-          F**k Your 9&#8209;to&#8209;5.<br>
-          <span>Come Build a Unicorn.</span>
+          <span class="hero__glitch" data-text="F**k Your 9&#8209;to&#8209;5.">F**k Your 9&#8209;to&#8209;5.</span><br>
+          <span class="gradient-text">Come Build a Unicorn.</span>
         </h1>
         <p class="hero__subtitle">
-          Seattle's founder engine for frontier problems. We find builders from Big Tech layoffs, college dorms, and garages and throw them into a hadron collider to ship or die.
+          Seattle's founder engine for frontier problems. We find builders from Big Tech layoffs, college dorms, and garages and throw them into a hadron collider to <span class="hero__typed-wrap"><span class="hero__typed">ship or die.</span><span class="hero__cursor">|</span></span>
         </p>
         <div class="hero__ctas">
-          <a href="#apply" class="btn btn--primary">Apply for Hacker House</a>
-          <a href="#events" class="btn btn--secondary">See Events</a>
+          <a href="#apply" class="btn btn--primary btn--glow">Apply for Hacker House</a>
+          <a href="#events" class="btn btn--secondary btn--outline-glow">See Events</a>
+        </div>
+        <div class="hero__terminal">
+          <span class="mono hero__terminal-text">$ <span style="color:var(--color-primary);">onlyexit</span> --mode=founder --city=seattle <span class="hero__cursor">|</span></span>
         </div>
       </div>
       <div class="hero__scroll-hint">
