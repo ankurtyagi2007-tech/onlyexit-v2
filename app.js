@@ -306,23 +306,20 @@
     });
   }
 
-  // ===== HERO FADE-TO-BLUR ON SCROLL =====
-  var heroBgImg = document.querySelector('.hero__bg img');
+  // ===== HERO FADE ON SCROLL =====
   var heroSection = document.querySelector('.section--hero');
-  if (heroBgImg && heroSection) {
+  if (heroSection) {
     var heroTicking = false;
     window.addEventListener('scroll', function() {
       if (!heroTicking) {
         requestAnimationFrame(function() {
           var scrollY = window.scrollY;
           var vh = window.innerHeight;
-          var progress = Math.min(scrollY / (vh * 0.6), 1);
-          heroBgImg.style.filter = 'blur(' + (progress * 12) + 'px)';
-          heroBgImg.style.opacity = 0.9 - (progress * 0.5);
           if (scrollY >= vh) {
             heroSection.style.visibility = 'hidden';
           } else {
             heroSection.style.visibility = '';
+            heroSection.style.opacity = 1 - (scrollY / vh) * 0.3;
           }
           heroTicking = false;
         });
