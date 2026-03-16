@@ -1,16 +1,52 @@
 # CLAUDE.md
 
-Before starting ANY work in this repo, read `MOTHER.md` in the repo root and follow every rule in it.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Critical: Minified Files
+## Project Overview
 
-The site serves minified files (referenced in `index.html`). The unminified sources are for editing only.
+OnlyExit V2 — Seattle's founder engine website. A landing page built with HTML, CSS, and vanilla JavaScript. The site promotes OnlyExit's mission of finding builders and helping them ship startups.
 
-Minified file pairs:
-- `style.css` → `style.min.css`
-- `base.css` → `base.min.css`
-- `calc-modal.css` → `calc-modal.min.css`
-- `app.js` → `app.min.js`
-- `calc-engine.js` → `calc-engine.min.js`
+## Tech Stack
 
-**When editing CSS or JS, ALWAYS regenerate the corresponding `.min` file using `terser` (JS) or inline minification (CSS). The `.min` files are what the site actually loads. Never skip them.**
+- **HTML/CSS/JS** — Static site with no build system
+- **Fonts**: Space Grotesk, Inter, JetBrains Mono (Google Fonts)
+- **Styling**: Custom CSS (`base.css`, `style.css`, `calc-modal.css`)
+- **JavaScript**: `app.js` (main), `calc-engine.js` (calculator modal)
+
+## File Structure
+
+```
+index.html          # Main landing page
+base.css            # Reset and base styles
+style.css           # Main styles
+calc-modal.css      # Calculator modal styles
+app.js              # Main JavaScript
+calc-engine.js      # Calculator engine
+assets/             # Images, logos, favicon
+```
+
+## UI/UX Design Intelligence (Installed Skill)
+
+This repo includes the **UI/UX Pro Max** skill for AI-powered design recommendations.
+
+### Search Command
+
+```bash
+python3 src/ui-ux-pro-max/scripts/search.py "<query>" --domain <domain> [-n <max_results>]
+```
+
+**Domains:** `product`, `style`, `typography`, `color`, `landing`, `chart`, `ux`, `google-fonts`, `prompt`
+
+**Stack search:**
+```bash
+python3 src/ui-ux-pro-max/scripts/search.py "<query>" --stack html-tailwind
+```
+
+**Design system generation:**
+```bash
+python3 src/ui-ux-pro-max/scripts/search.py "<product_type> <keywords>" --design-system -p "OnlyExit"
+```
+
+### Prerequisites
+
+Python 3.x (no external dependencies required)
