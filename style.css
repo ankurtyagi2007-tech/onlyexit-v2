@@ -2218,6 +2218,17 @@
   /* Soft shadow for depth as content slides over hero */
   box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.4);
 }
+/* Solid backdrop behind rounded corners so hero never peeks through */
+.site-content::before {
+  content: '';
+  position: absolute;
+  top: -24px;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: var(--color-surface);
+  z-index: -1;
+}
 .hero__content {
   padding-bottom: var(--space-4);
 }
