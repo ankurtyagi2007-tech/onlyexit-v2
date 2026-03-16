@@ -214,7 +214,7 @@
           var progress = Math.min(scrollY / (vh * 0.6), 1);
           heroBgImg.style.filter = 'blur(' + (progress * 12) + 'px)';
           heroBgImg.style.opacity = 0.9 - (progress * 0.5);
-          if (progress >= 0.85) {
+          if (progress >= 1) {
             heroSection.style.visibility = 'hidden';
           } else {
             heroSection.style.visibility = '';
