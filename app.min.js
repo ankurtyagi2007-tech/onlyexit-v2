@@ -180,7 +180,9 @@
   // ===== SCROLL REVEALS =====
   document.body.classList.add('js-ready');
 
-  var revealElements = document.querySelectorAll('.reveal, .reveal-stagger > *');
+  var revealElements = document.querySelectorAll(
+    '.reveal, .reveal--left, .reveal--right, .reveal--scale, .reveal-stagger > *, .timeline, .funnel, .facility-grid'
+  );
   var revealObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
@@ -190,13 +192,13 @@
     });
   }, {
     threshold: 0.08,
-    rootMargin: '0px 0px -30px 0px'
+    rootMargin: '0px 0px -40px 0px'
   });
 
   revealElements.forEach(function(el) {
     if (el.parentElement && el.parentElement.classList.contains('reveal-stagger')) {
       var childIndex = Array.from(el.parentElement.children).indexOf(el);
-      el.style.transitionDelay = childIndex * 120 + 'ms';
+      el.style.transitionDelay = childIndex * 100 + 'ms';
     }
     revealObserver.observe(el);
   });
@@ -204,35 +206,17 @@
   // ===== HERO FADE-TO-BLUR ON SCROLL =====
   var heroSection = document.querySelector('.section--hero');
   if (heroSection) {
-    var heroBlobs = heroSection.querySelectorAll('.mesh-blob');
-    var heroParticles = heroSection.querySelector('.hero__particles');
-    var heroContent = heroSection.querySelector('.hero__content');
     var heroTicking = false;
     window.addEventListener('scroll', function() {
       if (!heroTicking) {
         requestAnimationFrame(function() {
           var scrollY = window.scrollY;
           var vh = window.innerHeight;
-          var progress = Math.min(scrollY / (vh * 0.6), 1);
-          // Blur and fade the mesh blobs
-          heroBlobs.forEach(function(blob) {
-            blob.style.filter = 'blur(' + (80 + progress * 40) + 'px)';
-            blob.style.opacity = 0.07 - (progress * 0.05);
-          });
-          // Fade particles
-          if (heroParticles) {
-            heroParticles.style.opacity = 1 - progress;
-          }
-          // Fade + shift hero content up
-          if (heroContent) {
-            heroContent.style.opacity = 1 - (progress * 1.2);
-            heroContent.style.transform = 'translateY(' + (progress * -30) + 'px)';
-          }
-          // Hide hero when fully scrolled past
           if (scrollY >= vh) {
             heroSection.style.visibility = 'hidden';
           } else {
             heroSection.style.visibility = '';
+            heroSection.style.opacity = 1 - (scrollY / vh) * 0.3;
           }
           heroTicking = false;
         });
