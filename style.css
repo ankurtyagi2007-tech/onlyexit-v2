@@ -2152,7 +2152,7 @@
   line-height: 1.5;
 }
 
-/* ===== HOW IT WORKS / FUNNEL — Expandable Stages ===== */
+/* ===== HOW IT WORKS / FUNNEL — Visual Timeline ===== */
 .funnel {
   margin-top: var(--space-12);
   position: relative;
@@ -2171,31 +2171,30 @@
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
-  width: 48px;
+  width: 56px;
 }
 .funnel__number {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  border: 2px solid var(--color-primary);
-  font-family: var(--font-mono);
+  border: 2px solid rgba(102, 255, 255, 0.3);
+  font-family: var(--font-mono, var(--font-display));
   font-size: var(--text-sm);
   font-weight: 700;
   color: var(--color-primary);
   background: var(--color-bg);
   position: relative;
   z-index: 2;
-  transition: background 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s var(--ease-golden);
+  box-shadow: 0 0 0 0 rgba(102, 255, 255, 0);
 }
 .funnel__line {
   width: 2px;
   flex: 1;
-  background: var(--color-border);
+  background: linear-gradient(to bottom, rgba(102, 255, 255, 0.3), rgba(102, 255, 255, 0.05));
   margin-top: var(--space-2);
   min-height: 40px;
 }
@@ -2203,12 +2202,9 @@
   padding-bottom: var(--space-2);
   flex: 1;
   border: 1px solid transparent;
-  border-radius: var(--radius-lg);
-  padding: var(--space-4);
-  transition: background 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              padding 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  transition: all 0.4s var(--ease-golden);
 }
 .funnel__title {
   font-family: var(--font-display);
@@ -2216,7 +2212,7 @@
   font-weight: 700;
   color: var(--color-text);
   margin-bottom: var(--space-3);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 .funnel__desc {
   font-size: var(--text-base);
@@ -2225,30 +2221,33 @@
   max-width: 65ch;
 }
 
-/* Hidden expandable details for all stages */
+/* Hidden expandable details */
 .funnel__details {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transform: translateY(8px);
-  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1),
-              opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.05s,
-              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.05s;
+  transition: max-height 0.5s var(--ease-golden),
+              opacity 0.4s var(--ease-golden) 0.05s,
+              transform 0.4s var(--ease-golden) 0.05s;
 }
 
-/* Expanded state (via hover on desktop, tap on mobile) */
+/* Expanded state */
 .funnel__stage:hover .funnel__content,
 .funnel__stage.funnel__stage--active .funnel__content {
-  background: var(--color-surface);
-  border-color: var(--color-border);
+  background: var(--glass-bg);
+  border-color: var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: var(--space-8);
-  box-shadow: 0 0 40px rgba(102, 255, 255, 0.04);
+  box-shadow: 0 0 50px rgba(102, 255, 255, 0.04), 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 .funnel__stage:hover .funnel__number,
 .funnel__stage.funnel__stage--active .funnel__number {
   background: var(--color-primary);
-  color: #000;
+  color: #0a0a0a;
   border-color: var(--color-primary);
+  box-shadow: 0 0 24px rgba(102, 255, 255, 0.3);
 }
 .funnel__stage:hover .funnel__details,
 .funnel__stage.funnel__stage--active .funnel__details {
@@ -2260,10 +2259,10 @@
 .funnel__deliverables {
   margin-top: var(--space-6);
   padding-top: var(--space-6);
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 .funnel__deliverables-label {
-  font-family: var(--font-body);
+  font-family: var(--font-mono, var(--font-body));
   font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -2296,7 +2295,7 @@
 .funnel__closer {
   margin-top: var(--space-6);
   font-size: var(--text-sm);
-  color: var(--color-text);
+  color: rgba(240, 240, 240, 0.85);
   font-style: italic;
   line-height: 1.7;
   max-width: 65ch;
@@ -2304,8 +2303,8 @@
 
 @media (max-width: 640px) {
   .funnel__stage { gap: var(--space-4); }
-  .funnel__marker { width: 36px; }
-  .funnel__number { width: 36px; height: 36px; font-size: var(--text-xs); }
+  .funnel__marker { width: 44px; }
+  .funnel__number { width: 44px; height: 44px; font-size: var(--text-xs); }
   .funnel__stage:hover .funnel__content,
   .funnel__stage.funnel__stage--active .funnel__content { padding: var(--space-5); }
 }
