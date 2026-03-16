@@ -188,7 +188,7 @@
 .hero__content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 880px;
 }
 .hero__bg {
   position: absolute;
@@ -199,63 +199,186 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.9;
+  opacity: 0.35;
+  filter: saturate(0.6);
 }
 .hero__bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(10,10,10,0.0) 0%, rgba(10,10,10,0.65) 80%);
+  background:
+    linear-gradient(160deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.4) 40%, rgba(10,10,10,0.7) 100%),
+    linear-gradient(to bottom, transparent 60%, rgba(10,10,10,0.95) 100%);
 }
+
+/* Animated gradient mesh */
+.hero__mesh {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero__mesh::before,
+.hero__mesh::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.12;
+  animation: mesh-drift 12s ease-in-out infinite alternate;
+}
+.hero__mesh::before {
+  width: 600px;
+  height: 600px;
+  background: var(--color-primary);
+  top: -20%;
+  right: -10%;
+}
+.hero__mesh::after {
+  width: 500px;
+  height: 500px;
+  background: #8B5CF6;
+  bottom: -15%;
+  left: -5%;
+  animation-delay: -6s;
+  animation-direction: alternate-reverse;
+}
+@keyframes mesh-drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(40px, -30px) scale(1.15); }
+}
+
+/* Headline */
 .hero__headline {
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--color-text);
-  letter-spacing: -0.03em;
-  line-height: 1.05;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
   margin-bottom: var(--space-6);
 }
 @media (min-width: 768px) {
-  .hero__headline { font-size: var(--text-3xl); }
+  .hero__headline { font-size: var(--text-hero); }
 }
-.hero__headline span { color: var(--color-primary); }
+.hero__headline-accent {
+  display: block;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #8B5CF6 50%, var(--color-primary) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 6s ease-in-out infinite;
+  margin-top: 0.05em;
+}
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+/* Subtitle */
 .hero__subtitle {
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   color: var(--color-text-muted);
-  max-width: 55ch;
-  margin-bottom: var(--space-8);
-  line-height: 1.7;
+  max-width: 52ch;
+  margin-bottom: var(--space-10);
+  line-height: 1.65;
 }
+
+/* Badge */
 .hero__badge {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background: var(--color-primary-bg);
-  border: 1px solid rgba(102, 255, 255, 0.2);
+  background: rgba(102, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(102, 255, 255, 0.15);
   border-radius: var(--radius-full);
-  padding: var(--space-1) var(--space-4);
+  padding: var(--space-2) var(--space-5);
   font-size: var(--text-xs);
   color: var(--color-primary);
   font-weight: 500;
-  margin-bottom: var(--space-8);
-  letter-spacing: 0.02em;
+  margin-bottom: var(--space-10);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 .hero__badge .dot {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background: var(--color-primary);
   border-radius: 50%;
+  box-shadow: 0 0 8px var(--color-primary);
   animation: pulse-dot 2s ease-in-out infinite;
 }
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
 }
+
+/* CTAs */
 .hero__ctas {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+.btn--lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-base);
+}
+
+/* Social Proof Stats Bar */
+.hero__proof {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-5) var(--space-8);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  width: fit-content;
+}
+.hero__proof-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.hero__proof-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.hero__proof-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.hero__proof-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.08);
+}
+@media (max-width: 640px) {
+  .hero__proof {
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+  }
+  .hero__proof-divider {
+    display: none;
+  }
+  .hero__proof-item {
+    flex: 1;
+    min-width: calc(50% - var(--space-4));
+  }
 }
 
 /* ===== BUTTONS ===== */
@@ -1949,12 +2072,14 @@
 
 /* ===== VISUAL PRINCIPLES POLISH ===== */
 
-/* 1. Hero: Fix dead space below CTAs — add scroll indicator + tighten bottom */
+/* 1. Hero: Tighten layout, center content vertically */
 .section--hero {
   padding-bottom: var(--space-8);
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding-top: calc(var(--space-16) + var(--space-8));
 }
 .hero__content {
