@@ -1277,8 +1277,8 @@
 
 /* ===== APPLICATION FORM ===== */
 .form-section {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-xl);
   padding: var(--space-8);
   margin-top: var(--space-8);
@@ -1293,7 +1293,8 @@
   color: var(--color-primary);
   margin-bottom: var(--space-6);
   padding-bottom: var(--space-3);
-  border-bottom: 1px solid var(--color-divider);
+  border-bottom: 1px solid rgba(102, 255, 255, 0.08);
+  letter-spacing: -0.02em;
 }
 .form-grid {
   display: grid;
@@ -1307,36 +1308,42 @@
 .form-field label {
   display: block;
   font-size: var(--text-xs);
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.5);
   margin-bottom: var(--space-2);
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
+  font-family: var(--font-body);
 }
 .form-field input,
 .form-field select,
 .form-field textarea {
   width: 100%;
-  background: var(--color-surface-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
   padding: var(--space-3) var(--space-4);
   font-size: var(--text-sm);
   color: var(--color-text);
-  transition: border-color var(--transition-interactive),
-              box-shadow var(--transition-interactive);
+  font-family: var(--font-body);
+  transition: all 0.25s ease;
 }
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
   outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(102, 255, 255, 0.1);
+  border-color: rgba(102, 255, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(102, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
 }
 .form-field textarea { min-height: 100px; resize: vertical; }
 .form-field select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
   padding-right: var(--space-8);
@@ -1358,15 +1365,18 @@
   color: var(--color-text);
   cursor: pointer;
   padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-md);
-  transition: background var(--transition-interactive);
+  border-radius: var(--radius-lg);
+  transition: all 0.2s ease;
   text-transform: none;
   letter-spacing: 0;
   font-weight: 400;
+  font-family: var(--font-body);
+  border: 1px solid transparent;
 }
 .radio-group label:hover,
 .checkbox-group label:hover {
-  background: var(--color-surface-2);
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.06);
 }
 .radio-group input,
 .checkbox-group input {
@@ -1787,8 +1797,9 @@
   position: fixed;
   inset: 0;
   z-index: 300;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1802,15 +1813,18 @@
   pointer-events: all;
 }
 .modal {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: var(--space-8);
+  background: rgba(17, 17, 17, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: var(--space-10);
   max-width: 480px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
 }
 .modal--wide {
   max-width: 680px;
@@ -1823,16 +1837,23 @@
   padding: var(--space-2);
   cursor: pointer;
   z-index: 10;
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
-.modal__close:hover { color: var(--color-text); }
+.modal__close:hover {
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+}
 .modal__title {
-  font-size: var(--text-lg);
+  font-size: var(--text-xl);
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--color-text);
   margin-bottom: var(--space-6);
+  letter-spacing: -0.02em;
 }
 
 /* ===== SCROLL REVEALS (Framer-style) ===== */
@@ -1874,17 +1895,20 @@
 /* ===== SUCCESS MESSAGE ===== */
 .success-msg {
   display: none;
-  background: var(--color-primary-bg);
-  border: 1px solid rgba(102, 255, 255, 0.3);
-  border-radius: var(--radius-lg);
-  padding: var(--space-6);
+  background: rgba(102, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(102, 255, 255, 0.15);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
   text-align: center;
 }
 .success-msg.active { display: block; }
 .success-msg p {
   font-size: var(--text-sm);
   color: var(--color-primary);
-  line-height: 1.7;
+  line-height: 1.8;
+  font-family: var(--font-body);
 }
 
 /* ===== CO-FOUNDER FORM ===== */
