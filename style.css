@@ -236,14 +236,19 @@
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
 }
 .hero__bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0.9;
-  will-change: filter, opacity;
-  transition: filter 0.05s linear, opacity 0.05s linear;
+  will-change: transform;
+  animation: kenBurns 25s ease-in-out infinite alternate;
+}
+@keyframes kenBurns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-1.5%, -1%); }
 }
 .hero__bg::after {
   content: '';
