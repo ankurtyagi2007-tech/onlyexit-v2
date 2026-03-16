@@ -488,28 +488,41 @@
 .stats-strip {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-6);
+  gap: var(--space-4);
   padding: var(--space-6) 0;
-  border-top: 1px solid var(--color-divider);
-  border-bottom: 1px solid var(--color-divider);
   margin-top: var(--space-8);
 }
 .stats-strip__item {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-6);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(102, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  flex: 1;
+  min-width: 140px;
+}
+.stats-strip__item:hover {
+  border-color: rgba(102, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 .stats-strip__value {
   font-size: var(--text-xl);
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--color-primary);
+  letter-spacing: -0.02em;
 }
 .stats-strip__label {
   font-size: var(--text-xs);
   color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  font-family: var(--font-body);
 }
 
 /* ===== HACKER HOUSE (dominant section) ===== */
@@ -526,24 +539,28 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.12;
+  opacity: 0.2;
+  filter: saturate(0.6);
 }
 .hacker-house__bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, var(--color-bg) 0%, rgba(10,10,10,0.7) 30%, rgba(10,10,10,0.85) 70%, var(--color-bg) 100%);
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(102, 255, 255, 0.04) 0%, transparent 50%),
+    linear-gradient(180deg, var(--color-bg) 0%, rgba(10,10,10,0.6) 25%, rgba(10,10,10,0.7) 75%, var(--color-bg) 100%);
 }
 .hacker-house__content {
   position: relative;
   z-index: 2;
 }
 .hacker-house__body {
-  font-size: var(--text-base);
-  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  color: rgba(240, 240, 240, 0.7);
   max-width: 65ch;
   line-height: 1.8;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-10);
+  font-family: var(--font-body);
 }
 
 /* ===== WHAT YOU GET — BENEFITS GRID ===== */
@@ -561,13 +578,16 @@
 }
 
 .benefit-card {
-  background: var(--color-surface-2, #1a1a1a);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-xl);
   padding: var(--space-6);
   transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -575,9 +595,10 @@
   min-height: 220px;
 }
 .benefit-card:hover {
-  border-color: rgba(102, 255, 255, 0.25);
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(102, 255, 255, 0.06);
+  border-color: rgba(102, 255, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), 0 0 24px rgba(102, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.04);
 }
 .benefit-card::before {
   content: '';
@@ -585,8 +606,8 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 2px;
-  background: var(--color-primary);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(102, 255, 255, 0.4), transparent);
   opacity: 0;
   transition: opacity var(--transition-interactive);
 }
@@ -595,8 +616,9 @@
 .benefit-icon {
   width: 48px;
   height: 48px;
-  border-radius: 12px;
-  background: rgba(102, 255, 255, 0.08);
+  border-radius: 14px;
+  background: rgba(102, 255, 255, 0.06);
+  border: 1px solid rgba(102, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -613,7 +635,8 @@
 .benefit-card p {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
-  line-height: 1.6;
+  line-height: 1.7;
+  font-family: var(--font-body);
 }
 
 .sponsor-tags {
@@ -649,19 +672,26 @@
 
 .facility-card {
   position: relative;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   overflow: hidden;
   aspect-ratio: 4 / 3;
   cursor: default;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+.facility-card:hover {
+  border-color: rgba(102, 255, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 .facility-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.facility-card:hover img { transform: scale(1.05); }
+.facility-card:hover img { transform: scale(1.08); }
 
 .facility-card__overlay {
   position: absolute;
@@ -2364,23 +2394,20 @@
   50% { transform: translateX(-50%) translateY(8px); }
 }
 
-/* 2. Hacker House: bump bg image opacity */
-.hacker-house__bg img {
-  opacity: 0.17;
-}
+/* 2. Hacker House: bg image opacity handled in main section */
 
 /* 3. What You Get: Make first card (Exploration Grants) a featured hero card */
 .benefits-grid .benefit-card:first-child {
-  border-color: rgba(102, 255, 255, 0.25);
-  background: linear-gradient(135deg, rgba(102, 255, 255, 0.04) 0%, var(--color-surface-2, #1a1a1a) 100%);
+  border-color: rgba(102, 255, 255, 0.15);
+  background: linear-gradient(135deg, rgba(102, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
 }
 .benefits-grid .benefit-card:first-child::before {
   opacity: 1;
 }
 
-/* 4. Facility grid: Strengthen gradient overlay for text readability */
+/* 4. Facility grid: Glassmorphism overlay for text readability */
 .facility-card__overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.0) 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.0) 100%);
 }
 
 /* 5. Corvette: Bump kicker text, add top divider between image and below-text */
