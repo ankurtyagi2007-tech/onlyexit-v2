@@ -1585,6 +1585,8 @@
 
 /* ===== FOOTER ===== */
 .footer {
+  position: relative;
+  z-index: 2;
   border-top: 1px solid var(--color-divider);
   padding: var(--space-12) 0 var(--space-6);
   background: var(--color-bg);
