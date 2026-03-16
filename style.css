@@ -1815,23 +1815,17 @@
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--color-primary);
-  margin-bottom: 0;
+  margin-bottom: var(--space-4);
   font-weight: 500;
   opacity: 0;
-  max-height: 0;
-  overflow: hidden;
   transform: translateY(-8px);
   transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              margin 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   align-self: flex-start;
 }
 .thesis-card:hover .thesis-card__number,
 .thesis-card.thesis-card--active .thesis-card__number {
   opacity: 1;
-  max-height: 2em;
-  margin-bottom: var(--space-4);
   transform: translateY(0);
 }
 .thesis-card__title {
@@ -1848,21 +1842,14 @@
   color: var(--color-text-muted);
   line-height: 1.7;
   opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  margin-top: 0;
   transform: translateY(10px);
   transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
-              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
-              max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
-              margin 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
   align-self: flex-start;
 }
 .thesis-card:hover .thesis-card__body,
 .thesis-card.thesis-card--active .thesis-card__body {
   opacity: 1;
-  max-height: 12em;
-  margin-top: var(--space-3);
   transform: translateY(0);
 }
 /* Mobile: cards stack, active state via tap */
