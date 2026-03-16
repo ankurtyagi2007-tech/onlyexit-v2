@@ -538,8 +538,8 @@
 .benefits-grid{
  display:grid;
  grid-template-columns:repeat(3, 1fr);
- gap:var(--space-4);
- margin-top:var(--space-8);
+ gap:var(--space-5);
+ margin-top:var(--space-10);
 }
 @media (max-width:768px){
  .benefits-grid{grid-template-columns:1fr}
@@ -548,23 +548,24 @@
  .benefits-grid{grid-template-columns:repeat(2, 1fr)}
 }
 .benefit-card{
- background:var(--color-surface-2, #1a1a1a);
- border:1px solid var(--color-border);
- border-radius:var(--radius-lg);
- padding:var(--space-6);
- transition:border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
- transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
- box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+ background:var(--glass-bg);
+ border:1px solid var(--glass-border);
+ backdrop-filter:blur(16px);
+ -webkit-backdrop-filter:blur(16px);
+ border-radius:var(--radius-xl);
+ padding:var(--space-8);
+ transition:all 0.4s var(--ease-golden);
  position:relative;
  overflow:hidden;
  display:flex;
  flex-direction:column;
- min-height:220px;
+ min-height:240px;
 }
 .benefit-card:hover{
- border-color:rgba(102, 255, 255, 0.25);
+ border-color:var(--glass-border-hover);
+ background:var(--glass-bg-hover);
  transform:translateY(-6px);
- box-shadow:0 12px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(102, 255, 255, 0.06);
+ box-shadow:0 16px 40px rgba(0, 0, 0, 0.3), 0 0 24px rgba(102, 255, 255, 0.06);
 }
 .benefit-card::before{
  content:'';
@@ -573,50 +574,61 @@
  left:0;
  right:0;
  height:2px;
- background:var(--color-primary);
+ background:linear-gradient(90deg, transparent, var(--color-primary), transparent);
  opacity:0;
- transition:opacity var(--transition-interactive);
+ transition:opacity var(--transition-slow);
 }
 .benefit-card:hover::before{opacity:1}
 .benefit-icon{
- width:48px;
- height:48px;
- border-radius:12px;
- background:rgba(102, 255, 255, 0.08);
+ width:52px;
+ height:52px;
+ border-radius:var(--radius-lg);
+ background:rgba(102, 255, 255, 0.06);
+ border:1px solid rgba(102, 255, 255, 0.1);
  display:flex;
  align-items:center;
  justify-content:center;
- margin-bottom:var(--space-4);
+ margin-bottom:var(--space-5);
  color:var(--color-primary);
+ transition:background var(--transition-slow), border-color var(--transition-slow);
+}
+.benefit-card:hover .benefit-icon{
+ background:rgba(102, 255, 255, 0.1);
+ border-color:rgba(102, 255, 255, 0.2);
 }
 .benefit-card h3{
  font-family:var(--font-display);
  font-size:var(--text-base);
- font-weight:600;
- margin-bottom:var(--space-2);
+ font-weight:700;
+ margin-bottom:var(--space-3);
  color:var(--color-text);
+ letter-spacing:-0.01em;
 }
 .benefit-card p{
  font-size:var(--text-sm);
  color:var(--color-text-muted);
- line-height:1.6;
+ line-height:1.7;
 }
 .sponsor-tags{
  display:flex;
  flex-wrap:wrap;
  gap:var(--space-2);
- margin-top:var(--space-3);
+ margin-top:var(--space-4);
 }
 .sponsor-tag{
  font-size:11px;
  font-weight:500;
- letter-spacing:0.05em;
+ letter-spacing:0.06em;
  text-transform:uppercase;
- padding:4px 10px;
- border-radius:100px;
- background:rgba(102, 255, 255, 0.06);
- border:1px solid rgba(102, 255, 255, 0.12);
+ padding:5px 12px;
+ border-radius:var(--radius-full);
+ background:rgba(102, 255, 255, 0.04);
+ border:1px solid rgba(102, 255, 255, 0.1);
  color:rgba(102, 255, 255, 0.7);
+ transition:border-color var(--transition-interactive);
+}
+.sponsor-tag:hover{
+ border-color:rgba(102, 255, 255, 0.25);
 }
 /* ===== LIFE AT THE HOUSE — FACILITY GRID ===== */
 .facility-grid{
@@ -632,39 +644,45 @@
 }
 .facility-card{
  position:relative;
- border-radius:var(--radius-lg);
+ border-radius:var(--radius-xl);
  overflow:hidden;
  aspect-ratio:4 / 3;
  cursor:default;
+ border:1px solid rgba(255, 255, 255, 0.06);
+ transition:border-color var(--transition-slow), transform var(--transition-slow);
+}
+.facility-card:hover{
+ border-color:rgba(102, 255, 255, 0.15);
+ transform:translateY(-4px);
 }
 .facility-card img{
  width:100%;
  height:100%;
  object-fit:cover;
  display:block;
- transition:transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+ transition:transform 0.6s var(--ease-out-expo);
 }
-.facility-card:hover img{transform:scale(1.05)}
+.facility-card:hover img{transform:scale(1.08)}
 .facility-card__overlay{
  position:absolute;
  inset:0;
- background:linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.0) 100%);
+ background:linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.0) 100%);
  display:flex;
  flex-direction:column;
  justify-content:flex-end;
- padding:var(--space-4);
+ padding:var(--space-5);
 }
 .facility-card__title{
  font-family:var(--font-display);
  font-size:var(--text-sm);
- font-weight:600;
+ font-weight:700;
  color:#fff;
  margin-bottom:4px;
 }
 .facility-card__desc{
  font-size:var(--text-xs);
- color:rgba(255, 255, 255, 0.85);
- line-height:1.5;
+ color:rgba(255, 255, 255, 0.75);
+ line-height:1.6;
 }
 .facility-card::after{
  content:'';
@@ -673,9 +691,9 @@
  left:0;
  right:0;
  height:2px;
- background:var(--color-primary);
+ background:linear-gradient(90deg, transparent, var(--color-primary), transparent);
  opacity:0;
- transition:opacity var(--transition-interactive);
+ transition:opacity var(--transition-slow);
 }
 .facility-card:hover::after{opacity:1}
 /* ===== CORVETTE SECTION ===== */
@@ -742,9 +760,11 @@
 }
 /* ===== FLY-IN SECTION ===== */
 .flyin__inner{
- background:var(--color-surface);
- border:1px solid var(--color-border);
- border-radius:var(--radius-lg);
+ background:var(--glass-bg);
+ border:1px solid var(--glass-border);
+ backdrop-filter:blur(16px);
+ -webkit-backdrop-filter:blur(16px);
+ border-radius:var(--radius-2xl);
  overflow:hidden;
  display:grid;
  grid-template-columns:1fr 1fr;
@@ -849,7 +869,7 @@
 }
 .flyin__visual{
  position:relative;
- background:var(--color-surface-2, #1a1a1a);
+ background:rgba(102, 255, 255, 0.02);
  display:flex;
  align-items:center;
  justify-content:center;
@@ -2333,8 +2353,8 @@
 /* 2. Hacker House:bg opacity controlled in main rule above */
 /* 3. What You Get:Make first card (Exploration Grants) a featured hero card */
 .benefits-grid .benefit-card:first-child{
- border-color:rgba(102, 255, 255, 0.25);
- background:linear-gradient(135deg, rgba(102, 255, 255, 0.04) 0%, var(--color-surface-2, #1a1a1a) 100%);
+ border-color:rgba(102, 255, 255, 0.15);
+ background:linear-gradient(135deg, rgba(102, 255, 255, 0.05) 0%, var(--glass-bg) 100%);
 }
 .benefits-grid .benefit-card:first-child::before{
  opacity:1;
