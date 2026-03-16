@@ -1852,10 +1852,19 @@
   justify-content: center;
   position: relative;
   cursor: pointer;
-  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+  height: 180px;
+  overflow: hidden;
+  transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
               opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.thesis-card:hover,
+.thesis-card.thesis-card--active {
+  height: 320px;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 40px rgba(102, 255, 255, 0.08);
 }
 /* Spotlight: dim siblings when one card is hovered */
 .thesis-grid:hover .thesis-card {
@@ -1870,11 +1879,6 @@
 .thesis-grid:hover .thesis-card.thesis-card--active {
   opacity: 1;
   transform: scale(1);
-}
-.thesis-card:hover,
-.thesis-card.thesis-card--active {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 40px rgba(102, 255, 255, 0.08);
 }
 /* Top glow line on hover */
 .thesis-card::before {
@@ -1893,23 +1897,17 @@
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--color-primary);
-  margin-bottom: 0;
+  margin-bottom: var(--space-4);
   font-weight: 500;
   opacity: 0;
-  max-height: 0;
-  overflow: hidden;
   transform: translateY(-8px);
   transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
-              max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              margin 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   align-self: flex-start;
 }
 .thesis-card:hover .thesis-card__number,
 .thesis-card.thesis-card--active .thesis-card__number {
   opacity: 1;
-  max-height: 2em;
-  margin-bottom: var(--space-4);
   transform: translateY(0);
 }
 .thesis-card__title {
@@ -1926,27 +1924,22 @@
   color: var(--color-text-muted);
   line-height: 1.7;
   opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  margin-top: 0;
   transform: translateY(10px);
   transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
-              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
-              max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s,
-              margin 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
   align-self: flex-start;
 }
 .thesis-card:hover .thesis-card__body,
 .thesis-card.thesis-card--active .thesis-card__body {
   opacity: 1;
-  max-height: 12em;
-  margin-top: var(--space-3);
   transform: translateY(0);
 }
 /* Mobile: cards stack, active state via tap */
 @media (max-width: 768px) {
   .thesis-grid:hover .thesis-card { opacity: 1; transform: scale(1); }
-  .thesis-card { min-height: auto; }
+  .thesis-card { height: 140px; }
+  .thesis-card:hover,
+  .thesis-card.thesis-card--active { height: 300px; }
 }
 
 /* Frontier Problems */
