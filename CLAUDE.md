@@ -2,8 +2,6 @@
 
 Before starting ANY work in this repo, read `MOTHER.md` in the repo root and follow every rule in it.
 
-Always develop on branch: claude/anim8-5IM8V
-
 ## Critical: Minified Files
 
 The site serves minified files (referenced in `index.html`). The unminified sources are for editing only.
