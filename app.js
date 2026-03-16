@@ -183,7 +183,7 @@
   // Check for reduced motion preference
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  var revealElements = document.querySelectorAll('.reveal, .reveal--left, .reveal--right, .reveal--scale, .reveal-stagger > *');
+  var revealElements = document.querySelectorAll('.reveal, .reveal--left, .reveal--right, .reveal--scale, .reveal-stagger > *, .timeline, .funnel');
   var revealObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
@@ -207,40 +207,41 @@
   // ===== CARD SHINE EFFECT (auto-apply to interactive cards) =====
   if (!prefersReducedMotion) {
     var shineTargets = document.querySelectorAll(
-      '.benefit-card, .series-card, .thesis-card, .resource-card, .city-card'
+      '.benefit-card, .series-card, .thesis-card, .resource-card, .city-card, .merch-card, .stats-strip__item'
     );
     shineTargets.forEach(function(card) {
       card.classList.add('card-shine');
     });
   }
 
-  // ===== PARALLAX ON SCROLL (subtle) =====
-  if (!prefersReducedMotion) {
-    var parallaxElements = document.querySelectorAll('.stats-strip__item, .hero__stat');
-    var parallaxTicking = false;
-
-    window.addEventListener('scroll', function() {
-      if (!parallaxTicking) {
-        requestAnimationFrame(function() {
-          var scrollY = window.scrollY;
-          parallaxElements.forEach(function(el) {
-            var rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-              var offset = (rect.top - window.innerHeight / 2) * 0.02;
-              el.style.transform = 'translateY(' + offset + 'px)';
-            }
-          });
-          parallaxTicking = false;
-        });
-        parallaxTicking = true;
-      }
-    }, { passive: true });
+  // ===== 3D MAGNETIC TILT EFFECT ON CARDS =====
+  if (!prefersReducedMotion && window.innerWidth > 768) {
+    var tiltCards = document.querySelectorAll(
+      '.benefit-card, .series-card, .merch-card, .stats-strip__item'
+    );
+    tiltCards.forEach(function(card) {
+      card.addEventListener('mousemove', function(e) {
+        var rect = card.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var centerX = rect.width / 2;
+        var centerY = rect.height / 2;
+        var rotateX = (y - centerY) / centerY * -8;
+        var rotateY = (x - centerX) / centerX * 8;
+        card.style.transform = 'perspective(800px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-8px) scale(1.02)';
+      });
+      card.addEventListener('mouseleave', function() {
+        card.style.transform = '';
+        card.style.transition = 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        setTimeout(function() { card.style.transition = ''; }, 500);
+      });
+    });
   }
 
   // ===== CURSOR GLOW FOLLOW ON CARDS =====
   if (!prefersReducedMotion && window.innerWidth > 768) {
     var glowCards = document.querySelectorAll(
-      '.benefit-card, .series-card, .thesis-frontier__item, .flyin__inner'
+      '.benefit-card, .series-card, .thesis-frontier__item, .flyin__inner, .merch-card, .funnel__content, .stats-strip__item, .timeline-item'
     );
     glowCards.forEach(function(card) {
       card.addEventListener('mousemove', function(e) {
@@ -249,11 +250,59 @@
         var y = e.clientY - rect.top;
         card.style.setProperty('--glow-x', x + 'px');
         card.style.setProperty('--glow-y', y + 'px');
-        card.style.background = 'radial-gradient(circle 200px at ' + x + 'px ' + y + 'px, rgba(102, 255, 255, 0.06), transparent 70%)';
+        card.style.background = 'radial-gradient(circle 250px at ' + x + 'px ' + y + 'px, rgba(102, 255, 255, 0.08), transparent 60%)';
       });
       card.addEventListener('mouseleave', function() {
         card.style.background = '';
       });
+    });
+  }
+
+  // ===== STAGGER ANIMATION FOR GRID CHILDREN =====
+  if (!prefersReducedMotion) {
+    var staggerGrids = document.querySelectorAll('.benefits-grid, .series-grid, .merch-grid, .cities-grid, .stats-strip');
+    staggerGrids.forEach(function(grid) {
+      var gridObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var children = entry.target.children;
+            for (var i = 0; i < children.length; i++) {
+              (function(child, index) {
+                child.style.opacity = '0';
+                child.style.transform = 'translateY(40px)';
+                setTimeout(function() {
+                  child.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+                  child.style.opacity = '1';
+                  child.style.transform = 'translateY(0)';
+                }, index * 150);
+              })(children[i], i);
+            }
+            gridObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      gridObserver.observe(grid);
+    });
+  }
+
+  // ===== COUNTER GLOW BURST EFFECT =====
+  if (!prefersReducedMotion) {
+    var statsItems = document.querySelectorAll('.stats-strip__item');
+    statsItems.forEach(function(item) {
+      var animated = false;
+      var itemObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting && !animated) {
+            animated = true;
+            setTimeout(function() {
+              item.style.animation = 'glow-burst 0.8s ease-out';
+              setTimeout(function() { item.style.animation = ''; }, 800);
+            }, 600);
+            itemObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      itemObserver.observe(item);
     });
   }
 
