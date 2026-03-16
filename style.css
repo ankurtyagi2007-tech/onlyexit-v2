@@ -681,59 +681,200 @@
 
 .facility-card {
   position: relative;
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-2xl);
   overflow: hidden;
   aspect-ratio: 4 / 3;
-  cursor: default;
+  cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: border-color var(--transition-slow), transform var(--transition-slow);
+  transition: all 0.6s var(--ease-out-expo);
+  transform-style: preserve-3d;
 }
 .facility-card:hover {
-  border-color: rgba(102, 255, 255, 0.15);
-  transform: translateY(-4px);
+  border-color: rgba(102, 255, 255, 0.3);
+  transform: translateY(-16px) scale(1.03);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(102, 255, 255, 0.12),
+    0 0 0 1px rgba(102, 255, 255, 0.2),
+    inset 0 0 60px rgba(102, 255, 255, 0.03);
+  z-index: 2;
 }
 .facility-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s var(--ease-out-expo);
+  transition: all 0.7s var(--ease-out-expo);
+  filter: saturate(0.6) brightness(0.8);
 }
-.facility-card:hover img { transform: scale(1.08); }
+.facility-card:hover img {
+  transform: scale(1.18);
+  filter: saturate(1.2) brightness(1.05);
+}
 
+/* Overlay: starts mostly hidden, slides up dramatically on hover */
 .facility-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.0) 100%);
+  background: linear-gradient(to top,
+    rgba(10, 10, 10, 0.95) 0%,
+    rgba(10, 10, 10, 0.6) 40%,
+    rgba(10, 10, 10, 0.1) 70%,
+    transparent 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: var(--space-5);
+  padding: var(--space-6);
+  transition: all 0.6s var(--ease-out-expo);
+}
+.facility-card:hover .facility-card__overlay {
+  background: linear-gradient(to top,
+    rgba(10, 10, 10, 0.98) 0%,
+    rgba(10, 10, 10, 0.7) 50%,
+    rgba(102, 255, 255, 0.03) 100%
+  );
 }
 .facility-card__title {
   font-family: var(--font-display);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: 700;
   color: #fff;
-  margin-bottom: 4px;
+  margin-bottom: var(--space-2);
+  transition: all 0.5s var(--ease-out-expo);
+  transform: translateY(0);
+}
+.facility-card:hover .facility-card__title {
+  color: var(--color-primary);
+  text-shadow: 0 0 30px rgba(102, 255, 255, 0.3);
+  transform: translateY(-4px);
 }
 .facility-card__desc {
   font-size: var(--text-xs);
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.7;
+  transition: all 0.5s var(--ease-out-expo);
+  opacity: 0;
+  transform: translateY(16px);
+  max-height: 0;
+  overflow: hidden;
 }
+.facility-card:hover .facility-card__desc {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 100px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Animated gradient border — traces around the card on hover */
+.facility-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-2xl);
+  padding: 2px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    rgba(102, 255, 255, 0.5) 10%,
+    var(--color-primary) 20%,
+    rgba(102, 255, 255, 0.5) 30%,
+    transparent 40%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-golden);
+  z-index: 3;
+  pointer-events: none;
+}
+.facility-card:hover::before {
+  opacity: 1;
+  animation: facility-border-spin 3s linear infinite;
+}
+
+/* Bottom glow bar */
 .facility-card::after {
   content: '';
   position: absolute;
   bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), rgba(102, 255, 255, 0.8), var(--color-primary), transparent);
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: all 0.5s var(--ease-golden);
+  z-index: 4;
+  border-radius: 2px;
+  filter: blur(0.5px);
+}
+.facility-card:hover::after {
+  opacity: 1;
+  left: 5%;
+  right: 5%;
+  animation: gradient-flow 2s linear infinite;
+  box-shadow: 0 0 20px rgba(102, 255, 255, 0.3), 0 0 40px rgba(102, 255, 255, 0.1);
+}
+
+/* Scan line effect on hover */
+.facility-card__overlay::before {
+  content: '';
+  position: absolute;
+  top: -100%;
   left: 0;
   right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
-  opacity: 0;
-  transition: opacity var(--transition-slow);
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 48%,
+    rgba(102, 255, 255, 0.06) 49%,
+    rgba(102, 255, 255, 0.12) 50%,
+    rgba(102, 255, 255, 0.06) 51%,
+    transparent 52%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+  transition: top 0s;
 }
-.facility-card:hover::after { opacity: 1; }
+.facility-card:hover .facility-card__overlay::before {
+  top: 200%;
+  transition: top 1.5s var(--ease-out-expo);
+}
+
+@keyframes facility-border-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Stagger entrance for facility cards */
+.js-ready .facility-grid > .facility-card {
+  opacity: 0;
+  transform: translateY(60px) scale(0.9);
+}
+.js-ready .facility-grid.revealed > .facility-card {
+  animation: facility-card-enter 0.8s var(--ease-out-expo) both;
+}
+.js-ready .facility-grid.revealed > .facility-card:nth-child(1) { animation-delay: 0.1s; }
+.js-ready .facility-grid.revealed > .facility-card:nth-child(2) { animation-delay: 0.2s; }
+.js-ready .facility-grid.revealed > .facility-card:nth-child(3) { animation-delay: 0.3s; }
+.js-ready .facility-grid.revealed > .facility-card:nth-child(4) { animation-delay: 0.4s; }
+.js-ready .facility-grid.revealed > .facility-card:nth-child(5) { animation-delay: 0.5s; }
+.js-ready .facility-grid.revealed > .facility-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes facility-card-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9) perspective(800px) rotateX(8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) perspective(800px) rotateX(0);
+  }
+}
 
 /* ===== CORVETTE SECTION ===== */
 .corvette__block {

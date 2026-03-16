@@ -183,7 +183,7 @@
   // Check for reduced motion preference
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  var revealElements = document.querySelectorAll('.reveal, .reveal--left, .reveal--right, .reveal--scale, .reveal-stagger > *, .timeline, .funnel');
+  var revealElements = document.querySelectorAll('.reveal, .reveal--left, .reveal--right, .reveal--scale, .reveal-stagger > *, .timeline, .funnel, .facility-grid');
   var revealObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
@@ -217,7 +217,7 @@
   // ===== 3D MAGNETIC TILT EFFECT ON CARDS =====
   if (!prefersReducedMotion && window.innerWidth > 768) {
     var tiltCards = document.querySelectorAll(
-      '.benefit-card, .series-card, .merch-card, .stats-strip__item'
+      '.benefit-card, .series-card, .merch-card, .stats-strip__item, .facility-card'
     );
     tiltCards.forEach(function(card) {
       card.addEventListener('mousemove', function(e) {
@@ -241,7 +241,7 @@
   // ===== CURSOR GLOW FOLLOW ON CARDS =====
   if (!prefersReducedMotion && window.innerWidth > 768) {
     var glowCards = document.querySelectorAll(
-      '.benefit-card, .series-card, .thesis-frontier__item, .flyin__inner, .merch-card, .funnel__content, .stats-strip__item, .timeline-item'
+      '.benefit-card, .series-card, .thesis-frontier__item, .flyin__inner, .merch-card, .funnel__content, .stats-strip__item, .timeline-item, .facility-card'
     );
     glowCards.forEach(function(card) {
       card.addEventListener('mousemove', function(e) {
