@@ -2470,19 +2470,23 @@
   z-index: 2;
   margin-top: 100vh;
   background: var(--color-surface);
-  border-radius: 24px 24px 0 0;
+  border-radius: 28px 28px 0 0;
   overflow: hidden;
-  box-shadow: 0 -8px 60px rgba(0, 0, 0, 0.6), 0 -2px 20px rgba(139, 92, 246, 0.05);
+  box-shadow:
+    0 -12px 80px rgba(0, 0, 0, 0.7),
+    0 -2px 30px rgba(139, 92, 246, 0.06),
+    inset 0 1px 0 rgba(139, 92, 246, 0.12);
 }
+/* Top edge glow line at the lip where content meets hero */
 .site-content::before {
   content: '';
   position: absolute;
-  top: -24px;
-  left: 0;
-  right: 0;
-  height: 24px;
-  background: var(--color-surface);
-  z-index: -1;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.3), rgba(102, 255, 255, 0.2), rgba(139, 92, 246, 0.3), transparent);
+  z-index: 10;
 }
 
 /* Scroll indicator */

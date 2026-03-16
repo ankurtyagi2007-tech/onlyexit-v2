@@ -202,9 +202,11 @@
   });
 
   // ===== HERO FADE-TO-BLUR ON SCROLL =====
-  var heroBgImg = document.querySelector('.hero__bg img');
   var heroSection = document.querySelector('.section--hero');
-  if (heroBgImg && heroSection) {
+  if (heroSection) {
+    var heroBlobs = heroSection.querySelectorAll('.mesh-blob');
+    var heroParticles = heroSection.querySelector('.hero__particles');
+    var heroContent = heroSection.querySelector('.hero__content');
     var heroTicking = false;
     window.addEventListener('scroll', function() {
       if (!heroTicking) {
@@ -212,8 +214,21 @@
           var scrollY = window.scrollY;
           var vh = window.innerHeight;
           var progress = Math.min(scrollY / (vh * 0.6), 1);
-          heroBgImg.style.filter = 'blur(' + (progress * 12) + 'px)';
-          heroBgImg.style.opacity = 0.9 - (progress * 0.5);
+          // Blur and fade the mesh blobs
+          heroBlobs.forEach(function(blob) {
+            blob.style.filter = 'blur(' + (80 + progress * 40) + 'px)';
+            blob.style.opacity = 0.07 - (progress * 0.05);
+          });
+          // Fade particles
+          if (heroParticles) {
+            heroParticles.style.opacity = 1 - progress;
+          }
+          // Fade + shift hero content up
+          if (heroContent) {
+            heroContent.style.opacity = 1 - (progress * 1.2);
+            heroContent.style.transform = 'translateY(' + (progress * -30) + 'px)';
+          }
+          // Hide hero when fully scrolled past
           if (scrollY >= vh) {
             heroSection.style.visibility = 'hidden';
           } else {
