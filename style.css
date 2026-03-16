@@ -609,7 +609,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, var(--color-bg) 0%, rgba(10,10,10,0.7) 30%, rgba(10,10,10,0.85) 70%, var(--color-bg) 100%);
+  background: linear-gradient(to bottom, var(--color-bg) 0%, rgba(5,5,7,0.7) 30%, rgba(5,5,7,0.85) 70%, var(--color-bg) 100%);
 }
 .hacker-house__content {
   position: relative;
@@ -966,7 +966,7 @@
   align-items: center;
   gap: 8px;
   background: var(--color-primary);
-  color: #0a0a0a;
+  color: var(--color-text-inverse);
   font-family: var(--font-display);
   font-size: var(--text-sm);
   font-weight: 600;
@@ -1324,7 +1324,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.3) 60%);
+  background: linear-gradient(to top, rgba(5,5,7,0.95) 0%, rgba(5,5,7,0.3) 60%);
 }
 .city-card__content {
   position: relative;
