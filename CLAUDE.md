@@ -25,6 +25,22 @@ calc-engine.js      # Calculator engine
 assets/             # Images, logos, favicon
 ```
 
+## CRITICAL: Minified Files
+
+**The site loads `.min` files ONLY.** The HTML references `base.min.css`, `style.min.css`, `calc-modal.min.css`, `app.min.js`, and `calc-engine.min.js`.
+
+**Every time you edit a source file, you MUST copy it to its `.min` counterpart before committing:**
+
+```bash
+cp base.css base.min.css
+cp style.css style.min.css
+cp calc-modal.css calc-modal.min.css
+cp app.js app.min.js
+cp calc-engine.js calc-engine.min.js
+```
+
+If you forget this step, your changes will NOT appear on the live site. There is no build system — the `.min` files ARE the deployed files.
+
 ## UI/UX Design Intelligence (Installed Skill)
 
 This repo includes the **UI/UX Pro Max** skill for AI-powered design recommendations.
