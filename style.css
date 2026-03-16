@@ -483,24 +483,33 @@
 
 /* ===== STATS STRIP ===== */
 .stats-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-6);
-  padding: var(--space-6) 0;
-  border-top: 1px solid var(--color-divider);
-  border-bottom: 1px solid var(--color-divider);
-  margin-top: var(--space-8);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-10);
 }
 .stats-strip__item {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
+  padding: var(--space-5) var(--space-6);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-slow), transform var(--transition-slow);
+}
+.stats-strip__item:hover {
+  border-color: var(--glass-border-hover);
+  transform: translateY(-2px);
 }
 .stats-strip__value {
   font-size: var(--text-xl);
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--color-primary);
+  letter-spacing: -0.02em;
 }
 .stats-strip__label {
   font-size: var(--text-xs);
@@ -523,24 +532,27 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.12;
+  opacity: 0.2;
+  filter: saturate(0.6);
 }
 .hacker-house__bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, var(--color-bg) 0%, rgba(10,10,10,0.7) 30%, rgba(10,10,10,0.85) 70%, var(--color-bg) 100%);
+  background:
+    radial-gradient(ellipse at 30% 70%, rgba(102, 255, 255, 0.06) 0%, transparent 50%),
+    linear-gradient(to bottom, var(--color-bg) 0%, rgba(10,10,10,0.5) 20%, rgba(10,10,10,0.7) 70%, var(--color-bg) 100%);
 }
 .hacker-house__content {
   position: relative;
   z-index: 2;
 }
 .hacker-house__body {
-  font-size: var(--text-base);
-  color: var(--color-text-muted);
-  max-width: 65ch;
+  font-size: var(--text-lg);
+  color: rgba(240, 240, 240, 0.7);
+  max-width: 60ch;
   line-height: 1.8;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-10);
 }
 
 /* ===== WHAT YOU GET — BENEFITS GRID ===== */
@@ -2394,10 +2406,7 @@
   50% { transform: translateX(-50%) translateY(6px); }
 }
 
-/* 2. Hacker House: bump bg image opacity */
-.hacker-house__bg img {
-  opacity: 0.17;
-}
+/* 2. Hacker House: bg opacity controlled in main rule above */
 
 /* 3. What You Get: Make first card (Exploration Grants) a featured hero card */
 .benefits-grid .benefit-card:first-child {
