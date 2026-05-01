@@ -5,28 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="OnlyExit — Seattle's founder engine for frontier problems. We find builders and throw them into a hadron collider to ship or die.">
-  <meta property="og:title" content="OnlyExit — F**k Your 9-to-5. Come Build a Unicorn.">
+  <meta property="og:title" content="OnlyExit | Where Builders Become Founders">
   <meta property="og:description" content="Seattle's founder engine for frontier problems. We find builders and throw them into a hadron collider to ship or die.">
   <meta property="og:type" content="website">
-  <title>OnlyExit — F**k Your 9-to-5. Come Build a Unicorn.</title>
+  <meta property="og:image" content="https://onlyexit.ai/assets/hero.webp">
+  <meta property="og:url" content="https://onlyexit.ai">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="OnlyExit | Where Builders Become Founders">
+  <meta name="twitter:description" content="Seattle's founder engine for frontier problems. We find builders and throw them into a hadron collider to ship or die.">
+  <meta name="twitter:image" content="https://onlyexit.ai/assets/hero.webp">
+  <title>OnlyExit | Where Builders Become Founders</title>
   <link rel="icon" href="assets/favicon.jpg" type="image/jpeg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="base.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="calc-modal.css">
+  <link rel="stylesheet" href="base.min.css">
+  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="calc-modal.min.css">
 </head>
 <body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
 
   <!-- ===== HEADER ===== -->
   <header class="header" id="header">
     <div class="header__inner">
       <a href="#" class="header__logo">
-        <img src="./assets/OnlyExit-Logo-White.png" alt="OnlyExit" loading="eager">
+        <img src="./assets/OnlyExit-Logo-White.webp" alt="OnlyExit" loading="eager">
       </a>
       <nav class="header__nav">
         <a href="#thesis">Thesis</a>
@@ -59,28 +67,50 @@
     <a href="#apply">Apply Now</a>
   </div>
 
-  <main>
+  <main id="main">
 
     <!-- ===== 1. HERO ===== -->
-    <section class="section section--hero section--dark" id="hero">
+    <section class="section section--hero section--dark noise-overlay grid-bg" id="hero">
+      <!-- Gradient mesh blobs -->
+      <!-- Hero background image — subtle/transparent -->
       <div class="hero__bg">
-        <img src="./assets/hero.png" alt="OnlyExit community" loading="eager">
+        <img src="./assets/hero.webp" alt="" loading="eager" aria-hidden="true">
       </div>
+
+      <div class="mesh-blob mesh-blob--cyan" style="width:600px;height:600px;top:-10%;left:-5%;"></div>
+      <div class="mesh-blob mesh-blob--violet" style="width:500px;height:500px;bottom:10%;right:-10%;"></div>
+      <div class="mesh-blob mesh-blob--sand" style="width:300px;height:300px;top:40%;left:50%;"></div>
+
+      <!-- Floating particles -->
+      <div class="hero__particles" aria-hidden="true">
+        <span class="particle" style="--x:10%;--y:20%;--d:6s;--s:3px;"></span>
+        <span class="particle" style="--x:85%;--y:15%;--d:8s;--s:2px;"></span>
+        <span class="particle" style="--x:25%;--y:70%;--d:7s;--s:4px;"></span>
+        <span class="particle" style="--x:70%;--y:60%;--d:9s;--s:2px;"></span>
+        <span class="particle" style="--x:50%;--y:30%;--d:5s;--s:3px;"></span>
+        <span class="particle" style="--x:90%;--y:80%;--d:10s;--s:2px;"></span>
+        <span class="particle" style="--x:15%;--y:85%;--d:6s;--s:3px;"></span>
+        <span class="particle" style="--x:60%;--y:10%;--d:8s;--s:2px;"></span>
+      </div>
+
       <div class="container hero__content reveal">
         <div class="hero__badge">
-          <span class="dot"></span>
-          Seattle House · Join Waitlist · Apps Open April 2nd
+          <span class="hero__badge-dot"></span>
+          <span class="mono">SEATTLE HOUSE</span> &middot; Apps Open April 2 &middot; Close May 15
         </div>
         <h1 class="hero__headline">
-          F**k Your 9&#8209;to&#8209;5.<br>
-          <span>Come Build a Unicorn.</span>
+          <span class="hero__glitch" data-text="F**k Your 9&#8209;to&#8209;5.">F**k Your 9&#8209;to&#8209;5.</span><br>
+          <span class="gradient-text">Come Build a Unicorn.</span>
         </h1>
         <p class="hero__subtitle">
-          Seattle's founder engine for frontier problems. We find builders from Big Tech layoffs, college dorms, and garages and throw them into a hadron collider to ship or die.
+          Seattle's founder engine for frontier problems. We find builders from Big Tech layoffs, college dorms, and garages and throw them into a hadron collider to <span class="hero__typed-wrap"><span class="hero__typed">ship or die.</span><span class="hero__cursor">|</span></span>
         </p>
         <div class="hero__ctas">
-          <a href="#apply" class="btn btn--primary">Apply for Hacker House</a>
-          <a href="#events" class="btn btn--secondary">See Events</a>
+          <a href="#apply" class="btn btn--primary btn--glow">Apply for Hacker House</a>
+          <a href="#events" class="btn btn--secondary btn--outline-glow">See Events</a>
+        </div>
+        <div class="hero__terminal">
+          <span class="mono hero__terminal-text">$ <span style="color:var(--color-primary);">onlyexit</span> --mode=founder --city=seattle <span class="hero__cursor">|</span></span>
         </div>
       </div>
       <div class="hero__scroll-hint">
@@ -89,31 +119,34 @@
       </div>
     </section>
 
+    <!-- ===== SITE CONTENT (slides up over fixed hero) ===== -->
+    <div class="site-content">
+
     <!-- ===== MARQUEE TICKER ===== -->
     <div class="marquee">
       <div class="marquee__inner" id="marquee">
         <span class="marquee__item"><span class="marquee__dot"></span> <strong>7</strong> Startups</span>
         <span class="marquee__item"><span class="marquee__dot"></span> <strong>3,000</strong> Sq Ft</span>
         <span class="marquee__item"><span class="marquee__dot"></span> <strong>Founder Events</strong> Every Month</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>3</strong> Cities</span>
         <span class="marquee__item"><span class="marquee__dot"></span> Opens <strong>June 15</strong></span>
         <span class="marquee__item"><span class="marquee__dot"></span> Applications Close <strong>May 15</strong></span>
         <span class="marquee__item"><span class="marquee__dot"></span> Seattle · SF · NYC</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>200+</strong> Series A-E Founders in Network</span>
+        <span class="marquee__item"><span class="marquee__dot"></span> <strong>200+</strong> Founders &amp; Operators in Network</span>
+        <span class="marquee__item"><span class="marquee__dot"></span> <strong>Zero Equity.</strong> Zero SAFEs. Zero Strings.</span>
         <!-- Duplicate for seamless loop -->
         <span class="marquee__item"><span class="marquee__dot"></span> <strong>7</strong> Startups</span>
         <span class="marquee__item"><span class="marquee__dot"></span> <strong>3,000</strong> Sq Ft</span>
         <span class="marquee__item"><span class="marquee__dot"></span> <strong>Founder Events</strong> Every Month</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>3</strong> Cities</span>
         <span class="marquee__item"><span class="marquee__dot"></span> Opens <strong>June 15</strong></span>
         <span class="marquee__item"><span class="marquee__dot"></span> Applications Close <strong>May 15</strong></span>
         <span class="marquee__item"><span class="marquee__dot"></span> Seattle · SF · NYC</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>200+</strong> Series A-E Founders in Network</span>
+        <span class="marquee__item"><span class="marquee__dot"></span> <strong>200+</strong> Founders &amp; Operators in Network</span>
+        <span class="marquee__item"><span class="marquee__dot"></span> <strong>Zero Equity.</strong> Zero SAFEs. Zero Strings.</span>
       </div>
     </div>
 
     <!-- ===== THE THESIS ===== -->
-    <section class="section section--surface" id="thesis">
+    <section class="section section--surface noise-overlay" id="thesis">
       <div class="container">
         <div class="thesis-section reveal">
           <p class="section__label">The Thesis</p>
@@ -130,7 +163,7 @@
           <div class="thesis-card">
             <div class="thesis-card__number">01</div>
             <h3 class="thesis-card__title">The Talent Flood</h3>
-            <p class="thesis-card__body">Amazon, Meta, Google, and Block have cut thousands of senior operators. Principal engineers, product leaders, engineering managers who ran systems serving hundreds of millions of users. They have the skills, networks, and runway to build companies. They need a starting point.</p>
+            <p class="thesis-card__body">Amazon, Meta, Google, and Block have cut thousands of senior operators — principal engineers, product leaders, engineering managers. They have the skills, networks, and runway. They need a starting point.</p>
           </div>
           <div class="thesis-card">
             <div class="thesis-card__number">02</div>
@@ -139,8 +172,8 @@
           </div>
           <div class="thesis-card">
             <div class="thesis-card__number">03</div>
-            <h3 class="thesis-card__title">The Culture Shifted</h3>
-            <p class="thesis-card__body">The safety net that kept elite builders inside Big Tech is fraying. Another FAANG offer, another RSU package, another cycle inside the machine. Operators increasingly want ownership, not employment.</p>
+            <h3 class="thesis-card__title">Generational Collisions</h3>
+            <p class="thesis-card__body">The best companies emerge when builders with genuinely different knowledge collide. One has lived inside the problem. The other brings tools the first never had. OnlyExit engineers those collisions.</p>
           </div>
         </div>
 
@@ -157,6 +190,7 @@
             </div>
           </div>
           <p class="thesis-frontier__closer">If Claude can ship your product as a feature update next Tuesday, this isn't the place for you.</p>
+          <p class="thesis-frontier__closer" style="margin-top: var(--space-4); font-size: var(--text-sm); color: var(--color-text-muted);">Consumer can be frontier. If the problem is genuinely hard — trust, behavior change, regulatory, infrastructure — the category doesn't matter.</p>
         </div>
       </div>
     </section>
@@ -164,7 +198,7 @@
     <!-- ===== 2. HACKER HOUSE (dominant) ===== -->
     <section class="section section--dark hacker-house" id="hacker-house" style="padding-top: clamp(5rem, 10vw, 10rem); padding-bottom: clamp(5rem, 10vw, 10rem);">
       <div class="hacker-house__bg">
-        <img src="./assets/hackerhouse.png" alt="OnlyExit Hacker House" loading="lazy">
+        <img src="./assets/hackerhouse.webp" alt="OnlyExit Hacker House" loading="lazy">
       </div>
       <div class="container hacker-house__content">
         <div class="reveal">
@@ -198,11 +232,12 @@
     </section>
 
     <!-- ===== HOW IT WORKS ===== -->
-    <section class="section section--dark" id="how-it-works">
+    <section class="section section--dark noise-overlay" id="how-it-works">
       <div class="container">
         <div class="reveal">
           <p class="section__label">How It Works</p>
           <h2 class="section__headline">Three Stages. One Output: Startups.</h2>
+          <p class="section__subheadline"><strong>Time Density Over Attendance:</strong> Every stage of the funnel trades audience size for interaction depth. That's by design.</p>
         </div>
 
         <div class="funnel reveal">
@@ -216,27 +251,40 @@
             <div class="funnel__content">
               <h3 class="funnel__title">Events</h3>
               <p class="funnel__desc">Curated gatherings in Seattle. Meet builders and operators solving frontier problems. Collisions that would otherwise never, ever happen.</p>
+              <div class="funnel__details">
+                <div class="funnel__deliverables">
+                  <p class="funnel__deliverables-label">Two formats, one goal:</p>
+                  <ul class="funnel__deliverables-list">
+                    <li>Collision Events — small groups, psychological exercises designed to surface how people think, not what they do. Teams form through competitive collaboration.</li>
+                    <li>Builder Sessions — depth-forcing exercises, then builders share real work: open-source projects, tools they're testing, problem theses to pressure-test.</li>
+                    <li>No panels. No keynotes. No name tags and three-minute conversations. Engineered for depth.</li>
+                  </ul>
+                </div>
+                <p class="funnel__closer">Every event attendee is a potential sprint applicant. Every person in the room sees what the OnlyExit community produces.</p>
+              </div>
             </div>
           </div>
 
-          <!-- Stage 2: Founder Collision Sprints (expanded) -->
-          <div class="funnel__stage funnel__stage--expanded">
+          <!-- Stage 2: Founder Collision Sprints -->
+          <div class="funnel__stage">
             <div class="funnel__marker">
               <span class="funnel__number">02</span>
               <div class="funnel__line"></div>
             </div>
             <div class="funnel__content">
               <h3 class="funnel__title">Founder Collision Sprints</h3>
-              <p class="funnel__desc">A weekend thesis formation hackathon at the house. $300/person. $500/team.</p>
-              <div class="funnel__deliverables">
-                <p class="funnel__deliverables-label">What you walk out with:</p>
-                <ul class="funnel__deliverables-list">
-                  <li>A problem thesis torn apart and rebuilt by exited founders and operators who've seen what works and what's a dead end</li>
-                  <li>A residency build plan. Not a vague pitch. A structured roadmap for 8 weeks.</li>
-                  <li>Co-founder compatibility proof. You'll know if this team works under pressure or falls apart in 6 hours.</li>
-                </ul>
+              <p class="funnel__desc">A weekend thesis formation hackathon at the house.</p>
+              <div class="funnel__details">
+                <div class="funnel__deliverables">
+                  <p class="funnel__deliverables-label">What you walk out with:</p>
+                  <ul class="funnel__deliverables-list">
+                    <li>A problem thesis torn apart and rebuilt by exited founders and operators who've seen what works and what's a dead end</li>
+                    <li>A residency build plan. Not a vague pitch. A structured roadmap for 8 weeks.</li>
+                    <li>Co-founder compatibility proof. You'll know if this team works under pressure or falls apart in 6 hours.</li>
+                  </ul>
+                </div>
+                <p class="funnel__closer">This isn't a networking event. You're paying for access to people who've built, shipped, failed, and exited. That feedback loop in a single weekend is worth more than 6 months of brainstorming at Starbucks.</p>
               </div>
-              <p class="funnel__closer">This isn't a networking event. You're paying for access to people who've built, shipped, failed, and exited. That feedback loop in a single weekend is worth more than 6 months of brainstorming at Starbucks.</p>
             </div>
           </div>
 
@@ -247,11 +295,23 @@
             </div>
             <div class="funnel__content">
               <h3 class="funnel__title">The Residency</h3>
-              <p class="funnel__desc">8 weeks. Move in. Build a product. Demo what you shipped. The strongest teams are awarded grants of up to $20K. Not everyone gets one. You earn it by building.</p>
+              <p class="funnel__desc">8 weeks. Move in. Build a product. Demo what you shipped. The strongest teams are awarded grants of up to $50K. Not everyone gets one. You earn it by building.</p>
+              <div class="funnel__details">
+                <div class="funnel__deliverables">
+                  <p class="funnel__deliverables-label">What 8 weeks looks like:</p>
+                  <ul class="funnel__deliverables-list">
+                    <li>7 resident teams maximum. 10–12 serious builders. Small enough for everyone to know everyone deeply.</li>
+                    <li>Synchronized build cycles. Public weekly progress reviews. Each team presents product progress, customer feedback, key metrics.</li>
+                    <li>Builder transparency sessions — operators expose real work, real problems, real numbers. When ambitious builders show each other their real work, people stop performing and start collaborating.</li>
+                  </ul>
+                </div>
+                <p class="funnel__closer">The program concludes with a demo day where teams present their progress to investors and advisors. Public accountability creates social pressure to ship.</p>
+              </div>
             </div>
           </div>
 
         </div>
+
       </div>
     </section>
 
@@ -273,7 +333,7 @@
               </svg>
             </div>
             <h3>Exploration Grants</h3>
-            <p>The strongest teams are awarded up to $20K at the end of every residency. Non-dilutive. No equity, no SAFEs, no strings. Not everyone gets one. You earn it by building.</p>
+            <p>The strongest teams are awarded up to $50K at the end of every residency. Non-dilutive. No equity, no SAFEs, no strings. Not everyone gets one. You earn it by building.</p>
           </div>
 
           <!-- Card 2: Housing -->
@@ -295,7 +355,7 @@
               </svg>
             </div>
             <h3>The Network</h3>
-            <p>Direct access to 200+ Series A-E founders who've built and scaled. Weekly intros and working sessions with operators who've solved the problems you're facing right now.</p>
+            <p>Direct access to 200+ founders and operators who've built and scaled. Weekly intros and working sessions with operators who've solved the problems you're facing right now.</p>
           </div>
 
           <!-- Card 4: Sponsor Perks -->
@@ -350,7 +410,7 @@
           <p class="section__subtitle" style="margin-bottom: var(--space-12);">Everything you need to build — and nothing you don't. All included at $1K/month.</p>
         </div>
 
-        <div class="facility-grid reveal-stagger">
+        <div class="facility-grid">
 
           <div class="facility-card">
             <img src="./assets/facilities/facility-whiteboards.jpg" alt="Whiteboards and war room" loading="lazy">
@@ -415,8 +475,8 @@
           </div>
         </div>
       </div>
-      <div class="corvette__image corvette__image--fullbleed reveal">
-        <img src="./assets/corvette-seattle.jpg" alt="OnlyExit branded Corvette C8 on the streets of Seattle" loading="eager">
+      <div class="corvette__image corvette__image--fullbleed reveal--scale">
+        <img src="./assets/corvette-seattle.jpg" alt="OnlyExit branded Corvette C8 on the streets of Seattle" loading="lazy">
       </div>
       <div class="container">
         <div class="corvette__block">
@@ -431,7 +491,7 @@
     <!-- ===== 6. FLY-IN (NEW) ===== -->
     <section class="section section--dark" id="fly-in">
       <div class="container">
-        <div class="flyin__inner reveal">
+        <div class="flyin__inner reveal--scale">
 
           <!-- Left: Copy -->
           <div class="flyin__content">
@@ -614,7 +674,7 @@
           <!-- Seattle -->
           <div class="city-card">
             <div class="city-card__img">
-              <img src="./assets/seattle.png" alt="Seattle skyline" loading="eager">
+              <img src="./assets/seattle.webp" alt="Seattle skyline" loading="lazy">
             </div>
             <div class="city-card__content">
               <h3 class="city-card__name">Seattle</h3>
@@ -626,7 +686,7 @@
           <!-- San Francisco -->
           <div class="city-card">
             <div class="city-card__img">
-              <img src="./assets/sf.png" alt="San Francisco skyline" loading="eager">
+              <img src="./assets/sf.webp" alt="San Francisco skyline" loading="lazy">
             </div>
             <div class="city-card__content">
               <span class="city-card__tag">Hacker House 2027</span>
@@ -639,7 +699,7 @@
           <!-- New York -->
           <div class="city-card">
             <div class="city-card__img">
-              <img src="./assets/nyc.png" alt="New York City skyline" loading="eager">
+              <img src="./assets/nyc.webp" alt="New York City skyline" loading="lazy">
             </div>
             <div class="city-card__content">
               <span class="city-card__tag">Hacker House 2027</span>
@@ -665,6 +725,27 @@
             <br>
             <p>The talent is here. The capital is here. The only thing missing was a launchpad. <strong style="color: var(--color-primary);">That's OnlyExit.</strong></p>
           </div>
+
+          <div class="stats-strip reveal" style="margin-top: var(--space-10);">
+            <div class="stats-strip__item">
+              <span class="stats-strip__value">#2</span>
+              <span class="stats-strip__label">Talent Rank (but #15 Startup Ecosystem)</span>
+            </div>
+            <div class="stats-strip__item">
+              <span class="stats-strip__value">23%</span>
+              <span class="stats-strip__label">of U.S. AI Engineers — #2 behind SF</span>
+            </div>
+            <div class="stats-strip__item">
+              <span class="stats-strip__value">185K</span>
+              <span class="stats-strip__label">Tech Workers in Puget Sound (2024)</span>
+            </div>
+            <div class="stats-strip__item">
+              <span class="stats-strip__value">$1.97B</span>
+              <span class="stats-strip__label">Early-Stage Capital vs Bay Area's $26.7B</span>
+            </div>
+          </div>
+          <p class="seattle-story__source" style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted); text-align: center;">Sources: CBRE Tech Talent 2025 · Startup Genome GSER 2025 · Carta Startup Ecosystem Ranking 2025 · SignalFire AI Talent Report 2024</p>
+
         </div>
       </div>
     </section>
@@ -1160,7 +1241,7 @@
               <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
             </button>
             <div class="faq-item__answer"><div class="faq-item__answer-inner">
-              OnlyExit is a founder engine built around a hacker house in Seattle. Events and collision sprints bring builders together. The house is where teams form, build, and ship. 7 startups. 8-week residencies. Up to $20K in non-dilutive grants. If you're solving a frontier problem and ready to go all in, this is your launchpad.
+              OnlyExit is a founder engine built around a hacker house in Seattle. Events and collision sprints bring builders together. The house is where teams form, build, and ship. 7 startups. 8-week residencies. Up to $50K in non-dilutive grants. If you're solving a frontier problem and ready to go all in, this is your launchpad.
             </div></div>
           </div>
 
@@ -1190,7 +1271,7 @@
               <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
             </button>
             <div class="faq-item__answer"><div class="faq-item__answer-inner">
-              9 events across Seattle, SF, and NYC in 3 stages: Flight Plan (free workshop), Copilot (free co-founder mixer), and Runway (invite-only, founders meet capital, $15). Each stage filters harder. The pipeline ends at the Hacker House.
+              9 events across Seattle, SF, and NYC in 3 stages: Flight Plan (free workshop), Copilot (free co-founder mixer), and Runway (invite-only, founders meet capital). Each stage filters harder. The pipeline ends at the Hacker House.
             </div></div>
           </div>
 
@@ -1200,7 +1281,7 @@
               <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
             </button>
             <div class="faq-item__answer"><div class="faq-item__answer-inner">
-              Applications close May 15. 15-minute interviews May 16-23. Decisions May 25. Move in June 15. 7 startups. $1K/month all-in. 8-week residencies: form your team, build your product, demo what you shipped. The strongest teams are awarded grants of up to $20K in non-dilutive funding.
+              Applications close May 15. 15-minute interviews May 16-23. Decisions May 25. Move in June 15. 7 startups. $1K/month all-in. 8-week residencies: form your team, build your product, demo what you shipped. The strongest teams are awarded grants of up to $50K in non-dilutive funding.
             </div></div>
           </div>
 
@@ -1210,7 +1291,16 @@
               <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
             </button>
             <div class="faq-item__answer"><div class="faq-item__answer-inner">
-              Email <a href="mailto:ankur@onlyexit.com" style="color: var(--color-primary);">ankur@onlyexit.com</a>. Two Founding Partner slots ($50K/yr) and six Category Partner slots ($25-30K/yr, one per vertical). If you want your brand embedded in the next generation of startups being built in Seattle, let's talk.
+              Email <a href="mailto:ankur@onlyexit.com" style="color: var(--color-primary);">ankur@onlyexit.com</a>. Two Founding Partner slots and six Category Partner slots (one per vertical). If you want your brand embedded in the next generation of startups being built in Seattle, let's talk.
+            </div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              I have a family. Can I still do the residency?
+              <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+            </button>
+            <div class="faq-item__answer"><div class="faq-item__answer-inner">
+              Yes. The only requirement is that you can be fully locked in at the house for the full 8-week residency. If you can make that work, we don't care about your living situation outside of it.
             </div></div>
           </div>
         </div>
@@ -1229,6 +1319,8 @@
         <a href="#apply" class="btn btn--primary" style="font-size: var(--text-base); padding: var(--space-4) var(--space-8);">Apply for Hacker House →</a>
       </div>
     </section>
+
+    </div><!-- /.site-content -->
 
   </main>
 
@@ -1281,7 +1373,7 @@
           <div class="calc-modal__step-content">
             <div class="calc-modal__step-header">
               <span class="calc-modal__step-overline">Step 1</span>
-              <h2 class="calc-modal__step-title">Your Severance & Cash</h2>
+              <h3 class="calc-modal__step-title">Your Severance & Cash</h3>
               <p class="calc-modal__step-subtitle">Start with what you have. We'll figure out what you keep after taxes in the next step.</p>
             </div>
             <div class="calc-modal__form-grid">
@@ -1346,7 +1438,7 @@
           <div class="calc-modal__step-content">
             <div class="calc-modal__step-header">
               <span class="calc-modal__step-overline">Step 2</span>
-              <h2 class="calc-modal__step-title">Tax Reality</h2>
+              <h3 class="calc-modal__step-title">Tax Reality</h3>
               <p class="calc-modal__step-subtitle">Severance is taxed as ordinary income. Let's see what you actually keep.</p>
             </div>
             <div class="calc-modal__form-grid">
@@ -1439,7 +1531,7 @@
           <div class="calc-modal__step-content">
             <div class="calc-modal__step-header">
               <span class="calc-modal__step-overline">Step 3</span>
-              <h2 class="calc-modal__step-title">Monthly Burn</h2>
+              <h3 class="calc-modal__step-title">Monthly Burn</h3>
               <p class="calc-modal__step-subtitle">Be honest. The math only works if the inputs are real.</p>
             </div>
             <!-- Fixed Costs -->
@@ -1557,7 +1649,7 @@
           <div class="calc-modal__step-content">
             <div class="calc-modal__step-header">
               <span class="calc-modal__step-overline">Step 4</span>
-              <h2 class="calc-modal__step-title">Your Runway</h2>
+              <h3 class="calc-modal__step-title">Your Runway</h3>
             </div>
             <div class="calc-modal__runway-hero">
               <div class="calc-modal__runway-hero-number calc-modal__mono" id="cm-heroMonths">0</div>
@@ -1618,7 +1710,7 @@
     <div class="container">
       <div class="footer__grid">
         <div>
-          <img src="./assets/OnlyExit-Logo-White.png" alt="OnlyExit" class="footer__logo" style="height: 28px; width: auto; margin-bottom: var(--space-3);">
+          <img src="./assets/OnlyExit-Logo-White.webp" alt="OnlyExit" class="footer__logo" style="height: 28px; width: auto; margin-bottom: var(--space-3);">
           <p class="footer__tagline">We're going to incubate unicorns out of Seattle whether this city is ready or not.</p>
         </div>
         <div>
@@ -1640,13 +1732,6 @@
             <li><a href="https://medium.com/@onlyexit" target="_blank" rel="noopener noreferrer">Medium</a></li>
           </ul>
         </div>
-        <div>
-          <h4 class="footer__heading">Legal</h4>
-          <ul class="footer__links" role="list">
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
-          </ul>
-        </div>
       </div>
       <div class="footer__bottom">
         <span class="footer__copy">&copy; 2026 OnlyExit</span>
@@ -1655,7 +1740,7 @@
     </div>
   </footer>
 
-  <script src="calc-engine.js"></script>
-  <script src="app.js"></script>
+  <script src="calc-engine.min.js"></script>
+  <script src="app.min.js"></script>
 </body>
 </html>
