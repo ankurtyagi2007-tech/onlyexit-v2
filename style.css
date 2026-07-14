@@ -2714,12 +2714,12 @@
 }
 .thesis-frontier__title {
   font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  font-weight: 700;
-  color: var(--color-text);
-  margin-bottom: var(--space-10);
-  letter-spacing: -0.03em;
-  line-height: 1.1;
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 .thesis-frontier__standfirst {
   font-size: var(--text-base);
