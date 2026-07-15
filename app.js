@@ -419,6 +419,25 @@
     });
   }
 
+  // Dynamic cofounder rows
+  var addCofounderBtn = document.getElementById('addCofounder');
+  var cofoundersContainer = document.getElementById('cofounders-container');
+  if (addCofounderBtn && cofoundersContainer) {
+    var cofounderCount = 1;
+    addCofounderBtn.addEventListener('click', function() {
+      cofounderCount++;
+      var row = document.createElement('div');
+      row.className = 'form-grid form-grid--2col cofounder-row';
+      row.innerHTML = '<div class="form-field"><label>Cofounder Name</label><input type="text" name="cofounder_' + cofounderCount + '_name" placeholder="Optional"></div>' +
+        '<div class="form-field"><label>Cofounder LinkedIn</label><input type="url" name="cofounder_' + cofounderCount + '_linkedin" placeholder="https://linkedin.com/in/..."></div>' +
+        '<button type="button" class="btn--remove-cofounder" aria-label="Remove cofounder">&times;</button>';
+      cofoundersContainer.appendChild(row);
+      row.querySelector('.btn--remove-cofounder').addEventListener('click', function() {
+        row.remove();
+      });
+    });
+  }
+
   var hhForm = document.getElementById('hackerHouseForm');
   var hhSuccess = document.getElementById('hhSuccess');
   if (hhForm) {

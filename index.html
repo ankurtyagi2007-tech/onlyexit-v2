@@ -485,8 +485,9 @@
         <h3 class="modal__title">Hacker House Application</h3>
         <form id="hackerHouseForm">
           <input type="hidden" name="formType" value="hacker-house-application">
-          <!-- Section 1 -->
-          <h4 class="form-group-title">Section 1: Who Are You</h4>
+
+          <!-- Section 1: You -->
+          <h4 class="form-group-title">Section 1: You</h4>
           <div class="form-grid form-grid--2col">
             <div class="form-field">
               <label for="hh-name">Full Name</label>
@@ -497,52 +498,13 @@
               <input type="email" id="hh-email" name="email" required placeholder="you@email.com">
             </div>
             <div class="form-field">
-              <label for="hh-phone">Phone</label>
-              <input type="tel" id="hh-phone" name="phone" required placeholder="+1 (555) 000-0000">
-            </div>
-            <div class="form-field">
               <label for="hh-linkedin">LinkedIn URL</label>
               <input type="url" id="hh-linkedin" name="linkedin" required placeholder="https://linkedin.com/in/yourname">
             </div>
-            <div class="form-field">
-              <label for="hh-city">City</label>
-              <select id="hh-city" name="city" required>
-                <option value="">Select your city</option>
-                <option value="Seattle">Seattle</option>
-                <option value="SF">San Francisco</option>
-                <option value="NYC">New York</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
           </div>
-
-          <!-- Section 2 -->
-          <h4 class="form-group-title">Section 2: What Are You Building</h4>
           <div class="form-grid">
             <div class="form-field">
-              <label>Are you currently working on a startup?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="startup_status" value="full-time" required> Yes, full-time</label>
-                <label><input type="radio" name="startup_status" value="nights-weekends"> Yes, nights &amp; weekends</label>
-                <label><input type="radio" name="startup_status" value="have-idea"> No, but I have an idea</label>
-                <label><input type="radio" name="startup_status" value="looking-cofounder"> No, looking for a co-founder</label>
-              </div>
-            </div>
-            <div class="form-field">
-              <label for="hh-whatbuilding">If yes — one sentence: what does it do?</label>
-              <input type="text" id="hh-whatbuilding" name="what_building" placeholder="Describe in one sentence">
-            </div>
-            <div class="form-field">
-              <label>What stage are you at?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="stage" value="problem" required> I have a problem I want to solve</label>
-                <label><input type="radio" name="stage" value="building-need-cofounder"> I'm building something and need a cofounder</label>
-                <label><input type="radio" name="stage" value="team-need-launchpad"> I have a team and need a launchpad</label>
-                <label><input type="radio" name="stage" value="done-with-bigtech"> I don't have an idea yet. I just know I'm done with Big Tech</label>
-              </div>
-            </div>
-            <div class="form-field">
-              <label>Are you technical or non-technical?</label>
+              <label>Are you technical?</label>
               <div class="radio-group">
                 <label><input type="radio" name="technical" value="technical" required> Technical</label>
                 <label><input type="radio" name="technical" value="non-technical"> Non-technical</label>
@@ -550,77 +512,112 @@
               </div>
             </div>
             <div class="form-field">
-              <label for="hh-superpower">What's your superpower?</label>
-              <input type="text" id="hh-superpower" name="superpower" placeholder="Keep it to one line">
+              <label for="hh-founded">Have you founded a company before? What happened?</label>
+              <textarea id="hh-founded" name="founded_before" placeholder="Exit, failed, still running, or first time. Be specific."></textarea>
+            </div>
+            <div class="form-field">
+              <label for="hh-audience">Do you have a social media audience on LinkedIn, Instagram, or TikTok? How large?</label>
+              <input type="text" id="hh-audience" name="audience" placeholder="e.g. 12K on LinkedIn, 50K on TikTok, or none">
             </div>
           </div>
 
-          <!-- Section 3 -->
-          <h4 class="form-group-title">Section 3: Why OnlyExit</h4>
+          <!-- Section 2: The Idea -->
+          <h4 class="form-group-title">Section 2: The Idea</h4>
           <div class="form-grid">
             <div class="form-field">
-              <label>Where are you coming from?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="background" value="big-tech-layoff" required> Big Tech layoff</label>
-                <label><input type="radio" name="background" value="quit"> Quit my job</label>
-                <label><input type="radio" name="background" value="college"> College/university</label>
-                <label><input type="radio" name="background" value="founder"> Already a founder</label>
-                <label><input type="radio" name="background" value="other"> Other</label>
-              </div>
+              <label for="hh-whatmaking">What is your company going to make?</label>
+              <textarea id="hh-whatmaking" name="what_making" required placeholder="Explain what you're building and why it matters."></textarea>
             </div>
             <div class="form-field">
-              <label>What do you need most right now?</label>
-              <div class="checkbox-group">
-                <label><input type="checkbox" name="needs" value="co-founder"> Co-founder</label>
-                <label><input type="checkbox" name="needs" value="funding"> Funding introductions</label>
-                <label><input type="checkbox" name="needs" value="workspace"> Workspace</label>
-                <label><input type="checkbox" name="needs" value="community"> Community</label>
-                <label><input type="checkbox" name="needs" value="mentorship"> Mentorship</label>
-                <label><input type="checkbox" name="needs" value="all"> All of the above</label>
-              </div>
+              <label for="hh-customer">Who is your customer?</label>
+              <input type="text" id="hh-customer" name="customer" required placeholder="Be specific. Not 'everyone.'">
             </div>
             <div class="form-field">
-              <label>How did you hear about OnlyExit?</label>
+              <label for="hh-bizmodel">What's your business model?</label>
+              <input type="text" id="hh-bizmodel" name="business_model" required placeholder="How do you make money?">
+            </div>
+            <div class="form-field">
+              <label for="hh-whythisidea">Why did you pick this idea? Do you have domain expertise?</label>
+              <textarea id="hh-whythisidea" name="why_this_idea" required placeholder="What makes you the right person to build this?"></textarea>
+            </div>
+            <div class="form-field">
+              <label for="hh-howlong">How long have you been thinking about this problem?</label>
+              <input type="text" id="hh-howlong" name="how_long" required placeholder="e.g. 6 months, 3 years, since college">
+            </div>
+            <div class="form-field">
+              <label for="hh-users">Are people using your product? How many?</label>
+              <input type="text" id="hh-users" name="users" placeholder="e.g. 200 beta users, 0 yet, 5 design partners">
+            </div>
+            <div class="form-field">
+              <label for="hh-demand">Do you have a paying customer, paid pilot, or design partner?</label>
+              <div class="radio-group" style="margin-bottom: var(--space-2);">
+                <label><input type="radio" name="has_demand" value="yes"> Yes</label>
+                <label><input type="radio" name="has_demand" value="no"> No</label>
+              </div>
+              <input type="text" id="hh-demand" name="demand_details" placeholder="If yes, tell us more">
+            </div>
+            <div class="form-field">
+              <label for="hh-revenue">Do you have any revenue?</label>
+              <div class="radio-group" style="margin-bottom: var(--space-2);">
+                <label><input type="radio" name="has_revenue" value="yes"> Yes</label>
+                <label><input type="radio" name="has_revenue" value="no"> No</label>
+              </div>
+              <input type="text" id="hh-revenue" name="revenue_details" placeholder="If yes, how much?">
+            </div>
+            <div class="form-field">
+              <label for="hh-funding">Did you raise any funding?</label>
+              <div class="radio-group" style="margin-bottom: var(--space-2);">
+                <label><input type="radio" name="has_funding" value="yes"> Yes</label>
+                <label><input type="radio" name="has_funding" value="no"> No</label>
+              </div>
+              <input type="text" id="hh-funding" name="funding_details" placeholder="If yes, how much and from whom?">
+            </div>
+            <div class="form-field">
+              <label>Are you looking for a cofounder?</label>
               <div class="radio-group">
-                <label><input type="radio" name="source" value="social-media" required> Social media</label>
-                <label><input type="radio" name="source" value="friend"> Friend</label>
-                <label><input type="radio" name="source" value="event"> Event</label>
-                <label><input type="radio" name="source" value="linkedin"> LinkedIn</label>
-                <label><input type="radio" name="source" value="other"> Other</label>
+                <label><input type="radio" name="looking_cofounder" value="yes"> Yes</label>
+                <label><input type="radio" name="looking_cofounder" value="no"> No</label>
               </div>
             </div>
           </div>
 
-          <!-- Section 4 -->
+          <!-- Section 3: Your Team -->
+          <h4 class="form-group-title">Section 3: Your Team</h4>
+          <div id="cofounders-container">
+            <div class="form-grid form-grid--2col cofounder-row">
+              <div class="form-field">
+                <label>Cofounder Name</label>
+                <input type="text" name="cofounder_1_name" placeholder="Optional">
+              </div>
+              <div class="form-field">
+                <label>Cofounder LinkedIn</label>
+                <input type="url" name="cofounder_1_linkedin" placeholder="https://linkedin.com/in/...">
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn--secondary btn--small" id="addCofounder" style="margin-top: var(--space-2); margin-bottom: var(--space-6);">+ Add Another Cofounder</button>
+
+          <!-- Section 4: Ready to Go? -->
           <h4 class="form-group-title">Section 4: Ready to Go?</h4>
           <div class="form-grid">
             <div class="form-field">
-              <label for="hh-builderlink">Link to Something You Built</label>
-              <input type="url" id="hh-builderlink" name="builder_link" required placeholder="GitHub repo, live product, portfolio, demo video. Anything that shows you ship.">
-            </div>
-            <div class="form-field">
-              <label for="hh-builderstory">What Did You Ship, Break, or Learn?</label>
-              <textarea id="hh-builderstory" name="builder_story" required placeholder="Tell us about something you built. What worked. What didn't. What you'd do differently."></textarea>
-            </div>
-            <div class="form-field">
-              <label for="hh-why">Why should we let you in?</label>
-              <textarea id="hh-why" name="why" required placeholder="2-3 sentences. Make it count."></textarea>
-            </div>
-            <div class="form-field">
-              <label>Are you available for a 15-minute interview in May?</label>
+              <label>Can you commit full-time, in-person, in Seattle for 10+2 weeks?</label>
               <div class="radio-group">
-                <label><input type="radio" name="interview_avail" value="yes" required> Yes</label>
-                <label><input type="radio" name="interview_avail" value="limited"> Yes, but limited availability</label>
-                <label><input type="radio" name="interview_avail" value="no"> No</label>
+                <label><input type="radio" name="seattle_commit" value="yes" required> Yes</label>
+                <label><input type="radio" name="seattle_commit" value="no"> No</label>
               </div>
             </div>
             <div class="form-field">
-              <label>Preferred interview time</label>
-              <div class="radio-group">
-                <label><input type="radio" name="interview_time" value="morning" required> Morning</label>
-                <label><input type="radio" name="interview_time" value="afternoon"> Afternoon</label>
-                <label><input type="radio" name="interview_time" value="evening"> Evening</label>
-              </div>
+              <label for="hh-sacrifice">What have you given up to work on this?</label>
+              <textarea id="hh-sacrifice" name="sacrifice" required placeholder="Quit a job, turned down an offer, moved cities, burned savings. What's at stake for you?"></textarea>
+            </div>
+            <div class="form-field">
+              <label for="hh-builderlink">Link to something you built</label>
+              <input type="url" id="hh-builderlink" name="builder_link" required placeholder="GitHub, live product, demo video. Anything that shows you ship.">
+            </div>
+            <div class="form-field">
+              <label for="hh-source">How did you hear about OnlyExit?</label>
+              <input type="text" id="hh-source" name="source" placeholder="Event, social media, friend, LinkedIn, etc.">
             </div>
           </div>
 
