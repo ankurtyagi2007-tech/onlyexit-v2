@@ -1142,10 +1142,8 @@
 .do-not-apply { padding-bottom: 0; }
 .do-not-apply + .section { padding-top: var(--space-10); }
 .do-not-apply__block {
-  text-align: center;
   max-width: 720px;
-  margin: 0 auto;
-  padding: 0 var(--space-6);
+  padding: 0;
 }
 .do-not-apply__headline {
   font-family: var(--font-display);
