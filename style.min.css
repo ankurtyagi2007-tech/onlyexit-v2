@@ -1103,7 +1103,7 @@
  font-family: var(--font-display);
  font-size: var(--text-lg);
  font-weight: 600;
- color: var(--color-accent);
+ color: #fff;
 }
 .the-deal__block {
  text-align: center;
