@@ -984,6 +984,20 @@
 }
 
 /* ===== DEMO DAY SECTION ===== */
+.demo-day {
+  position: relative;
+}
+.demo-day::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+.demo-day > .container {
+  position: relative;
+  z-index: 1;
+}
 .demo-day__headline { font-size: var(--text-3xl); }
 .demo-day__content {
   display: grid;
@@ -1101,6 +1115,45 @@
     gap: var(--space-2);
     padding-left: var(--space-6);
   }
+}
+
+/* ===== CINEMATIC INTERSTITIAL ===== */
+.section--cinematic {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background-attachment: fixed;
+}
+@media (max-width: 768px) {
+  .section--cinematic { background-attachment: scroll; min-height: 50vh; }
+}
+.cinematic__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.7) 100%);
+  z-index: 0;
+}
+.cinematic__content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+}
+
+/* ===== BUILD IN PUBLIC ===== */
+.reality-tv {
+  position: relative;
+}
+.reality-tv::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 0;
+}
+.reality-tv > .container {
+  position: relative;
+  z-index: 1;
 }
 
 /* ===== REALITY TV / BUILD IN PUBLIC ===== */
