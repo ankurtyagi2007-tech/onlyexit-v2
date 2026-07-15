@@ -3090,7 +3090,7 @@
 }
 .hero__scroll-hint span {
  font-size: var(--text-xs);
- color: var(--color-text-muted);
+ color: var(--color-text);
  letter-spacing: 0.1em;
  text-transform: uppercase;
 }
