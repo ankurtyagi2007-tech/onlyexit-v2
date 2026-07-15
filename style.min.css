@@ -1055,29 +1055,53 @@
 @media (max-width: 768px) {
  .reality-tv__grid { grid-template-columns: 1fr; }
 }
-.do-not-apply { padding-bottom: 0; }
-.do-not-apply + .section { padding-top: var(--space-10); }
-.do-not-apply__block {
- max-width: 720px;
- padding: 0;
+.warnbox {
+ margin-top: var(--space-10);
+ border: 1px solid rgba(255, 59, 59, 0.45);
+ background: rgba(255, 59, 59, 0.04);
 }
-.do-not-apply__headline {
- font-family: var(--font-display);
- font-size: clamp(2rem, 4vw, 3rem);
+.warnbox__stripes {
+ height: 7px;
+ background: repeating-linear-gradient(-45deg, #FF3B3B 0 12px, transparent 12px 24px);
+ opacity: 0.75;
+}
+.warnbox__inner {
+ padding: var(--space-6) var(--space-8) var(--space-7);
+}
+.warnbox__tag {
+ font-family: var(--font-mono);
  font-weight: 700;
- color: #ff4444;
- margin-bottom: var(--space-4);
- letter-spacing: -0.02em;
+ font-size: 12px;
+ letter-spacing: 0.3em;
+ text-transform: uppercase;
+ color: #FF3B3B;
+ display: flex;
+ align-items: center;
+ gap: 14px;
 }
-.do-not-apply__body {
- font-size: var(--text-sm);
- color: var(--color-text-secondary);
- line-height: 1.7;
- margin-bottom: var(--space-4);
+.warnbox__tag::after {
+ content: '';
+ flex: 1;
+ height: 1px;
+ background: rgba(255, 59, 59, 0.35);
 }
-.do-not-apply__kicker {
- font-family: var(--font-display);
+.warnbox__lead {
+ margin-top: var(--space-4);
+ font-size: var(--text-lg);
+ font-weight: 600;
+ color: var(--color-text);
+ letter-spacing: 0.02em;
+}
+.warnbox__inner p {
+ margin-top: var(--space-3);
+ max-width: 660px;
  font-size: var(--text-base);
+ color: var(--color-text-secondary);
+ line-height: 1.55;
+}
+.warnbox__kicker {
+ font-family: var(--font-display);
+ font-size: var(--text-lg);
  font-weight: 600;
  color: var(--color-accent);
 }
