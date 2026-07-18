@@ -376,7 +376,7 @@ a:hover { color: var(--cyan); }
   margin: 0 0 56px; width: 100%; padding: 32px 0; text-align: center;
 }
 .warfront__pre {
-  margin: 0 0 20px; text-align: center;
+  margin: 0 0 20px; text-align: center; max-width: none;
   font-family: var(--font-mono); font-size: 17px; font-weight: 700;
   letter-spacing: 0.3em; text-transform: uppercase; color: var(--text-muted);
 }
@@ -937,6 +937,8 @@ a:hover { color: var(--cyan); }
 }
 .site-footer__col a { color: var(--text-body); font-size: 15px; }
 .site-footer__col a:hover { color: var(--cyan); }
+.site-footer__nav-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; }
+.site-footer__col--wide { min-width: 260px; }
 .site-footer__bottom {
   margin-top: 72px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.07);
   display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
