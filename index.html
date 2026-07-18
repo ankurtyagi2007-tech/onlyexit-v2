@@ -1,1746 +1,622 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="OnlyExit — Seattle's founder engine for frontier problems. We find builders and throw them into a hadron collider to ship or die.">
-  <meta property="og:title" content="OnlyExit | Where Builders Become Founders">
-  <meta property="og:description" content="Seattle's founder engine for frontier problems. We find builders and throw them into a hadron collider to ship or die.">
+  <title>OnlyExit — F**k Your 9-to-5. Come Build a Unicorn.</title>
+  <meta name="description" content="America's first hacker house + reality show + cars & jets + venture fund. 10-week residency in Seattle. Apply now.">
+  <meta property="og:title" content="OnlyExit — F**k Your 9-to-5. Come Build a Unicorn.">
+  <meta property="og:description" content="America's first hacker house + reality show + cars & jets + venture fund. Ship or die.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://onlyexit.ai/assets/hero.webp">
   <meta property="og:url" content="https://onlyexit.ai">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="OnlyExit | Where Builders Become Founders">
-  <meta name="twitter:description" content="Seattle's founder engine for frontier problems. We find builders and throw them into a hadron collider to ship or die.">
-  <meta name="twitter:image" content="https://onlyexit.ai/assets/hero.webp">
-  <title>OnlyExit | Where Builders Become Founders</title>
-  <link rel="icon" href="assets/favicon.jpg" type="image/jpeg">
-
-  <!-- Fonts -->
+  <link rel="icon" href="./assets/favicon.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="base.min.css">
-  <link rel="stylesheet" href="style.min.css">
-  <link rel="stylesheet" href="calc-modal.min.css">
+  <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 </head>
 <body>
 
-  <a href="#main" class="skip-link">Skip to content</a>
+<!-- HEADER -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="#hero" class="site-header__logo"><img src="assets/OnlyExit-Logo-White.webp" alt="OnlyExit"></a>
+    <nav class="site-header__nav">
+      <a href="#manifest">The Program</a>
+      <a href="#demo-day">Demo Day</a>
+      <a href="#cities">Cities</a>
+      <a href="#faq">FAQ</a>
+      <a href="#hacker-house" class="nav-apply">Apply Now</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- ===== HEADER ===== -->
-  <header class="header" id="header">
-    <div class="header__inner">
-      <a href="#" class="header__logo">
-        <img src="./assets/OnlyExit-Logo-White.webp" alt="OnlyExit" loading="eager">
+<!-- 1. HERO -->
+<section id="hero" class="hero">
+  <div class="hero__glow-tl"></div>
+  <div class="hero__glow-br"></div>
+  <div class="hero__grid"></div>
+  <div class="hero__inner">
+    <div class="hero__badge">
+      <span class="hero__badge-dot"></span>
+      <span><span style="color:#00F0FF;">Seattle House</span> &middot; Apps Open &middot; Early Admissions Aug 3 &middot; Full Batch Aug 17</span>
+    </div>
+    <h1 class="hero__title">
+      F**k Your 9&#8209;to&#8209;5.<br>
+      <span style="white-space:nowrap;"><span class="hero__title-gradient">Come Build a Unicorn.</span> <span class="oe-zap" style="font-size:0.66em;line-height:1;vertical-align:0.06em;">&#129412;</span></span>
+    </h1>
+    <p class="hero__sub">The founder engine for frontier problems. We find builders from Big Tech layoffs, college dorms, and garages and throw them into a hadron collider to <span style="color:#00F0FF;font-weight:500;">ship or die</span><span class="hero__cursor">_</span></p>
+    <div class="hero__ctas">
+      <a href="#hacker-house" class="hero__cta-primary">Apply for Hacker House</a>
+      <a href="#demo-day" class="hero__cta-secondary">
+        <span class="hero__cta-label"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="transform:rotate(45deg);"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>Demo Day on a Gulfstream? FTW!!</span>
+        <span class="hero__cta-sub"><span class="hero__cta-sub-dot"></span>Livestreamed worldwide</span>
       </a>
-      <nav class="header__nav">
-        <a href="#thesis">Thesis</a>
-        <a href="#hacker-house">Hacker House</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#events">Events</a>
-        <a href="#cities">Cities</a>
-        <a href="#merch">Merch</a>
-        <a href="#faq">FAQ</a>
-        <a href="#apply" class="header__cta">Apply Now</a>
-      </nav>
-      <button class="menu-toggle" id="menuOpen" aria-label="Open menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      </button>
     </div>
-  </header>
+    <p class="hero__terminal">$ <span style="color:#00F0FF;">onlyexit</span> --mode=founder --city=seattle</p>
+  </div>
+  <div class="hero__scroll"><span>Scroll</span><span>&darr;</span></div>
+</section>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <button class="mobile-menu__close" id="menuClose" aria-label="Close menu">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+<!-- MARQUEE TICKER -->
+<div class="marquee">
+  <div class="marquee__track">
+    <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">8</strong> Startups</span>
+    <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">3,000</strong> Sq Ft</span>
+    <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">Founder Events</strong> Every Month</span>
+    <span class="marquee__item"><span class="marquee__dot"></span>Apps Close <strong style="color:#F2F5F6;">Aug 15</strong> &middot; <strong style="color:#FF2E3D;">Apply NOW</strong></span>
+    <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">200+</strong> Founders &amp; Operators in Network</span>
+    <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">8</strong> Startups</span>
+    <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">3,000</strong> Sq Ft</span>
+    <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">Founder Events</strong> Every Month</span>
+    <span class="marquee__item"><span class="marquee__dot"></span>Apps Close <strong style="color:#F2F5F6;">Aug 15</strong> &middot; <strong style="color:#FF2E3D;">Apply NOW</strong></span>
+    <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">200+</strong> Founders &amp; Operators in Network</span>
+  </div>
+</div>
+
+<!-- 2. WAR FRONT -->
+<section id="hacker-house" class="warfront">
+  <div class="warfront__fade"></div>
+  <div class="warfront__inner">
+    <div class="warfront__banner">
+      <p class="warfront__pre">America's First</p>
+      <div class="warfront__pillars">
+        <span>Hacker House</span><span class="warfront__plus">+</span>
+        <span>Reality Show</span><span class="warfront__plus">+</span>
+        <span>Cars &amp; Jets</span><span class="warfront__plus">+</span>
+        <span style="color:#00F0FF;">Venture Fund</span>
+      </div>
+    </div>
+    <div class="warfront__warnbox">
+      <div class="warfront__warnbox-inner">
+        <span class="warfront__warn-label">&#9888; Do Not Apply</span>
+        <h2 class="warfront__warn-h2">This Is a War Front. <span class="oe-zap" style="font-size:0.72em;vertical-align:0.06em;filter:grayscale(1);">&#128128;</span></h2>
+        <p class="warfront__warn-sub">Ten weeks of grueling grind. 16&#8209;hour days.</p>
+      </div>
+    </div>
+    <div class="warfront__cta-block">
+      <p class="warfront__still">Still here? Good.</p>
+      <div class="warfront__cta-row">
+        <a href="mailto:ankur@onlyexit.ai?subject=Hacker%20House%20Application" class="warfront__cta-apply" id="openHackerHouseModal">Start Application &rarr;</a>
+        <span class="warfront__rolling">Rolling admissions</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="stats-band__inner">
+    <div class="stats-band__item">8 Startups</div>
+    <div class="stats-band__item">10+2 Weeks</div>
+    <div class="stats-band__item">Run by Ex&#8209;Founders</div>
+  </div>
+</div>
+
+<!-- 3. TEN-WEEK MANIFEST -->
+<section id="manifest" class="manifest">
+  <div class="manifest__fade"></div>
+  <div class="manifest__inner">
+    <div class="manifest__header">
+      <p class="eyebrow"><span class="slash">//</span>The Manifest</p>
+      <h2 class="h2">Just One Objective. <span style="white-space:nowrap;">Ship or Die. <span class="oe-zap" style="font-size:0.72em;vertical-align:0.06em;">&#128128;</span></span></h2>
+    </div>
+    <div class="manifest__timeline">
+      <div class="manifest__line oe-runline"></div>
+      <span class="manifest__end-diamond oe-cpend"></span>
+      <span class="manifest__car oe-runcar"><svg width="34" height="23" viewBox="-12 -8 24 16" fill="none"><g fill="#F2F5F6"><path d="M-7 -2.6 L-4.2 -3.4 L-1.2 -2.2 L3.4 -2.0 L6.4 -1.0 L7.6 0 L6.4 1.0 L3.4 2.0 L-1.2 2.2 L-4.2 3.4 L-7 2.6 L-7.8 0 Z"/><rect x="-8.6" y="-4.4" width="2.2" height="8.8" rx="0.8"/><rect x="5.2" y="-3.2" width="1.6" height="6.4" rx="0.7"/></g></svg></span>
+      <div class="manifest__grid oe-rungrid">
+        <div class="manifest__week">
+          <span class="manifest__week-label oe-txt" style="color:#00F0FF;">Weeks 1–2</span>
+          <span class="manifest__cp oe-cp" style="background:#00F0FF;box-shadow:0 0 14px #00F0FF;"></span>
+          <h3 class="manifest__week-title oe-txt">Foundation</h3>
+          <p class="manifest__week-obj oe-txt">Team formation. Problem validation. Working prototype by Friday of week one.</p>
+        </div>
+        <div class="manifest__week">
+          <span class="manifest__week-label oe-txt" style="color:#00F0FF;">Weeks 3–4</span>
+          <span class="manifest__cp oe-cp" style="background:#00F0FF;box-shadow:0 0 14px #00F0FF;"></span>
+          <h3 class="manifest__week-title oe-txt">Go to Market</h3>
+          <p class="manifest__week-obj oe-txt">Customer discovery. First real users. Angel investor dinners begin.</p>
+        </div>
+        <div class="manifest__week">
+          <span class="manifest__week-label oe-txt" style="color:#00F0FF;">Weeks 5–6</span>
+          <span class="manifest__cp oe-cp" style="background:#00F0FF;box-shadow:0 0 14px #00F0FF;"></span>
+          <h3 class="manifest__week-title oe-txt">Growth Engine</h3>
+          <p class="manifest__week-obj oe-txt">Pick the metric that matters. Find the channel that works. Iterate daily.</p>
+        </div>
+        <div class="manifest__week">
+          <span class="manifest__week-label oe-txt" style="color:#00F0FF;">Weeks 7–8</span>
+          <span class="manifest__cp oe-cp" style="background:#00F0FF;box-shadow:0 0 14px #00F0FF;"></span>
+          <h3 class="manifest__week-title oe-txt">Product Depth</h3>
+          <p class="manifest__week-obj oe-txt">Build the moat. Technical defensibility. Data flywheels.</p>
+        </div>
+        <div class="manifest__week">
+          <span class="manifest__week-label oe-txt" style="color:#00F0FF;">Weeks 9–10</span>
+          <span class="manifest__cp oe-cp" style="background:#00F0FF;box-shadow:0 0 14px #00F0FF;"></span>
+          <h3 class="manifest__week-title oe-txt">Fundraise Ready</h3>
+          <p class="manifest__week-obj oe-txt">Pitch practice. Investor meetings. Term sheet prep.</p>
+        </div>
+        <div class="manifest__week">
+          <span class="manifest__week-label oe-txt" style="color:#8B5CF6;">Weeks 11–12</span>
+          <span class="manifest__cp oe-cp" style="background:#8B5CF6;box-shadow:0 0 14px #8B5CF6;"></span>
+          <h3 class="manifest__week-title oe-txt">Demo Days <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 6px rgba(139,92,246,0.6));"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></h3>
+          <p class="manifest__week-obj oe-txt">Pitch at 40,000 feet. VC roadshows. Media. The world finds out.</p>
+        </div>
+      </div>
+      <div class="manifest__footer">Wheels up &middot; Demo Day at 40,000 ft</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. BUILD IN PUBLIC -->
+<section id="build-in-public" class="build-public">
+  <div class="build-public__inner">
+    <div class="build-public__header">
+      <p class="build-public__rec"><span class="build-public__rec-dot"></span>Build in Public &middot; REC</p>
+      <h2 class="build-public__h2">Love Island for Startups. <span style="white-space:nowrap;"><span style="color:#00F0FF;">Minus the Love.</span></span></h2>
+      <p class="build-public__subtitle">Filmed. Streamed. No Place to Hide.</p>
+    </div>
+    <div class="build-public__grid">
+      <div class="build-public__card oe-bp">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        <h3 class="build-public__card-title oe-bp-title">Weekly Metrics Hotseat</h3>
+        <p class="build-public__card-desc oe-bp-desc">Every week, every team sits in front of a camera and reports their numbers. Revenue. Users. Churn. Burn rate. The audience is watching. If you had a bad week, you say you had a bad week. There is no spin.</p>
+      </div>
+      <div class="build-public__card oe-bp">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <h3 class="build-public__card-title oe-bp-title">Streamed on YouTube</h3>
+        <p class="build-public__card-desc oe-bp-desc">The entire batch is documented and streamed live. Your journey from day one to Demo Day, on camera, in public. Founders who build in public attract investors, customers, and talent before they even start fundraising.</p>
+      </div>
+      <div class="build-public__card oe-bp">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h3 class="build-public__card-title oe-bp-title">Radical Transparency</h3>
+        <p class="build-public__card-desc oe-bp-desc">This is intentional. Social pressure to ship is the most underrated force in startup building. When you know the world is watching, you do not waste a single week. Every batch that has done this has shipped faster than the one before.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. DEMO DAY -->
+<section id="demo-day" class="demo-day">
+  <div class="demo-day__fade"></div>
+  <div class="demo-day__inner">
+    <div>
+      <p class="eyebrow"><span class="slash">//</span>The Finale</p>
+      <h2 class="demo-day__h2"><span style="color:#F2F5F6;">Demo Day</span> on a <span style="white-space:nowrap;"><span style="color:#00F0FF;">Private Jet</span>? <span class="oe-zap" style="font-size:0.72em;vertical-align:0.06em;">&#129327;</span></span></h2>
+    </div>
+    <div class="demo-day__content">
+      <div class="demo-day__stat">
+        <span class="demo-day__stat-pre">It's like Shark Tank but at</span>
+        <span class="demo-day__slotnum oe-slotnum">
+          <span class="demo-day__slot-digit"><span class="oe-slotstrip oe-slot-a"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span></span></span>
+          <span class="demo-day__slot-digit"><span class="oe-slotstrip oe-slot-b" style="animation-delay:0.12s;"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span></span></span>
+          <span>,</span>
+          <span class="demo-day__slot-digit"><span class="oe-slotstrip oe-slot-b" style="animation-delay:0.24s;"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span></span></span>
+          <span class="demo-day__slot-digit"><span class="oe-slotstrip oe-slot-b" style="animation-delay:0.36s;"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span></span></span>
+          <span class="demo-day__slot-digit"><span class="oe-slotstrip oe-slot-b" style="animation-delay:0.48s;"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span></span></span>
+        </span>
+        <span class="demo-day__stat-unit">Feet</span>
+      </div>
+      <div class="demo-day__copy">
+        <p style="margin:0;">Most accelerators end with a demo day in a hotel ballroom. Folding chairs, bad coffee, polite applause. Ours ends in a Gulfstream G5 at cruising altitude with <span style="color:#00F0FF;">7 of America's top Angels and VC Funds onboard</span>.</p>
+      </div>
+    </div>
+    <div class="demo-day__ctas">
+      <a href="#hacker-house" class="btn-primary">Apply for the Hacker House &rarr;</a>
+      <a href="https://luma.com/ewzfza1s" target="_blank" rel="noopener noreferrer" class="btn-outline">Investor? Apply for a Seat &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- 6. WHAT YOU GET -->
+<section id="what-you-get" class="whatyouget">
+  <div class="whatyouget__inner">
+    <div class="whatyouget__header">
+      <p class="eyebrow"><span class="slash">//</span>What You Get</p>
+      <h2 class="h2">Everything You Need to Build.</h2>
+    </div>
+    <div class="whatyouget__grid">
+      <div class="card-shine oe-fac whatyouget__card">
+        <div class="oe-fac-scan"></div>
+        <div class="whatyouget__card-icon oe-fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3 class="oe-fac-title">Housing</h3>
+        <p class="oe-fac-desc" style="font-size:16px;line-height:1.7;color:#C4CDD2;">3,000 sq ft. Live where you build. Meals, cleaning, utilities included.</p>
+      </div>
+      <div class="card-shine oe-fac whatyouget__card">
+        <div class="oe-fac-scan"></div>
+        <div class="whatyouget__card-icon oe-fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3 class="oe-fac-title">The Network</h3>
+        <p class="oe-fac-desc" style="font-size:16px;line-height:1.7;color:#C4CDD2;">Direct access to 200+ founders and operators who've built and scaled.</p>
+      </div>
+      <div class="card-shine oe-fac whatyouget__card">
+        <div class="oe-fac-scan"></div>
+        <div class="whatyouget__card-icon oe-fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <h3 class="oe-fac-title">Sponsor Perks</h3>
+        <p class="oe-fac-desc" style="font-size:16px;line-height:1.7;color:#C4CDD2;">Our partners cover your stack so you can focus on building.</p>
+        <div class="whatyouget__card-tags" style="opacity:0;">
+          <span class="whatyouget__tag">Banking</span>
+          <span class="whatyouget__tag">Cloud</span>
+          <span class="whatyouget__tag">Legal</span>
+          <span class="whatyouget__tag">AI</span>
+        </div>
+      </div>
+      <div class="card-shine oe-fac whatyouget__card">
+        <div class="oe-fac-scan"></div>
+        <div class="whatyouget__card-icon oe-fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <h3 class="oe-fac-title">Demo Night</h3>
+        <p class="oe-fac-desc" style="font-size:16px;line-height:1.7;color:#C4CDD2;">At the end of every residency, teams present what they shipped. Investors, operators, and alumni in the room. You earn the attention by building, not by pitching.</p>
+      </div>
+      <div class="card-shine oe-fac whatyouget__card">
+        <div class="oe-fac-scan"></div>
+        <div class="whatyouget__card-icon oe-fac-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <h3 class="oe-fac-title">Build Support</h3>
+        <p class="oe-fac-desc" style="font-size:16px;line-height:1.7;color:#C4CDD2;">During your residency, operators from the Seattle ecosystem drop in for GTM, fundraising, product, and hiring. Not lectures. Working sessions on your actual problems.</p>
+      </div>
+      <div class="oe-fac whatyouget__card--photo" style="border:1px solid rgba(255,255,255,0.06);">
+        <div class="oe-fac-img" style="position:absolute;inset:0;background:url('assets/facilities/facility-audi.jpg') center/cover no-repeat;"></div>
+        <div class="photo-overlay" style="position:absolute;inset:0;background:linear-gradient(to top,rgba(4,6,8,0.94) 20%,rgba(4,6,8,0.35) 60%,rgba(4,6,8,0.1));"></div>
+        <div class="oe-fac-scan"></div>
+        <div style="position:relative;padding:36px 40px;display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center;">
+          <p class="oe-fac-title" style="margin:0;color:#00F0FF;text-transform:uppercase;">Life at the House</p>
+          <p class="oe-fac-desc" style="margin:0;font-size:14.5px;line-height:1.65;color:#B8C2C7;">Audi Q5 at the door. Personal trainer at dawn. Adventure days every other week: jet ski, karting, hikes. 3,000 sq ft with whiteboards everywhere. You're building a company, not doing time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. ADVENTURE INTERSTITIAL -->
+<section id="adventure" class="adventure">
+  <div class="adventure__fade"></div>
+  <div class="adventure__inner">
+    <p class="eyebrow"><span class="slash">//</span>Life Outside the Code</p>
+    <h2 class="adventure__h2"><span class="oe-shine">You're Building a Company,</span> <span style="white-space:nowrap;"><span class="oe-shine">Not Doing Time.</span> <span class="oe-zap" style="font-size:0.72em;vertical-align:0.06em;">&#9889;</span></span></h2>
+    <p class="adventure__sub">Jet ski. Karting. Hikes. Boating. Every other week we get out. When the mind locks up, the body unlocks it.</p>
+  </div>
+</section>
+
+<!-- 8. CORVETTE -->
+<section id="corvette" class="corvette-section">
+  <div class="corvette-section__fade"></div>
+  <div class="corvette-section__inner">
+    <div>
+      <p class="eyebrow" style="text-shadow:0 1px 12px rgba(0,0,0,0.8);"><span class="slash">//</span>The Takeoff Car</p>
+      <h2 class="h2" style="text-shadow:0 2px 24px rgba(0,0,0,0.7);">Founders' Corvette Race Car</h2>
+    </div>
+    <div class="corvette-section__rally-grid">
+      <div class="corvette-section__rally">
+        <svg width="290" height="198" viewBox="0 0 220 150" fill="none" style="flex:none;">
+          <path d="M40 138 C 30 120, 44 108, 38 94 C 32 80, 48 72, 44 60 C 40 50, 56 46, 62 38 C 70 28, 88 32, 100 24 C 116 14, 140 20, 152 14 C 164 8, 176 12, 182 8" stroke="rgba(0,240,255,0.25)" stroke-width="2.5" stroke-linecap="round"/>
+          <path pathLength="1" d="M40 138 C 30 120, 44 108, 38 94 C 32 80, 48 72, 44 60 C 40 50, 56 46, 62 38 C 70 28, 88 32, 100 24 C 116 14, 140 20, 152 14 C 164 8, 176 12, 182 8" stroke="#00F0FF" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.18 0.82" style="filter:drop-shadow(0 0 4px rgba(0,240,255,0.8));"><animate attributeName="stroke-dashoffset" from="1.18" to="0.18" dur="14s" repeatCount="indefinite"/></path>
+          <path d="M0 -6 L4.5 6 L0 3.4 L-4.5 6 Z" transform="rotate(90)" fill="#F2F5F6" style="filter:drop-shadow(0 0 6px rgba(0,240,255,0.9));"><animateMotion dur="14s" begin="-12.74s" repeatCount="indefinite" rotate="auto" path="M40 138 C 30 120, 44 108, 38 94 C 32 80, 48 72, 44 60 C 40 50, 56 46, 62 38 C 70 28, 88 32, 100 24 C 116 14, 140 20, 152 14 C 164 8, 176 12, 182 8"/></path>
+          <circle cx="40" cy="138" r="5" fill="#F2F5F6"/><circle cx="182" cy="8" r="5" fill="#00F0FF"/>
+          <text x="52" y="142" fill="#C4CDD2" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1.5">SEA</text>
+          <text x="150" y="30" fill="#C4CDD2" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1.5">WHISTLER</text>
+        </svg>
+        <div class="corvette-section__rally-info">
+          <p class="corvette-section__rally-label">Spring Rally</p>
+          <p class="corvette-section__rally-desc"><strong style="color:#F2F5F6;">Seattle to Whistler</strong> for family offices and founders. Every <span style="color:#00F0FF;">Mar 1</span>.</p>
+          <div class="corvette-section__rally-stats"><span>232 mi</span><span>7,400 ft elev</span></div>
+        </div>
+      </div>
+      <div class="corvette-section__rally">
+        <svg width="290" height="198" viewBox="0 0 220 150" fill="none" style="flex:none;">
+          <path d="M96 12 C 84 28, 100 40, 90 54 C 80 68, 96 76, 88 90 C 82 100, 96 106, 106 116 C 116 126, 134 130, 148 138" stroke="rgba(139,92,246,0.3)" stroke-width="2.5" stroke-linecap="round"/>
+          <path pathLength="1" d="M96 12 C 84 28, 100 40, 90 54 C 80 68, 96 76, 88 90 C 82 100, 96 106, 106 116 C 116 126, 134 130, 148 138" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.18 0.82" style="filter:drop-shadow(0 0 4px rgba(139,92,246,0.8));"><animate attributeName="stroke-dashoffset" from="1.18" to="0.18" dur="14s" repeatCount="indefinite"/></path>
+          <path d="M0 -6 L4.5 6 L0 3.4 L-4.5 6 Z" transform="rotate(90)" fill="#F2F5F6" style="filter:drop-shadow(0 0 6px rgba(139,92,246,0.9));"><animateMotion dur="14s" begin="-12.74s" repeatCount="indefinite" rotate="auto" path="M96 12 C 84 28, 100 40, 90 54 C 80 68, 96 76, 88 90 C 82 100, 96 106, 106 116 C 116 126, 134 130, 148 138"/></path>
+          <circle cx="96" cy="12" r="5" fill="#F2F5F6"/><circle cx="90" cy="76" r="4" fill="#8B5CF6"/><circle cx="148" cy="138" r="5" fill="#8B5CF6"/>
+          <text x="108" y="16" fill="#C4CDD2" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1.5">SEA</text>
+          <text x="102" y="80" fill="#C4CDD2" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1.5">SF</text>
+          <text x="160" y="142" fill="#C4CDD2" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1.5">LA</text>
+        </svg>
+        <div class="corvette-section__rally-info">
+          <p class="corvette-section__rally-label">Fall Rally</p>
+          <p class="corvette-section__rally-desc"><strong style="color:#F2F5F6;">Seattle to SF to LA</strong> during <span style="color:#00F0FF;">SF and LA Tech Weeks</span>.</p>
+          <div class="corvette-section__rally-stats"><span>1,135 mi</span><span>3 cities</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="corvette-section__quote">
+      <p class="corvette-section__quote-text"><span style="color:#F2F5F6;">Cap Hill, Sand Hill or Beverly Hills. A branded Corvette. &ldquo;F**K YOUR 9&#8209;TO&#8209;5&rdquo; on the side.</span> <span style="color:#00F0FF;">The meeting starts before you open your mouth.</span></p>
+      <p class="corvette-section__disclaimer">Expected Q3 2026 &middot; Sponsor&#8209;Branded &middot; Resident Access Included</p>
+    </div>
+  </div>
+</section>
+
+<!-- 9. CITIES -->
+<section id="cities" class="cities">
+  <div class="cities__inner">
+    <div class="cities__header">
+      <p class="eyebrow"><span class="slash">//</span>Where We Build</p>
+      <h2 class="h2" style="font-size:clamp(34px,4vw,56px);">Future Expansion</h2>
+    </div>
+    <div class="cities__grid">
+      <div class="cities__card">
+        <div class="cities__card-img">
+          <div style="background-image:url('assets/seattle.webp');"></div>
+        </div>
+        <div class="cities__card-body">
+          <h3>Seattle</h3>
+          <p>Home base. Where Amazon and Microsoft just handed us 100,000 potential founders. The war starts here.</p>
+        </div>
+      </div>
+      <div class="cities__card">
+        <div class="cities__card-img">
+          <div style="background-image:url('assets/nyc.webp');"></div>
+          <span class="cities__card-tag">Hacker House 2027</span>
+        </div>
+        <div class="cities__card-body">
+          <h3>New York</h3>
+          <p>Finance meets founding. Wall Street refugees welcome. Hacker House coming 2027.</p>
+        </div>
+      </div>
+      <div class="cities__card">
+        <div class="cities__card-img">
+          <div style="background-image:url('assets/sf.webp');"></div>
+          <span class="cities__card-tag">Hacker House 2027</span>
+        </div>
+        <div class="cities__card-body">
+          <h3>San Francisco</h3>
+          <p>The OG startup city. We're bringing the fire. Hacker House coming 2027.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. SOCIAL LIFE -->
+<section id="social-life" class="social-life">
+  <div class="social-life__inner">
+    <div class="social-life__header">
+      <p class="eyebrow"><span class="slash">//</span>Off the Clock</p>
+      <h2 class="h2">Social Life With Us</h2>
+    </div>
+    <div class="social-life__grid">
+      <div class="social-life__col">
+        <div class="social-life__tile">
+          <p class="social-life__label">Our Event at New York Tech Week</p>
+          <div class="social-life__tweet-frame">
+            <blockquote class="twitter-tweet" data-media-max-width="720" data-theme="dark" style="margin:0;"><p lang="en" dir="ltr">dinner with 14 founders and 2 imposters w/ <a href="https://x.com/OnlyExitai?ref_src=twsrc%5Etfw">@OnlyExitai</a>. <br /><br />join <a href="https://t.co/aLlvJVQT5s">https://t.co/aLlvJVQT5s</a> for an invite. <a href="https://t.co/GQs59BcDZ5">pic.twitter.com/GQs59BcDZ5</a></p>&mdash; ana (@anamika__x) <a href="https://x.com/anamika__x/status/2077872420401131789?ref_src=twsrc%5Etfw">July 16, 2026</a></blockquote>
+          </div>
+        </div>
+        <div class="social-life__tile" style="flex:5;">
+          <p class="social-life__label">Adventure Day &middot; Cascades</p>
+          <div class="social-life__photo" style="flex:1;min-height:200px;">
+            <img src="assets/social-hike.webp" alt="Team hike, holding up a fallen log in the snow">
+          </div>
+        </div>
+        <div class="social-life__tile" style="flex:3;">
+          <p class="social-life__label">Boat Day &middot; Lake Union</p>
+          <div class="social-life__photo" style="flex:1;min-height:140px;">
+            <img src="assets/social-boat.webp" alt="Founders on a boat on Lake Union" style="object-position:center bottom;">
+          </div>
+        </div>
+      </div>
+      <div class="social-life__col">
+        <div class="social-life__tile" style="flex:9;">
+          <p class="social-life__label">Do It for the Plot</p>
+          <div class="social-life__photo" style="flex:1;min-height:200px;">
+            <img src="assets/social-pitch.webp" alt="Founder pitching at an OnlyExit night event">
+          </div>
+        </div>
+        <div class="social-life__tile" style="flex:10;">
+          <p class="social-life__label">Guerrilla Marketing &middot; SLU</p>
+          <div class="social-life__photo" style="flex:1;min-height:200px;">
+            <img src="assets/social-poster.webp" alt="Worried about layoffs street poster">
+          </div>
+        </div>
+      </div>
+      <div class="social-life__col">
+        <div class="social-life__tile" style="flex:9;">
+          <p class="social-life__label">Supercar Runway Show</p>
+          <div class="social-life__photo" style="flex:1;min-height:200px;">
+            <img src="assets/social-cars.webp" alt="Supercars on a fashion runway show floor">
+          </div>
+        </div>
+        <div class="social-life__tile" style="flex:10;">
+          <p class="social-life__label">Fireside at the Moxy</p>
+          <div class="social-life__photo" style="flex:1;min-height:200px;">
+            <img src="assets/social-firechat.webp" alt="Founder fireside chat circle at Moxy SLU">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. THESIS -->
+<section id="thesis" class="thesis">
+  <div class="thesis__inner">
+    <div class="thesis__header">
+      <p class="eyebrow"><span class="slash">//</span>The Thesis</p>
+      <h2 class="thesis__h2">We Only Back Frontier Problems</h2>
+      <p class="thesis__sub">AI is breaking careers. We are here to fund what comes next.</p>
+    </div>
+    <div class="oe-taggrid thesis__tags">
+      <div class="thesis__tag-cell">
+        <span class="oe-tag thesis__tag-pill" style="--tg:rgba(139,92,246,0.35);--tgi:rgba(139,92,246,0.12);color:#8B5CF6;border:1px solid rgba(139,92,246,0.35);">Regulation &times; AI</span>
+      </div>
+      <div class="thesis__tag-cell">
+        <span class="oe-tag thesis__tag-pill" style="--tg:rgba(0,240,255,0.35);--tgi:rgba(0,240,255,0.12);color:#00F0FF;border:1px solid rgba(0,240,255,0.35);">Capability &times; AI</span>
+      </div>
+      <div class="thesis__tag-cell">
+        <span class="oe-tag thesis__tag-pill" style="--tg:rgba(255,255,255,0.3);--tgi:rgba(255,255,255,0.1);color:#F2F5F6;border:1px solid rgba(255,255,255,0.3);">Physical &times; AI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. FAQ -->
+<section id="faq" class="faq-section">
+  <div class="faq-section__inner">
+    <div class="faq-section__header">
+      <p class="eyebrow"><span class="slash">//</span>FAQ</p>
+      <h2 class="h2" style="font-size:clamp(34px,4vw,56px);">Questions? Fine.</h2>
+    </div>
+    <div class="faq-section__list">
+      <div class="faq-item">
+        <button class="faq-item__btn" aria-expanded="false">
+          <span class="faq-item__question">What is OnlyExit?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">OnlyExit is a founder engine built around a hacker house in Seattle. The house is where teams form, build, and ship. 8 startups. 10-week residencies + up to 2 weeks of demo events and roadshows. If you're solving a frontier problem and ready to go all in, this is your launchpad.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__btn" aria-expanded="false">
+          <span class="faq-item__question">I'm on an H&#8209;1B. Can I even start a company?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">Yes. You can incorporate, invest, and own equity on an H-1B. You just can't actively work for your startup unless it sponsors your visa. The new 2025 rules also allow self-sponsored H-1Bs. Our immigration law firm partner works with residents directly on visa strategy. Come talk to us.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__btn" aria-expanded="false">
+          <span class="faq-item__question">How does the Hacker House work?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">Applications are open and reviewed on a rolling basis. You come here, live with other highly motivated founders, build your start-up under guidance of mentors and get an opportunity to present to angels and VCs on the Demo day.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__btn" aria-expanded="false">
+          <span class="faq-item__question">What does it cost?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">1% equity. That is it. No strings. You get the house, the network, the mentors, the Demo Day, and the full residency. We take a sliver of ownership and a bet that you are going to build something worth backing at the next round.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__btn" aria-expanded="false">
+          <span class="faq-item__question">How do I sponsor or co&#8209;host?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">Email <a href="mailto:ankur@onlyexit.ai">ankur@onlyexit.ai</a>. Two Founding Partner slots and six Category Partner slots (one per vertical). If you want your brand embedded in the next generation of startups being built in America, let's talk.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__btn" aria-expanded="false">
+          <span class="faq-item__question">I have a family. Can I still do the residency?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">Yes. The only requirement is that you can be fully locked in at the house for the full 10-week residency. If you can make that work, we don't care about your living situation outside of it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13. CTA BANNER -->
+<section class="cta-banner">
+  <div class="cta-banner__glow"></div>
+  <div class="cta-banner__inner">
+    <h2 class="cta-banner__h2">The Next Decade Belongs to Founders.<br><span style="color:#00F0FF;">Wake Up.</span></h2>
+    <p class="cta-banner__sub">Stop waiting for permission. Stop updating your LinkedIn. Start building.</p>
+    <a href="#hacker-house" class="cta-banner__btn">Apply for Hacker House</a>
+  </div>
+</section>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="hackerHouseModal">
+  <div class="modal modal--wide">
+    <button class="modal__close" data-close-modal="hackerHouseModal" aria-label="Close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
-    <a href="#thesis">Thesis</a>
-    <a href="#hacker-house">Hacker House</a>
-    <a href="#how-it-works">How It Works</a>
-    <a href="#events">Events</a>
-    <a href="#cities">Cities</a>
-    <a href="#merch">Merch</a>
-    <a href="#faq">FAQ</a>
-    <a href="#apply">Apply Now</a>
+    <h3 class="modal__title">Hacker House Application</h3>
+    <form id="hackerHouseForm">
+      <input type="hidden" name="formType" value="hacker-house-application">
+      <h4 class="form-group-title">Section 1: You</h4>
+      <div class="form-grid form-grid--2col">
+        <div class="form-field"><label for="hh-name">Full Name</label><input type="text" id="hh-name" name="name" required placeholder="Your full name"></div>
+        <div class="form-field"><label for="hh-email">Email</label><input type="email" id="hh-email" name="email" required placeholder="you@email.com"></div>
+        <div class="form-field"><label for="hh-linkedin">LinkedIn URL</label><input type="url" id="hh-linkedin" name="linkedin" required placeholder="https://linkedin.com/in/yourname"></div>
+      </div>
+      <div class="form-grid">
+        <div class="form-field"><label>Are you technical?</label><div class="radio-group"><label><input type="radio" name="technical" value="technical" required> Technical</label><label><input type="radio" name="technical" value="non-technical"> Non-technical</label><label><input type="radio" name="technical" value="both"> Both</label></div></div>
+        <div class="form-field"><label for="hh-founded">Have you founded a company before? What happened?</label><textarea id="hh-founded" name="founded_before" placeholder="Exit, failed, still running, or first time. Be specific."></textarea></div>
+        <div class="form-field"><label for="hh-audience">Do you have a social media audience on LinkedIn, Instagram, or TikTok? How large?</label><input type="text" id="hh-audience" name="audience" placeholder="e.g. 12K on LinkedIn, 50K on TikTok, or none"></div>
+      </div>
+      <h4 class="form-group-title">Section 2: The Idea</h4>
+      <div class="form-grid">
+        <div class="form-field"><label for="hh-whatmaking">What is your company going to make?</label><textarea id="hh-whatmaking" name="what_making" required placeholder="Explain what you're building and why it matters."></textarea></div>
+        <div class="form-field"><label for="hh-customer">Who is your customer?</label><input type="text" id="hh-customer" name="customer" required placeholder="Be specific. Not 'everyone.'"></div>
+        <div class="form-field"><label for="hh-bizmodel">What's your business model?</label><input type="text" id="hh-bizmodel" name="business_model" required placeholder="How do you make money?"></div>
+        <div class="form-field"><label for="hh-whythisidea">Why did you pick this idea? Do you have domain expertise?</label><textarea id="hh-whythisidea" name="why_this_idea" required placeholder="What makes you the right person to build this?"></textarea></div>
+        <div class="form-field"><label for="hh-howlong">How long have you been thinking about this problem?</label><input type="text" id="hh-howlong" name="how_long" required placeholder="e.g. 6 months, 3 years, since college"></div>
+        <div class="form-field"><label for="hh-users">Are people using your product? How many?</label><input type="text" id="hh-users" name="users" placeholder="e.g. 200 beta users, 0 yet, 5 design partners"></div>
+        <div class="form-field"><label for="hh-demand">Do you have a paying customer, paid pilot, or design partner?</label><div class="radio-group" style="margin-bottom:8px;"><label><input type="radio" name="has_demand" value="yes"> Yes</label><label><input type="radio" name="has_demand" value="no"> No</label></div><input type="text" id="hh-demand" name="demand_details" placeholder="If yes, tell us more"></div>
+        <div class="form-field"><label for="hh-revenue">Do you have any revenue?</label><div class="radio-group" style="margin-bottom:8px;"><label><input type="radio" name="has_revenue" value="yes"> Yes</label><label><input type="radio" name="has_revenue" value="no"> No</label></div><input type="text" id="hh-revenue" name="revenue_details" placeholder="If yes, how much?"></div>
+        <div class="form-field"><label for="hh-funding">Did you raise any funding?</label><div class="radio-group" style="margin-bottom:8px;"><label><input type="radio" name="has_funding" value="yes"> Yes</label><label><input type="radio" name="has_funding" value="no"> No</label></div><input type="text" id="hh-funding" name="funding_details" placeholder="If yes, how much and from whom?"></div>
+        <div class="form-field"><label>Are you looking for a cofounder?</label><div class="radio-group"><label><input type="radio" name="looking_cofounder" value="yes"> Yes</label><label><input type="radio" name="looking_cofounder" value="no"> No</label></div></div>
+      </div>
+      <h4 class="form-group-title">Section 3: Your Team</h4>
+      <div id="cofounders-container">
+        <div class="form-grid form-grid--2col cofounder-row">
+          <div class="form-field"><label>Cofounder Name</label><input type="text" name="cofounder_1_name" placeholder="Optional"></div>
+          <div class="form-field"><label>Cofounder LinkedIn</label><input type="url" name="cofounder_1_linkedin" placeholder="https://linkedin.com/in/..."></div>
+        </div>
+      </div>
+      <button type="button" class="btn-outline" id="addCofounder" style="margin-top:8px;margin-bottom:24px;font-size:13px;padding:8px 16px;">+ Add Another Cofounder</button>
+      <h4 class="form-group-title">Section 4: Ready to Go?</h4>
+      <div class="form-grid">
+        <div class="form-field"><label>Can you commit full-time, in-person, in Seattle for 10+2 weeks?</label><div class="radio-group"><label><input type="radio" name="seattle_commit" value="yes" required> Yes</label><label><input type="radio" name="seattle_commit" value="no"> No</label></div></div>
+        <div class="form-field"><label for="hh-sacrifice">What have you given up to work on this?</label><textarea id="hh-sacrifice" name="sacrifice" required placeholder="Quit a job, turned down an offer, moved cities, burned savings. What's at stake for you?"></textarea></div>
+        <div class="form-field"><label for="hh-builderlink">Link to something you built</label><input type="url" id="hh-builderlink" name="builder_link" required placeholder="GitHub, live product, demo video. Anything that shows you ship."></div>
+        <div class="form-field"><label for="hh-source">How did you hear about OnlyExit?</label><input type="text" id="hh-source" name="source" placeholder="Event, social media, friend, LinkedIn, etc."></div>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:16px 32px;">Send It</button>
+    </form>
+    <div class="success-msg" id="hhSuccess"><p><strong>Application received.</strong><br><br>If we like what we see, you'll get a 15-minute interview. We're admitting on a rolling basis. Early admissions Aug 3. Full batch starts Aug 17. Come ready.</p></div>
   </div>
+</div>
 
-  <main id="main">
 
-    <!-- ===== 1. HERO ===== -->
-    <section class="section section--hero section--dark noise-overlay grid-bg" id="hero">
-      <!-- Gradient mesh blobs -->
-      <!-- Hero background image — subtle/transparent -->
-      <div class="hero__bg">
-        <img src="./assets/hero.webp" alt="" loading="eager" aria-hidden="true">
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__grid">
+      <div class="site-footer__about">
+        <img src="assets/OnlyExit-Logo-White.webp" alt="OnlyExit">
+        <p>We're going to incubate unicorns out of Seattle whether this city is ready or not.</p>
       </div>
-
-      <div class="mesh-blob mesh-blob--cyan" style="width:600px;height:600px;top:-10%;left:-5%;"></div>
-      <div class="mesh-blob mesh-blob--violet" style="width:500px;height:500px;bottom:10%;right:-10%;"></div>
-      <div class="mesh-blob mesh-blob--sand" style="width:300px;height:300px;top:40%;left:50%;"></div>
-
-      <!-- Floating particles -->
-      <div class="hero__particles" aria-hidden="true">
-        <span class="particle" style="--x:10%;--y:20%;--d:6s;--s:3px;"></span>
-        <span class="particle" style="--x:85%;--y:15%;--d:8s;--s:2px;"></span>
-        <span class="particle" style="--x:25%;--y:70%;--d:7s;--s:4px;"></span>
-        <span class="particle" style="--x:70%;--y:60%;--d:9s;--s:2px;"></span>
-        <span class="particle" style="--x:50%;--y:30%;--d:5s;--s:3px;"></span>
-        <span class="particle" style="--x:90%;--y:80%;--d:10s;--s:2px;"></span>
-        <span class="particle" style="--x:15%;--y:85%;--d:6s;--s:3px;"></span>
-        <span class="particle" style="--x:60%;--y:10%;--d:8s;--s:2px;"></span>
+      <div class="site-footer__col">
+        <h4 class="site-footer__col-title">Navigate</h4>
+        <a href="#hacker-house">Hacker House</a>
+        <a href="#cities">Cities</a>
       </div>
-
-      <div class="container hero__content reveal">
-        <div class="hero__badge">
-          <span class="hero__badge-dot"></span>
-          <span class="mono">SEATTLE HOUSE</span> &middot; Apps Open April 2 &middot; Close May 15
-        </div>
-        <h1 class="hero__headline">
-          <span class="hero__glitch" data-text="F**k Your 9&#8209;to&#8209;5.">F**k Your 9&#8209;to&#8209;5.</span><br>
-          <span class="gradient-text">Come Build a Unicorn.</span>
-        </h1>
-        <p class="hero__subtitle">
-          Seattle's founder engine for frontier problems. We find builders from Big Tech layoffs, college dorms, and garages and throw them into a hadron collider to <span class="hero__typed-wrap"><span class="hero__typed">ship or die.</span><span class="hero__cursor">|</span></span>
-        </p>
-        <div class="hero__ctas">
-          <a href="#apply" class="btn btn--primary btn--glow">Apply for Hacker House</a>
-          <a href="#events" class="btn btn--secondary btn--outline-glow">See Events</a>
-        </div>
-        <div class="hero__terminal">
-          <span class="mono hero__terminal-text">$ <span style="color:var(--color-primary);">onlyexit</span> --mode=founder --city=seattle <span class="hero__cursor">|</span></span>
-        </div>
-      </div>
-      <div class="hero__scroll-hint">
-        <span>Scroll</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-      </div>
-    </section>
-
-    <!-- ===== SITE CONTENT (slides up over fixed hero) ===== -->
-    <div class="site-content">
-
-    <!-- ===== MARQUEE TICKER ===== -->
-    <div class="marquee">
-      <div class="marquee__inner" id="marquee">
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>7</strong> Startups</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>3,000</strong> Sq Ft</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>Founder Events</strong> Every Month</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> Opens <strong>June 15</strong></span>
-        <span class="marquee__item"><span class="marquee__dot"></span> Applications Close <strong>May 15</strong></span>
-        <span class="marquee__item"><span class="marquee__dot"></span> Seattle · SF · NYC</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>200+</strong> Founders &amp; Operators in Network</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>Zero Equity.</strong> Zero SAFEs. Zero Strings.</span>
-        <!-- Duplicate for seamless loop -->
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>7</strong> Startups</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>3,000</strong> Sq Ft</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>Founder Events</strong> Every Month</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> Opens <strong>June 15</strong></span>
-        <span class="marquee__item"><span class="marquee__dot"></span> Applications Close <strong>May 15</strong></span>
-        <span class="marquee__item"><span class="marquee__dot"></span> Seattle · SF · NYC</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>200+</strong> Founders &amp; Operators in Network</span>
-        <span class="marquee__item"><span class="marquee__dot"></span> <strong>Zero Equity.</strong> Zero SAFEs. Zero Strings.</span>
+      <div class="site-footer__col">
+        <h4 class="site-footer__col-title">Connect</h4>
+        <a href="mailto:ankur@onlyexit.ai">ankur@onlyexit.ai</a>
+        <a href="https://www.linkedin.com/in/ankurtyagi2007/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://x.com/onlyexitai" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+        <a href="https://medium.com/@onlyexit" target="_blank" rel="noopener noreferrer">Medium</a>
       </div>
     </div>
-
-    <!-- ===== THE THESIS ===== -->
-    <section class="section section--surface noise-overlay" id="thesis">
-      <div class="container">
-        <div class="thesis-section reveal">
-          <p class="section__label">The Thesis</p>
-          <h2 class="thesis__headline">The Startup Ecosystem Invests in Founders. We Create Them.</h2>
-          <p class="thesis__body">
-            World-class infrastructure exists for companies that already exist. VCs fund them. Accelerators refine them. Nobody builds infrastructure for the stage before that. The moment a senior engineer at Amazon, a product lead at Meta, or a systems architect at Google wakes up thinking about escape.
-          </p>
-          <p class="thesis__body">
-            That moment is where OnlyExit lives. We create environments where high-signal operators collide, explore hard problems, test founder compatibility, and launch startups.
-          </p>
-        </div>
-
-        <div class="thesis-grid reveal-stagger">
-          <div class="thesis-card">
-            <div class="thesis-card__number">01</div>
-            <h3 class="thesis-card__title">The Talent Flood</h3>
-            <p class="thesis-card__body">Amazon, Meta, Google, and Block have cut thousands of senior operators — principal engineers, product leaders, engineering managers. They have the skills, networks, and runway. They need a starting point.</p>
-          </div>
-          <div class="thesis-card">
-            <div class="thesis-card__number">02</div>
-            <h3 class="thesis-card__title">AI Changed the Math</h3>
-            <p class="thesis-card__body">What previously required 20 engineers now takes 3. The barrier to starting has never been lower for people with the right skills. AI enables early-stage teams to take on problems that used to require 50 engineers.</p>
-          </div>
-          <div class="thesis-card">
-            <div class="thesis-card__number">03</div>
-            <h3 class="thesis-card__title">Generational Collisions</h3>
-            <p class="thesis-card__body">The best companies emerge when builders with genuinely different knowledge collide. One has lived inside the problem. The other brings tools the first never had. OnlyExit engineers those collisions.</p>
-          </div>
-        </div>
-
-        <div class="thesis-frontier reveal">
-          <h3 class="thesis-frontier__title">We Only Back Frontier Problems</h3>
-          <div class="thesis-frontier__grid">
-            <div class="thesis-frontier__item">
-              <span class="thesis-frontier__tag">Integration Frontier</span>
-              <p>AI can theoretically do the job. But the world hasn't built the trust layer, the compliance layer, or the liability chain to let it. Healthcare. Finance. Infrastructure.</p>
-            </div>
-            <div class="thesis-frontier__item">
-              <span class="thesis-frontier__tag">Systems Frontier</span>
-              <p>AI cannot do this today. These problems require highly innovative thinking for AI to even begin making inroads. Defense. Deeptech. Construction. Supply chain.</p>
-            </div>
-          </div>
-          <p class="thesis-frontier__closer">If Claude can ship your product as a feature update next Tuesday, this isn't the place for you.</p>
-          <p class="thesis-frontier__closer" style="margin-top: var(--space-4); font-size: var(--text-sm); color: var(--color-text-muted);">Consumer can be frontier. If the problem is genuinely hard — trust, behavior change, regulatory, infrastructure — the category doesn't matter.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 2. HACKER HOUSE (dominant) ===== -->
-    <section class="section section--dark hacker-house" id="hacker-house" style="padding-top: clamp(5rem, 10vw, 10rem); padding-bottom: clamp(5rem, 10vw, 10rem);">
-      <div class="hacker-house__bg">
-        <img src="./assets/hackerhouse.webp" alt="OnlyExit Hacker House" loading="lazy">
-      </div>
-      <div class="container hacker-house__content">
-        <div class="reveal">
-          <p class="section__label">The Hacker House</p>
-          <h2 class="section__headline" style="font-size: var(--text-3xl);">This Is Not a Co&#8209;Working Space.</h2>
-          <p class="hacker-house__body">
-            This is a war room. 7 startups. One house. 8-week residencies. Seattle. We're selecting the first cohort of founders to move in June 15. You move in. You form a team. You build a product. You demo what you shipped. Then the next cohort arrives. No tourists. No spectators. No one who's "still figuring it out." If you're in, you're all in.
-          </p>
-          <a href="#apply" class="btn btn--primary">Apply for the Hacker House →</a>
-        </div>
-
-        <div class="stats-strip reveal">
-          <div class="stats-strip__item">
-            <span class="stats-strip__value">7</span>
-            <span class="stats-strip__label">Startups</span>
-          </div>
-          <div class="stats-strip__item">
-            <span class="stats-strip__value">3,000</span>
-            <span class="stats-strip__label">Sq Ft</span>
-          </div>
-          <div class="stats-strip__item">
-            <span class="stats-strip__value">June 15</span>
-            <span class="stats-strip__label">Opens</span>
-          </div>
-          <div class="stats-strip__item">
-            <span class="stats-strip__value">Seattle</span>
-            <span class="stats-strip__label">Home Base</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== HOW IT WORKS ===== -->
-    <section class="section section--dark noise-overlay" id="how-it-works">
-      <div class="container">
-        <div class="reveal">
-          <p class="section__label">How It Works</p>
-          <h2 class="section__headline">Three Stages. One Output: Startups.</h2>
-          <p class="section__subheadline"><strong>Time Density Over Attendance:</strong> Every stage of the funnel trades audience size for interaction depth. That's by design.</p>
-        </div>
-
-        <div class="funnel reveal">
-
-          <!-- Stage 1: Events -->
-          <div class="funnel__stage">
-            <div class="funnel__marker">
-              <span class="funnel__number">01</span>
-              <div class="funnel__line"></div>
-            </div>
-            <div class="funnel__content">
-              <h3 class="funnel__title">Events</h3>
-              <p class="funnel__desc">Curated gatherings in Seattle. Meet builders and operators solving frontier problems. Collisions that would otherwise never, ever happen.</p>
-              <div class="funnel__details">
-                <div class="funnel__deliverables">
-                  <p class="funnel__deliverables-label">Two formats, one goal:</p>
-                  <ul class="funnel__deliverables-list">
-                    <li>Collision Events — small groups, psychological exercises designed to surface how people think, not what they do. Teams form through competitive collaboration.</li>
-                    <li>Builder Sessions — depth-forcing exercises, then builders share real work: open-source projects, tools they're testing, problem theses to pressure-test.</li>
-                    <li>No panels. No keynotes. No name tags and three-minute conversations. Engineered for depth.</li>
-                  </ul>
-                </div>
-                <p class="funnel__closer">Every event attendee is a potential sprint applicant. Every person in the room sees what the OnlyExit community produces.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Stage 2: Founder Collision Sprints -->
-          <div class="funnel__stage">
-            <div class="funnel__marker">
-              <span class="funnel__number">02</span>
-              <div class="funnel__line"></div>
-            </div>
-            <div class="funnel__content">
-              <h3 class="funnel__title">Founder Collision Sprints</h3>
-              <p class="funnel__desc">A weekend thesis formation hackathon at the house.</p>
-              <div class="funnel__details">
-                <div class="funnel__deliverables">
-                  <p class="funnel__deliverables-label">What you walk out with:</p>
-                  <ul class="funnel__deliverables-list">
-                    <li>A problem thesis torn apart and rebuilt by exited founders and operators who've seen what works and what's a dead end</li>
-                    <li>A residency build plan. Not a vague pitch. A structured roadmap for 8 weeks.</li>
-                    <li>Co-founder compatibility proof. You'll know if this team works under pressure or falls apart in 6 hours.</li>
-                  </ul>
-                </div>
-                <p class="funnel__closer">This isn't a networking event. You're paying for access to people who've built, shipped, failed, and exited. That feedback loop in a single weekend is worth more than 6 months of brainstorming at Starbucks.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Stage 3: The Residency -->
-          <div class="funnel__stage">
-            <div class="funnel__marker">
-              <span class="funnel__number">03</span>
-            </div>
-            <div class="funnel__content">
-              <h3 class="funnel__title">The Residency</h3>
-              <p class="funnel__desc">8 weeks. Move in. Build a product. Demo what you shipped. The strongest teams are awarded grants of up to $50K. Not everyone gets one. You earn it by building.</p>
-              <div class="funnel__details">
-                <div class="funnel__deliverables">
-                  <p class="funnel__deliverables-label">What 8 weeks looks like:</p>
-                  <ul class="funnel__deliverables-list">
-                    <li>7 resident teams maximum. 10–12 serious builders. Small enough for everyone to know everyone deeply.</li>
-                    <li>Synchronized build cycles. Public weekly progress reviews. Each team presents product progress, customer feedback, key metrics.</li>
-                    <li>Builder transparency sessions — operators expose real work, real problems, real numbers. When ambitious builders show each other their real work, people stop performing and start collaborating.</li>
-                  </ul>
-                </div>
-                <p class="funnel__closer">The program concludes with a demo day where teams present their progress to investors and advisors. Public accountability creates social pressure to ship.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== 3. WHAT YOU GET (NEW) ===== -->
-    <section class="section section--surface" id="what-you-get">
-      <div class="container">
-        <div class="reveal">
-          <p class="section__label">What You Get</p>
-          <h2 class="section__headline">Everything You Need to Build. Nothing Else.</h2>
-        </div>
-
-        <div class="benefits-grid reveal-stagger">
-
-          <!-- Card 1: Investment -->
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-              </svg>
-            </div>
-            <h3>Exploration Grants</h3>
-            <p>The strongest teams are awarded up to $50K at the end of every residency. Non-dilutive. No equity, no SAFEs, no strings. Not everyone gets one. You earn it by building.</p>
-          </div>
-
-          <!-- Card 2: Housing -->
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-              </svg>
-            </div>
-            <h3>Housing</h3>
-            <p>3,000 sq ft. Live where you build. $1K/month all-in — meals, cleaning, utilities included.</p>
-          </div>
-
-          <!-- Card 3: Network -->
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
-            </div>
-            <h3>The Network</h3>
-            <p>Direct access to 200+ founders and operators who've built and scaled. Weekly intros and working sessions with operators who've solved the problems you're facing right now.</p>
-          </div>
-
-          <!-- Card 4: Sponsor Perks -->
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-              </svg>
-            </div>
-            <h3>Sponsor Perks</h3>
-            <p>Our partners cover your stack so you can focus on building.</p>
-            <div class="sponsor-tags">
-              <span class="sponsor-tag">Banking</span>
-              <span class="sponsor-tag">Cloud</span>
-              <span class="sponsor-tag">Legal</span>
-              <span class="sponsor-tag">AI</span>
-            </div>
-          </div>
-
-          <!-- Card 5: Investor Access -->
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
-              </svg>
-            </div>
-            <h3>Demo Night</h3>
-            <p>At the end of every residency, teams present what they shipped. Investors, operators, and alumni in the room. You earn the attention by building, not by pitching.</p>
-          </div>
-
-          <!-- Card 6: Mentorship -->
-          <div class="benefit-card">
-            <div class="benefit-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-              </svg>
-            </div>
-            <h3>Build Support</h3>
-            <p>During your residency, operators from the Seattle ecosystem drop in for GTM, fundraising, product, and hiring. Not lectures. Working sessions on your actual problems.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 4. LIFE AT THE HOUSE (NEW) ===== -->
-    <section class="section section--dark" id="life-at-house">
-      <div class="container">
-        <div class="reveal">
-          <p class="section__label">Life at the House</p>
-          <h2 class="section__headline">This Is What Home Looks Like.</h2>
-          <p class="section__subtitle" style="margin-bottom: var(--space-12);">Everything you need to build — and nothing you don't. All included at $1K/month.</p>
-        </div>
-
-        <div class="facility-grid">
-
-          <div class="facility-card">
-            <img src="./assets/facilities/facility-whiteboards.jpg" alt="Whiteboards and war room" loading="lazy">
-            <div class="facility-card__overlay">
-              <p class="facility-card__title">Whiteboards &amp; War Room</p>
-              <p class="facility-card__desc">Open floor plan. Whiteboards everywhere. Arguments about architecture at 2am. This is where companies get started.</p>
-            </div>
-          </div>
-
-          <div class="facility-card">
-            <img src="./assets/facilities/facility-workspace.jpg" alt="3,000 sq ft workspace" loading="lazy">
-            <div class="facility-card__overlay">
-              <p class="facility-card__title">3,000 Sq Ft Workspace</p>
-              <p class="facility-card__desc">Open floor plan. Whiteboards everywhere. Build until 3am if you want.</p>
-            </div>
-          </div>
-
-          <div class="facility-card">
-            <img src="./assets/facilities/facility-weekly-demos.jpg" alt="Weekly demos and accountability" loading="lazy">
-            <div class="facility-card__overlay">
-              <p class="facility-card__title">Weekly Demos &amp; Accountability</p>
-              <p class="facility-card__desc">Every team presents progress weekly. Real numbers. Real problems. Public accountability creates social pressure to ship.</p>
-            </div>
-          </div>
-
-          <div class="facility-card">
-            <img src="./assets/facilities/facility-gym.jpg" alt="Gym equipment" loading="lazy">
-            <div class="facility-card__overlay">
-              <p class="facility-card__title">Gym &amp; Membership</p>
-              <p class="facility-card__desc">On-site equipment plus full gym membership. No excuses.</p>
-            </div>
-          </div>
-
-          <div class="facility-card">
-            <img src="./assets/facilities/facility-pool.jpg" alt="Swimming pool" loading="lazy">
-            <div class="facility-card__overlay">
-              <p class="facility-card__title">Swimming Pool</p>
-              <p class="facility-card__desc">HOA pool access. Because even founders need to decompress.</p>
-            </div>
-          </div>
-
-          <div class="facility-card">
-            <img src="./assets/facilities/facility-audi.jpg" alt="Audi Q5 shared transportation" loading="lazy">
-            <div class="facility-card__overlay">
-              <p class="facility-card__title">Audi Q5</p>
-              <p class="facility-card__desc">Shared house transportation. A 2018 Audi Q5 for investor meetings, grocery runs, whatever you need to not waste time on logistics.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 5. CORVETTE (NEW) ===== -->
-    <section class="section section--surface" id="corvette">
-      <div class="container">
-        <div class="corvette__block reveal">
-          <div class="corvette__header">
-            <p class="corvette__label">THE TAKEOFF CAR</p>
-            <h2 class="corvette__headline">Every Cult Has a Symbol.</h2>
-            <p class="corvette__kicker">Most hacker houses give you a desk. We give you a Corvette. When this thing rolls through SLU, people ask two questions: What is OnlyExit? And how do I get in?</p>
-          </div>
-        </div>
-      </div>
-      <div class="corvette__image corvette__image--fullbleed reveal--scale">
-        <img src="./assets/corvette-seattle.jpg" alt="OnlyExit branded Corvette C8 on the streets of Seattle" loading="lazy">
-      </div>
-      <div class="container">
-        <div class="corvette__block">
-          <div class="corvette__footer">
-            <p class="corvette__sub">VC Meeting on Sand Hill Road. A branded Corvette. "F**K YOUR 9&#8209;TO&#8209;5" on the side. The meeting starts before you open your mouth.</p>
-            <p class="corvette__disclaimer">Expected August 2026. Sponsor-branded. Resident access included.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 6. FLY-IN (NEW) ===== -->
-    <section class="section section--dark" id="fly-in">
-      <div class="container">
-        <div class="flyin__inner reveal--scale">
-
-          <!-- Left: Copy -->
-          <div class="flyin__content">
-            <p class="flyin__label">Visiting Founders</p>
-            <h2 class="flyin__headline">Not in Seattle?<br>Come Build With Us.</h2>
-            <p class="flyin__desc">Fly in for a week. Get a desk, a bed, meals, the house car, and access to everything our residents have — minus the long-term commitment. Meet the cohort. Test the vibe. Ship something while you're here.</p>
-
-            <div class="flyin__price">
-              <span class="flyin__price-amount">$750</span>
-              <span class="flyin__price-period">/ week</span>
-            </div>
-
-            <ul class="flyin__includes">
-              <li>Desk</li>
-              <li>Bed</li>
-              <li>Meals</li>
-              <li>House Car</li>
-              <li>Events</li>
-              <li>Meet the Cohort</li>
-            </ul>
-
-            <button class="flyin__cta" id="openFlyinModal">
-              Apply to Visit
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-            <p class="flyin__note">Application-based. Limited spots each week.</p>
-          </div>
-
-          <!-- Right: Visual -->
-          <div class="flyin__visual">
-            <div class="flyin__visual-bg"></div>
-            <div class="flyin__visual-content">
-              <div class="flyin__visual-icon">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
-                </svg>
-              </div>
-
-              <ul class="flyin__visual-checklist">
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  Desk &amp; workspace access all week
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  Private bed in shared house
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  Chef-cooked breakfast &amp; dinner
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  Audi Q5 house car access
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  All house events &amp; programming
-                </li>
-                <li>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  Meet the current cohort &amp; network
-                </li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 7. EVENTS — WEEKLY PROGRAMMING ===== -->
-    <section class="section section--surface" id="events">
-      <div class="container">
-        <div class="reveal">
-          <p class="section__label">Inside the House</p>
-          <h2 class="section__headline">What a Week Looks Like.</h2>
-          <p class="section__subtitle" style="margin-bottom: var(--space-12);">No fixed days. No rigid schedules. Just the rhythm that keeps you building.</p>
-        </div>
-
-        <div class="timeline reveal">
-
-          <div class="timeline-item">
-            <h3 class="timeline-item__title">Office Hours</h3>
-            <p class="timeline-item__desc">1:1 mentorship sessions with operators who've built and exited. Bring your hardest problem.</p>
-          </div>
-
-          <div class="timeline-item">
-            <h3 class="timeline-item__title">Builder Night</h3>
-            <p class="timeline-item__desc">Music on. Heads down. Ship something by midnight.</p>
-          </div>
-
-          <div class="timeline-item">
-            <h3 class="timeline-item__title">Guest Speaker / Creator Collab</h3>
-            <p class="timeline-item__desc">We fly in founders, creators, and investors. They don't lecture — they collab with your startup.</p>
-          </div>
-
-          <div class="timeline-item">
-            <h3 class="timeline-item__title">Demo + Drinks</h3>
-            <p class="timeline-item__desc">Show what you built this week. Celebrate wins. Roast the failures.</p>
-          </div>
-
-        </div>
-
-        <div class="section-divider"></div>
-
-        <!-- PART B: Public Event Series -->
-        <div class="reveal">
-          <p class="section__label">Public Events</p>
-          <h2 class="section__headline">The Series.</h2>
-          <p class="section__subtitle" style="margin-bottom: var(--space-12);">Three tracks. Three audiences. All roads lead to building something real.</p>
-        </div>
-
-        <div class="series-grid reveal-stagger">
-
-          <!-- Series 1 -->
-          <div class="series-card">
-            <span class="series-card__badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              Series 01
-            </span>
-            <h3 class="series-card__title">Layoffs to TakeOff</h3>
-            <p class="series-card__audience">For: Laid off / quit tech workers</p>
-            <p class="series-card__desc">Turn your severance into a startup. Workshops, co-founder mixers, and invite-only founder-meets-capital nights across Seattle, SF, and NYC.</p>
-            <div class="series-card__luma">
-              <a href="https://lu.ma/yvud6kjc" target="_blank" rel="noopener noreferrer" class="series-card__luma-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                View upcoming events on Luma
-              </a>
-            </div>
-          </div>
-
-          <!-- Series 2 -->
-          <div class="series-card">
-            <span class="series-card__badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              Series 02
-            </span>
-            <h3 class="series-card__title">Dropout to Deploy</h3>
-            <p class="series-card__audience">For: College students &amp; new grads</p>
-            <p class="series-card__desc">Skip the resume. Build something. For students and new grads who'd rather start a company than update LinkedIn.</p>
-            <div class="series-card__luma">
-              <a href="https://lu.ma/yvud6kjc" target="_blank" rel="noopener noreferrer" class="series-card__luma-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                View upcoming events on Luma
-              </a>
-            </div>
-          </div>
-
-          <!-- Series 3 -->
-          <div class="series-card">
-            <span class="series-card__badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
-              Series 03
-            </span>
-            <h3 class="series-card__title">Double Life</h3>
-            <p class="series-card__audience">For: Employed builders, nights &amp; weekends</p>
-            <p class="series-card__desc">9-to-5 by day, founder by night. For builders who aren't ready to quit yet but aren't willing to wait either.</p>
-            <div class="series-card__luma">
-              <a href="https://lu.ma/yvud6kjc" target="_blank" rel="noopener noreferrer" class="series-card__luma-btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                View upcoming events on Luma
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 8. EVENTS BY CITY ===== -->
-    <section class="section section--dark" id="cities">
-      <div class="container">
-        <div class="reveal">
-          <p class="section__label">Where We Build</p>
-          <h2 class="section__headline">Starting in Seattle with Future Expansion in Three Cities. One Mission.</h2>
-        </div>
-
-        <div class="city-grid reveal-stagger">
-          <!-- Seattle -->
-          <div class="city-card">
-            <div class="city-card__img">
-              <img src="./assets/seattle.webp" alt="Seattle skyline" loading="lazy">
-            </div>
-            <div class="city-card__content">
-              <h3 class="city-card__name">Seattle</h3>
-              <p class="city-card__desc">Home base. Where Amazon and Microsoft just handed us 100,000 potential founders. The war starts here.</p>
-              <a href="https://lu.ma/yvud6kjc" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--small">View Events →</a>
-            </div>
-          </div>
-
-          <!-- San Francisco -->
-          <div class="city-card">
-            <div class="city-card__img">
-              <img src="./assets/sf.webp" alt="San Francisco skyline" loading="lazy">
-            </div>
-            <div class="city-card__content">
-              <span class="city-card__tag">Hacker House 2027</span>
-              <h3 class="city-card__name">San Francisco</h3>
-              <p class="city-card__desc">The OG startup city. We're bringing the fire. Hacker House coming 2027.</p>
-              <a href="https://lu.ma/yvud6kjc" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--small">View Events →</a>
-            </div>
-          </div>
-
-          <!-- New York -->
-          <div class="city-card">
-            <div class="city-card__img">
-              <img src="./assets/nyc.webp" alt="New York City skyline" loading="lazy">
-            </div>
-            <div class="city-card__content">
-              <span class="city-card__tag">Hacker House 2027</span>
-              <h3 class="city-card__name">New York</h3>
-              <p class="city-card__desc">Finance meets founding. Wall Street refugees welcome. Hacker House coming 2027.</p>
-              <a href="https://lu.ma/yvud6kjc" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--small">View Events →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 9. SEATTLE STORY ===== -->
-    <section class="section section--dark" id="seattle-story">
-      <div class="container">
-        <div class="reveal">
-          <p class="section__label">Why Seattle</p>
-          <h2 class="section__headline">Seattle Was a Startup City Once.<br>We're Making It One Again.</h2>
-          <div class="seattle-story__body" style="margin-top: var(--space-6);">
-            <p>Boeing. Microsoft. Amazon. Starbucks. Costco. This city built iconic companies before Big Tech turned it into a commuter town for engineers making $400K to maintain someone else's legacy code.</p>
-            <br>
-            <p>44% of America's unicorn founders are immigrants. Amazon and Microsoft brought 100,000+ visa workers to this city. Agentic AI is eating every role Big Tech built in the last decade. The layoffs aren't slowing down.</p>
-            <br>
-            <p>The talent is here. The capital is here. The only thing missing was a launchpad. <strong style="color: var(--color-primary);">That's OnlyExit.</strong></p>
-          </div>
-
-          <div class="stats-strip reveal" style="margin-top: var(--space-10);">
-            <div class="stats-strip__item">
-              <span class="stats-strip__value">#2</span>
-              <span class="stats-strip__label">Talent Rank (but #15 Startup Ecosystem)</span>
-            </div>
-            <div class="stats-strip__item">
-              <span class="stats-strip__value">23%</span>
-              <span class="stats-strip__label">of U.S. AI Engineers — #2 behind SF</span>
-            </div>
-            <div class="stats-strip__item">
-              <span class="stats-strip__value">185K</span>
-              <span class="stats-strip__label">Tech Workers in Puget Sound (2024)</span>
-            </div>
-            <div class="stats-strip__item">
-              <span class="stats-strip__value">$1.97B</span>
-              <span class="stats-strip__label">Early-Stage Capital vs Bay Area's $26.7B</span>
-            </div>
-          </div>
-          <p class="seattle-story__source" style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted); text-align: center;">Sources: CBRE Tech Talent 2025 · Startup Genome GSER 2025 · Carta Startup Ecosystem Ranking 2025 · SignalFire AI Talent Report 2024</p>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 10. APPLICATION (modal trigger) ===== -->
-    <section class="section section--surface" id="apply">
-      <div class="container">
-        <div class="reveal apply-cta-block" id="applyCta">
-          <p class="section__label">Application</p>
-          <h2 class="section__headline">Apply for the Hacker House</h2>
-          <p class="section__subtitle">
-            We're selecting the first cohort of builders. Applications close May 15. Interview week: May 16–23. Decisions: May 25. You either have it or you don't.
-          </p>
-          <button class="btn btn--primary btn--lg" id="openHackerHouseModal" style="margin-top: var(--space-6); padding: var(--space-4) var(--space-10); font-size: var(--text-base);">Start Application →</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 11. RESOURCES (Quiz + CoFounder + Calc + Medium) ===== -->
-    <section class="section section--dark" id="resources">
-      <div class="container">
-        <div class="reveal">
-          <p class="section__label">Resources</p>
-          <h2 class="section__headline">Built for Builders.</h2>
-        </div>
-
-        <div class="resource-grid reveal-stagger">
-          <!-- Quiz Card -->
-          <div class="resource-card" id="quiz-card">
-            <div class="resource-card__icon">🧠</div>
-            <h3 class="resource-card__title">Am I Ready to Quit?</h3>
-            <p class="resource-card__desc">10-question quiz. Get your founder-readiness score and honest feedback.</p>
-            <button class="btn btn--primary btn--small" id="openQuizModal">Take the Quiz →</button>
-          </div>
-
-          <!-- Co-Founder Match -->
-          <div class="resource-card" id="cofounder-card">
-            <div class="resource-card__icon">🤝</div>
-            <h3 class="resource-card__title">Find Your Co-Founder</h3>
-            <p class="resource-card__desc">Paste your LinkedIn. Tell us what you're building. We'll match you with founders in the network.</p>
-            <button class="btn btn--primary btn--small" id="openCofounderModal" style="margin-top: var(--space-3);">Get Matched →</button>
-          </div>
-
-          <!-- Severance Calculator -->
-          <div class="resource-card resource-card--clickable" id="calc-card" role="button" tabindex="0" aria-label="Open Severance Calculator">
-            <div class="resource-card__icon">🧮</div>
-            <h3 class="resource-card__title">Severance Calculator</h3>
-            <p class="resource-card__desc">How long can you survive? Real tax math, COBRA vs ACA, debt payoff — the full picture. Click to launch.</p>
-            <span class="btn btn--primary btn--small" style="margin-top: var(--space-3);">Launch Calculator →</span>
-          </div>
-
-          <!-- Medium Article -->
-          <div class="resource-card">
-            <div class="resource-card__icon">📰</div>
-            <h3 class="resource-card__title">The Analysis</h3>
-            <p class="resource-card__desc">Our deep-dive on why this is the best time in a decade to start a company in Seattle.</p>
-            <a href="https://medium.com/p/86e9f65dec61" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--small">Read on Medium →</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 12. MERCH ===== -->
-    <section class="section section--surface" id="merch">
-      <div class="container">
-        <div class="reveal">
-          <p class="section__label">Merch</p>
-          <h2 class="section__headline">Rep the Cult.</h2>
-          <p class="section__subtitle">
-            This isn't merch. It's a uniform. Wear it to your next investor meeting. Wear it to your last day at the office. Wear it because you mean it.
-          </p>
-        </div>
-
-        <div class="merch-grid reveal-stagger">
-          <!-- Neon Smile Tee -->
-          <div class="merch-card">
-            <div class="merch-card__img merch-card__img--crossfade">
-              <img src="./assets/mockups/01-neon-smile-tee-front.jpg" alt="Neon Smile Tee — Front" class="merch-card__img-front" loading="lazy">
-              <img src="./assets/mockups/02-neon-smile-tee-lifestyle.jpg" alt="Neon Smile Tee — Lifestyle" class="merch-card__img-back" loading="lazy">
-            </div>
-            <div class="merch-card__body">
-              <div class="merch-card__title">Neon Smile Tee</div>
-              <div class="merch-card__price">$35</div>
-              <button class="btn btn--primary btn--small" data-preorder="Neon Smile Tee" data-price="$35">Pre-Order</button>
-            </div>
-          </div>
-
-          <!-- Fire Skull Tee -->
-          <div class="merch-card">
-            <div class="merch-card__img merch-card__img--crossfade">
-              <img src="./assets/mockups/04-fire-skull-tee-front.jpg" alt="Fire Skull Tee — Front" class="merch-card__img-front" loading="lazy">
-              <img src="./assets/mockups/05-fire-skull-tee-lifestyle.jpg" alt="Fire Skull Tee — Lifestyle" class="merch-card__img-back" loading="lazy">
-            </div>
-            <div class="merch-card__body">
-              <div class="merch-card__title">Fire Skull Tee</div>
-              <div class="merch-card__price">$35</div>
-              <button class="btn btn--primary btn--small" data-preorder="Fire Skull Tee" data-price="$35">Pre-Order</button>
-            </div>
-          </div>
-
-          <!-- Neon Smile Hoodie -->
-          <div class="merch-card">
-            <div class="merch-card__img merch-card__img--crossfade">
-              <img src="./assets/mockups/11-neon-smile-hoodie-front.jpg" alt="Neon Smile Hoodie — Front" class="merch-card__img-front" loading="lazy">
-              <img src="./assets/mockups/12-neon-smile-hoodie-lifestyle.jpg" alt="Neon Smile Hoodie — Lifestyle" class="merch-card__img-back" loading="lazy">
-            </div>
-            <div class="merch-card__body">
-              <div class="merch-card__title">Neon Smile Hoodie</div>
-              <div class="merch-card__price">$65</div>
-              <button class="btn btn--primary btn--small" data-preorder="Neon Smile Hoodie" data-price="$65">Pre-Order</button>
-            </div>
-          </div>
-
-          <!-- Fire Skull Hoodie -->
-          <div class="merch-card">
-            <div class="merch-card__img merch-card__img--crossfade">
-              <img src="./assets/mockups/13-fire-skull-hoodie-front.jpg" alt="Fire Skull Hoodie — Front" class="merch-card__img-front" loading="lazy">
-              <img src="./assets/mockups/14-fire-skull-hoodie-lifestyle.jpg" alt="Fire Skull Hoodie — Lifestyle" class="merch-card__img-back" loading="lazy">
-            </div>
-            <div class="merch-card__body">
-              <div class="merch-card__title">Fire Skull Hoodie</div>
-              <div class="merch-card__price">$65</div>
-              <button class="btn btn--primary btn--small" data-preorder="Fire Skull Hoodie" data-price="$65">Pre-Order</button>
-            </div>
-          </div>
-
-          <!-- Dad Hat -->
-          <div class="merch-card">
-            <div class="merch-card__img merch-card__img--crossfade">
-              <img src="./assets/mockups/15-dad-hat-front.jpg" alt="Dad Hat — Front" class="merch-card__img-front" loading="lazy">
-              <img src="./assets/mockups/16-dad-hat-lifestyle.jpg" alt="Dad Hat — Lifestyle" class="merch-card__img-back" loading="lazy">
-            </div>
-            <div class="merch-card__body">
-              <div class="merch-card__title">Dad Hat</div>
-              <div class="merch-card__price">$28</div>
-              <button class="btn btn--primary btn--small" data-preorder="Dad Hat" data-price="$28">Pre-Order</button>
-            </div>
-          </div>
-
-          <!-- Phone Case -->
-          <div class="merch-card">
-            <div class="merch-card__img">
-              <img src="./assets/mockups/24-phone-case.jpg" alt="Phone Case" loading="lazy">
-            </div>
-            <div class="merch-card__body">
-              <div class="merch-card__title">Phone Case</div>
-              <div class="merch-card__price">$22</div>
-              <button class="btn btn--primary btn--small" data-preorder="Phone Case" data-price="$22">Pre-Order</button>
-            </div>
-          </div>
-
-          <!-- Snapback -->
-          <div class="merch-card">
-            <div class="merch-card__img">
-              <img src="./assets/mockups/25-snapback-side.jpg" alt="Snapback" loading="lazy">
-            </div>
-            <div class="merch-card__body">
-              <div class="merch-card__title">Snapback</div>
-              <div class="merch-card__price">$32</div>
-              <button class="btn btn--primary btn--small" data-preorder="Snapback" data-price="$32">Pre-Order</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pre-Order Modal -->
-    <div class="modal-overlay" id="preorderModal">
-      <div class="modal">
-        <button class="modal__close" id="preorderClose" aria-label="Close">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        </button>
-        <h3 class="modal__title">Pre-Order: <span id="preorderItemName"></span></h3>
-        <form id="preorderForm">
-          <input type="hidden" name="formType" value="merch-preorder">
-          <div class="form-grid">
-            <div class="form-field">
-              <label for="po-name">Name</label>
-              <input type="text" id="po-name" name="name" required>
-            </div>
-            <div class="form-field">
-              <label for="po-email">Email</label>
-              <input type="email" id="po-email" name="email" required>
-            </div>
-            <div class="form-field">
-              <label for="po-phone">Phone</label>
-              <input type="tel" id="po-phone" name="phone" required>
-            </div>
-            <div class="form-field">
-              <label for="po-size">Size</label>
-              <select id="po-size" name="size" required>
-                <option value="">Select size</option>
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-                <option value="XL">XL</option>
-                <option value="XXL">XXL</option>
-                <option value="N/A">N/A (accessories)</option>
-              </select>
-            </div>
-          </div>
-          <input type="hidden" id="po-item" name="item">
-          <input type="hidden" id="po-price" name="price">
-          <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center; margin-top: var(--space-4);">Submit Pre-Order</button>
-        </form>
-        <div class="success-msg" id="poSuccess">
-          <p><strong>Pre-order received!</strong><br>We'll reach out when it's ready to ship.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== HACKER HOUSE APPLICATION MODAL ===== -->
-    <div class="modal-overlay" id="hackerHouseModal">
-      <div class="modal modal--wide">
-        <button class="modal__close" data-close-modal="hackerHouseModal" aria-label="Close">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        </button>
-        <h3 class="modal__title">Hacker House Application</h3>
-        <form id="hackerHouseForm">
-          <input type="hidden" name="formType" value="hacker-house-application">
-          <!-- Section 1 -->
-          <h4 class="form-group-title">Section 1 — Who Are You</h4>
-          <div class="form-grid form-grid--2col">
-            <div class="form-field">
-              <label for="hh-name">Full Name</label>
-              <input type="text" id="hh-name" name="name" required placeholder="Your full name">
-            </div>
-            <div class="form-field">
-              <label for="hh-email">Email</label>
-              <input type="email" id="hh-email" name="email" required placeholder="you@email.com">
-            </div>
-            <div class="form-field">
-              <label for="hh-phone">Phone</label>
-              <input type="tel" id="hh-phone" name="phone" required placeholder="+1 (555) 000-0000">
-            </div>
-            <div class="form-field">
-              <label for="hh-linkedin">LinkedIn URL</label>
-              <input type="url" id="hh-linkedin" name="linkedin" required placeholder="https://linkedin.com/in/yourname">
-            </div>
-            <div class="form-field">
-              <label for="hh-city">City</label>
-              <select id="hh-city" name="city" required>
-                <option value="">Select your city</option>
-                <option value="Seattle">Seattle</option>
-                <option value="SF">San Francisco</option>
-                <option value="NYC">New York</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Section 2 -->
-          <h4 class="form-group-title">Section 2 — What Are You Building</h4>
-          <div class="form-grid">
-            <div class="form-field">
-              <label>Are you currently working on a startup?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="startup_status" value="full-time" required> Yes, full-time</label>
-                <label><input type="radio" name="startup_status" value="nights-weekends"> Yes, nights &amp; weekends</label>
-                <label><input type="radio" name="startup_status" value="have-idea"> No, but I have an idea</label>
-                <label><input type="radio" name="startup_status" value="looking-cofounder"> No, looking for a co-founder</label>
-              </div>
-            </div>
-            <div class="form-field">
-              <label for="hh-whatbuilding">If yes — one sentence: what does it do?</label>
-              <input type="text" id="hh-whatbuilding" name="what_building" placeholder="Describe in one sentence">
-            </div>
-            <div class="form-field">
-              <label>What stage are you at?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="stage" value="problem" required> I have a problem I want to solve</label>
-                <label><input type="radio" name="stage" value="building-need-cofounder"> I'm building something and need a cofounder</label>
-                <label><input type="radio" name="stage" value="team-need-launchpad"> I have a team and need a launchpad</label>
-                <label><input type="radio" name="stage" value="done-with-bigtech"> I don't have an idea yet. I just know I'm done with Big Tech</label>
-              </div>
-            </div>
-            <div class="form-field">
-              <label>Are you technical or non-technical?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="technical" value="technical" required> Technical</label>
-                <label><input type="radio" name="technical" value="non-technical"> Non-technical</label>
-                <label><input type="radio" name="technical" value="both"> Both</label>
-              </div>
-            </div>
-            <div class="form-field">
-              <label for="hh-superpower">What's your superpower?</label>
-              <input type="text" id="hh-superpower" name="superpower" placeholder="Keep it to one line">
-            </div>
-          </div>
-
-          <!-- Section 3 -->
-          <h4 class="form-group-title">Section 3 — Why OnlyExit</h4>
-          <div class="form-grid">
-            <div class="form-field">
-              <label>Where are you coming from?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="background" value="big-tech-layoff" required> Big Tech layoff</label>
-                <label><input type="radio" name="background" value="quit"> Quit my job</label>
-                <label><input type="radio" name="background" value="college"> College/university</label>
-                <label><input type="radio" name="background" value="founder"> Already a founder</label>
-                <label><input type="radio" name="background" value="other"> Other</label>
-              </div>
-            </div>
-            <div class="form-field">
-              <label>What do you need most right now?</label>
-              <div class="checkbox-group">
-                <label><input type="checkbox" name="needs" value="co-founder"> Co-founder</label>
-                <label><input type="checkbox" name="needs" value="funding"> Funding introductions</label>
-                <label><input type="checkbox" name="needs" value="workspace"> Workspace</label>
-                <label><input type="checkbox" name="needs" value="community"> Community</label>
-                <label><input type="checkbox" name="needs" value="mentorship"> Mentorship</label>
-                <label><input type="checkbox" name="needs" value="all"> All of the above</label>
-              </div>
-            </div>
-            <div class="form-field">
-              <label>How did you hear about OnlyExit?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="source" value="social-media" required> Social media</label>
-                <label><input type="radio" name="source" value="friend"> Friend</label>
-                <label><input type="radio" name="source" value="event"> Event</label>
-                <label><input type="radio" name="source" value="linkedin"> LinkedIn</label>
-                <label><input type="radio" name="source" value="other"> Other</label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Section 4 -->
-          <h4 class="form-group-title">Section 4 — The Filter</h4>
-          <div class="form-grid">
-            <div class="form-field">
-              <label for="hh-builderlink">Link to Something You Built</label>
-              <input type="url" id="hh-builderlink" name="builder_link" required placeholder="GitHub repo, live product, portfolio, demo video. Anything that shows you ship.">
-            </div>
-            <div class="form-field">
-              <label for="hh-builderstory">What Did You Ship, Break, or Learn?</label>
-              <textarea id="hh-builderstory" name="builder_story" required placeholder="Tell us about something you built. What worked. What didn't. What you'd do differently."></textarea>
-            </div>
-            <div class="form-field">
-              <label for="hh-why">Why should we let you in?</label>
-              <textarea id="hh-why" name="why" required placeholder="2-3 sentences. Make it count."></textarea>
-            </div>
-            <div class="form-field">
-              <label>Are you available for a 15-minute interview in May?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="interview_avail" value="yes" required> Yes</label>
-                <label><input type="radio" name="interview_avail" value="limited"> Yes, but limited availability</label>
-                <label><input type="radio" name="interview_avail" value="no"> No</label>
-              </div>
-            </div>
-            <div class="form-field">
-              <label>Preferred interview time</label>
-              <div class="radio-group">
-                <label><input type="radio" name="interview_time" value="morning" required> Morning</label>
-                <label><input type="radio" name="interview_time" value="afternoon"> Afternoon</label>
-                <label><input type="radio" name="interview_time" value="evening"> Evening</label>
-              </div>
-            </div>
-          </div>
-
-          <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center; padding: var(--space-4) var(--space-8); font-size: var(--text-base);">
-            Send It
-          </button>
-        </form>
-        <div class="success-msg" id="hhSuccess">
-          <p>
-            <strong>Application received.</strong><br><br>
-            If we like what we see, you'll get a 15-minute interview slot in May. Decisions go out May 25. The house opens June 15. Come ready.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== QUIZ MODAL ===== -->
-    <div class="modal-overlay" id="quizModal">
-      <div class="modal modal--wide">
-        <button class="modal__close" data-close-modal="quizModal" aria-label="Close">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        </button>
-        <h3 class="modal__title">Am I Ready to Quit?</h3>
-        <div class="quiz__progress">
-          <div class="quiz__progress-bar" id="quizProgress" style="width: 0%;"></div>
-        </div>
-        <div id="quizQuestions"></div>
-        <div class="quiz__result" id="quizResult"></div>
-      </div>
-    </div>
-
-    <!-- ===== CO-FOUNDER MATCH MODAL ===== -->
-    <div class="modal-overlay" id="cofounderModal">
-      <div class="modal">
-        <button class="modal__close" data-close-modal="cofounderModal" aria-label="Close">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        </button>
-        <h3 class="modal__title">Find Your Co-Founder</h3>
-        <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-6); line-height: 1.6;">
-          Paste your LinkedIn. Tell us what you're building. We'll match you with founders in the network.
-        </p>
-        <form id="cofounderForm">
-          <input type="hidden" name="formType" value="cofounder-match">
-          <div class="form-field" style="margin-bottom: var(--space-3);">
-            <label for="cf-linkedin">LinkedIn URL</label>
-            <input type="url" id="cf-linkedin" name="linkedin" placeholder="LinkedIn URL" required>
-          </div>
-          <div class="form-field" style="margin-bottom: var(--space-3);">
-            <label for="cf-building">What are you building?</label>
-            <input type="text" id="cf-building" name="building" placeholder="What are you building or want to build?">
-          </div>
-          <div class="form-field" style="margin-bottom: var(--space-4);">
-            <label for="cf-type">Co-founder type</label>
-            <select id="cf-type" name="cofounder_type" required>
-              <option value="">What kind of co-founder do you need?</option>
-              <option value="technical">Technical</option>
-              <option value="business">Business &amp; Sales</option>
-              <option value="design">Design &amp; Product</option>
-              <option value="industry">Industry Expert</option>
-              <option value="vibes">I'll know them when I meet them</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">Submit →</button>
-        </form>
-        <div class="success-msg" id="cofounderSuccess">
-          <p>We'll match you with founders in the OnlyExit network. Matches drop every Friday.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== FLY-IN APPLICATION MODAL ===== -->
-    <div class="modal-overlay" id="flyinModal">
-      <div class="modal modal--wide">
-        <button class="modal__close" data-close-modal="flyinModal" aria-label="Close">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-        </button>
-        <h3 class="modal__title">Fly-In Application</h3>
-        <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-6); line-height: 1.6;">
-          $750/week. Includes desk, bed, meals, house car, events, and access to the cohort. Limited spots.
-        </p>
-        <form id="flyinForm">
-          <input type="hidden" name="formType" value="flyin-application">
-          <div class="form-grid form-grid--2col">
-            <div class="form-field">
-              <label for="fi-name">Full Name</label>
-              <input type="text" id="fi-name" name="name" required placeholder="Your full name">
-            </div>
-            <div class="form-field">
-              <label for="fi-email">Email</label>
-              <input type="email" id="fi-email" name="email" required placeholder="you@email.com">
-            </div>
-            <div class="form-field">
-              <label for="fi-linkedin">LinkedIn URL</label>
-              <input type="url" id="fi-linkedin" name="linkedin" required placeholder="https://linkedin.com/in/yourname">
-            </div>
-            <div class="form-field">
-              <label for="fi-city">City</label>
-              <input type="text" id="fi-city" name="city" required placeholder="Your current city">
-            </div>
-          </div>
-          <div class="form-grid">
-            <div class="form-field">
-              <label for="fi-building">What are you building?</label>
-              <input type="text" id="fi-building" name="what_building" required placeholder="Describe in one sentence">
-            </div>
-            <div class="form-field">
-              <label for="fi-dates">Preferred dates</label>
-              <input type="text" id="fi-dates" name="preferred_dates" required placeholder="e.g., July 7–13 or flexible">
-            </div>
-            <div class="form-field">
-              <label for="fi-source">How did you hear about us?</label>
-              <input type="text" id="fi-source" name="source" placeholder="Social media, friend, event, etc.">
-            </div>
-          </div>
-          <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center; padding: var(--space-4) var(--space-8); font-size: var(--text-base);">
-            Submit Application
-          </button>
-        </form>
-        <div class="success-msg" id="flyinSuccess">
-          <p><strong>Application received!</strong><br>We'll review and get back to you within 48 hours.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- ===== 13. FAQ ===== -->
-    <section class="section section--dark" id="faq">
-      <div class="container">
-        <div class="reveal">
-          <p class="section__label">FAQ</p>
-          <h2 class="section__headline">Questions? Fine.</h2>
-        </div>
-
-        <div class="faq-list reveal">
-          <div class="faq-item">
-            <button class="faq-item__question" aria-expanded="false">
-              What is OnlyExit?
-              <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
-            </button>
-            <div class="faq-item__answer"><div class="faq-item__answer-inner">
-              OnlyExit is a founder engine built around a hacker house in Seattle. Events and collision sprints bring builders together. The house is where teams form, build, and ship. 7 startups. 8-week residencies. Up to $50K in non-dilutive grants. If you're solving a frontier problem and ready to go all in, this is your launchpad.
-            </div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-item__question" aria-expanded="false">
-              Do I need to be laid off?
-              <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
-            </button>
-            <div class="faq-item__answer"><div class="faq-item__answer-inner">
-              No. We don't care how you got here. Laid off, quit, dropped out, still employed but building nights and weekends — if you're serious about founding, you belong.
-            </div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-item__question" aria-expanded="false">
-              I'm on an H-1B. Can I even start a company?
-              <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
-            </button>
-            <div class="faq-item__answer"><div class="faq-item__answer-inner">
-              Yes. You can incorporate, invest, and own equity on an H-1B. You just can't actively work for your startup unless it sponsors your visa. The new 2025 rules also allow self-sponsored H-1Bs. We've done the research so you don't have to. Come talk to us.
-            </div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-item__question" aria-expanded="false">
-              What is the Layoff &gt; TakeOff series?
-              <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
-            </button>
-            <div class="faq-item__answer"><div class="faq-item__answer-inner">
-              9 events across Seattle, SF, and NYC in 3 stages: Flight Plan (free workshop), Copilot (free co-founder mixer), and Runway (invite-only, founders meet capital). Each stage filters harder. The pipeline ends at the Hacker House.
-            </div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-item__question" aria-expanded="false">
-              How does the Hacker House work?
-              <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
-            </button>
-            <div class="faq-item__answer"><div class="faq-item__answer-inner">
-              Applications close May 15. 15-minute interviews May 16-23. Decisions May 25. Move in June 15. 7 startups. $1K/month all-in. 8-week residencies: form your team, build your product, demo what you shipped. The strongest teams are awarded grants of up to $50K in non-dilutive funding.
-            </div></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-item__question" aria-expanded="false">
-              How do I sponsor or co-host?
-              <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
-            </button>
-            <div class="faq-item__answer"><div class="faq-item__answer-inner">
-              Email <a href="mailto:ankur@onlyexit.com" style="color: var(--color-primary);">ankur@onlyexit.com</a>. Two Founding Partner slots and six Category Partner slots (one per vertical). If you want your brand embedded in the next generation of startups being built in Seattle, let's talk.
-            </div></div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-item__question" aria-expanded="false">
-              I have a family. Can I still do the residency?
-              <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
-            </button>
-            <div class="faq-item__answer"><div class="faq-item__answer-inner">
-              Yes. The only requirement is that you can be fully locked in at the house for the full 8-week residency. If you can make that work, we don't care about your living situation outside of it.
-            </div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 14. CTA BANNER ===== -->
-    <section class="section section--dark cta-banner">
-      <div class="container reveal">
-        <h2 class="cta-banner__headline">
-          The Next Decade Belongs to Founders.<br><span style="color: var(--color-primary);">Wake Up.</span>
-        </h2>
-        <p class="cta-banner__subtitle">
-          Stop waiting for permission. Stop updating your LinkedIn. Start building.
-        </p>
-        <a href="#apply" class="btn btn--primary" style="font-size: var(--text-base); padding: var(--space-4) var(--space-8);">Apply for Hacker House →</a>
-      </div>
-    </section>
-
-    </div><!-- /.site-content -->
-
-  </main>
-
-  <!-- ===== SEVERANCE CALCULATOR MODAL ===== -->
-  <div class="calc-modal" id="calcModal" aria-hidden="true">
-    <div class="calc-modal__overlay"></div>
-    <div class="calc-modal__container" data-theme="dark">
-      <button class="calc-modal__close" id="calcModalClose" aria-label="Close calculator">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-      </button>
-
-      <!-- Calculator Header -->
-      <header class="calc-modal__header">
-        <div class="calc-modal__header-inner">
-          <div class="calc-modal__header-left">
-            <span class="calc-modal__logo-mark">SR</span>
-            <span class="calc-modal__logo-text">Severance Runway</span>
-          </div>
-        </div>
-      </header>
-
-      <div class="calc-modal__main">
-        <!-- Progress Bar -->
-        <div class="calc-modal__progress-container">
-          <div class="calc-modal__progress-steps">
-            <button class="calc-modal__progress-step active" data-calc-step="1" aria-label="Step 1: Severance & Cash">
-              <span class="calc-modal__step-num">1</span>
-              <span class="calc-modal__step-label">Severance & Cash</span>
-            </button>
-            <div class="calc-modal__progress-line"><div class="calc-modal__progress-line-fill" id="calc-line-1"></div></div>
-            <button class="calc-modal__progress-step" data-calc-step="2" aria-label="Step 2: Tax Reality">
-              <span class="calc-modal__step-num">2</span>
-              <span class="calc-modal__step-label">Tax Reality</span>
-            </button>
-            <div class="calc-modal__progress-line"><div class="calc-modal__progress-line-fill" id="calc-line-2"></div></div>
-            <button class="calc-modal__progress-step" data-calc-step="3" aria-label="Step 3: Monthly Burn">
-              <span class="calc-modal__step-num">3</span>
-              <span class="calc-modal__step-label">Monthly Burn</span>
-            </button>
-            <div class="calc-modal__progress-line"><div class="calc-modal__progress-line-fill" id="calc-line-3"></div></div>
-            <button class="calc-modal__progress-step" data-calc-step="4" aria-label="Step 4: Your Runway">
-              <span class="calc-modal__step-num">4</span>
-              <span class="calc-modal__step-label">Your Runway</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- STEP 1 -->
-        <section class="calc-modal__step-panel active" id="calc-step-1">
-          <div class="calc-modal__step-content">
-            <div class="calc-modal__step-header">
-              <span class="calc-modal__step-overline">Step 1</span>
-              <h3 class="calc-modal__step-title">Your Severance & Cash</h3>
-              <p class="calc-modal__step-subtitle">Start with what you have. We'll figure out what you keep after taxes in the next step.</p>
-            </div>
-            <div class="calc-modal__form-grid">
-              <div class="calc-modal__form-field">
-                <label for="cm-grossSeverance">Gross Severance Amount</label>
-                <div class="calc-modal__input-prefix-wrap">
-                  <span class="calc-modal__input-prefix">$</span>
-                  <input type="text" id="cm-grossSeverance" inputmode="numeric" value="102,000" data-cm-field="grossSeverance">
-                </div>
-              </div>
-              <div class="calc-modal__form-field">
-                <label>Payment Type</label>
-                <div class="calc-modal__toggle-group">
-                  <button class="calc-modal__toggle-btn active" data-cm-toggle="paymentType" data-value="lump">Lump Sum</button>
-                  <button class="calc-modal__toggle-btn" data-cm-toggle="paymentType" data-value="installments">Installments</button>
-                </div>
-                <div class="calc-modal__conditional-field" id="cm-installmentMonths-wrap" style="display:none;">
-                  <label for="cm-installmentMonths" class="calc-modal__sub-label">Over how many months?</label>
-                  <input type="text" id="cm-installmentMonths" inputmode="numeric" value="12" data-cm-field="installmentMonths" style="width:100%;padding:var(--space-3) var(--space-4);background:var(--color-surface-2);border:1px solid var(--color-border);border-radius:var(--radius-md);font-size:var(--text-sm);color:var(--color-text);">
-                </div>
-              </div>
-              <div class="calc-modal__form-field">
-                <label for="cm-vestedEquity">Vested Equity / RSU Acceleration</label>
-                <div class="calc-modal__input-prefix-wrap">
-                  <span class="calc-modal__input-prefix">$</span>
-                  <input type="text" id="cm-vestedEquity" inputmode="numeric" value="0" data-cm-field="vestedEquity">
-                </div>
-              </div>
-              <div class="calc-modal__form-field">
-                <label for="cm-currentSavings">Current Savings / Liquid Assets</label>
-                <div class="calc-modal__input-prefix-wrap">
-                  <span class="calc-modal__input-prefix">$</span>
-                  <input type="text" id="cm-currentSavings" inputmode="numeric" value="25,000" data-cm-field="currentSavings">
-                </div>
-              </div>
-              <div class="calc-modal__form-field">
-                <label for="cm-uiState">Unemployment Insurance State</label>
-                <select id="cm-uiState" data-cm-field="uiState">
-                  <option value="CA" selected>California — $450/week max ($1,950/mo)</option>
-                  <option value="WA">Washington — $999/week max ($4,329/mo)</option>
-                  <option value="NY">New York — $504/week max ($2,184/mo)</option>
-                  <option value="none">Not collecting UI</option>
-                </select>
-                <div class="calc-modal__callout calc-modal__callout--info" style="margin-top:var(--space-3);">
-                  <span>Yes, you can collect UI even with severance in most states — check your state's rules.</span>
-                </div>
-                <div class="calc-modal__data-point" id="cm-uiMonthlyDisplay">
-                  <span class="calc-modal__data-label">Monthly UI benefit</span>
-                  <span class="calc-modal__data-value calc-modal__mono calc-modal__accent-text">$1,950</span>
-                </div>
-              </div>
-            </div>
-            <div class="calc-modal__step-nav">
-              <div></div>
-              <button class="calc-modal__btn calc-modal__btn--primary" data-cm-goto="2">Next: Tax Reality <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-            </div>
-          </div>
-        </section>
-
-        <!-- STEP 2 -->
-        <section class="calc-modal__step-panel" id="calc-step-2">
-          <div class="calc-modal__step-content">
-            <div class="calc-modal__step-header">
-              <span class="calc-modal__step-overline">Step 2</span>
-              <h3 class="calc-modal__step-title">Tax Reality</h3>
-              <p class="calc-modal__step-subtitle">Severance is taxed as ordinary income. Let's see what you actually keep.</p>
-            </div>
-            <div class="calc-modal__form-grid">
-              <div class="calc-modal__form-field">
-                <label>Filing Status</label>
-                <div class="calc-modal__toggle-group">
-                  <button class="calc-modal__toggle-btn active" data-cm-toggle="filingStatus" data-value="single">Single</button>
-                  <button class="calc-modal__toggle-btn" data-cm-toggle="filingStatus" data-value="mfj">Married Filing Jointly</button>
-                </div>
-              </div>
-              <div class="calc-modal__form-field">
-                <label for="cm-taxState">State</label>
-                <select id="cm-taxState" data-cm-field="taxState">
-                  <option value="CA" selected>California</option>
-                  <option value="WA">Washington</option>
-                  <option value="NY">New York</option>
-                  <option value="other">Other</option>
-                </select>
-                <div id="cm-stateNote" class="calc-modal__callout calc-modal__callout--warning" style="margin-top:var(--space-3);">CA taxes severance as ordinary income at ~9.3%.</div>
-                <div class="calc-modal__conditional-field" id="cm-otherStateTax-wrap" style="display:none;">
-                  <label for="cm-otherStateTax" class="calc-modal__sub-label">Effective state tax rate (%)</label>
-                  <div class="calc-modal__input-suffix-wrap">
-                    <input type="text" id="cm-otherStateTax" inputmode="decimal" value="5" data-cm-field="otherStateTax">
-                    <span class="calc-modal__input-suffix">%</span>
-                  </div>
-                </div>
-              </div>
-              <div class="calc-modal__form-field">
-                <label for="cm-spouseIncome">Spouse / Other Income This Year</label>
-                <div class="calc-modal__input-prefix-wrap">
-                  <span class="calc-modal__input-prefix">$</span>
-                  <input type="text" id="cm-spouseIncome" inputmode="numeric" value="0" data-cm-field="spouseIncome">
-                </div>
-              </div>
-              <div class="calc-modal__form-divider-label">Pre-Tax Deductions</div>
-              <div class="calc-modal__form-field">
-                <label for="cm-contribution401k">401(k) Contribution Room Remaining</label>
-                <div class="calc-modal__input-prefix-wrap">
-                  <span class="calc-modal__input-prefix">$</span>
-                  <input type="text" id="cm-contribution401k" inputmode="numeric" value="23,500" data-cm-field="contribution401k">
-                </div>
-              </div>
-              <div class="calc-modal__form-field">
-                <label for="cm-contributionIRA">IRA Contribution Room</label>
-                <div class="calc-modal__input-prefix-wrap">
-                  <span class="calc-modal__input-prefix">$</span>
-                  <input type="text" id="cm-contributionIRA" inputmode="numeric" value="7,000" data-cm-field="contributionIRA">
-                </div>
-                <div class="calc-modal__callout calc-modal__callout--accent" style="margin-top:var(--space-2);">
-                  <span><strong>2025 tax deadline tip:</strong> You have until April 15, 2026 to make IRA contributions that count toward your 2025 taxes.</span>
-                </div>
-              </div>
-              <div class="calc-modal__form-field">
-                <label>HSA Eligible?</label>
-                <div class="calc-modal__toggle-group">
-                  <button class="calc-modal__toggle-btn" data-cm-toggle="hsaEligible" data-value="no">No</button>
-                  <button class="calc-modal__toggle-btn active" data-cm-toggle="hsaEligible" data-value="individual">Individual ($4,300)</button>
-                  <button class="calc-modal__toggle-btn" data-cm-toggle="hsaEligible" data-value="family">Family ($8,550)</button>
-                </div>
-              </div>
-            </div>
-            <!-- Tax Panel -->
-            <div class="calc-modal__tax-panel" id="cm-taxPanel">
-              <div class="calc-modal__tax-panel-title">Tax Breakdown</div>
-              <div class="calc-modal__tax-row"><span>Gross severance</span><span class="calc-modal__mono" id="cm-tax-gross">$102,000</span></div>
-              <div class="calc-modal__tax-row"><span>+ Equity / RSU</span><span class="calc-modal__mono" id="cm-tax-equity">$0</span></div>
-              <div class="calc-modal__tax-row"><span>+ Spouse / other income</span><span class="calc-modal__mono" id="cm-tax-spouse">$0</span></div>
-              <div class="calc-modal__tax-row" style="border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:var(--space-3);"><span>Total gross income</span><span class="calc-modal__mono" id="cm-tax-totalGross">$102,000</span></div>
-              <div class="calc-modal__tax-row calc-modal__tax-row--deduction"><span>Pre-tax deductions (401k + IRA + HSA)</span><span class="calc-modal__mono" id="cm-tax-pretax">-$34,800</span></div>
-              <div class="calc-modal__tax-row" style="border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:var(--space-3);"><span>Taxable income</span><span class="calc-modal__mono" id="cm-tax-taxable">$67,200</span></div>
-              <div class="calc-modal__tax-row calc-modal__tax-row--loss"><span>Federal tax (estimated)</span><span class="calc-modal__mono" id="cm-tax-federal">-$0</span></div>
-              <div class="calc-modal__tax-row calc-modal__tax-row--loss"><span>State tax</span><span class="calc-modal__mono" id="cm-tax-state">-$0</span></div>
-              <div class="calc-modal__tax-row calc-modal__tax-row--loss"><span>FICA (SS 6.2% + Medicare 1.45%)</span><span class="calc-modal__mono" id="cm-tax-fica">-$0</span></div>
-              <div class="calc-modal__tax-row calc-modal__tax-row--net"><span>Net after tax</span><span class="calc-modal__mono calc-modal__accent-text" id="cm-tax-net" style="font-size:var(--text-lg);font-weight:700;">$0</span></div>
-              <div class="calc-modal__tax-savings" id="cm-taxSavings">You saved <strong id="cm-tax-savings-amount">$0</strong> by maxing retirement accounts</div>
-              <div class="calc-modal__lump-comparison" id="cm-lumpComparison">
-                <div class="calc-modal__lump-comparison-title">Split Across 2 Years?</div>
-                <p>If you could split this across 2026–2027, you'd save approximately <strong class="calc-modal__accent-text" id="cm-lump-savings">$0</strong> in taxes.</p>
-              </div>
-            </div>
-            <div class="calc-modal__step-nav">
-              <button class="calc-modal__btn calc-modal__btn--secondary" data-cm-goto="1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back</button>
-              <button class="calc-modal__btn calc-modal__btn--primary" data-cm-goto="3">Next: Monthly Burn <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-            </div>
-          </div>
-        </section>
-
-        <!-- STEP 3 -->
-        <section class="calc-modal__step-panel" id="calc-step-3">
-          <div class="calc-modal__step-content">
-            <div class="calc-modal__step-header">
-              <span class="calc-modal__step-overline">Step 3</span>
-              <h3 class="calc-modal__step-title">Monthly Burn</h3>
-              <p class="calc-modal__step-subtitle">Be honest. The math only works if the inputs are real.</p>
-            </div>
-            <!-- Fixed Costs -->
-            <div class="calc-modal__burn-section">
-              <button class="calc-modal__burn-section-toggle" aria-expanded="true" data-cm-collapse="fixed">
-                <span class="calc-modal__burn-section-title">Fixed Costs</span>
-                <span class="calc-modal__burn-section-subtotal calc-modal__mono" id="cm-fixedSubtotal">$0</span>
-                <svg class="calc-modal__collapse-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-              </button>
-              <div class="calc-modal__burn-section-body" id="cm-fixed-body">
-                <div class="calc-modal__form-field">
-                  <label for="cm-rent">Rent / Mortgage</label>
-                  <div class="calc-modal__input-prefix-wrap"><span class="calc-modal__input-prefix">$</span><input type="text" id="cm-rent" inputmode="numeric" value="3,200" data-cm-field="rent"></div>
-                </div>
-                <div class="calc-modal__form-field">
-                  <label>Health Insurance</label>
-                  <div class="calc-modal__radio-group">
-                    <label class="calc-modal__radio-option"><input type="radio" name="cm-healthInsurance" value="cobra" checked data-cm-field="healthInsurance"> COBRA ($2,100/mo)</label>
-                    <label class="calc-modal__radio-option"><input type="radio" name="cm-healthInsurance" value="aca" data-cm-field="healthInsurance"> ACA Marketplace (~$400/mo with subsidies)</label>
-                    <label class="calc-modal__radio-option"><input type="radio" name="cm-healthInsurance" value="spouse" data-cm-field="healthInsurance"> Spouse's plan (~$300/mo)</label>
-                    <label class="calc-modal__radio-option"><input type="radio" name="cm-healthInsurance" value="none" data-cm-field="healthInsurance"> None yet</label>
-                  </div>
-                  <div class="calc-modal__callout calc-modal__callout--accent" id="cm-cobraCallout">Switching from COBRA to ACA could save you $20,400/year. You have 60 days from your last day to enroll.</div>
-                </div>
-                <div class="calc-modal__form-field">
-                  <label for="cm-carPayment">Car Payment</label>
-                  <div class="calc-modal__input-prefix-wrap"><span class="calc-modal__input-prefix">$</span><input type="text" id="cm-carPayment" inputmode="numeric" value="0" data-cm-field="carPayment"></div>
-                </div>
-                <div class="calc-modal__form-field">
-                  <label for="cm-studentLoans">Student Loans</label>
-                  <div class="calc-modal__input-prefix-wrap"><span class="calc-modal__input-prefix">$</span><input type="text" id="cm-studentLoans" inputmode="numeric" value="0" data-cm-field="studentLoans"></div>
-                  <div class="calc-modal__callout calc-modal__callout--info" style="margin-top:var(--space-2);">Look into income-driven repayment — payments can drop to $0 if income drops.</div>
-                </div>
-                <div class="calc-modal__form-field">
-                  <label for="cm-childcare">Childcare</label>
-                  <div class="calc-modal__input-prefix-wrap"><span class="calc-modal__input-prefix">$</span><input type="text" id="cm-childcare" inputmode="numeric" value="0" data-cm-field="childcare"></div>
-                </div>
-                <div class="calc-modal__form-field">
-                  <label for="cm-utilities">Utilities + Subscriptions</label>
-                  <div class="calc-modal__input-prefix-wrap"><span class="calc-modal__input-prefix">$</span><input type="text" id="cm-utilities" inputmode="numeric" value="300" data-cm-field="utilities"></div>
-                </div>
-                <div class="calc-modal__form-field">
-                  <label for="cm-phone">Phone</label>
-                  <div class="calc-modal__input-prefix-wrap"><span class="calc-modal__input-prefix">$</span><input type="text" id="cm-phone" inputmode="numeric" value="100" data-cm-field="phone"></div>
-                </div>
-              </div>
-            </div>
-            <!-- Debt -->
-            <div class="calc-modal__burn-section">
-              <button class="calc-modal__burn-section-toggle" aria-expanded="true" data-cm-collapse="debt">
-                <span class="calc-modal__burn-section-title">Debt Payments</span>
-                <span class="calc-modal__burn-section-subtotal calc-modal__mono" id="cm-debtSubtotal">$0</span>
-                <svg class="calc-modal__collapse-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-              </button>
-              <div class="calc-modal__burn-section-body" id="cm-debt-body">
-                <div class="calc-modal__debt-card">
-                  <div class="calc-modal__debt-card-label">Credit Card 1</div>
-                  <div class="calc-modal__debt-row">
-                    <div class="calc-modal__form-field calc-modal__form-field--compact"><label for="cm-cc1Balance">Balance</label><div class="calc-modal__input-prefix-wrap"><span class="calc-modal__input-prefix">$</span><input type="text" id="cm-cc1Balance" inputmode="numeric" value="5,000" data-cm-field="cc1Balance"></div></div>
-                    <div class="calc-modal__form-field calc-modal__form-field--compact"><label for="cm-cc1APR">APR</label><div class="calc-modal__input-suffix-wrap"><input type="text" id="cm-cc1APR" inputmode="decimal" value="24" data-cm-field="cc1APR"><span class="calc-modal__input-suffix">%</span></div></div>
-                    <div class="calc-modal__form-field calc-modal__form-field--compact"><label for="cm-cc1Payment">Min Payment</label><div class="calc-modal__input-prefix-wrap"><span class="calc-modal__input-prefix">$</span><input type="text" id="cm-cc1Payment" inputmode="numeric" value="150" data-cm-field="cc1Payment"></div></div>
-                  </div>
-                </div>
-                <div class="calc-modal__debt-card">
-                  <div class="calc-modal__debt-card-label">Credit Card 2</div>
-                  <div class="calc-modal__debt-row">
-                    <div class="calc-modal__form-field calc-modal__form-field--compact"><label for="cm-cc2Balance">Balance</label><div class="calc-modal__input-prefix-wrap"><span class="calc-modal__input-prefix">$</span><input type="text" id="cm-cc2Balance" inputmode="numeric" value="0" data-cm-field="cc2Balance"></div></div>
-                    <div class="calc-modal__form-field calc-modal__form-field--compact"><label for="cm-cc2APR">APR</label><div class="calc-modal__input-suffix-wrap"><input type="text" id="cm-cc2APR" inputmode="decimal" value="0" data-cm-field="cc2APR"><span class="calc-modal__input-suffix">%</span></div></div>
-                    <div class="calc-modal__form-field calc-modal__form-field--compact"><label for="cm-cc2Payment">Min Payment</label><div class="calc-modal__input-prefix-wrap"><span class="calc-modal__input-prefix">$</span><input type="text" id="cm-cc2Payment" inputmode="numeric" value="0" data-cm-field="cc2Payment"></div></div>
-                  </div>
-                </div>
-                <div class="calc-modal__debt-card">
-                  <div class="calc-modal__debt-card-label">Personal Loan</div>
-                  <div class="calc-modal__debt-row">
-                    <div class="calc-modal__form-field calc-modal__form-field--compact"><label for="cm-plBalance">Balance</label><div class="calc-modal__input-prefix-wrap"><span class="calc-modal__input-prefix">$</span><input type="text" id="cm-plBalance" inputmode="numeric" value="0" data-cm-field="plBalance"></div></div>
-                    <div class="calc-modal__form-field calc-modal__form-field--compact"><label for="cm-plAPR">APR</label><div class="calc-modal__input-suffix-wrap"><input type="text" id="cm-plAPR" inputmode="decimal" value="0" data-cm-field="plAPR"><span class="calc-modal__input-suffix">%</span></div></div>
-                    <div class="calc-modal__form-field calc-modal__form-field--compact"><label for="cm-plPayment">Payment</label><div class="calc-modal__input-prefix-wrap"><span class="calc-modal__input-prefix">$</span><input type="text" id="cm-plPayment" inputmode="numeric" value="0" data-cm-field="plPayment"></div></div>
-                  </div>
-                </div>
-                <div class="calc-modal__callout calc-modal__callout--loss" id="cm-debtCallout" style="display:none;"><span id="cm-debtCalloutText"></span></div>
-              </div>
-            </div>
-            <!-- Discretionary -->
-            <div class="calc-modal__burn-section">
-              <button class="calc-modal__burn-section-toggle" aria-expanded="true" data-cm-collapse="discretionary">
-                <span class="calc-modal__burn-section-title">Discretionary</span>
-                <span class="calc-modal__burn-section-subtotal calc-modal__mono" id="cm-discretionarySubtotal">$0</span>
-                <svg class="calc-modal__collapse-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-              </button>
-              <div class="calc-modal__burn-section-body" id="cm-discretionary-body">
-                <div class="calc-modal__form-field">
-                  <label for="cm-discretionary">Monthly Discretionary (dining, entertainment, travel, shopping)</label>
-                  <div class="calc-modal__input-prefix-wrap"><span class="calc-modal__input-prefix">$</span><input type="text" id="cm-discretionary" inputmode="numeric" value="1,500" data-cm-field="discretionary"></div>
-                </div>
-                <div class="calc-modal__form-field">
-                  <label for="cm-leanSlider">Lean Mode: <strong id="cm-leanPercent">100%</strong></label>
-                  <input type="range" id="cm-leanSlider" min="50" max="100" value="100" step="5" class="calc-modal__slider" data-cm-field="leanSlider">
-                  <div class="calc-modal__slider-labels"><span>50% — War Mode</span><span>100% — Current</span></div>
-                  <div class="calc-modal__data-point" id="cm-leanSavingsDisplay"><span class="calc-modal__data-label">Monthly savings from lean mode</span><span class="calc-modal__data-value calc-modal__mono calc-modal__accent-text">$0</span></div>
-                </div>
-              </div>
-            </div>
-            <div class="calc-modal__burn-total">
-              <div class="calc-modal__burn-total-row"><span>Total Monthly Burn</span><span class="calc-modal__mono" id="cm-totalBurn" style="font-size:var(--text-xl);font-weight:700;">$0</span></div>
-            </div>
-            <div class="calc-modal__step-nav">
-              <button class="calc-modal__btn calc-modal__btn--secondary" data-cm-goto="2"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back</button>
-              <button class="calc-modal__btn calc-modal__btn--primary" data-cm-goto="4">See Your Runway <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
-            </div>
-          </div>
-        </section>
-
-        <!-- STEP 4 -->
-        <section class="calc-modal__step-panel" id="calc-step-4">
-          <div class="calc-modal__step-content">
-            <div class="calc-modal__step-header">
-              <span class="calc-modal__step-overline">Step 4</span>
-              <h3 class="calc-modal__step-title">Your Runway</h3>
-            </div>
-            <div class="calc-modal__runway-hero">
-              <div class="calc-modal__runway-hero-number calc-modal__mono" id="cm-heroMonths">0</div>
-              <div class="calc-modal__runway-hero-label">months of runway</div>
-              <div class="calc-modal__runway-hero-deadline" id="cm-heroDeadline">Decision deadline: —</div>
-            </div>
-            <div class="calc-modal__timeline-container">
-              <div class="calc-modal__timeline-bar">
-                <div class="calc-modal__timeline-zone calc-modal__timeline-green" id="cm-tzGreen"></div>
-                <div class="calc-modal__timeline-zone calc-modal__timeline-yellow" id="cm-tzYellow"></div>
-                <div class="calc-modal__timeline-zone calc-modal__timeline-red" id="cm-tzRed"></div>
-                <div class="calc-modal__timeline-marker" id="cm-tzMarker" title="Cash hits zero"><div class="calc-modal__timeline-marker-label" id="cm-tzMarkerLabel">0mo</div></div>
-              </div>
-              <div class="calc-modal__timeline-labels"><span>Comfortable</span><span>Decision Time</span><span>Danger Zone</span></div>
-            </div>
-            <div class="calc-modal__levers-section">
-              <h3 class="calc-modal__levers-title">Extend Your Runway</h3>
-              <div class="calc-modal__levers-grid" id="cm-leversGrid"></div>
-            </div>
-            <div class="calc-modal__optimized-hero" id="cm-optimizedSection" style="display:none;">
-              <div class="calc-modal__optimized-label">Optimized Runway</div>
-              <div class="calc-modal__optimized-number"><span class="calc-modal__mono" id="cm-optimizedMonths">0</span><span class="calc-modal__optimized-delta" id="cm-optimizedDelta">+0 months</span></div>
-            </div>
-            <div class="calc-modal__summary-card" id="cm-summaryCard">
-              <div class="calc-modal__summary-card-title">Summary</div>
-              <div class="calc-modal__summary-row"><span>Net severance after tax</span><span class="calc-modal__mono" id="cm-sum-netSev">$0</span></div>
-              <div class="calc-modal__summary-row"><span>Total liquid assets</span><span class="calc-modal__mono" id="cm-sum-liquid">$0</span></div>
-              <div class="calc-modal__summary-row"><span>Monthly UI benefit (6mo est.)</span><span class="calc-modal__mono" id="cm-sum-ui">$0</span></div>
-              <div class="calc-modal__summary-divider"></div>
-              <div class="calc-modal__summary-row"><span>Monthly burn (baseline)</span><span class="calc-modal__mono" id="cm-sum-burnBase">$0</span></div>
-              <div class="calc-modal__summary-row"><span>Monthly burn (optimized)</span><span class="calc-modal__mono calc-modal__accent-text" id="cm-sum-burnOpt">$0</span></div>
-              <div class="calc-modal__summary-divider"></div>
-              <div class="calc-modal__summary-row calc-modal__summary-row--highlight"><span>Baseline runway</span><span class="calc-modal__mono" id="cm-sum-runwayBase">0 months</span></div>
-              <div class="calc-modal__summary-row calc-modal__summary-row--highlight calc-modal__summary-row--accent"><span>Optimized runway</span><span class="calc-modal__mono" id="cm-sum-runwayOpt">0 months</span></div>
-              <div class="calc-modal__summary-row"><span>Decision deadline</span><span class="calc-modal__mono" id="cm-sum-deadline">—</span></div>
-              <div class="calc-modal__summary-footer">Built for the 4,200. — OnlyExit</div>
-            </div>
-            <div class="calc-modal__step-nav">
-              <button class="calc-modal__btn calc-modal__btn--secondary" data-cm-goto="3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Back</button>
-              <button class="calc-modal__btn calc-modal__btn--secondary" data-cm-goto="1">Start Over</button>
-            </div>
-            <details class="calc-modal__methodology">
-              <summary>Methodology & Assumptions</summary>
-              <div class="calc-modal__methodology-body">
-                <p><strong>Federal Tax Brackets (2026, estimated):</strong> 10% up to $11,925 · 12% to $48,475 · 22% to $103,350 · 24% to $197,300 · 32% to $250,525 (Single). MFJ brackets are double.</p>
-                <p><strong>FICA:</strong> Social Security 6.2% on income up to $176,100 + Medicare 1.45% on all income.</p>
-                <p><strong>State Tax:</strong> CA ~9.3%, WA none, NY ~6.85%. These are simplified estimates.</p>
-                <p><strong>Disclaimer:</strong> This is an estimation tool, not financial advice. Consult a CPA for your specific situation.</p>
-              </div>
-            </details>
-          </div>
-        </section>
-      </div>
+    <div class="site-footer__bottom">
+      <span class="site-footer__copy">&copy; 2026 OnlyExit</span>
+      <span class="site-footer__tagline">SHIP OR DIE</span>
     </div>
   </div>
+</footer>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <img src="./assets/OnlyExit-Logo-White.webp" alt="OnlyExit" class="footer__logo" style="height: 28px; width: auto; margin-bottom: var(--space-3);">
-          <p class="footer__tagline">We're going to incubate unicorns out of Seattle whether this city is ready or not.</p>
-        </div>
-        <div>
-          <h4 class="footer__heading">Navigate</h4>
-          <ul class="footer__links" role="list">
-            <li><a href="#hacker-house">Hacker House</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#cities">Cities</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#merch">Merch</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer__heading">Connect</h4>
-          <ul class="footer__links" role="list">
-            <li><a href="mailto:ankur@onlyexit.com">ankur@onlyexit.com</a></li>
-            <li><a href="https://linkedin.com/company/onlyexit" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="https://x.com/onlyexit" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
-            <li><a href="https://medium.com/@onlyexit" target="_blank" rel="noopener noreferrer">Medium</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <span class="footer__copy">&copy; 2026 OnlyExit</span>
-
-      </div>
-    </div>
-  </footer>
-
-  <script src="calc-engine.min.js"></script>
-  <script src="app.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

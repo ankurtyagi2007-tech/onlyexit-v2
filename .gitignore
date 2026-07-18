@@ -2,3 +2,4 @@ preview-*.html
 node_modules/
 __pycache__/
 *.pyc
+design_handoff/
