@@ -373,7 +373,7 @@ a:hover { color: var(--cyan); }
   text-align: center; display: flex; flex-direction: column; align-items: center;
 }
 .warfront__banner {
-  margin: 0 0 56px; width: 100vw; padding: 32px 0;
+  margin: 0 0 56px; width: 100%; padding: 32px 0; text-align: center;
 }
 .warfront__pre {
   margin: 0 0 20px; text-align: center;
