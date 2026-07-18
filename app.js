@@ -4,7 +4,7 @@
   'use strict';
 
   // ===== GOOGLE SHEETS FORM SUBMISSION =====
-  var GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxpCT61uRcvcvxUOC6rOzfdjMz9F4PUJyJKO0uSVPz4_RxSwi0lR0FU_zhQepyU6cEQ/exec';
+  var GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbw1w2nCUcxTC7dFIRZE4BhmmtLFFq7InER-A8GAoy0cR420FKJzl2bXsB4wWLPqvzqm/exec';
 
   function submitToSheets(formData) {
     return fetch(GOOGLE_SHEETS_URL, {
