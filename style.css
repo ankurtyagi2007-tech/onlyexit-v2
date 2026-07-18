@@ -83,13 +83,13 @@ a:hover { color: var(--cyan); }
 @keyframes oe-tag { 0%,100% { box-shadow: 0 0 0 rgba(0,0,0,0); opacity: 0.75 } 50% { box-shadow: 0 0 26px var(--tg), inset 0 0 14px var(--tgi); opacity: 1 } }
 
 /* Manifest checkpoint animations */
-@keyframes oe-cp1 { 0% { opacity: 0.12 } 2%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
-@keyframes oe-cp2 { 0%,11.5% { opacity: 0.12 } 14%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
-@keyframes oe-cp3 { 0%,23% { opacity: 0.12 } 25.5%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
-@keyframes oe-cp4 { 0%,35% { opacity: 0.12 } 37.5%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
-@keyframes oe-cp5 { 0%,46.5% { opacity: 0.12 } 49%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
-@keyframes oe-cp6 { 0%,58% { opacity: 0.12 } 60.5%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
-@keyframes oe-cp7 { 0%,69.5% { opacity: 0.12 } 72%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
+@keyframes oe-cp1 { 0% { opacity: 0.12 } 0.5%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
+@keyframes oe-cp2 { 0%,11% { opacity: 0.12 } 12%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
+@keyframes oe-cp3 { 0%,23% { opacity: 0.12 } 24%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
+@keyframes oe-cp4 { 0%,35% { opacity: 0.12 } 36%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
+@keyframes oe-cp5 { 0%,47% { opacity: 0.12 } 48%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
+@keyframes oe-cp6 { 0%,59% { opacity: 0.12 } 60%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
+@keyframes oe-cp7 { 0%,69% { opacity: 0.12 } 70%,90% { opacity: 1 } 95%,100% { opacity: 0.12 } }
 
 /* === ANIMATION UTILITY CLASSES === */
 .oe-zap { display: inline-block; animation: oe-zap 5s ease-in-out infinite; filter: drop-shadow(0 0 10px rgba(0,240,255,0.6)); }
