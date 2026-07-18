@@ -1037,12 +1037,12 @@ a:hover { color: var(--cyan); }
 }
 .btn--remove-cofounder:hover { color: #FF2E3D; }
 
-.btn-outline {
+.modal .btn-outline {
   background: none; border: 1px solid var(--border, #1A2025);
   color: var(--text-muted, #C4CDD2); font-family: var(--font-mono);
   cursor: pointer; transition: border-color 0.2s, color 0.2s;
 }
-.btn-outline:hover { border-color: var(--accent, #00F0FF); color: #fff; }
+.modal .btn-outline:hover { border-color: var(--accent, #00F0FF); color: #fff; }
 
 .modal .btn-primary {
   display: flex; align-items: center; justify-content: center;
