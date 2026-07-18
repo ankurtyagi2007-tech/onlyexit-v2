@@ -203,13 +203,12 @@
   });
 
   // ===== HACKER HOUSE APPLICATION MODAL =====
-  var openHHBtn = document.getElementById('openHackerHouseModal');
-  if (openHHBtn) {
-    openHHBtn.addEventListener('click', function(e) {
+  document.querySelectorAll('#openHackerHouseModal, #openHackerHouseModal2').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
       e.preventDefault();
       openModal('hackerHouseModal');
     });
-  }
+  });
 
   var addCofounderBtn = document.getElementById('addCofounder');
   var cofoundersContainer = document.getElementById('cofounders-container');
