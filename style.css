@@ -335,7 +335,7 @@ a:hover { color: var(--cyan); }
 }
 @media (max-width: 768px) {
   .hero__ctas { grid-auto-flow: row; grid-auto-columns: auto; }
-  .hero__title { font-size: clamp(36px,9vw,72px); }
+  .hero__title { font-size: clamp(32px,8.2vw,72px); }
   .hero__cta-secondary { padding: 16px 24px; }
   .hero__cta-sub { display: none; }
 }
@@ -677,6 +677,17 @@ a:hover { color: var(--cyan); }
   position: relative; padding: 36px 40px;
   display: flex; flex-direction: column; gap: 12px;
   align-items: center; text-align: center;
+}
+@media (max-width: 768px) {
+  .oe-fac:hover { border-color: inherit; box-shadow: none; z-index: auto; }
+  .oe-fac:hover .oe-fac-title { color: inherit !important; text-shadow: none; transform: none; }
+  .oe-fac:hover h3.oe-fac-title { font-size: clamp(22px,1.9vw,28px); text-transform: uppercase; letter-spacing: 0.02em; }
+  .oe-fac:hover p.oe-fac-title { font-size: clamp(22px,1.9vw,28px); font-family: var(--font-display); font-weight: 700; letter-spacing: 0.02em; }
+  .oe-fac:hover .oe-fac-icon svg { width: 40px; height: 40px; }
+  .oe-fac-desc { display: none; }
+  .oe-fac:hover .oe-fac-desc { display: none; }
+  .oe-fac:hover .oe-fac-scan { top: -100%; transition: none; }
+  .oe-fac::after { display: none; }
 }
 
 /* ================================================================
