@@ -3,6 +3,26 @@
 (function() {
   'use strict';
 
+  // ===== MOBILE NAV HAMBURGER =====
+  var burger = document.querySelector('.site-header__burger');
+  var navMenu = document.querySelector('.site-header__nav');
+  if (burger && navMenu) {
+    burger.addEventListener('click', function() {
+      var open = burger.classList.toggle('is-open');
+      navMenu.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    navMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        burger.classList.remove('is-open');
+        navMenu.classList.remove('is-open');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
   // ===== GOOGLE SHEETS FORM SUBMISSION =====
   var GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbw1w2nCUcxTC7dFIRZE4BhmmtLFFq7InER-A8GAoy0cR420FKJzl2bXsB4wWLPqvzqm/exec';
 
