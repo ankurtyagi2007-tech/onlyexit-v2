@@ -720,6 +720,8 @@ a:hover { color: var(--cyan); }
   display: flex; align-items: center; justify-content: center;
   border: var(--border-subtle);
 }
+.whatyouget__card--photo.oe-fac:hover { justify-content: center; padding-top: 32px; }
+.whatyouget__card--photo .oe-fac-desc { position: static; opacity: 1; }
 .whatyouget__card--photo .oe-fac-img {
   position: absolute; inset: 0;
   background: url('assets/facilities/facility-audi.jpg') center/cover no-repeat;
