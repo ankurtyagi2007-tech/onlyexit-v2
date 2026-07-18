@@ -11,10 +11,12 @@ html {
   scroll-behavior: smooth;
   hanging-punctuation: first last;
   scroll-padding-top: var(--space-16);
+  overflow-x: hidden;
 }
 
 body {
   min-height: 100dvh;
+  overflow-x: hidden;
   line-height: 1.6;
   font-family: var(--font-body, 'DM Sans', sans-serif);
   font-size: var(--text-base);

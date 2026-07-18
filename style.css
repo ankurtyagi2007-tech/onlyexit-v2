@@ -336,8 +336,8 @@ a:hover { color: var(--cyan); }
 @media (max-width: 768px) {
   .hero__ctas { grid-auto-flow: row; grid-auto-columns: auto; }
   .hero__title { font-size: clamp(36px,9vw,72px); }
-  .hero__cta-secondary { padding: 14px 24px; gap: 4px; }
-  .hero__cta-sub { font-size: 9.5px; }
+  .hero__cta-secondary { padding: 16px 24px; }
+  .hero__cta-sub { display: none; }
 }
 
 /* ================================================================
