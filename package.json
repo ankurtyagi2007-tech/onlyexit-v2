@@ -1,6 +1,11 @@
 {
   "devDependencies": {
     "playwright-core": "^1.61.1",
-    "terser": "^5.46.1"
+    "terser": "^5.46.1",
+    "wrangler": "^4.112.0"
+  },
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   }
 }

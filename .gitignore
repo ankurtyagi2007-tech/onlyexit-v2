@@ -3,3 +3,10 @@ node_modules/
 __pycache__/
 *.pyc
 design_handoff/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
