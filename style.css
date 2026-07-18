@@ -482,10 +482,11 @@ a:hover { color: var(--cyan); }
   background: var(--violet); box-shadow: 0 0 14px var(--violet); transform: rotate(45deg);
 }
 .manifest__car {
-  position: absolute; top: 58.5px; left: 0; width: 0; height: 0;
+  position: absolute; top: 48px; left: 0;
+  overflow: visible; z-index: 3;
 }
 .manifest__car svg {
-  position: absolute; left: -17px; top: -11.5px;
+  display: block;
   filter: drop-shadow(0 0 7px rgba(0,240,255,0.9));
 }
 .manifest__grid {
