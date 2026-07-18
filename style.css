@@ -141,7 +141,7 @@ a:hover { color: var(--cyan); }
 
 /* === FACILITY CARD (oe-fac) — What You Get === */
 .oe-fac { cursor: pointer; transition: all 0.6s cubic-bezier(0.16,1,0.3,1); }
-.oe-fac:hover { border-color: rgba(102,255,255,0.3); transform: translateY(-16px) scale(1.03); box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(102,255,255,0.12), 0 0 0 1px rgba(102,255,255,0.2), inset 0 0 60px rgba(102,255,255,0.03); z-index: 3; }
+.oe-fac:hover { border-color: rgba(102,255,255,0.3); box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(102,255,255,0.12), 0 0 0 1px rgba(102,255,255,0.2), inset 0 0 60px rgba(102,255,255,0.03); z-index: 3; }
 .oe-fac-img { transition: all 0.7s cubic-bezier(0.16,1,0.3,1); filter: saturate(0.6) brightness(0.8); }
 .oe-fac:hover .oe-fac-img { transform: scale(1.18); filter: saturate(1.2) brightness(1.05); }
 .oe-fac p.oe-fac-title { font-size: clamp(22px,1.9vw,28px); font-family: var(--font-display); font-weight: 700; letter-spacing: 0.02em; line-height: 1.05; }
@@ -152,8 +152,8 @@ a:hover { color: var(--cyan); }
 .oe-fac:hover .oe-fac-icon svg { width: 24px; height: 24px; }
 .oe-fac-title { transition: all 0.5s cubic-bezier(0.16,1,0.3,1); }
 .oe-fac:hover .oe-fac-title { color: var(--cyan) !important; text-shadow: 0 0 30px rgba(102,255,255,0.3); transform: translateY(-4px); }
-.oe-fac-desc { opacity: 0; transform: translateY(16px); max-height: 0; overflow: hidden; transition: all 0.5s cubic-bezier(0.16,1,0.3,1); }
-.oe-fac:hover .oe-fac-desc { opacity: 1; transform: translateY(0); max-height: 140px; color: rgba(255,255,255,0.85); }
+.oe-fac-desc { opacity: 0; overflow: hidden; transition: opacity 0.5s cubic-bezier(0.16,1,0.3,1); position: absolute; bottom: 32px; left: 36px; right: 36px; }
+.oe-fac:hover .oe-fac-desc { opacity: 1; color: rgba(255,255,255,0.85); }
 .oe-fac::after {
   content: ''; position: absolute; bottom: 0; left: 10%; right: 10%; height: 3px;
   background: linear-gradient(90deg, transparent, #00F0FF, rgba(102,255,255,0.8), #00F0FF, transparent);
@@ -632,6 +632,7 @@ a:hover { color: var(--cyan); }
 .whatyouget__header { margin-bottom: 72px; }
 .whatyouget__grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+  grid-auto-rows: 1fr;
   gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08);
 }
 .whatyouget__card {
