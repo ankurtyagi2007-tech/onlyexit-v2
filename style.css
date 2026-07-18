@@ -301,7 +301,7 @@ a:hover { color: var(--cyan); }
 .hero__ctas { display: inline-grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 16px; }
 .hero__cta-primary {
   background: var(--cyan); color: #04070A; font-family: var(--font-display);
-  font-weight: 700; font-size: 16px; padding: 0 40px;
+  font-weight: 700; font-size: 16px; padding: 18px 40px;
   display: flex; align-items: center; justify-content: center; letter-spacing: 0.01em;
 }
 .hero__cta-primary:hover { background: var(--cyan-hover); color: #04070A; box-shadow: 0 0 40px rgba(0,240,255,0.45); }
@@ -336,6 +336,8 @@ a:hover { color: var(--cyan); }
 @media (max-width: 768px) {
   .hero__ctas { grid-auto-flow: row; grid-auto-columns: auto; }
   .hero__title { font-size: clamp(36px,9vw,72px); }
+  .hero__cta-secondary { padding: 14px 24px; gap: 4px; }
+  .hero__cta-sub { font-size: 9.5px; }
 }
 
 /* ================================================================
@@ -430,7 +432,8 @@ a:hover { color: var(--cyan); }
 }
 @media (max-width: 768px) {
   .warfront { padding: 80px var(--pad-x) 40px; }
-  .warfront__pillars { font-size: clamp(18px,5vw,28px); gap: 12px; }
+  .warfront__pillars { font-size: clamp(16px,4.5vw,24px); gap: 10px; white-space: normal; }
+  .warfront { overflow: hidden; }
   .warfront__warnbox-inner { padding: 28px 20px; }
   .warfront__warn-h2 { font-size: clamp(28px,7vw,48px); }
 }
