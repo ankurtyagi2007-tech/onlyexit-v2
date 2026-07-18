@@ -994,7 +994,7 @@ a:hover { color: var(--cyan); }
 .form-field { display: flex; flex-direction: column; gap: 6px; }
 .form-field label {
   font-family: var(--font-body); font-size: 14px; font-weight: 500;
-  color: var(--text-muted, #C4CDD2);
+  color: #fff;
 }
 .form-field input[type="text"],
 .form-field input[type="email"],
