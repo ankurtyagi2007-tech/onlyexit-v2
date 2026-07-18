@@ -453,10 +453,11 @@ a:hover { color: var(--cyan); }
   display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: center;
 }
 .warfront__cta-apply {
-  background: var(--cyan); color: #04070A; font-family: var(--font-display);
+  background: #8B5CF6; color: #fff; font-family: var(--font-display);
   font-weight: 700; font-size: 17px; padding: 20px 52px; border: none; cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-.warfront__cta-apply:hover { background: var(--cyan-hover); color: #04070A; box-shadow: 0 0 48px rgba(0,240,255,0.5); }
+.warfront__cta-apply:hover { background: #7C3AED; color: #fff; box-shadow: 0 0 48px rgba(139,92,246,0.5); }
 .warfront__rolling {
   font-family: var(--font-display); font-size: 16px; font-weight: 600;
   letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-head);
