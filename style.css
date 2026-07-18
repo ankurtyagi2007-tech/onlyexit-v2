@@ -323,6 +323,7 @@ a:hover { color: var(--cyan); }
 .hero__sub {
   margin: 0; max-width: 640px; font-size: 19px; line-height: 1.65; color: var(--text-body);
 }
+.hero__sub--mobile { display: none; }
 .hero__cursor { color: var(--cyan); animation: oe-blink 1.1s step-end infinite; }
 .hero__ctas { display: inline-grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 16px; }
 .hero__cta-primary {
@@ -362,7 +363,10 @@ a:hover { color: var(--cyan); }
 @media (max-width: 768px) {
   .hero__inner { gap: 48px; }
   .hero__ctas { grid-auto-flow: row; grid-auto-columns: auto; }
-  .hero__title { font-size: clamp(32px,8.2vw,72px); }
+  .hero__title { font-size: clamp(44px, 11.5vw, 72px); }
+  .hero__title span[style*="white-space"] { white-space: normal !important; }
+  .hero__sub--desktop { display: none; }
+  .hero__sub--mobile { display: block; }
   .hero__cta-secondary { padding: 16px 24px; }
   .hero__cta-sub { display: none; }
 }
