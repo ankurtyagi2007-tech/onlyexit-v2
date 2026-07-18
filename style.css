@@ -141,7 +141,7 @@ a:hover { color: var(--cyan); }
 
 /* === FACILITY CARD (oe-fac) — What You Get === */
 .oe-fac { cursor: pointer; transition: all 0.6s cubic-bezier(0.16,1,0.3,1); }
-.oe-fac:hover { border-color: rgba(102,255,255,0.3); box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(102,255,255,0.12), 0 0 0 1px rgba(102,255,255,0.2), inset 0 0 60px rgba(102,255,255,0.03); z-index: 3; }
+.oe-fac:hover { border-color: rgba(102,255,255,0.3); box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 60px rgba(102,255,255,0.12), 0 0 0 1px rgba(102,255,255,0.2), inset 0 0 60px rgba(102,255,255,0.03); z-index: 3; justify-content: flex-start; padding-top: 36px; }
 .oe-fac-img { transition: all 0.7s cubic-bezier(0.16,1,0.3,1); filter: saturate(0.6) brightness(0.8); }
 .oe-fac:hover .oe-fac-img { transform: scale(1.18); filter: saturate(1.2) brightness(1.05); }
 .oe-fac p.oe-fac-title { font-size: clamp(22px,1.9vw,28px); font-family: var(--font-display); font-weight: 700; letter-spacing: 0.02em; line-height: 1.05; }
