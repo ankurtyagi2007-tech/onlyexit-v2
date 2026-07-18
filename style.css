@@ -458,11 +458,14 @@ a:hover { color: var(--cyan); }
   letter-spacing: 0.04em; text-transform: uppercase; color: var(--text-head);
 }
 @media (max-width: 768px) {
-  .warfront { padding: 80px var(--pad-x) 40px; }
+  .warfront { padding: 80px var(--pad-x) 40px; overflow: hidden; }
   .warfront__pillars { font-size: clamp(16px,4.5vw,24px); gap: 10px; white-space: normal; }
-  .warfront { overflow: hidden; }
   .warfront__warnbox-inner { padding: 28px 20px; }
   .warfront__warn-h2 { font-size: clamp(28px,7vw,48px); }
+  .warfront__cta-block { align-items: stretch; align-self: stretch; }
+  .warfront__cta-row { flex-direction: column; width: 100%; }
+  .warfront__cta-apply { width: 100%; text-align: center; padding: 18px 40px; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+  .warfront__rolling { text-align: center; }
 }
 
 /* ================================================================
