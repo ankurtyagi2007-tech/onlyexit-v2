@@ -1011,7 +1011,7 @@ a:hover { color: var(--cyan); }
 }
 .form-field input::placeholder,
 .form-field textarea::placeholder {
-  color: #3E464B;
+  color: #98A4AB;
 }
 .form-field textarea { min-height: 80px; resize: vertical; }
 
