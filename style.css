@@ -360,6 +360,7 @@ a:hover { color: var(--cyan); }
   animation: oe-bob 2.4s ease-in-out infinite;
 }
 @media (max-width: 768px) {
+  .hero__inner { gap: 48px; }
   .hero__ctas { grid-auto-flow: row; grid-auto-columns: auto; }
   .hero__title { font-size: clamp(32px,8.2vw,72px); }
   .hero__cta-secondary { padding: 16px 24px; }
@@ -652,6 +653,9 @@ a:hover { color: var(--cyan); }
 @media (max-width: 768px) {
   .demo-day { background-attachment: scroll; }
   .demo-day__content { grid-template-columns: 1fr; gap: 32px; }
+  .demo-day__ctas { flex-direction: column; }
+  .demo-day__ctas .btn-primary,
+  .demo-day__ctas .btn-outline { width: 100%; text-align: center; justify-content: center; }
 }
 
 /* ================================================================
@@ -712,6 +716,7 @@ a:hover { color: var(--cyan); }
   .oe-fac:hover .oe-fac-icon svg { width: 40px; height: 40px; }
   .oe-fac-desc { display: none; }
   .oe-fac:hover .oe-fac-desc { display: none; }
+  .whatyouget__card-tags { display: none; }
   .oe-fac:hover .oe-fac-scan { top: -100%; transition: none; }
   .oe-fac::after { display: none; }
 }
