@@ -1216,23 +1216,24 @@ a:hover { color: var(--cyan); }
 }
 
 /* Jet image */
+.apply-page__hero {
+  position: relative; overflow: hidden;
+}
+.apply-page__hero-content {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 24px;
+  padding: 40px 0 48px;
+}
 .apply-page__jet {
-  position: relative; height: 220px; overflow: hidden;
+  position: absolute; inset: 0; z-index: 0;
 }
 .apply-page__jet-img {
-  width: 100%; height: 100%; object-fit: cover; opacity: 0.4;
-  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  width: 100%; height: 100%; object-fit: cover; object-position: center 30%; opacity: 0.25;
 }
 .apply-page__jet::after {
   content: ''; position: absolute; inset: 0;
-  background: linear-gradient(90deg, #060709 0%, transparent 20%, transparent 80%, #060709 100%);
+  background: linear-gradient(to bottom, rgba(6,7,9,0.3) 0%, rgba(6,7,9,0.7) 100%);
   pointer-events: none;
-}
-.apply-page__jet-caption {
-  position: absolute; bottom: 12px; left: 8px; z-index: 1;
-  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.15em;
-  text-transform: uppercase; color: #00F0FF;
 }
 
 /* Manifest list */
