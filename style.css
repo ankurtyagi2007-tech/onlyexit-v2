@@ -1359,23 +1359,21 @@ a:hover { color: var(--cyan); }
 
 /* Recorder */
 .apply-recorder__idle { display: flex; flex-direction: column; gap: 16px; }
-.apply-recorder__buttons { display: flex; gap: 12px; }
-.apply-recorder__btn {
-  flex: 1; padding: 24px 16px; background: transparent;
-  border: 2px dashed rgba(255,255,255,0.16); cursor: pointer;
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  transition: border-color 0.2s;
+.apply-recorder__start-btn {
+  width: 100%; padding: 18px 16px; background: transparent;
+  border: 2px dashed rgba(0,240,255,0.4); cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  color: #00F0FF; transition: border-color 0.2s, background 0.2s;
 }
-.apply-recorder__btn--video { border-color: rgba(0,240,255,0.4); }
-.apply-recorder__btn--video:hover { border-color: #00F0FF; }
-.apply-recorder__btn--audio:hover { border-color: rgba(255,255,255,0.4); }
-.apply-recorder__btn-label {
-  font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--text-head);
+.apply-recorder__start-btn:hover { border-color: #00F0FF; background: rgba(0,240,255,0.06); }
+.apply-recorder__start-btn:disabled { opacity: 0.5; cursor: wait; }
+.apply-recorder__audio-toggle {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);
+  letter-spacing: 0.05em; cursor: pointer;
 }
-.apply-recorder__btn-sub {
-  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--text-muted);
-}
+.apply-recorder__audio-toggle input { accent-color: #00F0FF; }
 .apply-recorder__alt-text {
   margin: 0; font-family: var(--font-mono); font-size: 11px;
   color: var(--text-muted); letter-spacing: 0.05em;
@@ -1420,10 +1418,10 @@ a:hover { color: var(--cyan); }
   text-transform: uppercase; color: var(--text-muted);
 }
 .apply-recorder__progress {
-  height: 4px; background: rgba(255,255,255,0.08);
+  height: 4px; background: rgba(255,255,255,0.08); overflow: hidden;
 }
 .apply-recorder__progress-bar {
-  height: 100%; width: 0; background: #00F0FF; transition: width 1s linear;
+  height: 100%; width: 0; max-width: 100%; background: #00F0FF; transition: width 1s linear;
 }
 .apply-recorder__stop-btn {
   width: 100%; padding: 14px; background: #FF2E3D; color: #fff;
