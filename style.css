@@ -1236,6 +1236,27 @@ a:hover { color: var(--cyan); }
 }
 
 /* Manifest list */
+.apply-page__manifest-details {
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.apply-page__manifest-toggle {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 16px; cursor: pointer;
+  font-family: var(--font-mono); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-head);
+  list-style: none;
+}
+.apply-page__manifest-toggle::-webkit-details-marker { display: none; }
+.apply-page__manifest-toggle::marker { display: none; content: ''; }
+.apply-page__manifest-arrow::after {
+  content: '+'; font-size: 18px; font-weight: 400; color: #00F0FF;
+}
+.apply-page__manifest-details[open] .apply-page__manifest-arrow::after {
+  content: '\2212';
+}
+.apply-page__manifest-details[open] .apply-page__manifest {
+  padding: 0 16px 8px;
+}
 .apply-page__manifest {
   display: flex; flex-direction: column; gap: 0;
 }
