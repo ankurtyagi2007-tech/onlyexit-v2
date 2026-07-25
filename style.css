@@ -1507,3 +1507,189 @@ a:hover { color: var(--cyan); }
   .apply-toggle { flex-direction: column; }
   .apply-dates { flex-direction: column; }
 }
+
+/* ===== FOUNDER PAGE ===== */
+.founder-page {
+  position: relative; overflow: hidden; background: var(--bg);
+  padding: 96px var(--pad-x) 140px; min-height: 100vh;
+}
+.founder-page__inner {
+  position: relative; max-width: 820px; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 64px;
+}
+.founder-page__hero {
+  display: flex; flex-direction: column; gap: 24px;
+}
+
+/* Sections */
+.founder-section {
+  display: flex; flex-direction: column; gap: 20px;
+}
+.founder-section__title {
+  font-family: var(--font-display); font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 700; color: var(--text-head); letter-spacing: -0.02em;
+}
+.founder-section__intro {
+  font-size: 16px; line-height: 1.7; color: var(--text-body); max-width: 620px;
+}
+.founder-section__body {
+  display: flex; flex-direction: column; gap: 16px;
+}
+.founder-section__body p {
+  font-size: 16px; line-height: 1.7; color: var(--text-body); max-width: 720px;
+}
+
+/* Divider */
+.founder-divider {
+  height: 1px; background: rgba(255,255,255,0.08);
+}
+
+/* Program timeline */
+.founder-program {
+  display: flex; flex-direction: column; gap: 0;
+}
+.founder-program__row {
+  display: flex; gap: 20px; padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.founder-program__row:first-child {
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.founder-program__wk {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 700;
+  color: #00F0FF; min-width: 48px; padding-top: 2px; flex-shrink: 0;
+}
+.founder-program__name {
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  color: var(--text-head); display: block; margin-bottom: 4px;
+}
+.founder-program__desc {
+  font-size: 14px; line-height: 1.65; color: var(--text-muted);
+}
+
+/* Checklist */
+.founder-checklist {
+  display: flex; flex-direction: column; gap: 0;
+}
+.founder-checklist__item {
+  display: flex; align-items: baseline; gap: 14px;
+  padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 15px; line-height: 1.6; color: var(--text-body);
+}
+.founder-checklist__item:first-child {
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.founder-checklist__icon {
+  font-size: 16px; font-weight: 700; color: #00F0FF; flex-shrink: 0; min-width: 18px; text-align: center;
+}
+.founder-checklist__icon--no {
+  color: #FF2E3D;
+}
+
+/* Cards */
+.founder-cards {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;
+}
+.founder-cards--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+.founder-card {
+  background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08);
+  padding: 24px; display: flex; flex-direction: column; gap: 8px;
+}
+.founder-card__label {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 700;
+  color: #00F0FF; letter-spacing: 0.1em;
+}
+.founder-card__title {
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  color: var(--text-head);
+}
+.founder-card__desc {
+  font-size: 14px; line-height: 1.65; color: var(--text-muted);
+}
+
+/* Scoring axes */
+.founder-axis {
+  background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08);
+  padding: 28px 24px; margin-top: 4px;
+}
+.founder-axis__title {
+  font-family: var(--font-display); font-size: 17px; font-weight: 700;
+  color: var(--text-head); margin-bottom: 20px;
+}
+.founder-axis__scale {
+  display: flex; flex-direction: column; gap: 0;
+}
+.founder-axis__band {
+  display: flex; align-items: baseline; gap: 16px;
+  padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 14px; line-height: 1.6; color: var(--text-body);
+}
+.founder-axis__band:last-child { border-bottom: none; }
+.founder-axis__score {
+  font-family: var(--font-mono); font-size: 13px; font-weight: 700;
+  color: var(--text-muted); min-width: 44px; flex-shrink: 0;
+}
+.founder-axis__score--accent {
+  color: #00F0FF;
+}
+
+/* Verdict */
+.founder-verdict {
+  display: flex; flex-direction: column; gap: 0;
+}
+.founder-verdict__row {
+  display: flex; align-items: center; gap: 16px;
+  padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 15px; line-height: 1.6; color: var(--text-body);
+}
+.founder-verdict__row:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
+.founder-verdict__tag {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 4px 10px; min-width: 90px; text-align: center; flex-shrink: 0;
+  background: rgba(0,240,255,0.12); color: #00F0FF;
+}
+.founder-verdict__tag--priority {
+  background: rgba(139,92,246,0.15); color: #8B5CF6;
+}
+.founder-verdict__tag--exception {
+  background: rgba(255,200,0,0.12); color: #FFC800;
+}
+.founder-verdict__tag--pass {
+  background: rgba(255,255,255,0.06); color: var(--text-muted);
+}
+.founder-verdict__tag--no {
+  background: rgba(255,46,61,0.12); color: #FF2E3D;
+}
+
+/* CTA */
+.founder-cta {
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  padding: 48px 0 0; text-align: center;
+}
+.founder-cta__btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 48px; background: #00F0FF; color: #060709;
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  text-decoration: none; transition: background 0.2s;
+}
+.founder-cta__btn:hover { background: #33f3ff; color: #060709; }
+.founder-cta__note {
+  font-family: var(--font-mono); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
+}
+
+/* Founder page responsive */
+@media (max-width: 768px) {
+  .founder-page { padding: 60px var(--pad-x) 80px; }
+  .founder-page__inner { gap: 48px; }
+  .founder-cards { grid-template-columns: 1fr; }
+  .founder-cards--2col { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .founder-verdict__row { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .founder-axis__band { flex-direction: column; gap: 4px; }
+  .founder-program__row { flex-direction: column; gap: 4px; }
+}
