@@ -1358,7 +1358,8 @@ a:hover { color: var(--cyan); }
 }
 
 /* Recorder */
-.apply-recorder__idle[hidden], .apply-recorder__live[hidden], .apply-recorder__done[hidden] { display: none !important; }
+[hidden].apply-recorder__idle, [hidden].apply-recorder__live, [hidden].apply-recorder__done,
+[hidden].apply-form, [hidden].apply-success { display: none !important; }
 .apply-recorder__idle { display: flex; flex-direction: column; gap: 16px; }
 .apply-recorder__start-btn {
   width: 100%; padding: 18px 16px; background: transparent;
