@@ -1433,6 +1433,37 @@ a:hover { color: var(--cyan); }
   border: none; cursor: pointer;
 }
 
+/* Recorder: ready (preview before recording) */
+.apply-recorder__ready {
+  border: 2px solid rgba(0,240,255,0.4); display: flex; flex-direction: column;
+}
+.apply-recorder__ready-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.apply-recorder__ready-label {
+  font-family: var(--font-mono); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: #00F0FF;
+}
+.apply-recorder__ready-hint {
+  font-size: 13px; color: var(--text-muted);
+}
+.apply-recorder__ready-actions {
+  display: flex; gap: 0;
+}
+.apply-recorder__go-btn {
+  flex: 1; padding: 14px; background: #00F0FF; color: #060709;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  border: none; cursor: pointer; transition: background 0.2s;
+}
+.apply-recorder__go-btn:hover { background: #33f3ff; }
+.apply-recorder__cancel-btn {
+  padding: 14px 20px; background: transparent; color: var(--text-muted);
+  font-family: var(--font-display); font-size: 14px; font-weight: 500;
+  border: none; border-left: 1px solid rgba(255,255,255,0.08); cursor: pointer;
+}
+.apply-recorder__cancel-btn:hover { color: var(--text-body); }
+
 /* Recorder: done */
 .apply-recorder__done {
   border: 2px solid #00F0FF; display: flex; flex-direction: column;

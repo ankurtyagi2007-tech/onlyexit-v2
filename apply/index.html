@@ -133,7 +133,26 @@
               <p id="recorder-error" class="apply-recorder__error" hidden></p>
             </div>
 
-            <!-- Live state -->
+            <!-- Ready state (preview before recording) -->
+            <div id="recorder-ready" class="apply-recorder__ready" hidden>
+              <div class="apply-recorder__ready-header">
+                <span class="apply-recorder__ready-label">Preview</span>
+                <span class="apply-recorder__ready-hint">Check your camera and mic, then hit Start when ready.</span>
+              </div>
+              <div class="apply-recorder__live-body">
+                <video id="rec-ready-preview" muted autoplay playsinline class="apply-recorder__preview"></video>
+                <div id="rec-ready-audio-visual" class="apply-recorder__audio-visual" hidden>
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                  <span class="apply-recorder__audio-label">Mic is live</span>
+                </div>
+              </div>
+              <div class="apply-recorder__ready-actions">
+                <button type="button" id="rec-go-btn" class="apply-recorder__go-btn">&#9679; Start Recording</button>
+                <button type="button" id="rec-cancel-btn" class="apply-recorder__cancel-btn">Cancel</button>
+              </div>
+            </div>
+
+            <!-- Live state (recording in progress) -->
             <div id="recorder-live" class="apply-recorder__live" hidden>
               <div class="apply-recorder__live-header">
                 <div class="apply-recorder__rec-indicator">
@@ -393,12 +412,17 @@
 
   // ===== RECORDER =====
   var recorderIdle = document.getElementById('recorder-idle');
+  var recorderReady = document.getElementById('recorder-ready');
   var recorderLive = document.getElementById('recorder-live');
   var recorderDone = document.getElementById('recorder-done');
   var recStartBtn = document.getElementById('rec-start-btn');
   var recAudioOnlyCheck = document.getElementById('rec-audio-only');
+  var recGoBtn = document.getElementById('rec-go-btn');
+  var recCancelBtn = document.getElementById('rec-cancel-btn');
   var recStopBtn = document.getElementById('rec-stop-btn');
   var recRerecordBtn = document.getElementById('rec-rerecord-btn');
+  var recReadyPreview = document.getElementById('rec-ready-preview');
+  var recReadyAudioVisual = document.getElementById('rec-ready-audio-visual');
   var recPreview = document.getElementById('rec-preview');
   var recAudioVisual = document.getElementById('rec-audio-visual');
   var recTimer = document.getElementById('rec-timer');
@@ -454,13 +478,13 @@
 
   function showState(state) {
     recorderIdle.hidden = state !== 'idle';
+    recorderReady.hidden = state !== 'ready';
     recorderLive.hidden = state !== 'live';
     recorderDone.hidden = state !== 'done';
   }
 
-  function startRecording(video) {
-    if (isRecording) return;
-    isRecording = true;
+  function openPreview(video) {
+    if (currentStream) return;
     isVideoMode = video;
     recordedChunks = [];
     recorderError.hidden = true;
@@ -473,76 +497,90 @@
 
     navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
       currentStream = stream;
-      secondsLeft = 60;
 
       if (video) {
-        recPreview.srcObject = stream;
-        recPreview.hidden = false;
-        recAudioVisual.hidden = true;
+        recReadyPreview.srcObject = stream;
+        recReadyPreview.hidden = false;
+        recReadyAudioVisual.hidden = true;
       } else {
-        recPreview.hidden = true;
-        recAudioVisual.hidden = false;
+        recReadyPreview.hidden = true;
+        recReadyAudioVisual.hidden = false;
       }
 
-      var mimeType = getMimeType();
-      var options = mimeType ? { mimeType: mimeType } : {};
-      mediaRecorder = new MediaRecorder(stream, options);
-
-      mediaRecorder.ondataavailable = function(e) {
-        if (e.data && e.data.size > 0) recordedChunks.push(e.data);
-      };
-
-      mediaRecorder.onstop = function() {
-        isRecording = false;
-        stopAllTracks();
-        clearInterval(timerInterval);
-        timerInterval = null;
-        secondsLeft = Math.max(0, secondsLeft);
-        var elapsed = 60 - secondsLeft;
-        var type = isVideoMode ? 'video/webm' : 'audio/webm';
-        recordedBlob = new Blob(recordedChunks, { type: type });
-        revokeOldUrl();
-        recordedBlobUrl = URL.createObjectURL(recordedBlob);
-
-        if (isVideoMode) {
-          recPlaybackVideo.src = recordedBlobUrl;
-          recPlaybackVideo.hidden = false;
-          recPlaybackAudio.hidden = true;
-        } else {
-          recPlaybackAudio.src = recordedBlobUrl;
-          recPlaybackAudio.hidden = false;
-          recPlaybackVideo.hidden = true;
-        }
-
-        recDuration.textContent = formatTime(elapsed) + ' / 1:00';
-        showState('done');
-      };
-
-      mediaRecorder.start(1000);
-      showState('live');
-      updateTimer();
-      timerInterval = setInterval(function() {
-        secondsLeft--;
-        if (secondsLeft <= 0) {
-          secondsLeft = 0;
-          updateTimer();
-          clearInterval(timerInterval);
-          timerInterval = null;
-          if (mediaRecorder && mediaRecorder.state === 'recording') {
-            mediaRecorder.stop();
-          }
-          return;
-        }
-        updateTimer();
-      }, 1000);
-
+      showState('ready');
     }).catch(function(err) {
-      isRecording = false;
       recStartBtn.disabled = false;
       recStartBtn.textContent = 'Record Pitch';
       recorderError.textContent = 'Could not access camera/mic. Check browser permissions, or paste a Loom link instead.';
       recorderError.hidden = false;
     });
+  }
+
+  function beginRecording() {
+    if (isRecording || !currentStream) return;
+    isRecording = true;
+    secondsLeft = 60;
+
+    if (isVideoMode) {
+      recPreview.srcObject = currentStream;
+      recPreview.hidden = false;
+      recAudioVisual.hidden = true;
+    } else {
+      recPreview.hidden = true;
+      recAudioVisual.hidden = false;
+    }
+
+    var mimeType = getMimeType();
+    var options = mimeType ? { mimeType: mimeType } : {};
+    mediaRecorder = new MediaRecorder(currentStream, options);
+
+    mediaRecorder.ondataavailable = function(e) {
+      if (e.data && e.data.size > 0) recordedChunks.push(e.data);
+    };
+
+    mediaRecorder.onstop = function() {
+      isRecording = false;
+      stopAllTracks();
+      clearInterval(timerInterval);
+      timerInterval = null;
+      secondsLeft = Math.max(0, secondsLeft);
+      var elapsed = 60 - secondsLeft;
+      var type = isVideoMode ? 'video/webm' : 'audio/webm';
+      recordedBlob = new Blob(recordedChunks, { type: type });
+      revokeOldUrl();
+      recordedBlobUrl = URL.createObjectURL(recordedBlob);
+
+      if (isVideoMode) {
+        recPlaybackVideo.src = recordedBlobUrl;
+        recPlaybackVideo.hidden = false;
+        recPlaybackAudio.hidden = true;
+      } else {
+        recPlaybackAudio.src = recordedBlobUrl;
+        recPlaybackAudio.hidden = false;
+        recPlaybackVideo.hidden = true;
+      }
+
+      recDuration.textContent = formatTime(elapsed) + ' / 1:00';
+      showState('done');
+    };
+
+    mediaRecorder.start(1000);
+    showState('live');
+    updateTimer();
+    timerInterval = setInterval(function() {
+      secondsLeft--;
+      if (secondsLeft <= 0) {
+        secondsLeft = 0;
+        updateTimer();
+        clearInterval(timerInterval);
+        timerInterval = null;
+        if (mediaRecorder && mediaRecorder.state === 'recording') {
+          mediaRecorder.stop();
+        }
+        return;
+      }
+      updateTimer();
+    }, 1000);
   }
 
   function updateTimer() {
@@ -558,7 +596,18 @@
   }
 
   recStartBtn.addEventListener('click', function() {
-    startRecording(!recAudioOnlyCheck.checked);
+    openPreview(!recAudioOnlyCheck.checked);
+  });
+
+  recGoBtn.addEventListener('click', function() {
+    beginRecording();
+  });
+
+  recCancelBtn.addEventListener('click', function() {
+    stopAllTracks();
+    recStartBtn.disabled = false;
+    recStartBtn.textContent = 'Record Pitch';
+    showState('idle');
   });
 
   recStopBtn.addEventListener('click', function() {
