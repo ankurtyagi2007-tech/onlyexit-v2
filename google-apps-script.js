@@ -25,7 +25,7 @@
 // pages to use this new script, update app.js too.
 // =============================================================
 
-var SPREADSHEET_ID = 'YOUR_SPREADSHEET_ID_HERE';
+var SPREADSHEET_ID = '1wj7OguaryfvVC82KgLKCqi1FlPJfD1Dy7DdIFYLS56w';
 var DRIVE_FOLDER_ID = 'YOUR_DRIVE_FOLDER_ID_HERE';
 
 var NOTIFY_EMAILS = ['ankur@onlyexit.vc', 'sahil@onlyexit.vc'];
