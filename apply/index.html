@@ -216,7 +216,7 @@
         </div>
         <h2 class="apply-success__title">Application received.</h2>
         <p class="apply-success__body">If we like what we see, you will get a 15-minute interview. We are admitting on a rolling basis. Early admissions Aug 3, full batch starts Aug 17. Come ready.</p>
-        <p id="apply-success-upload-note" class="apply-success__upload-note" hidden>We have your recording saved. You will receive an email with a link to upload it.</p>
+        <p id="apply-success-upload-note" class="apply-success__upload-note" hidden>Your pitch recording has been uploaded successfully.</p>
         <span class="apply-success__inbox">Check Your Inbox</span>
       </div>
     </div>
@@ -614,18 +614,39 @@
     btn.disabled = true;
     btn.textContent = 'Submitting...';
 
-    submitToSheets(data).then(function() {
-      applyForm.hidden = true;
-      applySuccess.hidden = false;
-      if (recordedBlob && (!pitchLinkInput.value || pitchLinkInput.value.trim().length === 0)) {
-        uploadNote.hidden = false;
+    function doSubmit() {
+      if (recordedBlob) {
+        btn.textContent = 'Uploading pitch...';
+        var reader = new FileReader();
+        reader.onloadend = function() {
+          var base64 = reader.result.split(',')[1];
+          data.pitch_recording_base64 = base64;
+          data.pitch_mime_type = recordedBlob.type || (isVideoMode ? 'video/webm' : 'audio/webm');
+          sendData();
+        };
+        reader.onerror = function() {
+          sendData();
+        };
+        reader.readAsDataURL(recordedBlob);
+      } else {
+        sendData();
       }
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }).catch(function() {
-      btn.disabled = false;
-      btn.textContent = origText;
-      alert('Submission failed. Please try again.');
-    });
+    }
+
+    function sendData() {
+      btn.textContent = 'Submitting...';
+      submitToSheets(data).then(function() {
+        applyForm.hidden = true;
+        applySuccess.hidden = false;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }).catch(function() {
+        btn.disabled = false;
+        btn.textContent = origText;
+        alert('Submission failed. Please try again.');
+      });
+    }
+
+    doSubmit();
   });
 })();
 </script>
