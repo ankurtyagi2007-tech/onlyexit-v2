@@ -26,7 +26,7 @@
 // =============================================================
 
 var SPREADSHEET_ID = '1wj7OguaryfvVC82KgLKCqi1FlPJfD1Dy7DdIFYLS56w';
-var DRIVE_FOLDER_ID = 'YOUR_DRIVE_FOLDER_ID_HERE';
+var DRIVE_FOLDER_ID = '1ZVJ9ma9Gfxp0xeYH-3PKTVLvbQct_3ZQ';
 
 var NOTIFY_EMAILS = ['ankur@onlyexit.vc', 'sahil@onlyexit.vc'];
 
