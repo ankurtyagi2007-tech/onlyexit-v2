@@ -106,7 +106,13 @@
             </div>
             <div class="form-field">
               <label for="creator-city">City</label>
-              <input type="text" id="creator-city" name="city" placeholder="Seattle, WA" autocomplete="address-level2">
+              <select id="creator-city" name="city">
+                <option value="" disabled selected>Select your city</option>
+                <option value="Seattle">Seattle</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="New York">New York</option>
+                <option value="San Francisco">San Francisco</option>
+              </select>
             </div>
           </div>
           <div class="form-grid form-grid--2col">
