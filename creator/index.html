@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creators · OnlyExit</title>
+  <meta name="description" content="Get paid to be on camera. OnlyExit books models, actors and creators for short-form shoots in Seattle. $100+ per shoot.">
+  <link rel="canonical" href="https://onlyexit.ai/creator">
+  <meta property="og:title" content="Creators · OnlyExit">
+  <meta property="og:description" content="Get paid to be on camera. Short-form shoots in Seattle. $100+ per shoot.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://onlyexit.ai/creator">
+  <meta property="og:image" content="https://onlyexit.ai/assets/jet-dark.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Creators · OnlyExit">
+  <meta name="twitter:description" content="Get paid to be on camera. Short-form shoots in Seattle. $100+ per shoot.">
+  <meta name="twitter:image" content="https://onlyexit.ai/assets/jet-dark.webp">
+  <link rel="icon" href="../assets/favicon.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="/" class="site-header__logo"><img src="../assets/OnlyExit-Logo-White.webp" alt="OnlyExit"></a>
+    <div class="apply-status">
+      <span class="apply-status__dot"></span>
+      <span class="apply-status__text"><span style="color:#00F0FF;">Now Booking</span> · Paid Shoots in Seattle</span>
+    </div>
+  </div>
+</header>
+
+<!-- CREATOR PAGE -->
+<main class="apply-page">
+  <div class="apply-page__glow-tl"></div>
+  <div class="apply-page__glow-br"></div>
+  <div class="apply-page__grid-bg"></div>
+
+  <div class="apply-page__layout">
+    <!-- LEFT COLUMN -->
+    <div class="apply-page__left">
+      <div class="apply-page__eyebrow">
+        <span class="apply-page__eyebrow-rule"></span>
+        <span class="apply-page__eyebrow-text">CREATORS</span>
+      </div>
+      <h1 class="apply-page__h1">Get paid to be<br><span class="hero__title-gradient">on camera.</span></h1>
+      <p class="apply-page__body">We book models, actors and creators for paid short-form shoots in Seattle. Show up, perform, get paid the same day.</p>
+
+      <!-- Stat rows -->
+      <div class="apply-page__stats">
+        <div class="apply-page__stat-row">
+          <span class="apply-page__stat-label">Pay</span>
+          <span class="apply-page__stat-value" style="color:#00F0FF;">$100+ per shoot</span>
+        </div>
+        <div class="apply-page__stat-row">
+          <span class="apply-page__stat-label">Time</span>
+          <span class="apply-page__stat-value">2-3 hours</span>
+        </div>
+        <div class="apply-page__stat-row">
+          <span class="apply-page__stat-label">Where</span>
+          <span class="apply-page__stat-value">Seattle</span>
+        </div>
+      </div>
+
+      <!-- Info blocks -->
+      <div class="creator-info">
+        <div class="creator-info__block">
+          <h3 class="creator-info__title">What a shoot day looks like</h3>
+          <p class="creator-info__text">You arrive at a location in Seattle, get briefed on the concept, and shoot 2-5 short-form clips with our team. Most shoots wrap in under three hours. You are acting, reacting, or being yourself on camera. No editing, no posting, no follow-up.</p>
+        </div>
+        <div class="creator-info__block">
+          <h3 class="creator-info__title">How bookings work</h3>
+          <p class="creator-info__text">We review your reel, add you to our roster, and text you when a shoot matches your look and vibe. You confirm, show up, and get paid. No exclusivity, no long-term contracts. One shoot at a time.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: FORM -->
+    <div class="apply-page__right">
+      <form id="creatorForm" class="apply-form" novalidate>
+        <input type="hidden" name="formType" value="creator">
+
+        <!-- 01 · YOU -->
+        <div class="apply-form__section">
+          <h2 class="apply-form__section-header">01 · You</h2>
+          <div class="form-grid form-grid--2col">
+            <div class="form-field">
+              <label for="creator-name">Full Name</label>
+              <input type="text" id="creator-name" name="full_name" required placeholder="Your full name" autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="creator-email">Email</label>
+              <input type="email" id="creator-email" name="email" required placeholder="you@example.com" inputmode="email" autocomplete="email">
+            </div>
+          </div>
+          <div class="form-grid form-grid--2col">
+            <div class="form-field">
+              <label for="creator-phone">Phone</label>
+              <input type="tel" id="creator-phone" name="phone" required placeholder="+1 (555) 000-0000" inputmode="tel" autocomplete="tel">
+            </div>
+            <div class="form-field">
+              <label for="creator-city">City</label>
+              <input type="text" id="creator-city" name="city" placeholder="Seattle, WA" autocomplete="address-level2">
+            </div>
+          </div>
+          <div class="form-grid form-grid--2col">
+            <div class="form-field">
+              <label for="creator-instagram">Instagram</label>
+              <input type="text" id="creator-instagram" name="instagram" placeholder="@handle">
+            </div>
+            <div class="form-field">
+              <label for="creator-tiktok">TikTok (optional)</label>
+              <input type="text" id="creator-tiktok" name="tiktok" placeholder="@handle">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="creator-followers">Follower Count (optional)</label>
+            <input type="text" id="creator-followers" name="follower_count" placeholder="e.g. 12k, 150k" inputmode="text">
+          </div>
+          <p id="social-error" class="apply-form__error" hidden>Please provide at least one social handle (Instagram or TikTok).</p>
+        </div>
+
+        <!-- 02 · ON CAMERA -->
+        <div class="apply-form__section">
+          <h2 class="apply-form__section-header">02 · On Camera</h2>
+          <p class="creator-section-desc">Record a quick 30-second video. Say your name and tell us something about yourself.</p>
+          <div id="recorder" class="apply-recorder">
+            <!-- Idle state -->
+            <div id="recorder-idle" class="apply-recorder__idle">
+              <button type="button" id="rec-start-btn" class="apply-recorder__start-btn" aria-label="Record video">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                Record Video
+              </button>
+              <p class="apply-recorder__alt-text">Or paste a link to an existing reel instead:</p>
+              <div class="form-field">
+                <input type="url" id="creator-reel-link" name="reel_link" placeholder="https://instagram.com/reel/... or tiktok.com/...">
+              </div>
+              <p id="recorder-error" class="apply-recorder__error" hidden></p>
+            </div>
+
+            <!-- Ready state (preview before recording) -->
+            <div id="recorder-ready" class="apply-recorder__ready" hidden>
+              <div class="apply-recorder__ready-header">
+                <span class="apply-recorder__ready-label">Preview</span>
+                <span class="apply-recorder__ready-hint">Check your camera, then hit Start.</span>
+              </div>
+              <div class="apply-recorder__live-body">
+                <video id="rec-ready-preview" muted autoplay playsinline class="apply-recorder__preview"></video>
+              </div>
+              <div class="apply-recorder__ready-actions">
+                <button type="button" id="rec-go-btn" class="apply-recorder__go-btn">&#9679; Start Recording</button>
+                <button type="button" id="rec-cancel-btn" class="apply-recorder__cancel-btn">Cancel</button>
+              </div>
+            </div>
+
+            <!-- Live state (recording in progress) -->
+            <div id="recorder-live" class="apply-recorder__live" hidden>
+              <div class="apply-recorder__live-header">
+                <div class="apply-recorder__rec-indicator">
+                  <span class="apply-recorder__rec-dot"></span>
+                  <span>REC</span>
+                </div>
+                <span id="rec-timer" class="apply-recorder__timer" aria-live="polite">0:30</span>
+              </div>
+              <div class="apply-recorder__live-body">
+                <video id="rec-preview" muted autoplay playsinline class="apply-recorder__preview"></video>
+              </div>
+              <div class="apply-recorder__progress">
+                <div id="rec-progress-bar" class="apply-recorder__progress-bar"></div>
+              </div>
+              <button type="button" id="rec-stop-btn" class="apply-recorder__stop-btn">&#9632; Stop Recording</button>
+            </div>
+
+            <!-- Done state -->
+            <div id="recorder-done" class="apply-recorder__done" hidden>
+              <div class="apply-recorder__done-header">
+                <div class="apply-recorder__done-check">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  <span style="color:#00F0FF;">Video Recorded</span>
+                </div>
+                <span id="rec-duration" class="apply-recorder__duration">0:00 / 0:30</span>
+              </div>
+              <div class="apply-recorder__done-body">
+                <video id="rec-playback-video" controls playsinline class="apply-recorder__playback"></video>
+              </div>
+              <button type="button" id="rec-rerecord-btn" class="apply-recorder__rerecord">&#8635; Re-record</button>
+            </div>
+          </div>
+          <p id="reel-error" class="apply-form__error" hidden>Please record a video or paste a reel link.</p>
+        </div>
+
+        <!-- 03 · AVAILABILITY -->
+        <div class="apply-form__section">
+          <h2 class="apply-form__section-header">03 · Availability</h2>
+          <div class="form-field">
+            <label>Which days generally work for you? (optional)</label>
+            <div class="creator-days" role="group" aria-label="Available days">
+              <button type="button" class="creator-day-btn" data-day="Mon" aria-pressed="false">Mon</button>
+              <button type="button" class="creator-day-btn" data-day="Tue" aria-pressed="false">Tue</button>
+              <button type="button" class="creator-day-btn" data-day="Wed" aria-pressed="false">Wed</button>
+              <button type="button" class="creator-day-btn" data-day="Thu" aria-pressed="false">Thu</button>
+              <button type="button" class="creator-day-btn" data-day="Fri" aria-pressed="false">Fri</button>
+              <button type="button" class="creator-day-btn" data-day="Sat" aria-pressed="false">Sat</button>
+              <button type="button" class="creator-day-btn" data-day="Sun" aria-pressed="false">Sun</button>
+            </div>
+            <input type="hidden" name="available_days" id="creator-available-days">
+          </div>
+          <div class="form-field">
+            <label>Do you have your own transportation?</label>
+            <div class="apply-toggle" role="radiogroup" aria-label="Own transportation">
+              <button type="button" class="apply-toggle__btn creator-transport-btn" data-value="yes" aria-pressed="false">Yes</button>
+              <button type="button" class="apply-toggle__btn creator-transport-btn" data-value="no" aria-pressed="false">No</button>
+            </div>
+            <input type="hidden" name="own_transport" id="creator-transport">
+          </div>
+        </div>
+
+        <!-- 04 · THE FILTER -->
+        <div class="apply-form__section">
+          <h2 class="apply-form__section-header">04 · The Filter</h2>
+
+          <div class="form-field">
+            <label>Are you 18 or older?</label>
+            <div class="apply-toggle" role="radiogroup" aria-label="Age confirmation">
+              <button type="button" class="apply-toggle__btn creator-age-btn" data-value="yes" aria-pressed="false">Yes</button>
+              <button type="button" class="apply-toggle__btn creator-age-btn" data-value="no" aria-pressed="false">No</button>
+            </div>
+            <input type="hidden" name="is_18_plus" id="creator-age" required>
+            <p id="age-warning" class="apply-form__warning" hidden>You must be 18 or older to participate.</p>
+          </div>
+
+          <div class="form-field">
+            <label>Can you get to Seattle for shoots?</label>
+            <div class="apply-toggle" role="radiogroup" aria-label="Seattle access">
+              <button type="button" class="apply-toggle__btn creator-seattle-btn" data-value="yes" aria-pressed="false">Yes</button>
+              <button type="button" class="apply-toggle__btn creator-seattle-btn" data-value="no" aria-pressed="false">No</button>
+            </div>
+            <input type="hidden" name="can_get_to_seattle" id="creator-seattle">
+          </div>
+        </div>
+
+        <!-- SUBMIT -->
+        <button type="submit" id="creator-submit" class="apply-form__submit">Join the Roster &rarr;</button>
+        <p class="apply-form__fine-print">We review submissions weekly and text you when there is a match</p>
+      </form>
+
+      <!-- SUCCESS STATE -->
+      <div id="creator-success" class="apply-success" hidden>
+        <div class="apply-success__icon">
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 12 15 16 10"/></svg>
+        </div>
+        <h2 class="apply-success__title">You are on our radar.</h2>
+        <p class="apply-success__body">We review submissions every week. If your look fits an upcoming shoot, we will text you with the details. No exclusivity, no commitment until you confirm.</p>
+        <p id="creator-success-upload-note" class="apply-success__upload-note" hidden>Your video has been uploaded successfully.</p>
+        <span class="apply-success__inbox">Keep Your Phone On</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__grid">
+      <div class="site-footer__about">
+        <img src="../assets/OnlyExit-Logo-White.webp" alt="OnlyExit">
+        <p>We're going to incubate unicorns out of Seattle whether this city is ready or not.</p>
+      </div>
+      <div class="site-footer__col site-footer__col--wide">
+        <h4 class="site-footer__col-title">Navigate</h4>
+        <div class="site-footer__nav-grid">
+          <a href="/#hacker-house">Hacker House</a>
+          <a href="/#manifest">The Program</a>
+          <a href="/#build-in-public">Build in Public</a>
+          <a href="/#demo-day">Demo Day</a>
+          <a href="/#what-you-get">What You Get</a>
+          <a href="/#corvette">The Corvette</a>
+          <a href="/#cities">Cities</a>
+          <a href="/#social-life">Social Life</a>
+          <a href="/#thesis">Thesis</a>
+          <a href="/#faq">FAQ</a>
+        </div>
+      </div>
+      <div class="site-footer__col">
+        <h4 class="site-footer__col-title">Connect</h4>
+        <a href="mailto:ankur@onlyexit.ai">ankur@onlyexit.ai</a>
+        <a href="https://www.linkedin.com/in/ankurtyagi2007/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://x.com/onlyexitai" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+        <a href="https://medium.com/@onlyexit" target="_blank" rel="noopener noreferrer">Medium</a>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span class="site-footer__copy">&copy; 2026 OnlyExit</span>
+      <span class="site-footer__tagline">SHIP OR DIE</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // ===== GOOGLE SHEETS SUBMISSION =====
+  var GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzWeuQ9vXNC0wlysGN-DKrZfuJA_J8432b52vQn09UK6MB30wR85EmorbsOPknTluzNOA/exec';
+
+  function submitToSheets(formData) {
+    return fetch(GOOGLE_SHEETS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(formData),
+      redirect: 'follow'
+    });
+  }
+
+  // ===== HEADER SCROLL STATE =====
+  var header = document.querySelector('.site-header');
+  if (header) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        header.classList.add('site-header--scrolled');
+      } else {
+        header.classList.remove('site-header--scrolled');
+      }
+    }, { passive: true });
+  }
+
+  // ===== DAY MULTI-SELECT =====
+  var dayBtns = document.querySelectorAll('.creator-day-btn');
+  var daysInput = document.getElementById('creator-available-days');
+
+  dayBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var pressed = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', String(!pressed));
+      btn.classList.toggle('creator-day-btn--selected', !pressed);
+      updateDaysInput();
+    });
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        btn.click();
+      }
+    });
+  });
+
+  function updateDaysInput() {
+    var selected = [];
+    dayBtns.forEach(function(btn) {
+      if (btn.getAttribute('aria-pressed') === 'true') {
+        selected.push(btn.getAttribute('data-day'));
+      }
+    });
+    daysInput.value = selected.join(', ');
+  }
+
+  // ===== TRANSPORT TOGGLE =====
+  var transportBtns = document.querySelectorAll('.creator-transport-btn');
+  var transportInput = document.getElementById('creator-transport');
+
+  transportBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      transportBtns.forEach(function(b) {
+        b.setAttribute('aria-pressed', 'false');
+        b.classList.remove('apply-toggle__btn--yes', 'apply-toggle__btn--no');
+      });
+      btn.setAttribute('aria-pressed', 'true');
+      var val = btn.getAttribute('data-value');
+      transportInput.value = val;
+      if (val === 'yes') {
+        btn.classList.add('apply-toggle__btn--yes');
+      } else {
+        btn.classList.add('apply-toggle__btn--no');
+      }
+    });
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+    });
+  });
+
+  // ===== AGE TOGGLE =====
+  var ageBtns = document.querySelectorAll('.creator-age-btn');
+  var ageInput = document.getElementById('creator-age');
+  var ageWarning = document.getElementById('age-warning');
+
+  ageBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      ageBtns.forEach(function(b) {
+        b.setAttribute('aria-pressed', 'false');
+        b.classList.remove('apply-toggle__btn--yes', 'apply-toggle__btn--no');
+      });
+      btn.setAttribute('aria-pressed', 'true');
+      var val = btn.getAttribute('data-value');
+      ageInput.value = val;
+      if (val === 'yes') {
+        btn.classList.add('apply-toggle__btn--yes');
+        ageWarning.hidden = true;
+      } else {
+        btn.classList.add('apply-toggle__btn--no');
+        ageWarning.hidden = false;
+      }
+    });
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+    });
+  });
+
+  // ===== SEATTLE TOGGLE =====
+  var seattleBtns = document.querySelectorAll('.creator-seattle-btn');
+  var seattleInput = document.getElementById('creator-seattle');
+
+  seattleBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      seattleBtns.forEach(function(b) {
+        b.setAttribute('aria-pressed', 'false');
+        b.classList.remove('apply-toggle__btn--yes', 'apply-toggle__btn--no');
+      });
+      btn.setAttribute('aria-pressed', 'true');
+      var val = btn.getAttribute('data-value');
+      seattleInput.value = val;
+      if (val === 'yes') {
+        btn.classList.add('apply-toggle__btn--yes');
+      } else {
+        btn.classList.add('apply-toggle__btn--no');
+      }
+    });
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+    });
+  });
+
+  // ===== RECORDER (VIDEO ONLY, 30s CAP) =====
+  var recorderIdle = document.getElementById('recorder-idle');
+  var recorderReady = document.getElementById('recorder-ready');
+  var recorderLive = document.getElementById('recorder-live');
+  var recorderDone = document.getElementById('recorder-done');
+  var recStartBtn = document.getElementById('rec-start-btn');
+  var recGoBtn = document.getElementById('rec-go-btn');
+  var recCancelBtn = document.getElementById('rec-cancel-btn');
+  var recStopBtn = document.getElementById('rec-stop-btn');
+  var recRerecordBtn = document.getElementById('rec-rerecord-btn');
+  var recReadyPreview = document.getElementById('rec-ready-preview');
+  var recPreview = document.getElementById('rec-preview');
+  var recTimer = document.getElementById('rec-timer');
+  var recProgressBar = document.getElementById('rec-progress-bar');
+  var recPlaybackVideo = document.getElementById('rec-playback-video');
+  var recDuration = document.getElementById('rec-duration');
+  var recorderError = document.getElementById('recorder-error');
+  var reelLinkInput = document.getElementById('creator-reel-link');
+
+  var MAX_SECONDS = 30;
+  var mediaRecorder = null;
+  var recordedChunks = [];
+  var recordedBlob = null;
+  var recordedBlobUrl = null;
+  var currentStream = null;
+  var timerInterval = null;
+  var secondsLeft = MAX_SECONDS;
+  var isRecording = false;
+
+  function getMimeType() {
+    if (typeof MediaRecorder === 'undefined') return null;
+    var types = ['video/webm;codecs=vp9,opus', 'video/webm;codecs=vp8,opus', 'video/webm', 'video/mp4'];
+    for (var i = 0; i < types.length; i++) {
+      if (MediaRecorder.isTypeSupported(types[i])) return types[i];
+    }
+    return '';
+  }
+
+  function formatTime(s) {
+    s = Math.max(0, s);
+    var m = Math.floor(s / 60);
+    var sec = s % 60;
+    return m + ':' + (sec < 10 ? '0' : '') + sec;
+  }
+
+  function stopAllTracks() {
+    if (currentStream) {
+      currentStream.getTracks().forEach(function(t) { t.stop(); });
+      currentStream = null;
+    }
+  }
+
+  function revokeOldUrl() {
+    if (recordedBlobUrl) {
+      URL.revokeObjectURL(recordedBlobUrl);
+      recordedBlobUrl = null;
+    }
+  }
+
+  function showState(state) {
+    recorderIdle.hidden = state !== 'idle';
+    recorderReady.hidden = state !== 'ready';
+    recorderLive.hidden = state !== 'live';
+    recorderDone.hidden = state !== 'done';
+  }
+
+  function openPreview() {
+    if (currentStream) return;
+    recordedChunks = [];
+    recorderError.hidden = true;
+    recStartBtn.disabled = true;
+    recStartBtn.textContent = 'Starting...';
+
+    var constraints = { video: { facingMode: 'user', width: { ideal: 640 }, height: { ideal: 480 } }, audio: true };
+
+    navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
+      currentStream = stream;
+      recReadyPreview.srcObject = stream;
+      showState('ready');
+    }).catch(function() {
+      recStartBtn.disabled = false;
+      recStartBtn.textContent = 'Record Video';
+      recorderError.textContent = 'Could not access camera/mic. Check browser permissions, or paste a reel link instead.';
+      recorderError.hidden = false;
+    });
+  }
+
+  function beginRecording() {
+    if (isRecording || !currentStream) return;
+    isRecording = true;
+    secondsLeft = MAX_SECONDS;
+
+    recPreview.srcObject = currentStream;
+
+    var mimeType = getMimeType();
+    var options = mimeType ? { mimeType: mimeType } : {};
+    mediaRecorder = new MediaRecorder(currentStream, options);
+
+    mediaRecorder.ondataavailable = function(e) {
+      if (e.data && e.data.size > 0) recordedChunks.push(e.data);
+    };
+
+    mediaRecorder.onstop = function() {
+      isRecording = false;
+      stopAllTracks();
+      clearInterval(timerInterval);
+      timerInterval = null;
+      secondsLeft = Math.max(0, secondsLeft);
+      var elapsed = MAX_SECONDS - secondsLeft;
+      recordedBlob = new Blob(recordedChunks, { type: 'video/webm' });
+      revokeOldUrl();
+      recordedBlobUrl = URL.createObjectURL(recordedBlob);
+      recPlaybackVideo.src = recordedBlobUrl;
+      recDuration.textContent = formatTime(elapsed) + ' / 0:30';
+      showState('done');
+    };
+
+    mediaRecorder.start(1000);
+    showState('live');
+    updateTimer();
+    timerInterval = setInterval(function() {
+      secondsLeft--;
+      if (secondsLeft <= 0) {
+        secondsLeft = 0;
+        updateTimer();
+        clearInterval(timerInterval);
+        timerInterval = null;
+        if (mediaRecorder && mediaRecorder.state === 'recording') {
+          mediaRecorder.stop();
+        }
+        return;
+      }
+      updateTimer();
+    }, 1000);
+  }
+
+  function updateTimer() {
+    var clamped = Math.max(0, secondsLeft);
+    recTimer.textContent = formatTime(clamped);
+    if (clamped <= 5) {
+      recTimer.style.color = '#FF2E3D';
+    } else {
+      recTimer.style.color = '';
+    }
+    var progress = Math.min(100, ((MAX_SECONDS - clamped) / MAX_SECONDS) * 100);
+    recProgressBar.style.width = progress + '%';
+  }
+
+  recStartBtn.addEventListener('click', function() {
+    openPreview();
+  });
+
+  recGoBtn.addEventListener('click', function() {
+    beginRecording();
+  });
+
+  recCancelBtn.addEventListener('click', function() {
+    stopAllTracks();
+    recStartBtn.disabled = false;
+    recStartBtn.textContent = 'Record Video';
+    showState('idle');
+  });
+
+  recStopBtn.addEventListener('click', function() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    if (mediaRecorder && mediaRecorder.state === 'recording') {
+      mediaRecorder.stop();
+    }
+  });
+
+  recRerecordBtn.addEventListener('click', function() {
+    stopAllTracks();
+    revokeOldUrl();
+    recordedBlob = null;
+    recordedChunks = [];
+    isRecording = false;
+    recPlaybackVideo.src = '';
+    recStartBtn.disabled = false;
+    recStartBtn.textContent = 'Record Video';
+    showState('idle');
+  });
+
+  window.addEventListener('beforeunload', function() {
+    stopAllTracks();
+    revokeOldUrl();
+  });
+
+  // ===== FORM SUBMISSION =====
+  var creatorForm = document.getElementById('creatorForm');
+  var creatorSuccess = document.getElementById('creator-success');
+  var reelError = document.getElementById('reel-error');
+  var socialError = document.getElementById('social-error');
+  var uploadNote = document.getElementById('creator-success-upload-note');
+
+  creatorForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Validate at least one social handle
+    var ig = document.getElementById('creator-instagram').value.trim();
+    var tt = document.getElementById('creator-tiktok').value.trim();
+    if (!ig && !tt) {
+      socialError.hidden = false;
+      socialError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    socialError.hidden = true;
+
+    // Validate age gate
+    if (ageInput.value !== 'yes') {
+      ageWarning.hidden = false;
+      ageWarning.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    // Validate reel
+    var hasReel = recordedBlob || (reelLinkInput.value && reelLinkInput.value.trim().length > 0);
+    if (!hasReel) {
+      reelError.hidden = false;
+      reelError.textContent = 'Please record a video or paste a reel link.';
+      reelError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    reelError.hidden = true;
+
+    var formData = new FormData(creatorForm);
+    var data = {};
+    formData.forEach(function(value, key) {
+      data[key] = value;
+    });
+
+    var btn = document.getElementById('creator-submit');
+    var origText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+
+    function doSubmit() {
+      if (recordedBlob) {
+        btn.textContent = 'Uploading video...';
+        var reader = new FileReader();
+        reader.onloadend = function() {
+          var base64 = reader.result.split(',')[1];
+          data.reel_recording_base64 = base64;
+          data.reel_mime_type = recordedBlob.type || 'video/webm';
+          sendData();
+        };
+        reader.onerror = function() {
+          sendData();
+        };
+        reader.readAsDataURL(recordedBlob);
+      } else {
+        sendData();
+      }
+    }
+
+    function sendData() {
+      btn.textContent = 'Submitting...';
+      submitToSheets(data).then(function() {
+        creatorForm.hidden = true;
+        creatorSuccess.hidden = false;
+        if (recordedBlob) uploadNote.hidden = false;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }).catch(function() {
+        btn.disabled = false;
+        btn.textContent = origText;
+        alert('Submission failed. Please try again.');
+      });
+    }
+
+    doSubmit();
+  });
+})();
+</script>
+
+</body>
+</html>

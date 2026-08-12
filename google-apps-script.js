@@ -37,6 +37,8 @@ function doPost(e) {
 
     if (formType === 'apply-page') {
       return handleApplySubmission(payload);
+    } else if (formType === 'creator') {
+      return handleCreatorSubmission(payload);
     } else {
       return handleMainSiteSubmission(payload);
     }
@@ -143,6 +145,117 @@ function handleApplySubmission(data) {
   return ContentService
     .createTextOutput(JSON.stringify({ status: 'success', pitchUrl: pitchFileUrl }))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+// ---- Creator page form ----
+function handleCreatorSubmission(data) {
+  var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  var sheet = ss.getSheetByName('Creators');
+
+  if (!sheet) {
+    sheet = ss.insertSheet('Creators');
+    sheet.appendRow([
+      'Timestamp',
+      'Full Name',
+      'Email',
+      'Phone',
+      'City',
+      'Instagram',
+      'TikTok',
+      'Follower Count',
+      'Reel Link',
+      'Reel Recording',
+      'Available Days',
+      'Own Transport',
+      'Is 18+',
+      'Can Get to Seattle'
+    ]);
+    sheet.getRange(1, 1, 1, 14).setFontWeight('bold');
+  }
+
+  var reelFileUrl = '';
+
+  if (data.reel_recording_base64) {
+    try {
+      var folder = DriveApp.getFolderById(DRIVE_FOLDER_ID);
+      var mimeType = data.reel_mime_type || 'video/webm';
+      var fileName = (data.full_name || 'unknown').replace(/[^a-zA-Z0-9]/g, '-') + '-reel-' + new Date().getTime() + '.webm';
+
+      var blob = Utilities.newBlob(
+        Utilities.base64Decode(data.reel_recording_base64),
+        mimeType,
+        fileName
+      );
+      var file = folder.createFile(blob);
+      file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+      reelFileUrl = file.getUrl();
+    } catch (uploadErr) {
+      reelFileUrl = 'Upload failed: ' + uploadErr.toString();
+    }
+
+    delete data.reel_recording_base64;
+    delete data.reel_mime_type;
+  }
+
+  sheet.appendRow([
+    new Date().toISOString(),
+    data.full_name || '',
+    data.email || '',
+    data.phone || '',
+    data.city || '',
+    data.instagram || '',
+    data.tiktok || '',
+    data.follower_count || '',
+    data.reel_link || '',
+    reelFileUrl,
+    data.available_days || '',
+    data.own_transport || '',
+    data.is_18_plus || '',
+    data.can_get_to_seattle || ''
+  ]);
+
+  sendCreatorNotificationEmail(data, reelFileUrl);
+
+  return ContentService
+    .createTextOutput(JSON.stringify({ status: 'success', reelUrl: reelFileUrl }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+function sendCreatorNotificationEmail(data, reelFileUrl) {
+  var subject = 'New Creator Submission: ' + (data.full_name || 'Unknown');
+
+  var body = 'New creator submission for OnlyExit shoots.\n\n'
+    + '--- CREATOR ---\n'
+    + 'Name: ' + (data.full_name || '') + '\n'
+    + 'Email: ' + (data.email || '') + '\n'
+    + 'Phone: ' + (data.phone || '') + '\n'
+    + 'City: ' + (data.city || '') + '\n'
+    + 'Instagram: ' + (data.instagram || '') + '\n'
+    + 'TikTok: ' + (data.tiktok || '') + '\n'
+    + 'Followers: ' + (data.follower_count || '') + '\n\n'
+    + '--- REEL ---\n'
+    + 'Recording: ' + (reelFileUrl || 'No recording') + '\n'
+    + 'Link: ' + (data.reel_link || 'None') + '\n\n'
+    + '--- AVAILABILITY ---\n'
+    + 'Days: ' + (data.available_days || 'Not specified') + '\n'
+    + 'Own transport: ' + (data.own_transport || 'Not specified') + '\n\n'
+    + '--- FILTER ---\n'
+    + '18+: ' + (data.is_18_plus || '') + '\n'
+    + 'Can get to Seattle: ' + (data.can_get_to_seattle || '') + '\n\n'
+    + '---\n'
+    + 'Submitted: ' + new Date().toISOString() + '\n';
+
+  NOTIFY_EMAILS.forEach(function(email) {
+    try {
+      MailApp.sendEmail({
+        to: email,
+        subject: subject,
+        body: body
+      });
+    } catch (mailErr) {
+      Logger.log('Failed to email ' + email + ': ' + mailErr.toString());
+    }
+  });
 }
 
 function sendNotificationEmail(data, pitchFileUrl) {
