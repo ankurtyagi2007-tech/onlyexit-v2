@@ -164,13 +164,10 @@ function handleCreatorSubmission(data) {
       'Instagram',
       'Age',
       'Own Transport',
-      'Available Start',
-      'Available End',
-      'Flexible Dates',
       'Reel Link',
       'Reel Recording'
     ]);
-    sheet.getRange(1, 1, 1, 14).setFontWeight('bold');
+    sheet.getRange(1, 1, 1, 11).setFontWeight('bold');
   }
 
   // Server-side age validation
@@ -215,9 +212,6 @@ function handleCreatorSubmission(data) {
     data.instagram || '',
     data.age || '',
     data.own_transport || '',
-    data.available_start || '',
-    data.available_end || '',
-    data.flexible_dates || '',
     data.reel_link || '',
     reelFileUrl
   ]);
@@ -245,10 +239,7 @@ function sendCreatorNotificationEmail(data, reelFileUrl) {
     + '--- REEL ---\n'
     + 'Recording: ' + (reelFileUrl || 'No recording') + '\n'
     + 'Link: ' + (data.reel_link || 'None') + '\n\n'
-    + '--- AVAILABILITY ---\n'
-    + 'Start: ' + (data.available_start || 'Not specified') + '\n'
-    + 'End: ' + (data.available_end || 'Not specified') + '\n'
-    + 'Flexible: ' + (data.flexible_dates || 'No') + '\n'
+    + '--- LOGISTICS ---\n'
     + 'Own transport: ' + (data.own_transport || 'Not specified') + '\n\n'
     + '---\n'
     + 'Submitted: ' + new Date().toISOString() + '\n';
