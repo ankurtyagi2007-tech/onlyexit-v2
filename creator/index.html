@@ -85,7 +85,7 @@
       </div>
       <div class="form-field">
         <label class="creator-check creator-check--consent">
-          <input type="checkbox" id="creator-whatsapp" name="whatsapp_consent" value="yes" required>
+          <input type="checkbox" id="creator-whatsapp" name="whatsapp_consent" value="yes">
           <span class="creator-check__box"></span>
           <span class="creator-check__text">OK to add me to the creator WhatsApp group</span>
         </label>
@@ -543,15 +543,6 @@
       return;
     }
     openToError.hidden = true;
-
-    // Validate WhatsApp consent
-    var whatsappCheck = document.getElementById('creator-whatsapp');
-    if (!whatsappCheck.checked) {
-      whatsappError.hidden = false;
-      whatsappError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      return;
-    }
-    whatsappError.hidden = true;
 
     // Validate age
     var ageVal = parseInt(ageInput.value, 10);
