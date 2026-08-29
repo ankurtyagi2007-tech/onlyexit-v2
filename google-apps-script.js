@@ -156,21 +156,29 @@ function handleCreatorSubmission(data) {
     sheet = ss.insertSheet('Creators');
     sheet.appendRow([
       'Timestamp',
+      'Open To',
       'Full Name',
-      'Email',
       'Phone',
+      'WhatsApp Consent',
       'City',
       'Instagram',
-      'TikTok',
-      'Follower Count',
-      'Reel Link',
-      'Reel Recording',
-      'Available Days',
+      'Age',
       'Own Transport',
-      'Is 18+',
-      'Can Get to Seattle'
+      'Available Start',
+      'Available End',
+      'Flexible Dates',
+      'Reel Link',
+      'Reel Recording'
     ]);
     sheet.getRange(1, 1, 1, 14).setFontWeight('bold');
+  }
+
+  // Server-side age validation
+  var age = parseInt(data.age, 10);
+  if (!age || age < 18) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ status: 'error', message: 'You must be 18 or over to apply.' }))
+      .setMimeType(ContentService.MimeType.JSON);
   }
 
   var reelFileUrl = '';
@@ -199,19 +207,19 @@ function handleCreatorSubmission(data) {
 
   sheet.appendRow([
     new Date().toISOString(),
+    data.open_to || '',
     data.full_name || '',
-    data.email || '',
     data.phone || '',
+    data.whatsapp_consent || '',
     data.city || '',
     data.instagram || '',
-    data.tiktok || '',
-    data.follower_count || '',
-    data.reel_link || '',
-    reelFileUrl,
-    data.available_days || '',
+    data.age || '',
     data.own_transport || '',
-    data.is_18_plus || '',
-    data.can_get_to_seattle || ''
+    data.available_start || '',
+    data.available_end || '',
+    data.flexible_dates || '',
+    data.reel_link || '',
+    reelFileUrl
   ]);
 
   sendCreatorNotificationEmail(data, reelFileUrl);
@@ -222,26 +230,26 @@ function handleCreatorSubmission(data) {
 }
 
 function sendCreatorNotificationEmail(data, reelFileUrl) {
-  var subject = 'New Creator Submission: ' + (data.full_name || 'Unknown');
+  var subject = 'New Creator Application: ' + (data.full_name || 'Unknown');
 
-  var body = 'New creator submission for OnlyExit shoots.\n\n'
+  var body = 'New creator application for OnlyExit.\n\n'
     + '--- CREATOR ---\n'
     + 'Name: ' + (data.full_name || '') + '\n'
-    + 'Email: ' + (data.email || '') + '\n'
     + 'Phone: ' + (data.phone || '') + '\n'
     + 'City: ' + (data.city || '') + '\n'
     + 'Instagram: ' + (data.instagram || '') + '\n'
-    + 'TikTok: ' + (data.tiktok || '') + '\n'
-    + 'Followers: ' + (data.follower_count || '') + '\n\n'
+    + 'Age: ' + (data.age || '') + '\n'
+    + 'WhatsApp consent: ' + (data.whatsapp_consent || '') + '\n\n'
+    + '--- OPEN TO ---\n'
+    + (data.open_to || 'Not specified') + '\n\n'
     + '--- REEL ---\n'
     + 'Recording: ' + (reelFileUrl || 'No recording') + '\n'
     + 'Link: ' + (data.reel_link || 'None') + '\n\n'
     + '--- AVAILABILITY ---\n'
-    + 'Days: ' + (data.available_days || 'Not specified') + '\n'
+    + 'Start: ' + (data.available_start || 'Not specified') + '\n'
+    + 'End: ' + (data.available_end || 'Not specified') + '\n'
+    + 'Flexible: ' + (data.flexible_dates || 'No') + '\n'
     + 'Own transport: ' + (data.own_transport || 'Not specified') + '\n\n'
-    + '--- FILTER ---\n'
-    + '18+: ' + (data.is_18_plus || '') + '\n'
-    + 'Can get to Seattle: ' + (data.can_get_to_seattle || '') + '\n\n'
     + '---\n'
     + 'Submitted: ' + new Date().toISOString() + '\n';
 
