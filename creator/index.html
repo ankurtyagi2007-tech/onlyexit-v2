@@ -130,29 +130,7 @@
         <p id="transport-error" class="apply-form__error" hidden>Please select yes or no.</p>
       </div>
 
-      <!-- Field 8: Available dates -->
-      <div class="form-field">
-        <label>Available dates</label>
-        <div class="creator-dates">
-          <div class="creator-dates__row">
-            <div class="form-field">
-              <label for="creator-start-date" class="creator-dates__label">Start</label>
-              <input type="date" id="creator-start-date" name="available_start">
-            </div>
-            <div class="form-field">
-              <label for="creator-end-date" class="creator-dates__label">End</label>
-              <input type="date" id="creator-end-date" name="available_end">
-            </div>
-          </div>
-          <label class="creator-check">
-            <input type="checkbox" id="creator-flexible" name="flexible_dates" value="yes">
-            <span class="creator-check__box"></span>
-            <span class="creator-check__text">I'm flexible</span>
-          </label>
-        </div>
-      </div>
-
-      <!-- Field 9: Reel (optional) -->
+      <!-- Field 8: Reel (optional) -->
       <div class="form-field">
         <label>Reel link or 30-second video (optional)</label>
         <div id="recorder" class="apply-recorder">
@@ -362,22 +340,6 @@
     btn.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
     });
-  });
-
-  // ===== FLEXIBLE DATES =====
-  var flexCheck = document.getElementById('creator-flexible');
-  var startDate = document.getElementById('creator-start-date');
-  var endDate = document.getElementById('creator-end-date');
-  flexCheck.addEventListener('change', function() {
-    if (flexCheck.checked) {
-      startDate.disabled = true;
-      endDate.disabled = true;
-      startDate.value = '';
-      endDate.value = '';
-    } else {
-      startDate.disabled = false;
-      endDate.disabled = false;
-    }
   });
 
   // ===== AGE VALIDATION =====
