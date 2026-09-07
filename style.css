@@ -513,7 +513,6 @@ a:hover { color: var(--cyan); }
    ================================================================ */
 .build-public {
   position: relative;
-  background: linear-gradient(to bottom, rgba(6,7,9,0.72) 0%, rgba(6,7,9,0.15) 40%, rgba(6,7,9,0.1) 60%, rgba(6,7,9,0.72) 100%), url('assets/show-dark.webp') center/cover no-repeat;
   padding: 150px var(--pad-x) 64px;
 }
 .build-public__inner { position: relative; max-width: var(--max-w); margin: 0 auto; }
