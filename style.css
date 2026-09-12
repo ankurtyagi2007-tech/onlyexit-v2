@@ -313,7 +313,7 @@ a:hover { color: var(--cyan); }
 }
 .hero__title {
   margin: 0; font-family: var(--font-display); font-weight: 700;
-  font-size: clamp(52px,7.4vw,116px); line-height: 0.98; letter-spacing: -0.035em;
+  font-size: clamp(36px,5.2vw,72px); line-height: 1.05; letter-spacing: -0.035em;
 }
 .hero__title-gradient {
   background: linear-gradient(92deg, #00F0FF 10%, #8B5CF6 90%);
@@ -363,7 +363,7 @@ a:hover { color: var(--cyan); }
 @media (max-width: 768px) {
   .hero__inner { gap: 48px; }
   .hero__ctas { grid-auto-flow: row; grid-auto-columns: auto; }
-  .hero__title { font-size: clamp(44px, 11.5vw, 72px); }
+  .hero__title { font-size: clamp(28px, 7vw, 48px); }
   .hero__title span[style*="white-space"] { white-space: normal !important; }
   .hero__sub--desktop { display: none; }
   .hero__sub--mobile { display: block; }
