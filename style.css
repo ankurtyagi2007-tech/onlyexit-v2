@@ -1523,7 +1523,8 @@ a:hover { color: var(--cyan); }
   display: flex; align-items: flex-start; gap: 12px; cursor: pointer;
   min-height: 44px; padding: 4px 0;
 }
-.creator-check input[type="checkbox"] {
+.creator-check input[type="checkbox"],
+.creator-check input[type="radio"] {
   position: absolute; opacity: 0; width: 0; height: 0;
 }
 .creator-check__box {
