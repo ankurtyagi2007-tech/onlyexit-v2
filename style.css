@@ -1528,12 +1528,12 @@ a:hover { color: var(--cyan); }
 }
 .creator-check__box {
   flex-shrink: 0; width: 22px; height: 22px; margin-top: 1px;
-  border: 1px solid rgba(255,255,255,0.24); background: transparent;
+  border: 1px solid rgba(255,255,255,0.24); border-radius: 50%; background: transparent;
   display: flex; align-items: center; justify-content: center;
   transition: all 0.15s;
 }
 .creator-check__box::after {
-  content: ''; display: block; width: 12px; height: 12px;
+  content: ''; display: block; width: 12px; height: 12px; border-radius: 50%;
   background: #00F0FF; opacity: 0; transition: opacity 0.15s;
 }
 .creator-check input:checked + .creator-check__box {
