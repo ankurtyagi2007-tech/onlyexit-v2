@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#080a09;color:#fff;font-family:'Host Grotesk',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#fff;text-decoration:none}a:hover{color:#ffffffcc}
+@keyframes ncq-slide{from{grid-template-rows:0fr}to{grid-template-rows:1fr}}
+@keyframes ncq-pop{from{transform:scale(.86);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes ncq-pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.35);opacity:.7}}
+</style>
+</helmet>
+<div style="width:100%;overflow:hidden;display:flex;flex-direction:column;align-items:center">
+
+<nav style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px 40px;flex-wrap:wrap;padding:16px 48px;box-sizing:border-box">
+  <a href="#top" style="display:flex;align-items:center"><img src="assets/OnlyExit-Wordmark-White.svg" alt="OnlyExit" style="height:22px;display:block"></a>
+  <div style="display:flex;flex-wrap:wrap;gap:10px 22px;font-size:14px;letter-spacing:-.02em;color:#ffffffb3;justify-content:center;order:3;flex:1 1 100%"><a href="#program" style="color:#ffffffb3">Program</a><a href="#admissions" style="color:#ffffffb3">Admissions</a><a href="#selection" style="color:#ffffffb3">Selection</a><a href="#thesis" style="color:#ffffffb3">Thesis</a><a href="#cohort" style="color:#ffffffb3">Cohort 0</a><a href="#ways" style="color:#ffffffb3">Who this is for</a></div>
+  <a href="apply.html" style="padding:10px 16px;background:#00f0ff;color:#04171a;border-radius:4px;font-size:14px;font-weight:500;letter-spacing:-.02em;white-space:nowrap">Apply</a>
+</nav>
+
+<header id="top" style="position:relative;width:100%;display:flex;justify-content:center;padding:48px 48px;box-sizing:border-box">
+  <div style="position:absolute;left:50%;top:-140px;width:1300px;height:780px;transform:translateX(-50%);background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(140,140,140,.55),rgba(8,10,9,0) 70%);pointer-events:none"></div>
+  <div style="position:absolute;left:50%;top:-140px;width:1300px;height:780px;transform:translateX(-50%);background-image:radial-gradient(rgba(255,255,255,.28) 1px,transparent 1.2px);background-size:14px 14px;mask-image:radial-gradient(ellipse 45% 45% at 50% 50%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 45% 45% at 50% 50%,#000 20%,transparent 75%);pointer-events:none"></div>
+  <canvas data-stars="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"></canvas>
+  <div style="position:relative;width:100%;display:flex;flex-direction:column;align-items:center;gap:32px">
+    <div style="width:100%;display:flex;flex-direction:column;align-items:center;gap:64px">
+      <div style="width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:40px">
+        <div style="width:100%;max-width:min(640px,58%);display:flex;flex-direction:column;align-items:flex-start;gap:24px">
+          <div data-appear="0" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span style="width:14px;height:8px;border-radius:9999px;background:#fff;display:block;flex:none"></span><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3;white-space:nowrap">Venture fund, Seattle</p><span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#00f0ff;border:1px solid rgba(0,240,255,.35);border-radius:3px;padding:3px 8px;white-space:nowrap">ship or die</span></div>
+          <h1 data-words="" style="margin:0;font-size:clamp(32px,7vw,48px);line-height:1.1;letter-spacing:-.04em;font-weight:500;text-wrap:pretty"><span style="display:inline-block">We</span> <span style="display:inline-block">back</span> <span style="display:inline-block">frontier</span> <span style="display:inline-block">AI</span> <span style="display:inline-block">companies</span> <span style="display:inline-block">and</span> <span style="display:inline-block">give</span> <span style="display:inline-block">their</span> <span style="display:inline-block">founders</span> <span style="display:inline-block;color:#00f0ff">10+2</span> <span style="display:inline-block;color:#00f0ff">weeks</span> <span style="display:inline-block">in</span> <span style="display:inline-block">Seattle</span> <span style="display:inline-block">to</span> <span style="display:inline-block">build.</span></h1>
+          <p data-appear="0.4" style="margin:0;font-size:16px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3;max-width:560px">OnlyExit Hacker House is an Accelerator for Cracked Founders to Launch their companies with an intense program.</p>
+        </div>
+        <div data-appear="0.6" style="display:flex;gap:12px;flex-wrap:wrap"><a href="apply.html" style="padding:12px 20px;background:#fff;color:#08090a;border-radius:4px;font-size:14px;font-weight:500;letter-spacing:-.02em;white-space:nowrap">Apply to Cohort 1</a><a href="mailto:ankur@onlyexit.ai" style="padding:12px 20px;background:#131517;border:1px solid rgba(255,255,255,.12);color:#fff;border-radius:4px;font-size:14px;font-weight:500;letter-spacing:-.02em;white-space:nowrap">Contact us</a></div>
+      </div>
+
+      <div data-appear="0.6" data-y="32" style="width:100%;height:min(34vw,420px);border-radius:4px 4px 0 0;overflow:hidden;background:#fafafa;color:#131517;border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;font-size:11px;letter-spacing:-.01em">
+        <div style="flex:none;display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid #ececec;background:#fff"><span style="display:flex;gap:5px"><span style="width:8px;height:8px;border-radius:9999px;background:#e3e3e3;display:block"></span><span style="width:8px;height:8px;border-radius:9999px;background:#e3e3e3;display:block"></span><span style="width:8px;height:8px;border-radius:9999px;background:#e3e3e3;display:block"></span></span><strong style="font-size:12px;font-weight:500">Cohort board</strong><span style="color:#888">Plans and progress</span></div>
+        <div style="flex:1;min-height:0;display:grid;align-items:start;grid-template-columns:52px 176px minmax(0,1fr) 196px">
+        <div style="border-right:1px solid #ececec;display:flex;flex-direction:column;align-items:center;gap:14px;padding:14px 0"><img src="assets/OnlyExit-Q-Black.svg" alt="" style="height:16px;margin-bottom:8px"><span style="width:22px;height:22px;border-radius:5px;background:#131517;display:block"></span><span style="width:22px;height:22px;border-radius:5px;border:1px solid #ddd;display:block"></span><span style="width:22px;height:22px;border-radius:5px;border:1px solid #ddd;display:block"></span><span style="width:22px;height:22px;border-radius:5px;border:1px solid #ddd;display:block"></span></div>
+        <div style="border-right:1px solid #ececec;padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0">
+          <div style="display:flex;justify-content:space-between;align-items:center"><strong style="font-size:12px;font-weight:500">Teams</strong></div>
+          <div style="display:flex;gap:6px"><span style="padding:4px 8px;border:1px solid #e3e3e3;border-radius:4px;background:#fff;white-space:nowrap">Cohort 0</span><span style="padding:4px 8px;border:1px solid #e3e3e3;border-radius:4px;background:#fff;white-space:nowrap">Week 6</span></div>
+          <sc-for list="{{ boardTeams }}" as="t" hint-placeholder-count="3">
+            <div style="display:flex;gap:8px;align-items:flex-start;padding:6px 0"><span style="width:22px;height:22px;border-radius:5px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;font-weight:500;flex:none">{{ t.initial }}</span><div style="min-width:0"><div style="font-weight:500;font-size:12px">{{ t.name }}</div><div style="color:#777;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.line }}</div></div></div>
+          </sc-for>
+        </div>
+        <div style="padding:14px 18px;min-width:0;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:10px"><strong style="font-size:12px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Cohort 0 · Aug to Nov</strong><div style="display:flex;gap:6px;flex:none"><span style="padding:5px 9px;border:1px solid #e3e3e3;border-radius:4px;background:#fff;white-space:nowrap">Stream</span><span style="padding:5px 9px;border-radius:4px;background:#131517;color:#fff;white-space:nowrap">Demo Day</span></div></div>
+          <div style="display:flex;gap:8px;color:#777"><span style="padding:4px 8px;border:1px solid #e3e3e3;border-radius:4px;background:#fff;color:#131517;white-space:nowrap">+ Session</span><span>6 steps</span><span style="color:#2f9e44">Active</span></div>
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-content:start">
+            <sc-for list="{{ boardSteps }}" as="s" hint-placeholder-count="6">
+              <div style="border:1px solid #e6e6e6;border-radius:4px;background:#fff;min-width:0"><div style="padding:8px 10px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;color:#777"><span>{{ s.n }}</span><span>···</span></div><div style="padding:8px 10px"><div style="font-weight:500;font-size:12px">{{ s.title }}</div><div style="color:#777">{{ s.sub }}</div></div><div style="padding:6px 10px;border-top:1px solid #eee;background:#fafafa;color:#888">{{ s.kind }}</div></div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="border-left:1px solid #ececec;padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0">
+          <strong style="font-size:12px;font-weight:500">This week on stream</strong>
+          <sc-for list="{{ boardStream }}" as="r" hint-placeholder-count="3">
+            <div style="border:1px solid #e6e6e6;border-radius:4px;background:#fff;padding:10px"><div style="font-weight:500;font-size:12px">{{ r.title }}</div><div style="color:#777;margin-top:2px">{{ r.sub }}</div></div>
+          </sc-for>
+          <span style="color:#888;margin-top:6px;letter-spacing:.04em">QUICK ACTIONS</span>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><span style="padding:8px;border:1px solid #e3e3e3;border-radius:4px;text-align:center;background:#fff">Plan</span><span style="padding:8px;border:1px solid #e3e3e3;border-radius:4px;text-align:center;background:#fff">Sessions</span><span style="padding:8px;border:1px solid #e3e3e3;border-radius:4px;text-align:center;background:#fff">Numbers</span><span style="padding:8px;border:1px solid #e3e3e3;border-radius:4px;text-align:center;background:#fff">Apply</span></div>
+        </div>
+        </div>
+      </div>
+
+      <div style="width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:32px 40px">
+        <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="4">
+          <div data-appear="0" style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:8px;border-radius:9999px;display:block;background:{{ p.color }}"></span><strong style="font-size:16px;font-weight:500;letter-spacing:-.04em">{{ p.title }}</strong></div><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">{{ p.text }} <sc-if value="{{ p.link }}" hint-placeholder-val="{{ true }}"><a href="{{ p.link }}" style="color:#9db4ff;text-decoration:underline">{{ p.linkLabel }}</a></sc-if></p></div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="program" style="background-image:radial-gradient(rgba(255,255,255,.1) 1px,transparent 1.1px);background-size:22px 22px;width:100%;display:flex;flex-direction:column;gap:64px;padding:72px 48px;box-sizing:border-box">
+  <div data-appear="0" style="display:flex;flex-direction:column;gap:24px;max-width:640px">
+    <div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:8px;border-radius:9999px;background:#68cc58;display:block"></span><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">The program</p></div>
+    <h2 style="margin:0;font-size:38px;line-height:1.1;letter-spacing:-.04em;font-weight:500;text-wrap:pretty">What would you build with 90 days and no excuses?</h2>
+    <p style="margin:0;font-size:16px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Founders work on their companies all day, every day. Last two weeks are for fundraising, roadshows and demo days.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:stretch">
+    <div style="display:flex;flex-direction:column;gap:6px;justify-content:space-between">
+      <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="4">
+        <button onClick="{{ t.pick }}" style="all:unset;cursor:pointer;flex:1;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:16px;border-radius:4px;border:1px solid {{ t.border }};background:{{ t.bg }}"><strong style="font-size:18px;font-weight:500;letter-spacing:-.04em">{{ t.title }}</strong><span style="font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">{{ t.text }}</span></button>
+      </sc-for>
+    </div>
+    <div data-appear="0" style="position:relative;aspect-ratio:1.31;max-height:430px;justify-self:end;width:100%;border-radius:4px;overflow:hidden;background:#131517">
+      {{ tabImageEl }}
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,10,9,.1),rgba(8,10,9,.35))"></div>
+      <div style="position:absolute;left:8%;right:8%;top:14%;background:#f4f4f2;color:#131517;border-radius:4px;padding:18px 20px;display:flex;flex-direction:column;gap:10px;box-shadow:0 20px 50px rgba(0,0,0,.35)">
+        <div style="display:flex;align-items:center;gap:10px"><span style="width:3px;height:18px;background:#3064ff;border-radius:2px;display:block"></span><strong style="font-size:15px;font-weight:500;letter-spacing:-.02em">{{ tabCardTitle }}</strong></div>
+        <sc-for list="{{ tabRows }}" as="r" hint-placeholder-count="3">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;border-radius:4px;padding:12px 14px"><div style="min-width:0;flex:1"><div style="font-size:14px;font-weight:500;letter-spacing:-.02em">{{ r.a }}</div><div style="font-size:12px;color:#777;margin-top:2px">{{ r.b }}</div></div><span style="font-size:11px;padding:5px 10px;border-radius:9999px;background:#f0f0ee;white-space:nowrap">{{ r.tag }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="admissions" style="width:100%;display:flex;flex-direction:column;gap:64px;padding:72px 48px;box-sizing:border-box">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center">
+  <div data-appear="0" style="display:flex;flex-direction:column;gap:24px;max-width:640px">
+    <div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:8px;border-radius:9999px;background:#d4b144;display:block"></span><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Admissions</p></div>
+    <h2 style="margin:0;font-size:38px;line-height:1.1;letter-spacing:-.04em;font-weight:500;text-wrap:pretty">Rolling admissions for Cohort 1</h2>
+    <p style="margin:0;font-size:16px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Applications for Cohort 1 are open now. If we like the application, you get a short interview.</p>
+    <a href="apply.html" style="align-self:flex-start;padding:12px 20px;background:#00f0ff;color:#04171a;border-radius:4px;font-size:14px;font-weight:500;letter-spacing:-.02em;white-space:nowrap">Apply to Cohort 1</a>
+  </div>
+  <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+    <sc-for list="{{ admissions }}" as="a" hint-placeholder-count="3">
+      <div data-appear="0" style="background:#131517;border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:28px;display:flex;flex-direction:column;gap:14px"><span style="font-size:32px;line-height:1.1;letter-spacing:-.04em;font-weight:500">{{ a.big }}</span><strong style="font-size:18px;font-weight:500;letter-spacing:-.04em">{{ a.title }}</strong><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">{{ a.text }}</p></div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="stack" style="background-image:radial-gradient(rgba(255,255,255,.1) 1px,transparent 1.1px);background-size:22px 22px;width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center;padding:72px 48px;box-sizing:border-box">
+  <div data-appear="0" style="display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:8px;border-radius:9999px;background:#9efaff;display:block"></span><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Partner stack</p></div>
+    <h2 style="margin:0;font-size:38px;line-height:1.1;letter-spacing:-.04em;font-weight:500;text-wrap:pretty">The bills that usually eat a first 3 months, covered</h2>
+    <p style="margin:0;font-size:16px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Banking, cloud, legal and AI tools are covered by partners while you build, so the team is not paying for its own infrastructure during the program. Companies that want their product in front of the next batch can write to us.</p>
+    <a href="mailto:ankur@onlyexit.ai" style="align-self:flex-start;padding:12px 20px;background:#fff;color:#08090a;border-radius:4px;font-size:14px;font-weight:500;letter-spacing:-.02em">Sponsor the next batch</a>
+  </div>
+  <div data-appear="0" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px">
+    <sc-for list="{{ stack }}" as="s" hint-placeholder-count="4">
+      <div style="background:#131517;border:1px solid rgba(255,255,255,.08);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:14px;min-height:120px"><span style="width:36px;height:36px;border-radius:4px;background:#232326;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:500">{{ s.mark }}</span><strong style="font-size:16px;font-weight:500;letter-spacing:-.04em">{{ s.title }}</strong><span style="font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">{{ s.text }}</span></div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="selection" style="width:100%;display:flex;flex-direction:column;gap:64px;padding:72px 48px;box-sizing:border-box">
+  <div data-appear="0" style="display:flex;flex-direction:column;gap:24px;max-width:640px">
+    <div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:8px;border-radius:9999px;background:#b59aff;display:block"></span><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Selection</p></div>
+    <h2 style="margin:0;font-size:38px;line-height:1.1;letter-spacing:-.04em;font-weight:500;text-wrap:pretty">Fewer than one percent of applicants get in</h2>
+    <p style="margin:0;font-size:16px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">We are looking for a few specific kinds of people. The full criteria are on the <a href="/founder" style="text-decoration:underline">founder page</a>.</p>
+    <a href="apply.html" style="align-self:flex-start;padding:12px 20px;background:#00f0ff;color:#04171a;border-radius:4px;font-size:14px;font-weight:500;letter-spacing:-.02em;white-space:nowrap">Apply</a>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 32px">
+    <sc-for list="{{ criteria }}" as="c" hint-placeholder-count="6">
+      <div data-appear="0" style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12)"><strong style="font-size:18px;font-weight:500;letter-spacing:-.04em">{{ c.title }}</strong><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">{{ c.text }}</p></div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="thesis" style="background-image:radial-gradient(rgba(255,255,255,.1) 1px,transparent 1.1px);background-size:22px 22px;width:100%;display:flex;flex-direction:column;gap:64px;padding:72px 48px;box-sizing:border-box">
+  <div data-appear="0" style="display:flex;flex-direction:column;gap:24px;max-width:640px">
+    <div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:8px;border-radius:9999px;background:#3064ff;display:block"></span><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">What the fund backs</p></div>
+    <h2 style="margin:0;font-size:38px;line-height:1.1;letter-spacing:-.04em;font-weight:500;text-wrap:pretty">We back frontier technology at the very edge of what is possible today</h2>
+    <p style="margin:0;font-size:16px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Regulated and highly complex verticals, in software and in hardware. If the next team with the same model can copy it, it is not a fit. The fund has its own site at <a href="https://onlyexit.vc" style="text-decoration:underline">onlyexit.vc</a>.</p>
+  </div>
+  <div data-appear="0.2" style="border:1px solid rgba(255,255,255,.12);border-radius:4px;overflow:hidden;background:#0c0e0d">
+    <div style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr) minmax(0,1.5fr);gap:16px;padding:12px 20px;border-bottom:1px solid rgba(255,255,255,.1);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#ffffff73"><span>Category</span><span>Examples</span><span>What it takes</span></div>
+    <sc-for list="{{ fundRows }}" as="r" hint-placeholder-count="3">
+      <div style="display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr) minmax(0,1.5fr);gap:16px;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,.07);font-size:16px;letter-spacing:-.02em;align-items:baseline"><strong style="font-weight:500">{{ r.name }}</strong><span style="color:#ffffffb3">{{ r.where }}</span><span style="color:#00f0ff">{{ r.takes }}</span></div>
+    </sc-for>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;padding:14px 20px;font-size:14px;color:#ffffff73"><span></span><a href="https://onlyexit.vc" style="color:#00f0ff">onlyexit.vc</a></div>
+  </div>
+</section>
+
+<section id="cohort" style="position:relative;width:100%;display:flex;flex-direction:column;gap:64px;padding:72px 48px;box-sizing:border-box">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center">
+  <div data-appear="0" style="display:flex;flex-direction:column;gap:24px;max-width:640px">
+    <div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:8px;border-radius:9999px;background:#f19447;display:block"></span><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Cohort 0</p></div>
+    <h2 style="margin:0;font-size:38px;line-height:1.1;letter-spacing:-.04em;font-weight:500;text-wrap:pretty">Companies building in the house right now</h2>
+    <p style="margin:0;font-size:16px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Cohort 0 runs August to early November 2026. Every week, every team sits in front of a camera and reports its numbers, livestreamed on YouTube. Demo Day is in the first week of November, with investors in the room.</p>
+  </div>
+  {{ queueStack }}
+  </div>
+  <div style="position:relative;display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(255,255,255,.1)">
+    <sc-for list="{{ companies }}" as="c" hint-placeholder-count="3">
+      <div data-appear="0" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;align-items:start;padding:36px 0;border-bottom:1px solid rgba(255,255,255,.1)">
+        <div style="display:flex;flex-direction:column;gap:14px;min-width:0">
+          <div style="height:30px;display:flex;align-items:center"><span style="{{ c.logoStyle }}">{{ c.logoText }}</span></div>
+          <a href="{{ c.href }}" style="font-size:14px;letter-spacing:-.02em;color:#00f0ff">{{ c.domain }}</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;min-width:0;grid-column:span 2">
+          <p style="margin:0;font-size:18px;line-height:1.45;letter-spacing:-.02em;text-wrap:pretty">{{ c.text }}</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
+          <span style="font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#ffffff73">Founders</span>
+          <sc-for list="{{ c.people }}" as="p" hint-placeholder-count="2">
+            <div style="display:flex;flex-direction:column"><span style="font-size:15px;font-weight:500;letter-spacing:-.02em">{{ p.name }}</span><span style="font-size:13px;letter-spacing:-.01em;color:#ffffffb3">{{ p.role }}</span></div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="ways" style="position:relative;overflow:hidden;background-image:radial-gradient(rgba(255,255,255,.1) 1px,transparent 1.1px);background-size:22px 22px;width:100%;display:flex;flex-direction:column;gap:64px;padding:72px 48px;box-sizing:border-box">
+  <div aria-hidden="true" style="position:absolute;inset:0;background:url(assets/oe-car.jpg) center -460px/100% auto no-repeat;opacity:1;pointer-events:none"></div>
+  <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,10,9,.78) 0%,rgba(8,10,9,.7) 40%,rgba(8,10,9,.56) 72%,rgba(8,10,9,.52) 100%),linear-gradient(180deg,rgba(8,10,9,.7) 0%,rgba(8,10,9,.5) 35%,rgba(8,10,9,.68) 70%,#080a09 100%);pointer-events:none"></div>
+
+  <div data-appear="0" style="position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;max-width:640px;align-self:center">
+    <div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:8px;border-radius:9999px;background:#fff;display:block"></span><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Who this is for</p></div>
+    <h2 style="margin:0;font-size:38px;line-height:1.1;letter-spacing:-.04em;font-weight:500;text-wrap:pretty">Founders apply. Sponsors and investors write to us.</h2>
+    <p style="margin:0;font-size:16px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">The program is free. There is no fee, no charge for the space, no charge for the network.</p>
+    <div style="display:flex;gap:4px;padding:4px;border:1px solid rgba(255,255,255,.12);border-radius:9999px;background:#131517">
+      <button onClick="{{ pickC0 }}" style="all:unset;cursor:pointer;padding:8px 16px;border-radius:9999px;font-size:14px;letter-spacing:-.02em;white-space:nowrap;background:{{ c0bg }};color:{{ c0fg }}">Cohort 0</button>
+      <button onClick="{{ pickC1 }}" style="all:unset;cursor:pointer;padding:8px 16px;border-radius:9999px;font-size:14px;letter-spacing:-.02em;white-space:nowrap;background:{{ c1bg }};color:{{ c1fg }}">Cohort 1</button>
+    </div>
+  </div>
+  <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;align-items:stretch">
+    <sc-for list="{{ ways }}" as="w" hint-placeholder-count="3">
+      <div data-appear="0" style="background:rgba(19,21,23,.55);backdrop-filter:blur(6px);border:1px solid {{ w.border }};border-radius:4px;padding:28px;display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><strong style="font-size:18px;font-weight:500;letter-spacing:-.04em">{{ w.title }}</strong><sc-if value="{{ w.popular }}" hint-placeholder-val="{{ false }}"><span style="font-size:12px;padding:4px 10px;border-radius:9999px;background:#fff;color:#08090a;white-space:nowrap">Open now</span></sc-if></div>
+        <p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">{{ w.text }}</p>
+        <div style="display:flex;flex-direction:column;gap:4px"><span style="font-size:28px;line-height:1.15;letter-spacing:-.03em;font-weight:500;overflow-wrap:anywhere">{{ w.price }}</span><span style="font-size:14px;letter-spacing:-.02em;color:#ffffffb3">{{ w.priceNote }}</span></div>
+        <div style="display:flex;flex-direction:column;gap:10px;border-top:1px solid rgba(255,255,255,.1);padding-top:20px">
+          <sc-for list="{{ w.items }}" as="it" hint-placeholder-count="4"><div style="display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.5;letter-spacing:-.02em"><span style="width:14px;height:8px;border-radius:9999px;background:#ffffff66;display:block;margin-top:7px;flex:none"></span><span>{{ it }}</span></div></sc-for>
+        </div>
+        <sc-if value="{{ w.cta }}" hint-placeholder-val="{{ true }}"><a href="{{ w.href }}" style="margin-top:auto;text-align:center;padding:12px 20px;border-radius:4px;font-size:14px;font-weight:500;letter-spacing:-.02em;background:{{ w.btnBg }};color:{{ w.btnFg }};border:1px solid rgba(255,255,255,.12)">{{ w.cta }}</a></sc-if>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="events" style="width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;gap:40px;padding:72px 48px;box-sizing:border-box">
+  <div data-appear="0" style="display:flex;flex-direction:column;align-items:center;gap:24px;max-width:640px">
+    <div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:8px;border-radius:9999px;background:#91cfb5;display:block"></span><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Around the program</p></div>
+    <h2 style="margin:0;font-size:38px;line-height:1.1;letter-spacing:-.04em;font-weight:500;text-wrap:pretty">Founder events every month</h2>
+    <p style="margin:0;font-size:16px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">We also show up at Seattle, New York and San Francisco Tech Weeks. New York and San Francisco houses open in 2027.</p>
+  </div>
+  <div data-appear="0" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px">
+    <sc-for list="{{ events }}" as="e" hint-placeholder-count="6"><span style="padding:10px 16px;border:1px solid rgba(255,255,255,.14);border-radius:9999px;font-size:14px;letter-spacing:-.02em;color:#ffffffb3;white-space:nowrap">{{ e }}</span></sc-for>
+  </div>
+  <div data-appear="0.1" style="width:100vw;margin:0 calc(50% - 50vw);display:flex;gap:2px;overflow:hidden">
+    <img src="https://onlyexit.ai/assets/social-hike.webp" alt="A team on a snowy hike in the Cascades holding up a fallen log" style="flex:1 1 0;min-width:0;height:clamp(140px,16vw,220px);object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.9);opacity:.85">
+    <img src="https://onlyexit.ai/assets/social-boat.webp" alt="Founders on a boat on Lake Union" style="flex:1 1 0;min-width:0;height:clamp(140px,16vw,220px);object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.9);opacity:.85">
+    <img src="https://onlyexit.ai/assets/social-pitch.webp" alt="A founder pitching at a night event" style="flex:1 1 0;min-width:0;height:clamp(140px,16vw,220px);object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.9);opacity:.85">
+    <img src="https://onlyexit.ai/assets/social-poster.webp" alt="A street poster in South Lake Union about layoffs" style="flex:1 1 0;min-width:0;height:clamp(140px,16vw,220px);object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.9);opacity:.85">
+    <img src="https://onlyexit.ai/assets/social-cars.webp" alt="Supercars on a fashion runway floor" style="flex:1 1 0;min-width:0;height:clamp(140px,16vw,220px);object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.9);opacity:.85">
+    <img src="https://onlyexit.ai/assets/social-firechat.webp" alt="A fireside chat circle at the Moxy in South Lake Union" style="flex:1 1 0;min-width:0;height:clamp(140px,16vw,220px);object-fit:cover;filter:grayscale(1) contrast(1.08) brightness(.9);opacity:.85">
+  </div>
+</section>
+
+<section id="faq" style="background-image:radial-gradient(rgba(255,255,255,.1) 1px,transparent 1.1px);background-size:22px 22px;width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:64px;padding:72px 48px;box-sizing:border-box">
+  <div data-appear="0" style="display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:center;gap:8px"><span style="width:14px;height:8px;border-radius:9999px;background:#fff;display:block"></span><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Questions</p></div>
+    <h2 style="margin:0;font-size:38px;line-height:1.1;letter-spacing:-.04em;font-weight:500;text-wrap:pretty">The things people ask before they apply</h2>
+    <p style="margin:0;font-size:16px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Anything else, write to <a href="mailto:ankur@onlyexit.ai" style="text-decoration:underline">ankur@onlyexit.ai</a>.</p>
+  </div>
+  <div data-appear="0" style="display:flex;flex-direction:column">
+    <sc-for list="{{ faq }}" as="q" hint-placeholder-count="6">
+      <div style="border-top:1px solid rgba(255,255,255,.12)"><button onClick="{{ q.toggle }}" style="all:unset;cursor:pointer;width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-size:18px;font-weight:500;letter-spacing:-.04em;box-sizing:border-box;text-align:left"><span style="flex:1 1 auto">{{ q.q }}</span><span style="font-size:20px;color:#ffffffb3;flex:none">{{ q.sign }}</span></button><div style="overflow:hidden;transition:max-height .35s cubic-bezier(.12,.23,.5,1);max-height:{{ q.h }}"><p style="margin:0 0 20px;font-size:16px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3;max-width:56ch">{{ q.a }}</p></div></div>
+    </sc-for>
+    <div style="border-top:1px solid rgba(255,255,255,.12)"></div>
+  </div>
+</section>
+
+<section style="width:100%;padding:0;box-sizing:border-box">
+  <div data-appear="0" style="position:relative;overflow:hidden;background:#131517;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);padding:96px 48px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px">
+    <div style="position:absolute;left:50%;top:50%;width:900px;height:500px;transform:translate(-50%,-50%);background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(140,140,140,.4),rgba(19,21,23,0) 70%);pointer-events:none"></div>
+    <div style="position:relative;display:flex;align-items:center;gap:8px"><span style="width:14px;height:8px;border-radius:9999px;background:#fff;display:block"></span><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3">Apply</p></div>
+    <h2 style="position:relative;margin:0;font-size:38px;line-height:1.1;letter-spacing:-.04em;font-weight:500;max-width:560px;text-wrap:pretty">Come to Seattle in January and build the thing</h2>
+    <p style="position:relative;margin:0;font-size:16px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3;max-width:520px">Early admissions January 4, 2027. Full batch January 18, 2027. One percent of the company, nothing else.</p>
+    <a href="apply.html" style="position:relative;padding:12px 20px;background:#fff;color:#08090a;border-radius:4px;font-size:14px;font-weight:500;letter-spacing:-.02em">Apply to Cohort 1</a>
+  </div>
+</section>
+
+<footer style="width:100%;display:grid;grid-template-columns:minmax(0,1.6fr) repeat(3,minmax(0,1fr));gap:40px;padding:48px 48px 40px;box-sizing:border-box;border-top:1px solid rgba(255,255,255,.1)">
+  <div style="display:flex;flex-direction:column;gap:16px"><img src="assets/OnlyExit-Wordmark-White.svg" alt="OnlyExit" style="height:16px;width:auto;align-self:flex-start"><p style="margin:0;font-size:14px;line-height:1.5;letter-spacing:-.02em;color:#ffffffb3;max-width:36ch">A venture fund in Seattle that runs the OnlyExit Hacker House and streams the batch as it happens.</p><span style="font-size:14px;letter-spacing:-.02em;color:#ffffff80">©2026 OnlyExit. All rights reserved.</span></div>
+  <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;letter-spacing:-.02em"><strong style="font-weight:500;margin-bottom:4px">Program</strong><a href="#program" style="color:#ffffffb3">The program</a><a href="#admissions" style="color:#ffffffb3">Admissions</a><a href="#selection" style="color:#ffffffb3">Selection</a><a href="/founder" style="color:#ffffffb3">Founder criteria</a><a href="apply.html" style="color:#ffffffb3">Apply</a></div>
+  <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;letter-spacing:-.02em"><strong style="font-weight:500;margin-bottom:4px">Company</strong><a href="https://onlyexit.vc" style="color:#ffffffb3">The fund, onlyexit.vc</a><a href="#cohort" style="color:#ffffffb3">Cohort 0</a><a href="#stack" style="color:#ffffffb3">Sponsors</a><a href="mailto:ankur@onlyexit.ai" style="color:#ffffffb3">ankur@onlyexit.ai</a></div>
+  <div style="display:flex;flex-direction:column;gap:12px;font-size:14px;letter-spacing:-.02em"><strong style="font-weight:500;margin-bottom:4px">Socials</strong><a href="https://x.com/OnlyExitai" style="color:#ffffffb3">X, @OnlyExitai</a><a href="https://linkedin.com/in/ankurtyagi2007" style="color:#ffffffb3">LinkedIn</a><a href="https://medium.com/@onlyexit" style="color:#ffffffb3">Medium</a></div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { tab: 0, faq: 0, cohort: 1, queue: [] };
+  queueItems = [['done', 'Weekly numbers reported', '#68cc58'], ['running', 'Working session: fundraising', '#f0bf00'], ['queued', 'Demo Day prep', '#8a8f98'], ['done', 'Plan reviewed with the GP', '#68cc58'], ['running', 'Shipping this week\u2019s build', '#f0bf00'], ['queued', 'Session: go to market', '#8a8f98']];
+  mk([state, task, c]) { return { state, task, c }; }
+  starsRef = React.createRef();
+  tabsData = [
+    { title: 'A plan for your team', text: 'The Managing GP works with each team one on one on a plan built for that team.', img: 'https://onlyexit.ai/assets/social-firechat.webp', card: 'Plan · written with the GP', rows: [['Go to market', 'first two weeks', 'Plan'], ['Fundraising', 'weeks three to six', 'Plan'], ['Product and hiring', 'through Demo Day', 'Plan']] },
+    { title: 'Working sessions', text: 'Operators and founders from the Seattle ecosystem come in and work on your real problems.', img: 'https://onlyexit.ai/assets/social-pitch.webp', card: 'Sessions · this week', rows: [['Pricing that survives a real buyer', 'with a Seattle operator', 'Session'], ['Reading a term sheet', 'with a founder who has raised', 'Session'], ['First five hires, in order', 'with an operator who has hired', 'Session'], ['Getting the first ten customers', 'with an operator who sold into the vertical', 'Session']] },
+    { title: 'Numbers on camera', text: 'Every week, every team reports its numbers. The batch is documented and livestreamed on YouTube.', img: 'https://onlyexit.ai/assets/social-poster.webp', card: 'Stream · weekly report', rows: [['Revenue', 'this week against last', 'Reported'], ['NRR', 'what existing customers did', 'Reported'], ['Cold calls and demos', 'how many, and what came back', 'Reported'], ['Burn', 'what it cost to get there', 'Reported']] },
+    { title: 'Demo Day', text: 'Investors in the room. Each team shows what it shipped, not what it plans to.', img: 'https://onlyexit.ai/assets/social-boat.webp', card: 'Demo Day · first week of November', rows: [['Investors in the room', 'Cohort 0', 'Nov 2026'], ['Each team shows what it shipped', 'ten weeks of work', 'Demo'], ['Cohort 1 Demo Day', 'after the January batch', '2027']] },
+  ];
+  faqData = [
+    { q: 'What does it cost?', a: 'One percent of the company. That is the whole price. The program is free, and there is no charge for the space or the network.' },
+    { q: 'How long is it, and do I have to be in Seattle?', a: '10+2 weeks: ten weeks of building with two around them for arriving and for showing what got built. It is full time and in person, so yes, you come to Seattle for the whole thing.' },
+    { q: 'Is there a curriculum?', a: 'No. There is no fixed curriculum and no group challenges. The Managing GP works with your team on a plan built for you, and operators come in for working sessions on your real problems.' },
+    { q: 'Who are you looking for?', a: 'People who have founded before, or who come from a frontier team, or who combine distribution with the ability to build, or who are exceptionally young and already shipping. Fewer than one percent of applicants get in. The full criteria are at /founder.' },
+    { q: 'What happens after I apply?', a: 'Admissions are rolling. If we like the application, you get a short interview. Cohort 1 early admissions are January 4, 2027 and the full batch is January 18, 2027.' },
+    { q: 'I am in the US on a visa. Can I apply?', a: 'Apply. The program is full time and in person in Seattle for the 10+2 weeks, and the price is one percent of the company. We cannot give you immigration advice, so write to ankur@onlyexit.ai with your situation and we will tell you what we know.' },
+    { q: 'We want to put our product in front of the batch. How?', a: 'Write to ankur@onlyexit.ai. Companies sponsor the stack the teams build on, so founders are not paying for banking, cloud, legal or AI tools during the program.' },
+    { q: 'I have a family. Does this work?', a: 'Yes. The only requirement is that you are fully committed and on site full time for the full 10 weeks. If you can make that work, the rest is your business.' },
+    { q: 'What does the fund invest in?', a: 'Frontier AI companies in regulated and highly complex verticals, software and hardware, with a proprietary data or workflow moat. The fund has its own site at onlyexit.vc.' },
+  ];
+  componentDidMount() {
+    this._onRz = () => this.forceUpdate(); addEventListener('resize', this._onRz);
+    this.qi = 3; this.setState({ queue: this.queueItems.slice(0, 3).map((q, i) => ({ ...this.mk(q), id: i })) });
+    this.qt = setInterval(() => { const item = { ...this.mk(this.queueItems[this.qi % this.queueItems.length]), id: this.qi }; this.qi++; this.setState(s => ({ queue: [...s.queue, item].slice(-3) })); }, 2200);
+    this.mountStars();
+    const ease = 'cubic-bezier(.12,.23,.5,1)';
+    const hide = el => { el.style.transition = 'none'; el.style.opacity = '0.001'; el.style.transform = `translateY(${el.dataset.y || 24}px)`; el.style.willChange = 'transform'; };
+    const show = el => {
+      const d = parseFloat(el.dataset.appear) || 0;
+      el.style.transition = `opacity 1.4s ${ease} ${d}s, transform 1.4s ${ease} ${d}s`;
+      el.style.opacity = '1'; el.style.transform = 'none';
+    };
+    const sweep = () => {
+      if (document.hidden || innerHeight === 0) return;
+      document.querySelectorAll('[data-appear]').forEach(el => {
+        if (el.dataset.shown) { if (el.style.opacity !== '1') { el.style.transition = 'none'; el.style.opacity = '1'; el.style.transform = 'none'; } return; }
+        if (!el.dataset.init) { el.dataset.init = '1'; hide(el); return; }
+        const r = el.getBoundingClientRect();
+        if ((r.top < innerHeight * 0.95 && r.bottom > 0) || el.closest('header')) { el.dataset.shown = '1'; requestAnimationFrame(() => show(el)); }
+      });
+      document.querySelectorAll('h1[data-words] span').forEach((w, i) => {
+        if (w.dataset.shown) return;
+        if (!w.dataset.init) { w.dataset.init = '1'; w.style.transition = 'none'; w.style.opacity = '0.001'; w.style.filter = 'blur(10px)'; w.style.transform = 'translateY(10px)'; return; }
+        w.dataset.shown = '1';
+        requestAnimationFrame(() => { w.style.transition = `opacity .8s ${ease} ${i * 0.05}s, filter .8s ${ease} ${i * 0.05}s, transform .8s ${ease} ${i * 0.05}s`; w.style.opacity = '1'; w.style.filter = 'blur(0px)'; w.style.transform = 'none'; });
+      });
+    };
+    window.__oeSweep = sweep;
+    if (!window.__oeSweepIv) window.__oeSweepIv = setInterval(() => window.__oeSweep && window.__oeSweep(), 120);
+    addEventListener('scroll', sweep, { passive: true });
+  }
+  componentWillUnmount() { clearInterval(this.qt); clearInterval(this._iv); this.ro && this.ro.disconnect(); }
+  mountStars() {
+    try { this._mountStarsInner(); } catch (e) { const c = document.querySelector('header [data-stars]'); if (c) c.dataset.err = String(e); }
+  }
+  _mountStarsInner() {
+    const cv = document.querySelector('header [data-stars]');
+    if (!cv) { if ((this._tries = (this._tries || 0) + 1) < 60) setTimeout(() => this.mountStars(), 60); return; }
+    if (this._starsUp) return; this._starsUp = true;
+    const ctx = cv.getContext('2d');
+    let W = 0, H = 0, pts = [];
+    const im = new Image(); im.src = 'assets/OnlyExit-Wordmark-White.svg';
+    const seed = () => {
+      try { seedInner(); } catch (e) { }
+    };
+    const seedInner = () => {
+      if (!im.complete || !im.naturalWidth) return;
+      const r = cv.parentElement.getBoundingClientRect(); W = cv.width = r.width; H = cv.height = r.height;
+      const sw = 300, sh = Math.max(1, Math.round(sw * im.naturalHeight / im.naturalWidth));
+      const oc = document.createElement('canvas'); oc.width = sw; oc.height = sh;
+      const octx = oc.getContext('2d'); octx.drawImage(im, 0, 0, sw, sh);
+      const data = octx.getImageData(0, 0, sw, sh).data;
+      const scale = Math.min((W * .8) / sw, (H * .26) / sh), ox = W - sw * scale - W * .04, oy = H * .2 - sh * scale / 2;
+      pts = [];
+      let opaque = 0; for (let i = 3; i < data.length; i += 4) if (data[i] / 255 >= .5) opaque++;
+      const keep = Math.min(1, 2600 / Math.max(1, opaque));
+      for (let y = 0; y < sh; y++) for (let x = 0; x < sw; x++) {
+        const a = data[(y * sw + x) * 4 + 3] / 255;
+        if (a < .5 || Math.random() > keep) continue;
+        const nb = [[1,0],[-1,0],[0,1],[0,-1]].some(([dx,dy]) => { const xx = x + dx, yy = y + dy; return xx < 0 || yy < 0 || xx >= sw || yy >= sh || data[(yy * sw + xx) * 4 + 3] / 255 < .5; });
+        const hx = ox + (x + Math.random()) * scale, hy = oy + (y + Math.random()) * scale;
+        pts.push({ hx, hy, rx: Math.random() * W, ry: Math.random() * H, edge: nb, r: Math.random() * .55 + .3, p: Math.random() * Math.PI * 2, s: .25 + Math.random() * .9, d: Math.random() });
+      }
+    };
+    im.onload = seed; seed();
+    this.ro = new ResizeObserver(seed); this.ro.observe(cv.parentElement);
+    this.visible = true;
+    const inView = () => { const r = cv.getBoundingClientRect(); return r.bottom > -200 && r.top < (innerHeight || 1000) + 200; };
+    const draw = t => {
+      if (!inView()) return;
+      ctx.clearRect(0, 0, W, H);
+      const base = .55;
+      const mode = 'assemble';
+      const ez = v => v < .5 ? 4 * v * v * v : 1 - Math.pow(-2 * v + 2, 3) / 2;
+      const cyc = (t / 9000) % 1;
+      const form = cyc < .4 ? ez(cyc / .4) : cyc < .7 ? 1 : 1 - ez((cyc - .7) / .3);
+      const sweepX = ((t / 4200) % 1) * 1.4 - .2;
+      for (const q of pts) {
+        let x = q.hx, y = q.hy, a = base, big = false;
+        if (mode === 'stars') {
+          const fade = .5 + .5 * Math.sin(t / 2600 * q.s + q.p), tw = .6 + .4 * Math.sin(t / 380 + q.p * 3);
+          a = Math.pow(fade, 1.6) * tw * base; big = fade > .93;
+        } else if (mode === 'assemble') {
+          const f = Math.min(1, Math.max(0, (form - q.d * .25) / .75));
+          x = q.rx + (q.hx - q.rx) * f; y = q.ry + (q.hy - q.ry) * f;
+          a = base * (.15 + .85 * f) * (.7 + .3 * Math.sin(t / 500 + q.p)); big = f > .98 && Math.sin(t / 300 + q.p) > .9;
+        } else if (mode === 'sweep') {
+          const dx = (q.hx / W) - sweepX, bell = Math.exp(-(dx * dx) / .012);
+          a = base * (.12 + .88 * bell); big = bell > .8;
+        } else if (mode === 'rain') {
+          const f = Math.min(1, Math.max(0, (form - q.d * .5) / .5));
+          y = q.hy - (1 - f) * H * .9; a = base * f * (.75 + .25 * Math.sin(t / 400 + q.p)); big = f > .98 && Math.sin(t / 250 + q.p) > .92;
+        } else if (mode === 'pulse') {
+          const br = .55 + .45 * Math.sin(t / 1800);
+          a = base * br * (.8 + .2 * Math.sin(t / 300 + q.p)); big = Math.sin(t / 220 + q.p * 5) > .97;
+        } else if (mode === 'outline') {
+          if (!q.edge) continue;
+          a = base * (.6 + .4 * Math.sin(t / 900 * q.s + q.p)); big = Math.sin(t / 300 + q.p) > .95;
+        }
+        if (a < .02) continue;
+        ctx.globalAlpha = Math.min(1, a); ctx.fillStyle = big ? '#d6feff' : '#00f0ff';
+        const s = q.r * (big ? 3 : 2); ctx.fillRect(x - s / 2, y - s / 2, s, s);
+      }
+    };
+    this._iv = setInterval(() => draw(performance.now()), 33); draw(performance.now());
+  }
+  renderVals() {
+    const { tab, faq, cohort } = this.state;
+    const cur = this.tabsData[tab];
+    const isC1 = cohort === 1;
+    const H = React.createElement;
+    const queueStack = H('div', { 'aria-hidden': true, style: { width: '100%', maxWidth: '320px', justifySelf: 'end', display: 'flex', flexDirection: 'column', alignItems: 'stretch', perspective: '900px', pointerEvents: 'none' } },
+      H('div', { style: { display: 'flex', flexDirection: 'column', width: '100%', transform: 'rotateY(-4deg) rotateX(2deg)', transformOrigin: 'center bottom' } },
+        ...(this.state.queue || []).map(q => H('div', { key: q.id, style: { display: 'grid', gridTemplateRows: '0fr', width: '100%', animation: 'ncq-slide .48s cubic-bezier(.22,1,.36,1) both' } }, H('div', { style: { minHeight: 0, overflow: 'clip' } }, H('div', { style: { animation: 'ncq-pop .52s cubic-bezier(.34,1.56,.64,1) both', paddingBottom: '8px' } },
+          H('div', { style: { display: 'flex', alignItems: 'center', gap: '8px', whiteSpace: 'nowrap', padding: '10px 12px', borderRadius: '8px', background: 'linear-gradient(180deg, rgba(24,25,26,.72), rgba(15,16,17,.82))', backdropFilter: 'blur(16px) saturate(1.15)', boxShadow: '0 2px 6px rgba(0,0,0,.35), 0 12px 32px -12px rgba(0,0,0,.5)', color: '#fff', fontSize: '13px', opacity: q.state === 'queued' ? .6 : 1 } },
+            H('span', { style: { display: 'flex', alignItems: 'center', gap: '6px', opacity: .92 } }, H('span', { style: { width: 6, height: 6, borderRadius: '50%', background: q.c, boxShadow: '0 0 6px ' + q.c + '80', animation: q.state === 'running' ? 'ncq-pulse 1.1s ease-in-out infinite' : 'none' } }), q.state === 'done' ? 'Done' : q.state === 'running' ? 'Working' : 'Queued'),
+            H('span', { style: { fontWeight: 500, overflow: 'hidden', textOverflow: 'ellipsis' } }, q.task)))))),
+        H('div', { style: { marginTop: '2px', fontSize: '12px', color: 'rgba(255,255,255,.85)', background: 'rgba(15,16,17,.55)', backdropFilter: 'blur(12px)', padding: '6px 10px', borderRadius: '999px', width: 'max-content', whiteSpace: 'nowrap' } }, '3 teams building this week')));
+    const photos = 'https://onlyexit.ai/assets/';
+    return {
+      queueStack,
+      boardTeams: [{ initial: 'R', name: 'Reva', line: 'Control layer for AI agents' }, { initial: 'V', name: 'VESTER', line: 'Points redeemed for shares' }, { initial: 'N', name: 'Nesta', line: 'AI-native mortgage origination' }],
+      boardSteps: [{ n: '1', title: 'Arrive in Seattle', sub: 'Week 0, the first of the two', kind: 'Arrival' }, { n: '2', title: 'Plan written with the GP', sub: 'One on one, per team', kind: 'Plan' }, { n: '3', title: 'Session: go to market', sub: 'Seattle operator, working session', kind: 'Session' }, { n: '4', title: 'Session: fundraising', sub: 'Founder who has raised', kind: 'Session' }, { n: '5', title: 'Weekly numbers on stream', sub: 'Every team, every week', kind: 'Stream' }, { n: '6', title: 'Demo Day', sub: 'Investors in the room, week 11', kind: 'Demo' }],
+      boardStream: [{ title: 'Reva reports numbers', sub: 'Thursday, live on YouTube' }, { title: 'VESTER reports numbers', sub: 'Thursday, live on YouTube' }, { title: 'Nesta reports numbers', sub: 'Thursday, live on YouTube' }],
+      pillars: [
+        { color: '#fff', title: 'OnlyExit Fund', text: 'Frontier AI in regulated and complex verticals. Details at', link: 'https://onlyexit.vc', linkLabel: 'onlyexit.vc' },
+        { color: '#68cc58', title: 'The house', text: 'A 3,000 square foot build space in Seattle and a plan written for your team.' },
+        { color: '#3064ff', title: 'Reality Show + Stream', text: 'Weekly numbers on camera, livestreamed on YouTube. A show is in production.' },
+        { color: '#d4b144', title: 'The network', text: 'Over 200 founders and operators, and investors in the room at Demo Day.' },
+      ],
+      tabs: this.tabsData.map((t, i) => ({ ...t, pick: () => this.setState({ tab: i }), border: i === tab ? 'rgba(255,255,255,.18)' : 'transparent', bg: i === tab ? '#131517' : 'transparent' })),
+      tabImageEl: React.createElement('img', { key: tab, src: cur.img, alt: '', style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(.9)' } }),
+      tabCardTitle: cur.card, tabRows: cur.rows.map(r => ({ a: r[0], b: r[1], tag: r[2] })),
+      admissions: [
+        { big: 'Now', title: 'Applications are open', text: 'Admissions are rolling. Apply at /apply when you are ready; we read as they come in.' },
+        { big: 'Jan 4', title: 'Early admissions, 2027', text: 'The first Cohort 1 founders arrive. A short interview follows any application we like.' },
+        { big: 'Jan 18', title: 'Full batch, 2027', text: 'The whole cohort is in the house and the ten weeks of building begin.' },
+      ],
+      stack: [
+        { mark: 'B', title: 'Banking', text: 'Covered by a partner for the duration of the program.' },
+        { mark: 'C', title: 'Cloud', text: 'Compute and hosting covered while the team builds.' },
+        { mark: 'L', title: 'Legal', text: 'Company legal work covered by a partner.' },
+        { mark: 'AI', title: 'AI tools', text: 'Model and tooling costs covered during the batch.' },
+      ],
+      criteria: [
+        { title: 'You have founded before', text: 'You have started a company already and know what the first ten weeks cost.' },
+        { title: 'You come from a frontier team', text: 'You worked on a team at the edge of what the technology can do.' },
+        { title: 'You combine distribution with building', text: 'You can reach customers and you can ship the product yourself.' },
+        { title: 'You are exceptionally young and already shipping', text: 'Students and recent graduates who build things and have shipped them.' },
+        { title: 'You are coming out of Big Tech', text: 'Engineers and operators leaving Amazon, Microsoft, Google, Meta or Netflix with something to build.' },
+        { title: 'You are under the spell', text: 'You meet none of the other criteria, but you have made significant sacrifices in pursuit of solving the problem, and you have unwavering commitment and top one percent capability.' },
+      ],
+      companies: [
+        { href: 'https://reva.so', logoText: '', logoStyle: 'display:inline-block;width:112px;height:30px;background:url(https://www.reva.so/reva-logo.png) left center/contain no-repeat;filter:brightness(0) invert(1)', text: 'A control layer for AI agents. Teams see every agent they run, steer it while it executes, and gate consequential actions behind human approval.', people: [{ name: 'Brandon Jakobson', role: 'CEO' }, { name: 'Srikar Chava', role: 'COO' }, { name: 'Andrew Yu', role: 'CMO' }], domain: 'reva.so' },
+        { href: 'https://vester.live', logoText: 'VESTER', logoStyle: 'font-size:26px;font-weight:700;letter-spacing:.12em', text: 'Loyalty points redeemed for real shares of the company behind the program. Members earn points as they already do, burn them, and receive fractional stock.', people: [{ name: 'David Bruining', role: 'Formerly Société Générale' }, { name: 'Arianna Daringa', role: 'Formerly Société Générale' }], domain: 'vester.live' },
+        { href: 'https://getnesta.ai', logoText: 'Nesta', logoStyle: 'font-size:28px;font-weight:500;letter-spacing:-.04em', text: 'AI-native mortgage origination. AI agents underwrite and process loans end to end.', people: [{ name: 'Wei Wang', role: 'CEO, formerly HomeLight' }, { name: 'Anirudh Bhutani', role: 'CTO, formerly HomeLight' }], domain: 'getnesta.ai' },
+        { href: 'https://pesito.la', logoText: 'Pesito', logoStyle: 'font-size:28px;font-weight:600;letter-spacing:-.03em', text: 'Remittances from Mexico to the United States at one percent, capped at fifteen pesos, settled on its own payments infrastructure rather than rented rails.', people: [{ name: 'Isaias Hernandez', role: 'Founder' }, { name: 'Ashwin Subramanian', role: 'Cofounder' }], domain: 'pesito.la' },
+        { href: '#cohort', logoText: 'Stealth × 3', logoStyle: 'font-size:26px;font-weight:500;letter-spacing:-.03em;color:#ffffff59', text: 'Three more teams in the house, not announced yet.', people: [{ name: 'Founders not announced', role: '' }], domain: 'In the house' },
+      ],
+      pickC0: () => this.setState({ cohort: 0 }), pickC1: () => this.setState({ cohort: 1 }),
+      c0bg: isC1 ? 'transparent' : '#fff', c0fg: isC1 ? '#ffffffb3' : '#08090a', c1bg: isC1 ? '#fff' : 'transparent', c1fg: isC1 ? '#08090a' : '#ffffffb3',
+      ways: [
+        { title: 'Founder', popular: isC1, border: 'rgba(255,255,255,.22)', price: '1%', priceNote: 'of the company, and nothing else', text: isC1 ? 'Cohort 1 opens January 2027. Applications are open now.' : 'Cohort 0 is running now, August to early November 2026.', items: isC1 ? ['Early admissions January 4, 2027', 'Full batch January 18, 2027', '10+2 weeks, full time, in Seattle', 'Demo Day with investors in the room'] : ['Three teams in the house', 'Weekly numbers on the stream', 'Demo Day in the first week of November 2026', 'Investors in the room'], cta: isC1 ? 'Apply to Cohort 1' : '', href: isC1 ? 'apply.html' : '', btnBg: '#fff', btnFg: '#08090a' },
+        { title: 'Sponsor', popular: false, border: 'rgba(255,255,255,.08)', price: 'Email', priceNote: 'ankur@onlyexit.ai', text: 'Put your product in front of the next batch of founders while they build.', items: ['Founders use the stack every day', 'Teams building in public, on stream', 'Part of the partner-covered stack', 'One email to start'], cta: 'Email us', href: 'mailto:ankur@onlyexit.ai', btnBg: '#131517', btnFg: '#fff' },
+        { title: 'Coinvestors', popular: false, border: 'rgba(255,255,255,.08)', price: '', priceNote: '', text: 'Come and see the teams show what they shipped, and coinvest alongside us.', items: ['Every batch ends with a Demo Day', 'Each team shows what it shipped', 'Coinvest alongside us in the teams you like', 'Write to ankur@onlyexit.ai for a seat'], cta: 'Ask for a Demo Day seat', href: 'mailto:ankur@onlyexit.ai', btnBg: '#131517', btnFg: '#fff' },
+      ],
+      fundRows: [
+        { name: 'Regulation × AI', where: 'Fintech, legal, real estate, lending, biotech', takes: 'Proprietary workflow, licenses, domain knowledge' },
+        { name: 'Capability × AI', where: 'Fine tuned or frontier models for specific verticals, new algorithms', takes: 'Proprietary models, data, workflows, harness' },
+        { name: 'Physical × AI', where: 'Chip design, robotics, drones', takes: 'Proprietary hardware (plus software)' },
+      ],
+      events: ['Boat days on Lake Union', 'Hikes in the Cascades', 'Fireside chats at the Moxy', 'Supercar runway show', 'Street posters in South Lake Union', 'Seattle Tech Week', 'New York Tech Week', 'San Francisco Tech Week'],
+      faq: this.faqData.map((q, i) => ({ ...q, toggle: () => this.setState({ faq: faq === i ? -1 : i }), sign: faq === i ? '−' : '+', h: faq === i ? '320px' : '0px' })),
+    };
+  }
+}
+</script>
+</body>
+</html>
