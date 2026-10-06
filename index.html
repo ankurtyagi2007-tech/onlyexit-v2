@@ -29,8 +29,9 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="site-header__nav">
-      <a href="#manifest">The Program</a>
-      <a href="#cities">Cities</a>
+      <a href="#manifest">Program</a>
+      <a href="#selection">Selection</a>
+      <a href="#thesis">Thesis</a>
       <a href="#faq">FAQ</a>
       <a href="/apply" class="nav-apply">Apply Now</a>
     </nav>
@@ -45,7 +46,7 @@
   <div class="hero__inner">
     <div class="hero__badge">
       <span class="hero__badge-dot"></span>
-      <span><span style="color:#00F0FF;">Seattle House</span> &middot; Apps Open<span class="hero__badge-dates"> &middot; Early Admissions Aug 3 &middot; Full Batch Aug 17</span></span>
+      <span><span style="color:#00F0FF;">Seattle House</span> &middot; Apps Open<span class="hero__badge-dates"> &middot; Early Admissions Jan 4, 2027 &middot; Full Batch Jan 18, 2027</span></span>
     </div>
     <h1 class="hero__title">
       Hacker House + Fund for<br>
@@ -72,12 +73,12 @@
     <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">Seattle</strong> Hacker House</span>
     <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">3,000</strong> Sq Ft</span>
     <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">Founder Events</strong> Every Month</span>
-    <span class="marquee__item"><span class="marquee__dot"></span>Apps Close <strong style="color:#F2F5F6;">Aug 15</strong> &middot; <strong style="color:#FF2E3D;">Apply NOW</strong></span>
+    <span class="marquee__item"><span class="marquee__dot"></span>Cohort 1 &middot; <strong style="color:#F2F5F6;">Jan 2027</strong> &middot; <strong style="color:#FF2E3D;">Apply NOW</strong></span>
     <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">200+</strong> Founders &amp; Operators in Network</span>
     <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">Seattle</strong> Hacker House</span>
     <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">3,000</strong> Sq Ft</span>
     <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">Founder Events</strong> Every Month</span>
-    <span class="marquee__item"><span class="marquee__dot"></span>Apps Close <strong style="color:#F2F5F6;">Aug 15</strong> &middot; <strong style="color:#FF2E3D;">Apply NOW</strong></span>
+    <span class="marquee__item"><span class="marquee__dot"></span>Cohort 1 &middot; <strong style="color:#F2F5F6;">Jan 2027</strong> &middot; <strong style="color:#FF2E3D;">Apply NOW</strong></span>
     <span class="marquee__item"><span class="marquee__dot"></span><strong style="color:#F2F5F6;">200+</strong> Founders &amp; Operators in Network</span>
   </div>
 </div>
@@ -117,46 +118,31 @@
   </div>
 </div>
 
-<!-- 3. TEN-WEEK MANIFEST -->
+<!-- 3. TEN-WEEK PROGRAM (Interactive Tabs) -->
 <section id="manifest" class="manifest">
   <div class="manifest__inner">
     <div class="manifest__header">
-      <p class="eyebrow"><span class="slash">//</span>The Manifest</p>
+      <p class="eyebrow"><span class="slash">//</span>The Program</p>
       <h2 class="h2">Just One Objective. <span style="white-space:nowrap;">Ship or Die.</span></h2>
+      <p style="margin:20px 0 0;font-size:17px;line-height:1.65;color:var(--text-body);max-width:640px;">Each team is paired with a Managing GP who writes a plan for the full 10+2 weeks. Sessions, numbers, and Demo Day are built around it.</p>
     </div>
-    <div class="manifest__card-grid">
-      <div class="manifest__card">
-        <span class="manifest__card-label">Weeks 1–2</span>
-        <h3 class="manifest__card-title">Foundation</h3>
-        <p class="manifest__card-desc">Team formation. Problem validation. Working prototype by Friday of week one.</p>
+    <div class="program-tabs">
+      <div class="program-tabs__nav">
+        <button class="program-tabs__btn program-tabs__btn--active" data-tab="0">Plan</button>
+        <button class="program-tabs__btn" data-tab="1">Sessions</button>
+        <button class="program-tabs__btn" data-tab="2">Numbers</button>
+        <button class="program-tabs__btn" data-tab="3">Demo Day</button>
       </div>
-      <div class="manifest__card">
-        <span class="manifest__card-label">Weeks 3–4</span>
-        <h3 class="manifest__card-title">Go to Market</h3>
-        <p class="manifest__card-desc">Customer discovery. First real users. Angel investor dinners begin.</p>
-      </div>
-      <div class="manifest__card">
-        <span class="manifest__card-label">Weeks 5–6</span>
-        <h3 class="manifest__card-title">Growth Engine</h3>
-        <p class="manifest__card-desc">Pick the metric that matters. Find the channel that works. Iterate daily.</p>
-      </div>
-      <div class="manifest__card">
-        <span class="manifest__card-label">Weeks 7–8</span>
-        <h3 class="manifest__card-title">Product Depth</h3>
-        <p class="manifest__card-desc">Build the moat. Technical defensibility. Data flywheels.</p>
-      </div>
-      <div class="manifest__card">
-        <span class="manifest__card-label">Weeks 9–10</span>
-        <h3 class="manifest__card-title">Fundraise Ready</h3>
-        <p class="manifest__card-desc">Pitch practice. Investor meetings. Term sheet prep.</p>
-      </div>
-      <div class="manifest__card manifest__card--violet">
-        <span class="manifest__card-label manifest__card-label--violet">Weeks 11–12</span>
-        <h3 class="manifest__card-title">Demo Days <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter:drop-shadow(0 0 6px rgba(139,92,246,0.6));"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></h3>
-        <p class="manifest__card-desc">Pitch at 40,000 feet. VC roadshows. Media. The world finds out.</p>
+      <div class="program-tabs__panel" id="program-panel">
+        <div class="program-tabs__card-title" id="program-card-title">Plan &middot; written with the GP</div>
+        <div class="program-tabs__rows" id="program-rows">
+          <div class="program-tabs__row"><div class="program-tabs__row-text"><span class="program-tabs__row-a">Go to market</span><span class="program-tabs__row-b">first two weeks</span></div><span class="program-tabs__row-tag">Plan</span></div>
+          <div class="program-tabs__row"><div class="program-tabs__row-text"><span class="program-tabs__row-a">Fundraising</span><span class="program-tabs__row-b">weeks three to six</span></div><span class="program-tabs__row-tag">Plan</span></div>
+          <div class="program-tabs__row"><div class="program-tabs__row-text"><span class="program-tabs__row-a">Product and hiring</span><span class="program-tabs__row-b">through Demo Day</span></div><span class="program-tabs__row-tag">Plan</span></div>
+        </div>
       </div>
     </div>
-    <div class="manifest__footer">Wheels up &middot; Demo Day at 40,000 ft</div>
+    <div class="manifest__footer">10+2 weeks &middot; full time &middot; in Seattle</div>
   </div>
 </section>
 
@@ -174,11 +160,11 @@
         <h3 class="build-public__card-title oe-bp-title">Weekly Metrics Hotseat</h3>
         <p class="build-public__card-desc oe-bp-desc">Every week, every team sits in front of a camera and reports their numbers. Revenue. Users. Churn. Burn rate. The audience is watching. If you had a bad week, you say you had a bad week. There is no spin.</p>
       </div>
-      <div class="build-public__card oe-bp">
+      <a href="https://www.youtube.com/@OnlyExitai" target="_blank" rel="noopener noreferrer" class="build-public__card oe-bp" style="text-decoration:none;color:inherit;">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-        <h3 class="build-public__card-title oe-bp-title">Streamed on YouTube</h3>
+        <h3 class="build-public__card-title oe-bp-title">Streamed on YouTube &rarr;</h3>
         <p class="build-public__card-desc oe-bp-desc">The entire batch is documented and streamed live. Your journey from day one to Demo Day, on camera, in public. Founders who build in public attract investors, customers, and talent before they even start fundraising.</p>
-      </div>
+      </a>
       <div class="build-public__card oe-bp">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         <h3 class="build-public__card-title oe-bp-title">Radical Transparency</h3>
@@ -286,6 +272,172 @@ end demo-day -->
     <h2 class="adventure__h2"><span class="oe-shine">You're Building a Company,</span> <span style="white-space:nowrap;"><span class="oe-shine">Not Doing Time.</span></span></h2>
     <p class="adventure__sub">Jet ski. Karting. Hikes. Boating. Every other week we get out. When the mind locks up, the body unlocks it.</p>
     <a href="/apply" class="btn-primary" style="margin-top:32px;">Apply for Hacker House &rarr;</a>
+  </div>
+</section>
+
+<!-- ADMISSIONS -->
+<section id="admissions" class="admissions">
+  <div class="admissions__inner">
+    <div class="admissions__header">
+      <p class="eyebrow"><span class="slash">//</span>Admissions</p>
+      <h2 class="h2">Rolling Admissions. <span style="color:#00F0FF;">Move Fast.</span></h2>
+    </div>
+    <div class="admissions__grid">
+      <div class="admissions__card admissions__card--active">
+        <span class="admissions__card-label">Now</span>
+        <h3 class="admissions__card-title">Applications Open</h3>
+        <p class="admissions__card-desc">We read every application as it comes in. If we like it, you get a 15-minute interview.</p>
+      </div>
+      <div class="admissions__card">
+        <span class="admissions__card-label">Jan 4, 2027</span>
+        <h3 class="admissions__card-title">Early Admissions</h3>
+        <p class="admissions__card-desc">First round of accepted teams announced. Early admits get a head start on onboarding.</p>
+      </div>
+      <div class="admissions__card">
+        <span class="admissions__card-label">Jan 18, 2027</span>
+        <h3 class="admissions__card-title">Full Batch Starts</h3>
+        <p class="admissions__card-desc">10+2 weeks, full time, in Seattle. Demo Day with investors in the room.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="/apply" class="btn-primary">Apply for Cohort 1 &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNER STACK -->
+<section id="partner-stack" class="partner-stack">
+  <div class="partner-stack__inner">
+    <div class="partner-stack__header">
+      <p class="eyebrow"><span class="slash">//</span>Partner Stack</p>
+      <h2 class="h2">Your Stack Is Covered.</h2>
+      <p style="margin:20px 0 0;font-size:17px;line-height:1.65;color:var(--text-body);max-width:640px;">Our sponsors cover the tools you need so you can focus on building. Banking, cloud, legal, and AI tools &mdash; handled.</p>
+    </div>
+    <div class="partner-stack__grid">
+      <div class="partner-stack__card">
+        <span class="partner-stack__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </span>
+        <h3 class="partner-stack__title">Banking</h3>
+        <p class="partner-stack__desc">Business accounts and financial infrastructure for startups, from day one.</p>
+      </div>
+      <div class="partner-stack__card">
+        <span class="partner-stack__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+        </span>
+        <h3 class="partner-stack__title">Cloud</h3>
+        <p class="partner-stack__desc">Compute, storage, and infrastructure credits to scale without worrying about the bill.</p>
+      </div>
+      <div class="partner-stack__card">
+        <span class="partner-stack__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </span>
+        <h3 class="partner-stack__title">Legal</h3>
+        <p class="partner-stack__desc">Incorporation, IP, contracts, and immigration covered by partner law firms.</p>
+      </div>
+      <div class="partner-stack__card">
+        <span class="partner-stack__icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00F0FF" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4z"/><circle cx="12" cy="15" r="2"/></svg>
+        </span>
+        <h3 class="partner-stack__title">AI Tools</h3>
+        <p class="partner-stack__desc">API credits and enterprise access to the AI platforms you need to build with.</p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:40px;font-size:15px;color:var(--text-muted);">Want to sponsor the next batch? <a href="mailto:ankur@onlyexit.ai" style="color:#00F0FF;">ankur@onlyexit.ai</a></p>
+  </div>
+</section>
+
+<!-- SELECTION CRITERIA -->
+<section id="selection" class="selection">
+  <div class="selection__inner">
+    <div class="selection__header">
+      <p class="eyebrow"><span class="slash">//</span>Selection</p>
+      <h2 class="h2">Who We're Looking For</h2>
+    </div>
+    <div class="selection__grid">
+      <div class="selection__card">
+        <span class="selection__num">01</span>
+        <h3 class="selection__title">Founded Before</h3>
+        <p class="selection__desc">You shipped something. Maybe it worked, maybe it didn't. You learned why startups break.</p>
+      </div>
+      <div class="selection__card">
+        <span class="selection__num">02</span>
+        <h3 class="selection__title">Frontier Team</h3>
+        <p class="selection__desc">AI, robotics, biotech, climate. You're building at the edge of what's possible, not another CRUD app.</p>
+      </div>
+      <div class="selection__card">
+        <span class="selection__num">03</span>
+        <h3 class="selection__title">Distribution + Building</h3>
+        <p class="selection__desc">You know how to get in front of customers and you can also build the product yourself.</p>
+      </div>
+      <div class="selection__card">
+        <span class="selection__num">04</span>
+        <h3 class="selection__title">Young Shippers</h3>
+        <p class="selection__desc">Dropped out, never joined the system, or left college with a prototype already running.</p>
+      </div>
+      <div class="selection__card">
+        <span class="selection__num">05</span>
+        <h3 class="selection__title">Big Tech Exits</h3>
+        <p class="selection__desc">Left Amazon, Microsoft, Google, or Meta. You've seen how big companies work. Now you want to build your own.</p>
+      </div>
+      <div class="selection__card">
+        <span class="selection__num">06</span>
+        <h3 class="selection__title">Under the Spell</h3>
+        <p class="selection__desc">You can't stop thinking about the problem. You're already building. You just need the environment to go all in.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COHORT 0 PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+  <div class="portfolio__inner">
+    <div class="portfolio__header">
+      <p class="eyebrow"><span class="slash">//</span>Cohort 0</p>
+      <h2 class="h2">The First Batch</h2>
+      <p style="margin:20px 0 0;font-size:17px;line-height:1.65;color:var(--text-body);max-width:640px;">Cohort 0 is running now, August to early November 2026. Three teams in the house. Weekly numbers on the stream.</p>
+    </div>
+    <div class="portfolio__grid">
+      <div class="portfolio__card">
+        <div class="portfolio__card-head">
+          <h3 class="portfolio__card-name">Reva</h3>
+          <a href="https://reva.so" target="_blank" rel="noopener noreferrer" class="portfolio__card-link">reva.so &rarr;</a>
+        </div>
+        <p class="portfolio__card-desc">AI-powered revenue automation for modern businesses.</p>
+        <span class="portfolio__card-founder">Founder &middot; Reva Team</span>
+      </div>
+      <div class="portfolio__card">
+        <div class="portfolio__card-head">
+          <h3 class="portfolio__card-name">VESTER</h3>
+          <a href="https://vester.live" target="_blank" rel="noopener noreferrer" class="portfolio__card-link">vester.live &rarr;</a>
+        </div>
+        <p class="portfolio__card-desc">Democratizing alternative investments for everyone.</p>
+        <span class="portfolio__card-founder">Founder &middot; VESTER Team</span>
+      </div>
+      <div class="portfolio__card">
+        <div class="portfolio__card-head">
+          <h3 class="portfolio__card-name">Nesta</h3>
+          <a href="https://getnesta.ai" target="_blank" rel="noopener noreferrer" class="portfolio__card-link">getnesta.ai &rarr;</a>
+        </div>
+        <p class="portfolio__card-desc">AI that helps you find and settle into your next home.</p>
+        <span class="portfolio__card-founder">Founder &middot; Nesta Team</span>
+      </div>
+      <div class="portfolio__card">
+        <div class="portfolio__card-head">
+          <h3 class="portfolio__card-name">Pesito</h3>
+          <a href="https://pesito.la" target="_blank" rel="noopener noreferrer" class="portfolio__card-link">pesito.la &rarr;</a>
+        </div>
+        <p class="portfolio__card-desc">LatAm-focused fintech rebuilding cross-border payments.</p>
+        <span class="portfolio__card-founder">Founder &middot; Pesito Team</span>
+      </div>
+      <div class="portfolio__card portfolio__card--stealth">
+        <div class="portfolio__card-head">
+          <h3 class="portfolio__card-name">Stealth &times; 3</h3>
+        </div>
+        <p class="portfolio__card-desc">Three more teams building in stealth. Announcements coming after Demo Day.</p>
+        <span class="portfolio__card-founder">In stealth</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -445,17 +597,28 @@ end corvette -->
     <div class="thesis__header">
       <p class="eyebrow"><span class="slash">//</span>The Thesis</p>
       <h2 class="thesis__h2">We Only Back Frontier Problems</h2>
-      <p class="thesis__sub">AI is breaking careers. We are here to fund what comes next.</p>
+      <p class="thesis__sub">AI is breaking careers. We are here to fund what comes next. <a href="https://onlyexit.vc" target="_blank" rel="noopener noreferrer" style="color:#00F0FF;">Read the full thesis &rarr;</a></p>
     </div>
-    <div class="oe-taggrid thesis__tags">
-      <div class="thesis__tag-cell">
-        <span class="oe-tag thesis__tag-pill" style="--tg:rgba(139,92,246,0.35);--tgi:rgba(139,92,246,0.12);color:#8B5CF6;border:1px solid rgba(139,92,246,0.35);">Regulation &times; AI</span>
+    <div class="thesis__table">
+      <div class="thesis__table-head">
+        <span>Category</span>
+        <span>Examples</span>
+        <span>What it takes</span>
       </div>
-      <div class="thesis__tag-cell">
-        <span class="oe-tag thesis__tag-pill" style="--tg:rgba(0,240,255,0.35);--tgi:rgba(0,240,255,0.12);color:#00F0FF;border:1px solid rgba(0,240,255,0.35);">Capability &times; AI</span>
+      <div class="thesis__table-row">
+        <span class="thesis__table-cat" style="color:#8B5CF6;">Regulation &times; AI</span>
+        <span class="thesis__table-ex">Immigration, tax, compliance, insurance, lending</span>
+        <span class="thesis__table-req">Domain expertise + technical chops</span>
       </div>
-      <div class="thesis__tag-cell">
-        <span class="oe-tag thesis__tag-pill" style="--tg:rgba(255,255,255,0.3);--tgi:rgba(255,255,255,0.1);color:#F2F5F6;border:1px solid rgba(255,255,255,0.3);">Physical &times; AI</span>
+      <div class="thesis__table-row">
+        <span class="thesis__table-cat" style="color:#00F0FF;">Capability &times; AI</span>
+        <span class="thesis__table-ex">Dev tools, agentic workflows, security, infra</span>
+        <span class="thesis__table-req">Deep technical skill + speed</span>
+      </div>
+      <div class="thesis__table-row">
+        <span class="thesis__table-cat" style="color:#F2F5F6;">Physical &times; AI</span>
+        <span class="thesis__table-ex">Robotics, manufacturing, climate, logistics</span>
+        <span class="thesis__table-req">Hardware access + frontier research</span>
       </div>
     </div>
   </div>
@@ -496,6 +659,41 @@ end corvette -->
           <span class="faq-item__icon">+</span>
         </button>
         <div class="faq-item__answer">Yes. The only requirement is that you're fully committed and on-site full-time for the full 10 weeks. If you can make that work, the rest is your business.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__btn" aria-expanded="false">
+          <span class="faq-item__question">How long is it?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">10+2 weeks. Ten weeks of building, followed by two weeks of Demo Day and investor meetings. Full time, in-person, in Seattle. No remote, no part-time.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__btn" aria-expanded="false">
+          <span class="faq-item__question">Is there a curriculum?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">Not a lecture series. Each team gets a Managing GP who writes a custom plan. Working sessions happen weekly with operators who've done the specific thing you're working on &mdash; pricing, term sheets, first hires, first ten customers.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__btn" aria-expanded="false">
+          <span class="faq-item__question">Who are you looking for?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">Founders who've built before, frontier teams (AI, robotics, climate), builders with distribution, young shippers, Big Tech exits, and anyone who can't stop thinking about the problem they're solving.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__btn" aria-expanded="false">
+          <span class="faq-item__question">What happens after I apply?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">We read every application as it comes in. If we like what we see, you get a 15-minute interview. Rolling admissions &mdash; don't wait until the deadline.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-item__btn" aria-expanded="false">
+          <span class="faq-item__question">What does the fund invest in?</span>
+          <span class="faq-item__icon">+</span>
+        </button>
+        <div class="faq-item__answer">Frontier problems at the intersection of AI &times; regulation, AI &times; capability, and AI &times; physical. We back teams that are solving hard problems the incumbents are too slow to touch. Read more at <a href="https://onlyexit.vc" target="_blank" rel="noopener noreferrer">onlyexit.vc</a>.</div>
       </div>
     </div>
   </div>
@@ -561,7 +759,7 @@ end corvette -->
       </div>
       <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:16px 32px;">Send It</button>
     </form>
-    <div class="success-msg" id="hhSuccess"><p><strong>Application received.</strong><br><br>If we like what we see, you'll get a 15-minute interview. We're admitting on a rolling basis. Early admissions Aug 3. Full batch starts Aug 17. Come ready.</p></div>
+    <div class="success-msg" id="hhSuccess"><p><strong>Application received.</strong><br><br>If we like what we see, you'll get a 15-minute interview. We're admitting on a rolling basis. Early admissions Jan 4, 2027. Full batch starts Jan 18, 2027. Come ready.</p></div>
   </div>
 </div>
 
@@ -581,8 +779,8 @@ end corvette -->
           <a href="#manifest">The Program</a>
           <a href="#build-in-public">Build in Public</a>
           <a href="#what-you-get">What You Get</a>
-          <a href="#cities">Cities</a>
-          <a href="#social-life">Social Life</a>
+          <a href="#portfolio">Cohort 0</a>
+          <a href="#selection">Selection</a>
           <a href="#thesis">Thesis</a>
           <a href="#faq">FAQ</a>
         </div>
@@ -590,6 +788,7 @@ end corvette -->
       <div class="site-footer__col">
         <h4 class="site-footer__col-title">Connect</h4>
         <a href="mailto:ankur@onlyexit.ai">ankur@onlyexit.ai</a>
+        <a href="https://onlyexit.vc" target="_blank" rel="noopener noreferrer">onlyexit.vc</a>
         <a href="https://www.linkedin.com/in/ankurtyagi2007/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://x.com/onlyexitai" target="_blank" rel="noopener noreferrer">X / Twitter</a>
         <a href="https://medium.com/@onlyexit" target="_blank" rel="noopener noreferrer">Medium</a>

@@ -222,6 +222,35 @@
     }
   });
 
+  // ===== PROGRAM TABS =====
+  var programTabBtns = document.querySelectorAll('.program-tabs__btn');
+  var programCardTitle = document.getElementById('program-card-title');
+  var programRowsEl = document.getElementById('program-rows');
+  var programTabsData = [
+    {card:'Plan · written with the GP', rows:[['Go to market','first two weeks','Plan'],['Fundraising','weeks three to six','Plan'],['Product and hiring','through Demo Day','Plan']]},
+    {card:'Sessions · this week', rows:[['Pricing that survives a real buyer','with a Seattle operator','Session'],['Reading a term sheet','with a founder who has raised','Session'],['First five hires, in order','with an operator who has hired','Session'],['Getting the first ten customers','with an operator who sold into the vertical','Session']]},
+    {card:'Stream · weekly report', rows:[['Revenue','this week against last','Reported'],['NRR','what existing customers did','Reported'],['Cold calls and demos','how many, and what came back','Reported'],['Burn','what it cost to get there','Reported']]},
+    {card:'Demo Day · first week of November', rows:[['Investors in the room','Cohort 0','Nov 2026'],['Each team shows what it shipped','ten weeks of work','Demo'],['Cohort 1 Demo Day','after the January batch','2027']]}
+  ];
+  function setProgramTab(i) {
+    programTabBtns.forEach(function(b, j) {
+      b.classList.toggle('program-tabs__btn--active', j === i);
+    });
+    if (programCardTitle) programCardTitle.textContent = programTabsData[i].card;
+    if (programRowsEl) {
+      programRowsEl.innerHTML = '';
+      programTabsData[i].rows.forEach(function(r) {
+        var div = document.createElement('div');
+        div.className = 'program-tabs__row';
+        div.innerHTML = '<div class="program-tabs__row-text"><span class="program-tabs__row-a">' + r[0] + '</span><span class="program-tabs__row-b">' + r[1] + '</span></div><span class="program-tabs__row-tag">' + r[2] + '</span>';
+        programRowsEl.appendChild(div);
+      });
+    }
+  }
+  programTabBtns.forEach(function(b, i) {
+    b.addEventListener('click', function() { setProgramTab(i); });
+  });
+
   // ===== HACKER HOUSE APPLICATION MODAL =====
   document.querySelectorAll('#openHackerHouseModal, #openHackerHouseModal2').forEach(function(btn) {
     btn.addEventListener('click', function(e) {
